@@ -23,14 +23,20 @@ margin-right: -25px !important;
 }
 
 }
-th{
+/*th{
 
     background: #aad1d6;
     padding-top: 10px !important;
     padding-bottom: 10px;
     padding-left: 3px !important;
+}*/
+.OuterSpace{
+background:#FFF;
+opacity:0.8;
+padding:0px;
+margin-top: 24px;
+border-radius: 5px;
 }
-
 </style>
 
  <div class="section-empty bgimage3">
@@ -43,21 +49,21 @@ th{
 
 
 			</div>
-                <div class="col-md-10" style="background:#FFF;color:#000;opacity:0.8;padding:10px;margin-top: 24px;border-radius: 5px;">
-
-					<table class="table-striped" style="width:100%;">
-                <thead>
+                <div class="col-md-10 OuterSpace">
+                	<hr class="space xs">
+					<table align="center" class="table-striped NotificationTable">
+                <thead class="TableHeading">
                     <tr>
-                        <th style="padding-left:30px!important;width:100px;">#</th>
+                        <th>#</th>
                         <th><span adr_trans="label_product_name">Product name</span></th>
                         <th><span adr_trans="label_timeline">Timeline</span></th>
                         <th><span adr_trans="label_product_cost">Product cost</span></th>
-                        <th><span adr_trans="label_description">Description</th>
+                        <th style="width:450px"><span adr_trans="label_description">Description</th>
                     </tr>
 
                 </thead>
 
-                <tbody>
+                <tbody class="TableContent">
 									<?php
 										//	---------------------------------  pagination starts ---------------------------------------
 										if(@$_GET["page"]<0)
@@ -129,11 +135,11 @@ th{
 	                  $cnt++;
 				          ?>
                     <tr class="listPageTR">
-                        <td scope="row" style="padding-left:30px!important;;"><?php echo $cnt;?></td>
+                        <td scope="row"><?php echo $cnt;?></td>
                         <td><?php echo $get_product['product_name']; ?></td>
                         <td><?php echo $get_product['timeline']; ?></td>
                         <td><?php echo $get_product['product_cost']; ?></td>
-				        <td style="width:450px"><b id="label_description" adr_trans="label_description">Description </b>: <?php echo $get_product['description']; ?></td>
+				        <td><b id="label_description" adr_trans="label_description">Description </b>: <?php echo $get_product['description']; ?></td>
                     </tr>
                     <tr><td class="listPageTRGap">&nbsp;</td></tr>
 
@@ -147,14 +153,14 @@ th{
 			if($total_no!=0)
 			{
 			?>
-						<div class="col-sm-6">
+						<div class="col-sm-6" style="padding:10px">
 									<ul class="pagination ">
 										<li class="first disabled" aria-disabled="true"><a href="./csr_products.php?page=1" class="button">«</a></li>
 										<li class="prev disabled" aria-disabled="true"><a href="<?php echo "./csr_products.php?page=".($_SESSION["page"]-1);?>" class="button">&lt;</a></li>
 										<li class="page-1 active" aria-disabled="false" aria-selected="true"><a href="#1" class="button"><?php echo $_SESSION["page"]; ?></a></li>
 										<li class="next disabled" aria-disabled="true"><a href="<?php echo "./csr_products.php?page=".($_SESSION["page"]+1);?>" class="button">&gt;</a></li>
 										<li class="last disabled" aria-disabled="true"><a href="<?php echo "./csr_products.php?page=".($Page_check);?>" class="button">»</a></li></ul></div>
-										<div class="col-sm-6 infoBar"style="margin-top:24px">
+										<div class="col-sm-6 infoBar"style="margin-top:27px">
 										<div class="infos"><p align="right"><span adr_trans="label_showing">Showing</span> <?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?> <span adr_trans="label_to">to</span> <?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?> of <?php echo $total_no; ?> <span adr_trans="label_entries">entries</span></p></div>
 										</div><?php } ?>
 

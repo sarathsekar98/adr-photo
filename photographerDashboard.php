@@ -133,7 +133,7 @@ height:fit-content!important;
 
 
 			</div>
-                <div class="col-md-10" style="padiding-left:20px;">
+                <div class="col-md-10">
               	<!-- <h5 class="text-center" id="label_photographer_dashboard" adr_trans="label_photographer_dashboard">Photographer Dashboard</h5> -->
 
 <?php if(@isset($_REQUEST["na"])) { ?>
@@ -154,8 +154,8 @@ height:fit-content!important;
             <div class="row" style="margin-left:5px;">
 <hr class="space s">
               <div class="col-md-3">
-                     <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
-                        
+                     <div class="advs-box boxed-inverse">
+                         
                <?php
                 $user_id=$_SESSION["loggedin_id"];
                 $get_completed_query=mysqli_query($con,"SELECT count(photographer_id) as COUNT FROM `orders` WHERE photographer_id='$user_id' and status_id=3");
@@ -164,52 +164,52 @@ height:fit-content!important;
 
                 ?>
 
-                             <h5><i class="fa fa-check-circle fa-lg" style="color:#aad1d6;"></i><br /><br /><span adr_trans="label_completed_orders">Completed orders</span></h5>
-                             <p class="counter" data-speed="1000" data-to="<?php echo $get_complete['COUNT'];?>" style="color:000;font-size:25px;font-weight:600;padding-top:5px;">
+                             <h5><i class="fa fa-check-circle fa-lg IconColor"></i><span adr_trans="label_completed_orders">Completed orders</span></h5>
+                             <p class="counter" data-speed="1000" data-to="<?php echo $get_complete['COUNT'];?>">
        <?php echo $get_complete['COUNT'];?>
                              </p>
-							 <br />
-                           <a class="btn-sm" adr_trans="label_view" href="photographerorder_list.php" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+							 
+                           <a class="ActionBtn-sm" adr_trans="label_view" href="photographerorder_list.php">View </a>
                          </div>
 
 
 
                          </div>
                        <div class="col-md-3">
-                    <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
+                    <div class=" advs-box boxed-inverse">
 							<?php
                // $user_id=$_SESSION["loggedin_id"];
                $get_order_query=mysqli_query($con,"SELECT count(photographer_id) as COUNT FROM `orders` WHERE photographer_id='$user_id' and status_id in(2,4,8)");
                $get_order=mysqli_fetch_array($get_order_query);
 
                ?>
-			    <h5><i class="fa fa-arrow-circle-right fa-lg" style="color:#aad1d6"></i><br /><br /><span adr_trans="label_ongoing">Ongoing orders</span></h5>
+			    <h5><i class="fa fa-arrow-circle-right fa-lg IconColor"></i><span adr_trans="label_ongoing">Ongoing orders</span></h5>
                             
-                            <p class="counter" data-speed="1000" data-to=" <?php echo $get_order['COUNT'];?>" style="color:000;font-size:25px;font-weight:600;padding-top:5px;">
+                            <p class="counter" data-speed="1000" data-to=" <?php echo $get_order['COUNT'];?>">
 			   <?php echo $get_order['COUNT'];?>
                             </p>
-							<br />
-							  <a class="btn-sm" adr_trans="label_view" href="photographerorder_list.php" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+						
+							  <a class="ActionBtn-sm" adr_trans="label_view" href="photographerorder_list.php">View </a>
 							
                            
                         </div></div>
 
 
                         <div class="col-md-3">
-                                <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
+                                <div class=" advs-box boxed-inverse">
 
-<h5><i class="fa fa-camera fa-lg" style="color:#aad1d6"></i><br /><br /><span adr_trans="label_my_products">My Products</span></h5>
+<h5><i class="fa fa-camera fa-lg IconColor"></i><span adr_trans="label_my_products">My Products</span></h5>
                                       
 									   <?php
 					 $get_prod_query1=mysqli_query($con,"SELECT count(*) as prodCount FROM `photographer_product_cost` WHERE photographer_id='$user_id'");
                $get_prod_query=mysqli_fetch_array($get_prod_query1);
 
 									   ?>
-                                        <p class="counter" data-speed="1000" data-to=" <?php echo $get_prod_query['prodCount'];?>" style="color:000;font-size:25px;font-weight:600;padding-top: 3px;padding-bottom: 1px;">
+                                        <p class="counter" data-speed="1000" data-to=" <?php echo $get_prod_query['prodCount'];?>">
 
                                        </p>
-<br />
-                                       <a class="btn-sm" adr_trans="label_view" href="products.php" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+
+                                       <a class="ActionBtn-sm" adr_trans="label_view" href="products.php">View </a>
                                    </div>
 
 
@@ -218,9 +218,9 @@ height:fit-content!important;
 
 					 <div class="col-md-3">
 
-                    <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
+                    <div class=" advs-box boxed-inverse">
 					
-					<h5><i class="fa fa-sliders fa-lg" style="color:#aad1d6"></i><br /><br /><span adr_trans="label_my_earnings_month">My Commissions this month</span></h5>
+					<h5><i class="fa fa-sliders fa-lg IconColor"></i><span adr_trans="label_my_earnings_month">My Commissions this month</span></h5>
                             
 
                             <?php
@@ -241,9 +241,9 @@ height:fit-content!important;
                             }
                             ?>
 
-                             <p style="color:000;font-size:25px;font-weight:600;"> $ &nbsp;<label class="counter" data-speed="1000" data-to="<?php echo $total1;?>" style="color:000;font-size:25px;font-weight:600"><?php echo $total1;?></label><br /></p>
-							 <hr class="space s">
-							  <a class="btn-sm" adr_trans="label_view" href="photographerorder_list.php" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+                             <span>$</span><p class="counter" data-speed="1000" data-to="<?php echo $total1;?>"><?php echo $total1;?></p>
+						
+							  <a class="ActionBtn-sm" adr_trans="label_view" href="photographerorder_list.php">View </a>
                          
                         </div>
 
@@ -264,7 +264,7 @@ height:fit-content!important;
 
 
           </div>
-          <hr class="space s" />
+         
 
 
 
@@ -409,16 +409,18 @@ window.location.href="./create_order.php?date="+date1+"&time="+time1;
 }
    </script>
      <!--  calender end -->
-    <div class="col-md-6" style="">
-        <center>    <h5 adr_trans="label_upcoming_events">Upcoming Events</h5></center>
- <div id='calendar' style="border-radius:5px"></div>
-    <br>
 
- <center> <a href="./photographerCalendar.php" class="anima-button circle-button btn-sm btn adr-save" adr_trans="label_view_my_calender" style="background:#aad1d6;color:#000;border-radius:5px;border:none;height: 30px;font-size: 12px;"><i class="fa fa-calendar"></i>View My Calender</a>  </center>
+     <hr class="space l">
+    <div class="col-md-6 TextCenter">
+       <h5 class="PageHeading-md TextCenter" adr_trans="label_upcoming_events">Upcoming Events</h5>
+ <div id='calendar' class="UpcomingCalender"></div>
+    
+
+<a href="./photographerCalendar.php" class="ActionBtn-md AnimationBtn" adr_trans="label_view_my_calender" ><i class="fa fa-calendar"></i>View My Calender</a>
   </div>
-  <div class="col-md-6">
-              <center>    <h5 adr_trans="label_latest_delivered">Latest Delivered Orders</h5></center>
-<div class=" advs-box boxed-inverse forMobile"  style="background:#FFF!important;border-radius:10px;height:305px;">
+  <div class="col-md-6 TextCenter">
+    <h5 class="PageHeading-md TextCenter" adr_trans="label_latest_delivered" >Latest Delivered Orders</h5>
+<div class=" advs-box boxed-inverse forMobile LatestDelivered">
 
    <?php
 
@@ -433,18 +435,16 @@ window.location.href="./create_order.php?date="+date1+"&time="+time1;
 
         <div class="col-md-6">
           <a href="photographerorder_detail.php?id=<?php echo $get_latest_delivered['order_id']; ?>&f=1">
-        <img id="delivered_image" src="./finished_images/order_<?php echo $get_latest_delivered['order_id']; ?>/<?php if($get_latest_delivered['service_id']==1){ echo "standard_photos" ;}elseif($get_latest_delivered['service_id']==2){ echo "floor_plans";}elseif($get_latest_delivered['service_id']==3){echo "Drone_photos";}else{ echo "Hdr_photos";}?>/<?php echo $get_latest_delivered['img']?>" width="230" height="140" style="padding-bottom:15px;"/>
-		 <span id="delivered_address" style="position:absolute; text-align:center;z-index:2;color:#000;background:#FFF!important;padding:3px;opacity:0.6;width:100%;float:left;left:0px;font-size:12px;font-weight:bold"><?php echo $get_address['property_address']; ?></span>
+        <img id="delivered_image" src="./finished_images/order_<?php echo $get_latest_delivered['order_id']; ?>/<?php if($get_latest_delivered['service_id']==1){ echo "standard_photos" ;}elseif($get_latest_delivered['service_id']==2){ echo "floor_plans";}elseif($get_latest_delivered['service_id']==3){echo "Drone_photos";}else{ echo "Hdr_photos";}?>/<?php echo $get_latest_delivered['img']?>"/>
+		 <span id="delivered_address"><?php echo $get_address['property_address']; ?></span>
         </a>
         </div>
   <?php		}
     ?>
+  </div>
+ <a class="ActionBtn-md AnimationBtn" href="photographerorder_list.php?c=1" adr_trans="label_view_order"><i class="fa fa-long-arrow-right"></i>View My Orders</a>
+</div>
 
-  </div></div>
-<p align="center">
-<br /><br />
- <a class="anima-button circle-button btn-sm adr-save" href="photographerorder_list.php?c=1" style="margin-top:20px!important;background:#aad1d6;color:#000;border-radius:8px;border:none;height: 30px;font-size: 12px;" adr_trans="label_view_order"><i class="fa fa-long-arrow-right"></i>View My Orders</a>
-</p>
 
             </div>
 

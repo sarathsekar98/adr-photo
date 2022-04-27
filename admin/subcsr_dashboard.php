@@ -232,120 +232,94 @@ window.location.href = "./subcsr_dashboard.php?rwl=1";
 						<?php }  ?>
 					<div>
                 <div class="col-md-3">
-                     <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
-                        <!-- <h3 style="margin-bottom: 20px;">Ongoing orders</h3> -->
-                          <hr class="space s">
-                        <div class="row">
-                          <div class="col-md-12 pd-2" style="padding-left: 35px;">
-                            <!-- fa fa-xs fa-stack-exchange -->
-                            <h5><i class="fa fa-stack-exchange fa-lg" style="color:#aad1d6;"></i><br /><br /> <span id="label_new_orders" adr_trans="label_new_orders">New Orders</span></h5>
-                              <?php
+                     <div class=" advs-box boxed-inverse"> 
+                   
+                          <?php
                               $get_ongoing_query=mysqli_query($con,"SELECT count(*) as ongoing_no FROM orders where csr_id=$loggedin_id and status_id in(1,7) ");
-                              if($get_ongoing=mysqli_fetch_assoc($get_ongoing_query))
-                              {
+                              $get_ongoing=mysqli_fetch_assoc($get_ongoing_query);
+                              
                               ?>
-                            <p class="counter" data-speed="1000" data-to="  <?php echo $get_ongoing["ongoing_no"];?>" style="color:white;font-size:25px;font-weight:600;padding-top: 15px;padding-bottom: 3px;color:#000"> <?php echo $get_ongoing["ongoing_no"]; }?></p>
 
-                        <hr class="space xs" />
-               <a class="btn-sm" adr_trans="label_view" href="subcsrOrder_list1.php" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+                            <h5><i class="fa fa-stack-exchange fa-lg IconColor"></i><span id="label_new_orders" adr_trans="label_new_orders">New Orders</span></h5>
+                            
+                            <p class="counter" data-speed="1000" data-to=" <?php echo $get_ongoing["ongoing_no"];?>"> <?php echo $get_ongoing["ongoing_no"];?></p>
 
-
-                          </div>
-
-                        </div>
-                    </div>
+               <a class="ActionBtn-sm" adr_trans="label_view" href="subcsrOrder_list1.php">View </a>
+                                    
+               </div>
                 </div>
                 
                 <div class="col-md-3">
-                     <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
-                        <!-- <h3 style="margin-bottom: 20px;">Ongoing orders</h3> -->
-													<hr class="space s">
-												<div class="row">
-													<div class="col-md-12 pd-2" style="padding-left: 35px;">
-                            <h5><i class="fa fa-arrow-circle-right fa-lg" style="color:#aad1d6;"></i><br /><br /><span id="label_ongoing" adr_trans="label_ongoing">Ongoing</span></h5>
-                              <?php
+                     <div class=" advs-box boxed-inverse">
+ 
+                        <?php
                               $get_ongoing_query=mysqli_query($con,"select count(*) as ongoing_no from orders where status_id in(2,4,8) and csr_id=$subcsr");
-                              if($get_ongoing=mysqli_fetch_assoc($get_ongoing_query))
-                              {
+                              $get_ongoing=mysqli_fetch_assoc($get_ongoing_query);                            
                               ?>
-                            <p class="counter" data-speed="1000" data-to="  <?php echo $get_ongoing["ongoing_no"];?>" style="color:white;font-size:25px;font-weight:600;padding-top: 15px;padding-bottom: 3px;color:#000"> <?php echo $get_ongoing["ongoing_no"]; }?></p>
+											
+                            <h5><i class="fa fa-arrow-circle-right fa-lg IconColor"></i><span id="label_ongoing" adr_trans="label_ongoing">Ongoing</span></h5>
+                            
+                            <p class="counter" data-speed="1000" data-to="  <?php echo $get_ongoing["ongoing_no"];?>"> <?php echo $get_ongoing["ongoing_no"];?></p>
 
-                        
-                        <hr class="space xs" />
-               <a class="btn-sm" adr_trans="label_view" href="subcsrOrder_list1.php?o=1" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+               <a class="ActionBtn-sm" adr_trans="label_view" href="subcsrOrder_list1.php?o=1">View </a>
 
-
-													</div>
-
-												</div>
+													
                     </div>
                 </div>
                 <div class="col-md-3">
 
-                    <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
+                    <div class=" advs-box boxed-inverse">
 
-                          <hr class="space s">
-                        <div class="row">
-                          <div class="col-md-12 " style="padding-left: 35px;">
-                            <h5><i class="fa fa-check-circle fa-lg" style="color:#aad1d6;"></i><br /><br /><span adr_trans="label_completed">Completed</span></h5>
-                              <?php
+                          <?php
                               $get_order_query=mysqli_query($con,"select count(*) as completed_no from orders where status_id=3 and csr_id=$subcsr");
-                              if($get_order=mysqli_fetch_assoc($get_order_query))
-                              {
+                              $get_order=mysqli_fetch_assoc($get_order_query);
+                              
                               ?>
-                            <p class="counter" data-speed="1000" data-to=" <?php echo $get_order["completed_no"];?>" style="color:white;font-size:25px;font-weight:600;padding-top: 15px;padding-bottom: 3px;color:#000">
 
-       <?php echo $get_order["completed_no"]; }?>
+                            <h5><i class="fa fa-check-circle fa-lg IconColor"></i><span adr_trans="label_completed">Completed</span></h5>
+                           
+                            <p class="counter" data-speed="1000" data-to=" <?php echo $get_order["completed_no"];?>">
+
+       <?php echo $get_order["completed_no"];?>
      </p>
     
-     <hr class="space xs" />
-               <a class="btn-sm" adr_trans="label_view" href="subcsrOrder_list1.php?c=1" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+               <a class="ActionBtn-sm" adr_trans="label_view" href="subcsrOrder_list1.php?c=1">View </a>
 
-                          </div>
-                          <div class="col-md-6">
-
-                          </div>
-                        </div>
-                    </div>
-                </div>
+                          </div>                  
+                        </div>               
                 <div class="col-md-3">
-                   <div class=" advs-box boxed-inverse" style="background:#FFF!important;border-radius:10px;color:#000000;text-align:center;">
+                   <div class=" advs-box boxed-inverse">
 
-                          	<hr class="space s">
-												<div class="row">
-													<div class="col-md-12 pd-2" style="padding-left: 35px;">
-														<h5><i class="fa fa-sliders fa-lg " style="color:#aad1d6;"></i><br /><br /> <span>Revenue<br/> this Month</span></h5>
-                      <?php
+                       <?php
                             $total1=0;
-  													$get_invoiced_name_query=mysqli_query($con,"SELECT id,product_id FROM orders where month(session_from_datetime)=month(now()) and status_id =3 and csr_id=$loggedin_id");
-  													while(@$get_name=mysqli_fetch_assoc(@$get_invoiced_name_query))
-  													{
-  														$order_id=$get_name['id'];
-  														  $total_cost=mysqli_query($con,"SELECT sum(price*quantity) as totalPrice from order_products WHERE order_id='$order_id'");
-  																	while($get_product=mysqli_fetch_array($total_cost))
+                            $get_invoiced_name_query=mysqli_query($con,"SELECT id,product_id FROM orders where month(session_from_datetime)=month(now()) and status_id =3 and csr_id=$loggedin_id");
+                            while(@$get_name=mysqli_fetch_assoc(@$get_invoiced_name_query))
+                            {
+                              $order_id=$get_name['id'];
+                                $total_cost=mysqli_query($con,"SELECT sum(price*quantity) as totalPrice from order_products WHERE order_id='$order_id'");
+                                    while($get_product=mysqli_fetch_array($total_cost))
                                      {
 
-  													     	@$total1 +=@$get_product['totalPrice'];
-  													       }
+                                  @$total1 +=@$get_product['totalPrice'];
+                                   }
 
                             }
-  												?>
-											   <p style="color:white;font-size:25px;font-weight:600"><label class="" data-speed="1000" data-to="<?php echo $total1;?>" style="color:white;font-size:25px;font-weight:600;color:#000"><?php echo "$".$total1; ?></label></p>
+                          ?>
+                          	
+														<h5><i class="fa fa-sliders fa-lg IconColor"></i><span>Revenue this Month</span></h5>
+                     
+											   <span>$</span><p data-speed="1000" data-to="<?php echo $total1;?>"><?php echo $total1; ?></p>
  
-                        <hr class="space xs" />
-               <a class="btn-sm" adr_trans="label_view" href="payment_reports.php" style="background:#aad1d6!important;color:#000!important;font-weight:600;border-radius:5px;padding-left:40px;padding-right:40px;">View </a>
+                      
+               <a class="ActionBtn-sm" adr_trans="label_view" href="payment_reports.php">View </a>
 
-													</div>
-
-												</div>
+												
 
 
 
-		  </div><br />
+		  </div>
 		  </div>
 		</div>
-    <div class="">
-      <div class="col-md-6">
 
 	  <link href='../lib/main.css' rel='stylesheet' />
 				<style>
@@ -458,22 +432,26 @@ $.ajax({
   });
 
 </script>
-<br />
-<center>    <h5 adr_trans="label_upcoming_events">Upcoming Events</h5></center>
- <div id='calendar' style="border-radius:5px"></div>
-<hr class="space s">
-                <center>  <a href="CSR_Calendar.php" class="anima-button circle-button btn-sm btn adr-save" style="background:#aad1d6;color:#000;border-radius:8px;border:none;"><span adr_trans="label_view_calendar"><i class="fa fa-calendar" style="color: black;"></i>View Calender</span></a>  </center>
-    </div>
-
 
 <!-- calendar ends -->
 
 
-	  </div>
-     <div class="col-md-6">
- <br />
-              <center>    <h5 id="label_latest_delivered" adr_trans="label_latest_delivered">Latest Delivered Orders</h5></center>
-<div class=" advs-box boxed-inverse forMobile"  style="background:#FFF!important;border-radius:10px;opacity:0.8;height: 305px;">
+      <div class="col-md-6 TextCenter">
+   <hr class="space l">
+
+<h5  class="PageHeading-md TextCenter" adr_trans="label_upcoming_events">Upcoming Events</h5>
+ <div id='calendar' class="UpcomingCalender"></div>
+
+                <a href="CSR_Calendar.php" class="ActionBtn-md AnimationBtn"><span adr_trans="label_view_my_calender"><i class="fa fa-calendar"></i>View My Calender</span></a>
+    </div>
+
+
+
+
+     <div class="col-md-6 TextCenter">
+<hr class="space l">
+      <h5 class="PageHeading-md TextCenter" adr_trans="label_latest_delivered">Latest Delivered Orders</h5>
+<div class=" advs-box boxed-inverse forMobile LatestDelivered">
        <?php
 
           $get_latest_delivered_query=mysqli_query($con,"SELECT * FROM `img_upload` where finished_images=1 and order_id in(select id from orders where csr_id=$_SESSION[admin_loggedin_id]) order by rand() limit 4");
@@ -486,41 +464,29 @@ $.ajax({
 
             <div class="col-md-6">
               <a href="superOrder_detail.php?id=<?php echo $get_latest_delivered['order_id']; ?>">
-          	<img src="../finished_images/order_<?php echo $get_latest_delivered['order_id']; ?>/<?php if($get_latest_delivered['service_id']==1){ echo "standard_photos" ;}elseif($get_latest_delivered['service_id']==2){ echo "floor_plans";}elseif($get_latest_delivered['service_id']==3){echo "Drone_photos";}else{ echo "Hdr_photos";}?>/<?php echo $get_latest_delivered['img']?>" width="230" height="125" style="padding-bottom:10px;"/>
-			 <span style="position:absolute; text-align:center;z-index:2;color:#000;background: #FFF!important;
-color:#000!important;padding:3px;opacity:0.6;width:100%;float:left;left:0px;font-weight:bold;font-size:12px;"><?php echo $get_address['property_address']; ?></span>
+          	<img src="../finished_images/order_<?php echo $get_latest_delivered['order_id']; ?>/<?php if($get_latest_delivered['service_id']==1){ echo "standard_photos" ;}elseif($get_latest_delivered['service_id']==2){ echo "floor_plans";}elseif($get_latest_delivered['service_id']==3){echo "Drone_photos";}else{ echo "Hdr_photos";}?>/<?php echo $get_latest_delivered['img']?>"/>
+			 <span id="delivered_address"><?php echo $get_address['property_address']; ?></span>
             </a>
             </div>
       <?php		}
         ?>
 
       </div>
+
+      <a class="ActionBtn-md AnimationBtn" href="subcsrOrder_list1.php?c=1" adr_trans="label_view_order"><i class="fa fa-long-arrow-right"></i>View My Orders </a>
     </div>
 
-
-<p align="center">
- <a class="anima-button circle-button btn-sm adr-save" href="subcsrOrder_list1.php?c=1" style="margin-top:25px;background:#aad1d6;color:#000;border-radius:8px;border:none;" adr_trans="label_view_order"><i class="fa fa-long-arrow-right"></i>View My Orders </a>
- </p>
 </div>
 
 
-
-
-
-
-
-
-
-		  <div class="col-md-2" style="height:inherit;overflow:scroll;height:650px;overflow-x: hidden;">
+		  <div class="col-md-2 RightSideCard">
 
 <hr class="space s" />
-				<div id="photographers" style="display:block">
-
-				<h5 class="text-left" style="margin-left:20px;display:none" id="label_photographers" adr_trans="label_photographers">Photographers</h5>
+				<div id="photographers">
 				<p style="padding-left:3px;">
-								<form name="searchByLocation" method="post" action="" style="margin-left:5px;">
+								<form name="searchByLocation" method="post" action="">
 
-				 <input type="text" list="Suggestions" multiple="multiple" class="form-control form-value" name="Photographersearch" value="<?php echo @$_REQUEST['Photographersearch'];?>" style="display:inline;font-size:12px;"  placeholder="Search Photographer" />
+				 <input type="text" list="Suggestions" multiple="multiple" class="form-control form-value" name="Photographersearch" value="<?php echo @$_REQUEST['Photographersearch'];?>" placeholder="Search Photographer" />
 
 </form>
 
@@ -541,26 +507,26 @@ $knowMore="";
 				{
 
 				?>
-				<table cellspacing="0" border="0" align="center"  cellpadding="0" class="table table-responsive" style="background:#FFF;color:#000;font-weight:600;opacity:0.8;border-radius:10px;width:90%">
-				<tr style="float:left;"><td rowspan="0" align="center" style="padding:25px;border:none">
+				<table cellspacing="0" border="0" align="center"  cellpadding="0" class="table table-responsive cardTable">
+				<tr><td rowspan="0" align="center">
 
 				 <?php
                 if ($ph=mysqli_query($con,"select * from user_login where type_of_user='Photographer' and csr_id='$subcsr' $whereIs  order by id desc")) {
 
                   ?>
-<div ng-repeat="file in imagefinaldata" class="img_wrp" style="display: inline-block;position: relative;">
+<div ng-repeat="file in imagefinaldata" class="img_wrp">
 
-				<img   href="#aboutMe" class="lightbox link" data-lightbox-anima="show-scale" style="color:blue;text-decoration:underline" onclick="GetDetails(<?php echo $photo1['id']; ?>)" src="data:<?php echo $photo1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode($photo1['profile_pic']); ?>" width="120" height="100"  style="max-width: 70px;"/>
+				<img   href="#aboutMe" class="lightbox link" data-lightbox-anima="show-scale" onclick="GetDetails(<?php echo $photo1['id']; ?>)" src="data:<?php echo $photo1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode($photo1['profile_pic']); ?>"/>
 
 				   <?php
 
-				   $knowMore="<a href='#aboutMe'  class='lightbox link' data-lightbox-anima='show-scale' onclick='GetDetails(".$photo1['id'].")'><span adr_trans='label_view1'>View</span></a>";
+				   $knowMore="<a href='#aboutMe'  class='lightbox link' data-lightbox-anima='show-scale' onclick='GetDetails(".$photo1['id'].")'><span class='Text-md' adr_trans='label_view1'>View</span></a>";
                 }
                ?>
 
-				<p align="center" style="padding-top:3px;"><?php echo strtoupper($photo1['first_name']); ?>
-          <br />
-
+				<p class="CardLabel TextCenter"><?php echo strtoupper($photo1['first_name']); ?>
+        </p>
+       
 <?php
 $phidIs=$photo1['id'];
 //echo "select ROUND(avg(rating)) as avgRating,photographer_id from photographer_rating group by realtor_id having photographer_id='$phidIs'";
@@ -578,13 +544,12 @@ for($i=1;$i<=5;$i++)
 if($i<=$ratingIs)
 {
 ?>
-<i class="fa fa-star" style="padding:1px;font-size:10px;color:#aad1d6;"></i>
+<i class="fa fa-star"></i>
 <?php } else { ?>
-<i class="fa fa-star-o" style="padding:1px;color:#aad1d6;font-size:10px;"></i>
+<i class="fa fa-star-o"></i>
 <?php } } ?>
-
-        </p><br />
-<?php echo $knowMore; ?>
+<br />
+<span class="Text-md"><?php echo $knowMore; ?></span>
 				</td>
 				</tr>
 

@@ -40,14 +40,21 @@ th,td
 		padding:5px!important;
 		text-align:left!important;
 		}*/
-
-th
+.OuterSpace{
+color: #000;
+background: white;
+opacity:0.8;
+border-radius:5px;
+margin-top: 13px;
+padding: 10px 0px;
+}
+/*th
 {
   background: #aad1d6;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   padding-left: 3px !important;
-}
+}*/
 .infobar .infos p
 {
   margin-right: -10px;
@@ -68,15 +75,15 @@ th
 
 
 			</div>
-                <div class="col-md-10" style="color: #000;background: white;opacity:0.8;border-radius:5px;margin-top: 23px;">
+                <div class="col-md-10">
 
 						<!-- <div class="col-md-8" style="background:#CCEDFC;opacity:0.8;padding:10px;"> -->
 
 						<!-- <h5 class="text-center" id="label_list_products" adr_trans="label_list_products" style="color:#000">List of Products</h5> -->
 						<hr class="space xs">
-						<div id="" style="width:100%;">
-					<table align="center" class="table-striped" width="98%" style="margin-left: 15px;">
-                <thead>
+						<div class="OuterSpace">
+					<table align="center" class="table-striped NotificationTable">
+                <thead class="TableHeading">
                     <tr>
                         <th>#</th>
                         <th ><span adr_trans="label_product_name">Product name</span></th>
@@ -87,7 +94,7 @@ th
 
                 </thead>
 
-                <tbody>
+                <tbody class="TableContent">
 									<?php
 										//	---------------------------------  pagination starts ---------------------------------------
 										if(@$_GET["page"]<0)
