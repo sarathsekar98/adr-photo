@@ -139,8 +139,8 @@ $pht = $_SESSION['loggedin_id'];
        <!--  <a href="create_order.php?photographer_id=<?php //echo $pht;  ?>" class="anima-button circle-button btn-sm btn"><i class="fa fa-calendar"></i> Create New Order</a> -->
         <!-- </p> -->
 <ul class="nav nav-tabs">
-<li  class="active" id="click11"><a href="#tab1" class="ActionBtn-md" id="click1" adr_trans="label_ongoing_orders">On Going Orders</a></li>
-<li id="click22" ><a href="#tab2" class="ActionBtn-md" id="click2" adr_trans="label_completed_orders">Completed Orders</a></li>
+<li  class="active" id="click11"><a href="#tab1" id="click1" adr_trans="label_ongoing_orders">On Going Orders</a></li>
+<li id="click22" ><a href="#tab2" id="click2" adr_trans="label_completed_orders">Completed Orders</a></li>
 </ul>
 
 <div class="panel active" id="tab1">
@@ -158,34 +158,34 @@ $pht = $_SESSION['loggedin_id'];
 <div class="TableScroll ListTable">
       <table class="" aria-busy="false" width="99%">
           <thead class="TableHeading">
-              <tr><th  class="text-left" style="" id="label_s.no"  ><span adr_trans="label_order_no">
+              <tr><th  class="text-left"  id="label_s.no"  ><span adr_trans="label_order_no">
                           Order#
 
                  </span></th>
-								 <th  class="text-left" style="" id="label_homeseller" ><span adr_trans="label_created_by">Created By</span> /<span adr_trans="label_realtor">
+								 <th  class="text-left"  id="label_homeseller" ><span adr_trans="label_created_by">Created By</span> /<span adr_trans="label_realtor">
                           Realtor
 
                   </span></th>
-								 <th  class="text-left" style="" id="label_homeseller" ><span adr_trans="label_homeseller">
+								 <th  class="text-left"  id="label_homeseller" ><span adr_trans="label_homeseller">
                           Homeseller Name
 
                   </span></th>
-                  <!-- <th  class="text-left" style="">
+                  <!-- <th  class="text-left" >
                           Photographer
                   </th> -->
 
-								<th  class="text-left" style="" id="label_from_date_time" ><span adr_trans="label_from_date_time">
+								<th  class="text-left"  id="label_from_date_time" ><span adr_trans="label_from_date_time">
                           From date & time
                  </span></th>
-                 <th  class="text-left" style="" ><span adr_trans="label_due_date">
+                 <th  class="text-left"  ><span adr_trans="label_due_date">
                           Due date
                  </span></th>
-                 <!-- <th  class="text-left" style="" id="label_created_by" adr_trans="label_created_by">
+                 <!-- <th  class="text-left"  id="label_created_by" adr_trans="label_created_by">
                            Created By
                </th> -->
-							 <th  class="text-left" style="" id="label_status" ><span adr_trans="label_status">
+							 <th  class="text-left"  id="label_status" ><span adr_trans="label_status">
                            Status
-                 </span></th><th  class="text-center" style="" id="label_details" ><span adr_trans="label_details">
+                 </span></th><th  class="text-center"  id="label_details" ><span adr_trans="label_details">
                            Details
 
                  </span></th>
@@ -256,7 +256,7 @@ $pht = $_SESSION['loggedin_id'];
           $cnt++;
           ?>
           <tr class="listPageTR TableContent">
-          <td class="text-left" style=""><?php echo $get_order['id']; ?></td>
+          <td class="text-left" ><?php echo $get_order['id']; ?></td>
 					<?php
 
 					$created_by_id=$get_order['created_by_id'];
@@ -277,7 +277,7 @@ $pht = $_SESSION['loggedin_id'];
 					$get_name=mysqli_fetch_assoc($get_realtor_name_query);
 					$realtor_name=@$get_name["first_name"]." ".@$get_name["last_name"];
 					?>
-					<td class="text-left" style=""><?php echo $realtor_name ?></td>
+					<td class="text-left" ><?php echo $realtor_name ?></td>
           <td class="text-left" style="word-break:break-all;"><?php
 
        $home_seller_id=$get_order['home_seller_id'];
@@ -295,12 +295,12 @@ $pht = $_SESSION['loggedin_id'];
           $photographer_Name=$get_name["first_name"]." ".$get_name["last_name"];
           ?>
 
-            <td class="text-left" style=""><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
-          <td class="text-left" style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
+            <td class="text-left" ><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
+          <td class="text-left" ><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
-          <td class="text-left" style=""><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";} elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}  elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";} elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Waiting for Customer</span>";} elseif($status==8){echo "<span class='Status-Reopen' adr_trans=''>Reopen</span>";}?></td>
-          <td class="text-center" style="padding-left: 5px !important"><a target="" href="photographerorder_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
-          <i class="fa fa-chevron-circle-right fa-lg" style="margin: 10px;"></i></a></td>
+          <td class="text-left" ><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";} elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}  elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";} elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Waiting for Customer</span>";} elseif($status==8){echo "<span class='Status-Reopen' adr_trans=''>Reopen</span>";}?></td>
+          <td class="text-center"><a target="" href="photographerorder_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
+          <i class="fa fa-chevron-circle-right fa-lg IconWithTitle"></i></a></td>
 
  
           </tr>
@@ -350,34 +350,34 @@ $pht = $_SESSION['loggedin_id'];
 <div class="TableScroll">
       <table class="" aria-busy="false" width="99%">
           <thead class="TableHeading">
-						<tr><th  class="text-left" style="" id="label_s.no"  ><span adr_trans="label_order_no">
+						<tr><th  class="text-left"  id="label_s.no"  ><span adr_trans="label_order_no">
 												Order#
 
 							 </span></th>
-							 <th  class="text-left" style="" id="label_homeseller" ><span adr_trans="label_created_by" style="padding:0px !important">Created By</span> / <span adr_trans="label_realtor" style="padding:0px !important">
+							 <th  class="text-left"  id="label_homeseller" ><span adr_trans="label_created_by">Created By</span> / <span adr_trans="label_realtor">
 												Realtor
 
 								</span></th>
-							 <th  class="text-left" style="" id="label_homeseller" ><span adr_trans="label_homeseller">
+							 <th  class="text-left"  id="label_homeseller" ><span adr_trans="label_homeseller">
 												Homeseller Name
 
 								</span></th>
-								<!-- <th  class="text-left" style="">
+								<!-- <th  class="text-left" >
 												Photographer
 								</th> -->
 
-							<th  class="text-left" style="" id="label_from_date_time" ><span adr_trans="label_from_date_time">
+							<th  class="text-left"  id="label_from_date_time" ><span adr_trans="label_from_date_time">
 												From date & time
 							 </span></th>
-							 <th  class="text-left" style="" ><span adr_trans="label_due_date">
+							 <th  class="text-left"  ><span adr_trans="label_due_date">
 												Due date
 							 </span></th>
-							 <!-- <th  class="text-left" style="" id="label_created_by" adr_trans="label_created_by">
+							 <!-- <th  class="text-left"  id="label_created_by" adr_trans="label_created_by">
 												 Created By
 						 </th> -->
-						 <th  class="text-left" style="" id="label_status" ><span adr_trans="label_status">
+						 <th  class="text-left"  id="label_status" ><span adr_trans="label_status">
 												 Status
-							 </span></th><th  class="text-center" style="" id="label_details" style="padding-right: 10px;"><span adr_trans="label_details">
+							 </span></th><th  class="text-center"  id="label_details"><span adr_trans="label_details">
 												 Details
 
 							 </span></th>
@@ -447,7 +447,7 @@ $pht = $_SESSION['loggedin_id'];
           $cnt++;
           ?>
           <tr class="listPageTR TableContent">
-          <td class="text-left" style=""><?php echo $get_order['id']; ?></td>
+          <td class="text-left" ><?php echo $get_order['id']; ?></td>
 					<?php
 					$created_by_id=$get_order['created_by_id'];
 						   $pcAdminId=$get_order['pc_admin_id'];
@@ -467,7 +467,7 @@ $pht = $_SESSION['loggedin_id'];
 					$get_name=mysqli_fetch_assoc($get_realtor_name_query);
 					$realtor_name=$get_name["first_name"]." ".$get_name["last_name"];
 					?>
-					<td class="text-left" style=""><?php echo $realtor_name ?></td>
+					<td class="text-left" ><?php echo $realtor_name ?></td>
           <td class="text-left" style="word-break:break-all;"><?php
 
        $home_seller_id=$get_order['home_seller_id'];
@@ -485,15 +485,13 @@ $pht = $_SESSION['loggedin_id'];
           $photographer_Name=$get_name["first_name"]." ".$get_name["last_name"];
           ?>
 
-          <td class="text-left" style=""><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
-          <td class="text-left" style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
+          <td class="text-left" ><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
+          <td class="text-left" ><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
-					<td class="text-left" style=""><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";}?></td>
+					<td class="text-left" ><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";}?></td>
 
-          <td class="text-center" style=""><a target="" href="photographerorder_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
-          <i class="fa fa-chevron-circle-right fa-lg" style="margin: 10px;"></i></a></td><td class="text-left" style="font-size: 13px;">
-
-
+          <td class="text-center" ><a target="" href="photographerorder_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
+          <i class="fa fa-chevron-circle-right fa-lg IconWithTitle"></i></a></td>
           </tr>
           <tr><td class="listPageTRGap">&nbsp;</td></tr>
 

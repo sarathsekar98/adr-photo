@@ -266,6 +266,7 @@ opacity:1!important;
 	</style>
 
     <style type="text/css">
+
         
 
 .PageHeading-sm
@@ -1104,8 +1105,10 @@ border-bottom-color: #fff;
 }
 /*.cardTable > tbody > tr 
 {
+
     /*float: left;*/
-}*/
+/*}*/
+
 .cardTable > tbody > tr > td
 {
     padding: 15px;
@@ -1211,6 +1214,7 @@ i.fa-star-o,i.fa-star
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
 /*Product BreadCrum code start here*/
 .ProductBreadCrumb
 {
@@ -1233,10 +1237,15 @@ i.fa-star-o,i.fa-star
 {
     background: #aad1d6;
 }
+.nav-tabs
+{
+
+  font-family: verdana;
+}
+
 
 
 </style>
-
 <script>
 var calid;
 function calDetails(calid)

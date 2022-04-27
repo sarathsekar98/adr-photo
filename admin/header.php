@@ -13,38 +13,38 @@ if($type=="FotopiaAdmin")
 }
 if($type=="PCAdmin")
 {
-		$id=$_SESSION['admin_loggedin_id'];
-		$pc_profile=mysqli_query($con,"select * from photo_company_profile where pc_admin_id='$id'");
-		$pc_profile1=mysqli_fetch_array($pc_profile);
-		$aboutPC=$pc_profile1['about_us'];
+        $id=$_SESSION['admin_loggedin_id'];
+        $pc_profile=mysqli_query($con,"select * from photo_company_profile where pc_admin_id='$id'");
+        $pc_profile1=mysqli_fetch_array($pc_profile);
+        $aboutPC=$pc_profile1['about_us'];
         $organization_number=$pc_profile1['organization_number'];
 
-		$products=mysqli_query($con,"select * from products where pc_admin_id='$id'");
-		$productsFound=mysqli_num_rows($products);
+        $products=mysqli_query($con,"select * from products where pc_admin_id='$id'");
+        $productsFound=mysqli_num_rows($products);
 
-		$DiscountPriceForRealtor=mysqli_query($con,"select * from realtor_product_cost where pc_admin_id='$id'");
-		$DiscountFound=mysqli_num_rows($DiscountPriceForRealtor);
+        $DiscountPriceForRealtor=mysqli_query($con,"select * from realtor_product_cost where pc_admin_id='$id'");
+        $DiscountFound=mysqli_num_rows($DiscountPriceForRealtor);
 
-	$EarningsForPhotographer=mysqli_query($con,"select * from photographer_product_cost where pc_admin_id='$id'");
-	$EarningsFound=mysqli_num_rows($EarningsForPhotographer);
+    $EarningsForPhotographer=mysqli_query($con,"select * from photographer_product_cost where pc_admin_id='$id'");
+    $EarningsFound=mysqli_num_rows($EarningsForPhotographer);
 
-	$getCSR=mysqli_query($con,"select * from admin_users where type_of_user='CSR' and pc_admin_id='$id'");
-	$CSRFound=mysqli_num_rows($getCSR);
+    $getCSR=mysqli_query($con,"select * from admin_users where type_of_user='CSR' and pc_admin_id='$id'");
+    $CSRFound=mysqli_num_rows($getCSR);
 
  $getPhotographer=mysqli_query($con,"select * from user_login where type_of_user='Photographer' and pc_admin_id='$id'");
-	$PhotographerFound=mysqli_num_rows($getPhotographer);
+    $PhotographerFound=mysqli_num_rows($getPhotographer);
 
-	$getEditor=mysqli_query($con,"select * from editor where pc_admin_id='$id'");
-	$editorFound=mysqli_num_rows($getEditor);
+    $getEditor=mysqli_query($con,"select * from editor where pc_admin_id='$id'");
+    $editorFound=mysqli_num_rows($getEditor);
 
 
-		if($organization_number=='' && !@$_REQUEST['first']) { header("location:edit_company_profile.php?first=1"); exit; }
-		if($productsFound==0 && !@$_REQUEST['first']) { header("location:products.php?first=1"); exit; }
-		/*if($DiscountFound==0 && !@$_REQUEST['first']) { header("location:RealtorProducts.php?first=1"); exit; }
-		if($CSRFound==0 && !@$_REQUEST['first']) { header("location:create_csr.php?first=1"); exit; }
-	if($PhotographerFound==0 && !@$_REQUEST['first']) { header("location:create_photographer.php?first=1"); exit; }
-	if($EarningsFound==0 && !@$_REQUEST['first']) { header("location:PhotographerProducts.php?first=1"); exit; }
-	if($editorFound==0 && !@$_REQUEST['first']) { header("location:create_editor.php?first=1"); exit; }*/
+        if($organization_number=='' && !@$_REQUEST['first']) { header("location:edit_company_profile.php?first=1"); exit; }
+        if($productsFound==0 && !@$_REQUEST['first']) { header("location:products.php?first=1"); exit; }
+        /*if($DiscountFound==0 && !@$_REQUEST['first']) { header("location:RealtorProducts.php?first=1"); exit; }
+        if($CSRFound==0 && !@$_REQUEST['first']) { header("location:create_csr.php?first=1"); exit; }
+    if($PhotographerFound==0 && !@$_REQUEST['first']) { header("location:create_photographer.php?first=1"); exit; }
+    if($EarningsFound==0 && !@$_REQUEST['first']) { header("location:PhotographerProducts.php?first=1"); exit; }
+    if($editorFound==0 && !@$_REQUEST['first']) { header("location:create_editor.php?first=1"); exit; }*/
 
 
 
@@ -77,17 +77,17 @@ $page="subcsr_dashboard.php";
     <script src="../scripts/jquery.min.js"></script>
 
     <link rel="stylesheet" href="../scripts/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="../scripts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../scripts/font-awesome/css/font-awesome.css">
     <script src="../scripts/script.js"></script>
     <link rel="stylesheet" href="../style.css">
-	<link rel="stylesheet" href="../scripts/flexslider/flexslider.css">
+    <link rel="stylesheet" href="../scripts/flexslider/flexslider.css">
     <link rel="stylesheet" href="../css/content-box.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/image-box.css">
     <link rel="stylesheet" href="../css/animations.css">
      <link rel="icon" href="../images/favicon.png">
-	  <link rel="stylesheet" href="../scripts/magnific-popup.css">
-	 <link rel="stylesheet" href="../scripts/jquery.flipster.min.css">
+      <link rel="stylesheet" href="../scripts/magnific-popup.css">
+     <link rel="stylesheet" href="../scripts/jquery.flipster.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
 
@@ -139,11 +139,11 @@ $page="subcsr_dashboard.php";
 
 } 
 
-	.row
-	{
-	width:100%;
-	}
-	.fc-today-button,.fc-button
+    .row
+    {
+    width:100%;
+    }
+    .fc-today-button,.fc-button
 {
 border-radius:25px!important;
 }
@@ -155,7 +155,9 @@ opacity:1!important;
 
 </style>
 
-   <style type="text/css">
+
+<style type="text/css">
+
         
 
 .PageHeading-sm
@@ -994,8 +996,10 @@ border-bottom-color: #fff;
 }
 /*.cardTable > tbody > tr 
 {
+
     /*float: left;*/
-}*/
+/*}*/
+
 .cardTable > tbody > tr > td
 {
     padding: 15px;
@@ -1101,6 +1105,7 @@ i.fa-star-o,i.fa-star
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
 /*Product BreadCrum code start here*/
 .ProductBreadCrumb
 {
@@ -1123,12 +1128,18 @@ i.fa-star-o,i.fa-star
 {
     background: #aad1d6;
 }
+.nav-tabs
+{
+
+  font-family: verdana;
+}
+
 
 
 </style>
 
-	<script>
-	function getClippedRegion(image, x, y, width, height) {
+    <script>
+    function getClippedRegion(image, x, y, width, height) {
    var canvas = document.createElement("canvas"),
       ctx = canvas.getContext("2d");
 
@@ -1153,23 +1164,23 @@ function validate_email(val)
      if(this.responseText == "true")
      {
         var langIs='<?php echo $_SESSION['Selected_Language_Session']; ?>';
-		var alertmsg='';
-		if(langIs=='no')
-		{
-	$("#Email_exist_error").html("E-posten er allerede i bruk, vennligst velg en annen e-post og fortsett");
-		}
-		else
-		{
-		$("#Email_exist_error").html("Email already in use, please choose different email and continue");
-		}
-	   $(".error_box").show();
-	   $("#email").val("");
-	    $("#email").focus();
+        var alertmsg='';
+        if(langIs=='no')
+        {
+    $("#Email_exist_error").html("E-posten er allerede i bruk, vennligst velg en annen e-post og fortsett");
+        }
+        else
+        {
+        $("#Email_exist_error").html("Email already in use, please choose different email and continue");
+        }
+       $(".error_box").show();
+       $("#email").val("");
+        $("#email").focus();
      }
      else
      {
       $("#Email_exist_error").html();
-	  $(".error_box").hide();
+      $(".error_box").hide();
      }
     }
   };
@@ -1212,8 +1223,8 @@ $.ajax({
 
 
 $("td[adr_trans],div[adr_trans],p[adr_trans],span[adr_trans],adr_trans,button[adr_trans],a[adr_trans],h3[adr_trans],h4[adr_trans],h5[adr_trans]").each(function(){
-		// alert($(this).attr("id"));
-		// var idIs=$(this).attr("id");
+        // alert($(this).attr("id"));
+        // var idIs=$(this).attr("id");
 
    // $("#"+idIs).html(data[idIs]);
 
@@ -1289,7 +1300,7 @@ var langval="";
           <span style="display:inline;font-size:13px;color:#000;margin-left:-4px"><span style="color:#aad1d6;font-size:18px;padding-left:13px">f</span>otopia</span></a>
                   </div>
 
-				   <div class="col-md-3 hidden-md hidden-lg hidden-xl" style="margin-left:20px;">
+                   <div class="col-md-3 hidden-md hidden-lg hidden-xl" style="margin-left:20px;">
                       <a class="navbar-brand" href="<?php echo $page; ?>"><img src="../images/Fotopia-New-Logo1.png" alt="logo" style="margin-top:-4px;width:40px;height:30px;">
           <span style="display:inline;font-size:13px;color:#000;margin-left:-4px"><span style="color:#aad1d6;font-size:18px;padding-left:13px">f</span>otopia</span></a>
                   </div>
@@ -1320,12 +1331,12 @@ $loggedin_name="";
 
 if(isset($_SESSION['admin_loggedin_id']))
 {
-	$loggedINID=$_SESSION['admin_loggedin_id'];
-		$loggedin_name=$_SESSION['admin_loggedin_name'];
+    $loggedINID=$_SESSION['admin_loggedin_id'];
+        $loggedin_name=$_SESSION['admin_loggedin_name'];
 }
-		if(isset($_SESSION['admin_loggedin_type']) && $_SESSION['admin_loggedin_type']=='PCAdmin')
-		{
-		$detailsOdUser=mysqli_query($con,"select * from photo_company_profile where pc_admin_id='$loggedINID'");
+        if(isset($_SESSION['admin_loggedin_type']) && $_SESSION['admin_loggedin_type']=='PCAdmin')
+        {
+        $detailsOdUser=mysqli_query($con,"select * from photo_company_profile where pc_admin_id='$loggedINID'");
 $detailsOdUser1=mysqli_fetch_array($detailsOdUser);
 
 $pc_admin_profile=mysqli_query($con,"select * from admin_users where id='$loggedINID'");
@@ -1340,7 +1351,7 @@ $pc_admin_profile=mysqli_query($con,"select * from admin_users where id='$logged
 $pc_admin_profile1=mysqli_fetch_array($pc_admin_profile);
 }
 
-						?>
+                        ?>
 
 <?php
        if(isset($_SESSION['admin_loggedin_email']))
@@ -1355,15 +1366,15 @@ $pc_admin_profile1=mysqli_fetch_array($pc_admin_profile);
                            <ul class="dropdown-menu">
         <li><a href="change_email_password.php" adr_trans="label_my_account"><i class="fa fa-key" style="padding-right:10px;"></i>My Account</a></li>
   <li><a href="cms.php?id=1"><i class="fa fa-camera-retro" style="padding-right:10px;"></i>About Fotopia</a></li>
-				  <li><a href="cms.php?id=3"><i class="fa fa-question" style="padding-right:10px;"></i>FAQ</a></li>
-				  <li><a href="cms.php?id=4"><i class="fa fa-envelope-o" style="padding-right:10px;"></i>Help & Support</a></li>
-				  <li><a href="cms.php?id=2"><i class="fa fa-check-square-o" style="padding-right:10px;"></i>Terms & Conditions</a></li>
+                  <li><a href="cms.php?id=3"><i class="fa fa-question" style="padding-right:10px;"></i>FAQ</a></li>
+                  <li><a href="cms.php?id=4"><i class="fa fa-envelope-o" style="padding-right:10px;"></i>Help & Support</a></li>
+                  <li><a href="cms.php?id=2"><i class="fa fa-check-square-o" style="padding-right:10px;"></i>Terms & Conditions</a></li>
           <li><a href="logout.php" adr_trans="label_logout"><i class="fa fa-sign-out" style="padding-right:10px;"></i>Logout</a></li>
                                        </ul>
                                   </li>
 
 
-		<?php
+        <?php
   $countIs=0;
 
 $loggedin_id=$_SESSION['admin_loggedin_id'];
@@ -1464,15 +1475,15 @@ else { ?>
 <?php } else { ?>
 
 
-				<img src="data:<?php echo @$pc_admin_profile1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode(@$pc_admin_profile1['profile_pic']); ?>" width="50" height="50" style="border-radius:60px;margin-left:5px;margin-top:10px; display:inline-block" />
+                <img src="data:<?php echo @$pc_admin_profile1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode(@$pc_admin_profile1['profile_pic']); ?>" width="50" height="50" style="border-radius:60px;margin-left:5px;margin-top:10px; display:inline-block" />
 
 <?php } ?>
 
 
 
     <?php //echo $_SESSION['Selected_Language_Session']; ?>
-	<select class="selectpicker sss" data-width="fit" onChange="changeLanguage(this.value)">
-			 <option  data-content='<span class="flag-icon flag-icon-us"></span> US' value='en' <?php if(isset($_SESSION['Selected_Language_Session']) && $_SESSION['Selected_Language_Session']=='en') { echo "selected"; } ?>>English</option>
+    <select class="selectpicker sss" data-width="fit" onChange="changeLanguage(this.value)">
+             <option  data-content='<span class="flag-icon flag-icon-us"></span> US' value='en' <?php if(isset($_SESSION['Selected_Language_Session']) && $_SESSION['Selected_Language_Session']=='en') { echo "selected"; } ?>>English</option>
     <option data-content='<span class="flag-icon flag-icon-no"></span> NO' value='no' <?php if(isset($_SESSION['Selected_Language_Session']) && $_SESSION['Selected_Language_Session']=='no') { echo "selected"; } ?>>Norwegian</option>
 </select>
 <input type="hidden" name="Selected_Language" id="Selected_Language" value="en" />
@@ -1488,7 +1499,7 @@ $(function(){
 </script>
 
 
-	</ul>
+    </ul>
 
 
 <?php } ?>
@@ -1528,11 +1539,11 @@ $(function(){
             <div class="navbar navbar-main over">
 
               <div class="row">
-			  <div class="col-sm-12">
+              <div class="col-sm-12">
 <div class="col-sm-2">
 
 
-				   <div class="col-md-3 hidden-md hidden-lg hidden-xl" style="margin-left:20px;">
+                   <div class="col-md-3 hidden-md hidden-lg hidden-xl" style="margin-left:20px;">
                       <a class="navbar-brand" href="<?php echo $page; ?>"><img src="../images/Fotopia-New-Logo1.png" alt="logo" style="margin-top:-4px;width:40px;height:30px;">
           <span style="display:inline;font-size:13px;color:#000;margin-left:-4px"><span style="color:#aad1d6;font-size:18px;padding-left:13px">f</span>otopia</span></a>
                   </div>
@@ -1560,16 +1571,16 @@ $(function(){
                            <ul class="dropdown-menu">
         <li><a href="change_email_password.php"><i class="fa fa-key" style="padding-right:0px;"></i>My Account</a></li>
   <li><a href="cms.php?id=1"><i class="fa fa-camera-retro" style="padding-right:10px;"></i>About Fotopia</a></li>
-				  <li><a href="cms.php?id=3"><i class="fa fa-question" style="padding-right:10px;"></i>FAQ</a></li>
-				  <li><a href="cms.php?id=4"><i class="fa fa-envelope-o" style="padding-right:10px;"></i>Help & Support</a></li>
-				  <li><a href="cms.php?id=2"><i class="fa fa-check-square-o" style="padding-right:10px;"></i>Terms & Conditions</a></li>
+                  <li><a href="cms.php?id=3"><i class="fa fa-question" style="padding-right:10px;"></i>FAQ</a></li>
+                  <li><a href="cms.php?id=4"><i class="fa fa-envelope-o" style="padding-right:10px;"></i>Help & Support</a></li>
+                  <li><a href="cms.php?id=2"><i class="fa fa-check-square-o" style="padding-right:10px;"></i>Terms & Conditions</a></li>
           <li><a href="logout.php"><i class="fa fa-sign-out" style="padding-right:0px;"></i>Logout</a></li>
                                        </ul>
                                </li>
 
-							   	</ul>
+                                </ul>
 
-								<?php
+                                <?php
 
   $countIs=0;
 
@@ -1618,16 +1629,16 @@ else { ?>
 <?php } else { ?>
 
 
-			<img src="data:<?php echo @$detailsOdUser1['logo_image_type']; ?>;base64,<?php echo base64_encode(@$detailsOdUser1['logo']); ?>" width="50" height="50" style="border-radius:60px;margin-left:-5px;margin-top:0px; display:inline-block" />
+            <img src="data:<?php echo @$detailsOdUser1['logo_image_type']; ?>;base64,<?php echo base64_encode(@$detailsOdUser1['logo']); ?>" width="50" height="50" style="border-radius:60px;margin-left:-5px;margin-top:0px; display:inline-block" />
 <?php } ?>
 
 
 
 
-		   <a href="notification.php" >
+           <a href="notification.php" >
 <i class="fa fa-bell fa-1x" style="color:#FFF;margin-right:5px;margin-top:15px;"  aria-hidden="true"></i>
-</a>		   <select class="selectpicker sss" data-width="fit" onChange="changeLanguage(this.value)">
-			 <option  data-content='<span class="flag-icon flag-icon-us"></span> US' value='en' <?php if(isset($_SESSION['Selected_Language_Session']) && $_SESSION['Selected_Language_Session']=='en') { echo "selected"; } ?>>English</option>
+</a>           <select class="selectpicker sss" data-width="fit" onChange="changeLanguage(this.value)">
+             <option  data-content='<span class="flag-icon flag-icon-us"></span> US' value='en' <?php if(isset($_SESSION['Selected_Language_Session']) && $_SESSION['Selected_Language_Session']=='en') { echo "selected"; } ?>>English</option>
     <option data-content='<span class="flag-icon flag-icon-no"></span> NO' value='no' <?php if(isset($_SESSION['Selected_Language_Session']) && $_SESSION['Selected_Language_Session']=='no') { echo "selected"; } ?>>Norwegian</option>
 </select>
 <input type="hidden" name="Selected_Language" id="Selected_Language" value="en" />
@@ -1705,12 +1716,12 @@ if(isset($_SESSION['admin_loggedin_type']) && $_SESSION['admin_loggedin_type']==
 
                                        </ul>
                                   </li>
-								</ul>
+                                </ul>
 
 </div>
 
 
-	</div>
+    </div>
 
 
 
