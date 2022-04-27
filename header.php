@@ -671,6 +671,13 @@ text-align: center;
 
 font-weight: bold;
 background: orange;
+color: #000; 
+display: block; 
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: left;
+
 
 }
 
@@ -1175,6 +1182,14 @@ i.fa-star-o,i.fa-star
 .W-30
 {
     width: 30%;
+}
+.Float-left
+{
+    float: left;
+}
+.Float-right
+{
+    float: right;
 }
 .Text-md
 {

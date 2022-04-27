@@ -169,8 +169,8 @@ min-width:100px!important;
 }  
  th,th > span
 {
-  background: #aad1d6;
-  padding-top: 10px;
+  /*background: #aad1d6;*/
+  padding-top: 8px;
   padding-bottom: 10px;
   padding-left: 3px !important;
 }
@@ -179,17 +179,17 @@ min-width:100px!important;
 {
   background-color: #fff;
 }
-th:last-child > span
+/*th:last-child > span
 {
   vertical-align: text-top;
-}
+}*/
 
      </style>
      <script>
 
        function mouseover(d)
        {
-
+           // alert('asdadsasds');
          $('#click'+d).toggleClass("hide");
 
        }
@@ -237,10 +237,10 @@ th:last-child > span
 
 
 
-  <div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden ">
+  <div class="TableScroll">
 
 <form name="filterStatus" method="post" action="">
-<select name="filterByStatus" style="width:200px;margin-bottom:5px;padding: 5px;height: 30px;" class="form-control" onchange="this.form.submit();">
+<select name="filterByStatus"  class="form-control W-30" onchange="this.form.submit();">
 <option value="0">All</option>
 <option value="1" <?php if(@$_REQUEST['filterByStatus']==1||$_SESSION['status']==1) { echo "selected"; } ?>>Created</option>
 <option value="2" <?php if(@$_REQUEST['filterByStatus']==2||$_SESSION['status']==2) { echo "selected"; } ?>>Work in progress</option>
@@ -251,8 +251,9 @@ th:last-child > span
 <option value="8" <?php if(@$_REQUEST['filterByStatus']==8||$_SESSION['status']==8) { echo "selected"; } ?>>Reopen</option>
 </select>
 </form>
-      <table class="table-stripped table-responsive" style="width:100%;" id="ListingTable">
-          <thead>
+<hr class="space xs">
+      <table class="table-stripped table-responsive ListTable W-100"  id="ListingTable">
+          <thead class="TableHeading">
           <tr><th class="text-left"><span class="text" id="label_s.no" adr_trans="label_order_no">
 
                           Order#
@@ -418,7 +419,7 @@ th:last-child > span
           {
           $cnt++;
           ?>
-          <tr class="listPageTR">
+          <tr class="listPageTR TableContent">
           <td style=""><?php echo @$get_order['id']; ?></td>
 
           <td style="word-break:break-all;"><?php
@@ -436,7 +437,7 @@ th:last-child > span
       $pc_Name=@$get_name["organization_name"];
      }
        ?>
-      <td style=""><?php echo @$pc_Name; ?></td>
+      <td><?php echo @$pc_Name; ?></td>
 
           <?php
         
@@ -450,9 +451,7 @@ th:last-child > span
          }
 
           ?>
-          <td style="word-break:break-all;"><?php if($photographer_id!=0){echo $photographer_Name;} else{echo 'Not yet selected';} ?>&nbsp;<?php if(@$online==1) { ?>
-      <i class="fa fa-comment" style="color:#006600" data-touserid="<?php echo $photographer_id ?>" data-tousername="<?php echo $photographer_Name ?>"></i>
-      <?php } ?></td>
+          <td style="word-break:break-all;"><?php if($photographer_id!=0){echo $photographer_Name;} else{echo 'Not yet selected';} ?></td>
       
         <td style=""><?php echo $get_order['property_address'];?></td>
 
@@ -461,7 +460,7 @@ th:last-child > span
 		  echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); } else { echo "Not booked yet."; } ?></td>
           <td style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
-                          <td style=""><a onclick="mouseover(<?php echo $get_order['id']?>)"><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' style='color: #000; font-weight: bold;display: block; background: #86C4F0;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip' style='color: #000; font-weight: bold;display: block; background: #FF8400; padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Rework</span>";}elseif($status==8){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;' id='' adr_trans=''>Reopen</span>";}elseif($status==6){echo "<span adr_trans='label_declined' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' style='color: #000; font-weight: bold;display: block; background: orange;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Working with Customer</span>";}elseif($status==5){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Cancelled</span>";}?><?php if($status==5||$status==6||$status==7){ echo "  <i class='fa fa-question-circle' style='position: relative;top: -28px;right: -75px;color: black;' aria-hidden='true' title='Click to view the reason'></i>";}?></a></td>
+                          <td style=""><a onclick="mouseover(<?php echo $get_order['id']?>)"><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed' >completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";}elseif($status==8){echo "<span adr_trans='' class='Status-Reopen'>Reopen</span>";}elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Working with Customer</span>";}elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}?><?php if($status==5||$status==6||$status==7){ echo "  <i class='fa fa-question-circle' style='position:relative;top:-28px;left:80px;color:black;'></i>";}?></a></td>
                                       <td style="" class="text-center"><a target="" href="order_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
           <i class="fa fa-pencil fa-lg" style="color:#000"></i></a></td>
 
@@ -472,8 +471,7 @@ th:last-child > span
           {
             ?>
             <tr>
-              <td class="text-left hide" id="click<?php echo $get_order['id']?>" colspan="9" style="background-color: white;
-color: black;" ><span style="color:red;font-size:13px;">Comment:</span><?php echo @$get_order['comment'];?> </td>
+              <td class="Text-sm hide" id="click<?php echo $get_order['id']?>" colspan="9"><span class="Text-md">Comment:</span><?php echo @$get_order['comment'];?> </td>
             </tr>
         <?php  }
       ?>
@@ -544,16 +542,17 @@ color: black;" ><span style="color:red;font-size:13px;">Comment:</span><?php ech
 <div class="panel" id="tab2">
 
 <div class="col-md-12" style="float:right">
-<form name="searchOrder" method="post" action=""> <a href="order_list.php?c=1" class="btn btn-default btn-sm" id="view_button" style="display:inline-table;float:left;margin-left:20px;border-radius:20px;">Reset Search</a><input type="text" name="searchAddress" class="form-control" value="<?php echo @$_REQUEST['searchAddress'];?>" style="width:330px;float:right;margin-bottom:20px;height: 30px;" placeholder="Search Address / Order # / PC / Homeseller " />
+<form name="searchOrder" method="post" action=""> <a href="order_list.php?c=1" class="ActionBtn-sm" id="view_button" style="margin-left:20px;">Reset Search</a><input type="text" name="searchAddress" class="form-control W-30 Float-right" style="display:inline" value="<?php echo @$_REQUEST['searchAddress'];?>"placeholder="Search Address / Order # / PC / Homeseller " />
 </form>
+<hr class="space xs">
 </div>
 
 
-  <div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden  ">
+  <div class="TableScroll">
 
 
-      <table class="table-striped" aria-busy="false" style="width:100%" id="ListingTable">
-          <thead>
+      <table class="table-striped ListTable W-100" aria-busy="false" id="ListingTable">
+          <thead class="TableHeading">
               <tr><th style=""><span class="text" id="label_s.no" adr_trans="label_order_no">
 
                           Order#
@@ -693,7 +692,7 @@ color: black;" ><span style="color:red;font-size:13px;">Comment:</span><?php ech
           {
           $cnt++;
           ?>
-          <tr class="listPageTR">
+          <tr class="listPageTR TableContent">
           <td style=""><?php echo @$get_order['id']; ?></td>
           <td style="word-break:break-all;"><?php
 
@@ -731,7 +730,7 @@ color: black;" ><span style="color:red;font-size:13px;">Comment:</span><?php ech
           <td style=""><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
           <td style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
-        <td class="text-center"  style=""><a onclick="mouseover(<?php echo $get_order['id']; ?>)"><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' style='color: #000; font-weight: bold;display: block; background: #86C4F0;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip' style='color: #000; font-weight: bold;display: block; background: #FF8400; padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Rework</span>";}elseif($status==6){echo "<span adr_trans='label_declined' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' style='color: #000; font-weight: bold;display: block; background: orange;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;''>Working With Customer</span>";}?></a></td>
+        <td class="text-center"  style=""><a onclick="mouseover(<?php echo $get_order['id']; ?>)"><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' >Rework</span>";}elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Working With Customer</span>";}?></a></td>
         <td class="text-center" style=""><a target="" href="order_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
           <i class="fa fa-chevron-circle-right fa-lg" style="color:#000"></i></a></td>
           <?php
