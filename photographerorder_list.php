@@ -91,13 +91,13 @@ font-weight:600!important;
     padding-right: 0px !important;
      background-color: #aad1d6 !important;
 }
-th,th > span
+/*th,th > span
 {
   background: #aad1d6;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   padding-left: 3px !important;
-}
+}*/
 th:last-child > span
 {
   vertical-align: text-top;
@@ -139,8 +139,8 @@ $pht = $_SESSION['loggedin_id'];
        <!--  <a href="create_order.php?photographer_id=<?php //echo $pht;  ?>" class="anima-button circle-button btn-sm btn"><i class="fa fa-calendar"></i> Create New Order</a> -->
         <!-- </p> -->
 <ul class="nav nav-tabs">
-<li  class="active" id="click11"><a href="#tab1" id="click1" adr_trans="label_ongoing_orders">On Going Orders</a></li>
-<li id="click22" ><a href="#tab2" id="click2" adr_trans="label_completed_orders">Completed Orders</a></li>
+<li  class="active" id="click11"><a href="#tab1" class="ActionBtn-md" id="click1" adr_trans="label_ongoing_orders">On Going Orders</a></li>
+<li id="click22" ><a href="#tab2" class="ActionBtn-md" id="click2" adr_trans="label_completed_orders">Completed Orders</a></li>
 </ul>
 
 <div class="panel active" id="tab1">
@@ -155,9 +155,9 @@ $pht = $_SESSION['loggedin_id'];
             } ?> -->
 
         <div >
-<div id="" style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
+<div class="TableScroll ListTable">
       <table class="" aria-busy="false" width="99%">
-          <thead>
+          <thead class="TableHeading">
               <tr><th  class="text-left" style="" id="label_s.no"  ><span adr_trans="label_order_no">
                           Order#
 
@@ -244,7 +244,7 @@ $pht = $_SESSION['loggedin_id'];
           $get_order_query=mysqli_query($con,"SELECT * FROM orders where (photographer_id='$loggedin_id') and status_id not in(1,3,5,6,7) order by id desc limit $limit");
           if($get_order_query == "0"){
 
-            ?><h5 align="center"> <?php echo "No Orders Yet";?> </h5>
+            ?><h5 align="center" class="PageHeading-md"> <?php echo "No Orders Yet";?> </h5>
           <?php
 
           $start_no_users = -1;
@@ -255,7 +255,7 @@ $pht = $_SESSION['loggedin_id'];
           {
           $cnt++;
           ?>
-          <tr class="listPageTR">
+          <tr class="listPageTR TableContent">
           <td class="text-left" style=""><?php echo $get_order['id']; ?></td>
 					<?php
 
@@ -298,7 +298,7 @@ $pht = $_SESSION['loggedin_id'];
             <td class="text-left" style=""><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
           <td class="text-left" style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
-          <td class="text-left" style=""><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' style='color: #000; font-weight: bold;display: block; background: #86C4F0;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' style='color: #000; font-weight: bold;display: block; background: #FF8400; padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Rework</span>";} elseif($status==5){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Cancelled</span>";}  elseif($status==6){echo "<span adr_trans='label_declined' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Declined</span>";} elseif($status==7){echo "<span adr_trans='label_working_customer' style='color:orange;font-weight:bold;'>Waiting for Customer</span>";} elseif($status==8){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;' id='' adr_trans=''>Reopen</span>";}?></td>
+          <td class="text-left" style=""><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";} elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}  elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";} elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Waiting for Customer</span>";} elseif($status==8){echo "<span class='Status-Reopen' adr_trans=''>Reopen</span>";}?></td>
           <td class="text-center" style="padding-left: 5px !important"><a target="" href="photographerorder_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
           <i class="fa fa-chevron-circle-right fa-lg" style="margin: 10px;"></i></a></td>
 
@@ -347,9 +347,9 @@ $pht = $_SESSION['loggedin_id'];
         <div>
 
 
-<div id="" style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-      <table class="" aria-busy="false" style="width:99%">
-          <thead>
+<div class="TableScroll">
+      <table class="" aria-busy="false" width="99%">
+          <thead class="TableHeading">
 						<tr><th  class="text-left" style="" id="label_s.no"  ><span adr_trans="label_order_no">
 												Order#
 
@@ -436,7 +436,7 @@ $pht = $_SESSION['loggedin_id'];
           $get_order_query=mysqli_query($con,"SELECT * FROM orders where (photographer_id='$loggedin_id') and status_id='3' order by id desc limit $limit");
           if($get_order_query == "0"){
 
-            ?><h5 align="center"> <?php echo "No Orders Yet";?> </h5>
+            ?><h5 align="center" class="PageHeading-md"> <?php echo "No Orders Yet";?> </h5>
           <?php
           $cnt = 0;
           $start_no_users = -1;
@@ -446,7 +446,7 @@ $pht = $_SESSION['loggedin_id'];
           {
           $cnt++;
           ?>
-          <tr class="listPageTR">
+          <tr class="listPageTR TableContent">
           <td class="text-left" style=""><?php echo $get_order['id']; ?></td>
 					<?php
 					$created_by_id=$get_order['created_by_id'];
@@ -488,7 +488,7 @@ $pht = $_SESSION['loggedin_id'];
           <td class="text-left" style=""><?php echo date('d/m/Y H:i',strtotime($get_order['session_from_datetime'])); ?></td>
           <td class="text-left" style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
-					<td class="text-left" style=""><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created'style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' style='color:brown;font-weight:bold;'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Rework</span>";}?></td>
+					<td class="text-left" style=""><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";}?></td>
 
           <td class="text-center" style=""><a target="" href="photographerorder_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
           <i class="fa fa-chevron-circle-right fa-lg" style="margin: 10px;"></i></a></td><td class="text-left" style="font-size: 13px;">

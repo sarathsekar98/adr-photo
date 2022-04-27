@@ -596,152 +596,110 @@ font-size: 100%;
 .Status-Created
 {
 
-background: skyblue;
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid skyblue; 
+font-weight: bold;
+display: block; 
+background:#86C4F0;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
+
 
 }
 
 .Status-Wip
 {
 
-background: yellow; 
-border-radius: 1px; 
+
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid yellow; 
+font-weight: bold;
+display: block; 
+background:#FF8400;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Completed
 {
 
-background: green; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid green; 
+font-weight: bold;
+display: block; 
+background:#76EA97;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Rework
 {
 
-background: orange; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid orange; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Cancelled
 {
 
-background: red; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid red; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
+
 
 }
 
 .Status-Wwc
 {
 
-background: orange; 
-border-radius: 1px; 
-color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid orange; 
+font-weight: bold;
+background: orange;
 
 }
 
 .Status-Declined
 {
 
-background: red; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid red; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Reopen
 {
 
-background: red; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid red; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
+
 
 }
 

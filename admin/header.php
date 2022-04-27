@@ -155,7 +155,7 @@ opacity:1!important;
 
 </style>
 
-    <style type="text/css">
+<style type="text/css">
         
 
 .PageHeading-sm
@@ -442,7 +442,6 @@ font-size: 100%;
   width:98%;
   padding-left:3px;
 }
-
 .NotificationTable > tbody > .listPageTR > td:first-child,.NotificationTable > .TableHeading > tr > th:first-child
 {
   padding-left: 20px !important;
@@ -486,152 +485,110 @@ font-size: 100%;
 .Status-Created
 {
 
-background: skyblue;
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid skyblue; 
+font-weight: bold;
+display: block; 
+background:#86C4F0;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
+
 
 }
 
 .Status-Wip
 {
 
-background: yellow; 
-border-radius: 1px; 
+
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid yellow; 
+font-weight: bold;
+display: block; 
+background:#FF8400;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Completed
 {
 
-background: green; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid green; 
+font-weight: bold;
+display: block; 
+background:#76EA97;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Rework
 {
 
-background: orange; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid orange; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Cancelled
 {
 
-background: red; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid red; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
+
 
 }
 
 .Status-Wwc
 {
 
-background: orange; 
-border-radius: 1px; 
-color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid orange; 
+font-weight: bold;
+background: orange;
 
 }
 
 .Status-Declined
 {
 
-background: red; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid red; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
 
 }
 
 .Status-Reopen
 {
 
-background: red; 
-border-radius: 1px; 
 color: #000; 
-height: 40px; 
-width: 90px;
-font-size: 10px; 
-font-family: verdana;  
-margin-top: 2px; 
-margin-bottom: 2px; 
-margin-right: 2px; 
-margin-left: 2px; 
-padding: 2px;
-border: 2px solid red; 
+font-weight: bold;
+display: block; 
+background:#F58883;
+padding-top: 5px; 
+max-width: 200px;
+padding-bottom: 5px;
+text-align: center;
+
 
 }
 
@@ -864,30 +821,37 @@ width: 100px;
 
 .ImageCircle
 {
+
 height: 10px; 
 width: 10px;
 border-radius: 10px;
+
 }
 
 .ChatUser
 {
+
 color: green; 
 font-size: 11px; 
 font-weight: bold;
 padding-bottom: 2px;
 font-family: verdana;  
+
 }
 
 .ChatDate
 {
+
 color: black; 
 font-size: 10px;
 padding-bottom: 2px; 
 font-family: verdana;  
+
 }
 
 .ChatMsg
 {
+
 color: blue; 
 font-size: 10px; 
 font-family: verdana;  
@@ -895,6 +859,7 @@ text-align: justify;
 line-height: 3px;
 word-wrap:break-word;
 padding-bottom: 5px; 
+
 }
 
 .ChatSender
@@ -1029,7 +994,7 @@ border-bottom-color: #fff;
 }
 /*.cardTable > tbody > tr 
 {
-    /*float: left;*/
+    float: left;
 }*/
 .cardTable > tbody > tr > td
 {
@@ -1092,10 +1057,6 @@ i.fa-star-o,i.fa-star
     font-size: 10px;
     color:  #000;
 }
-.W-100
-{
-    width: 100%;
-}
 .W-75
 {
     width: 75%;
@@ -1120,6 +1081,10 @@ i.fa-star-o,i.fa-star
     font-size: 13px;
     color:  #000;
 }
+.W-100
+{
+    width: 100%;
+}
 /*Table scroll*/
 .TableScroll
 {
@@ -1128,31 +1093,8 @@ i.fa-star-o,i.fa-star
     overflow-x: scroll;
     overflow-y: hidden;
 }
-/*Product BreadCrum code start here*/
-.ProductBreadCrumb
-{
-    /*border-radius: 5px 0px 0px 5px;*/
-    border: solid 1px;
-    background: #FFF;
-    color: #000!important;
-    font-weight: 600;
-    padding: 10px;
-}
-.ProductBreadCrumb.Left
-{
-    border-radius: 5px 0px 0px 5px;
-}
-.ProductBreadCrumb.Right
-{
-    border-radius: 0px 5px 5px 0px;
-}
-.Active
-{
-    background: #aad1d6;
-}
-
-
 </style>
+
 	<script>
 	function getClippedRegion(image, x, y, width, height) {
    var canvas = document.createElement("canvas"),
