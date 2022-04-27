@@ -139,7 +139,14 @@ th
 {
 	margin-right: -10px;
 }
-
+.OuterSpace
+{
+   background: #FFF;
+   color: #000;
+   opacity: 0.8;
+   padding:10px;
+   padding-left: 10px !important;
+}
 </style>
 <script>
         function confirmDelete() {
@@ -277,20 +284,20 @@ th
 						<?php }  ?>
 						</center>
 
-						<div class="col-md-12" style="width: 100%;background:#FFF;color:#000;opacity:0.8;padding:10px;border-radius:5px;scrollbar-width: none;overflow-x: hidden;overflow-y:hidden;margin-top: 25px;">
+						<div class="col-md-12 OuterSpace" >
 
 <center>
 <div class="col-md-12">
-<div class="col-md-4" style="border-radius:5px 0px 0px 5px;border:solid 1px;font-weight:600;padding:10px;"><a href="products.php" id="label_product_price" adr_trans="label_product_price">Products & It's Price</a></div>
-<div class="col-md-4" style="border:solid 1px black;background:#ddd;color:#000;font-weight:600;padding:10px;background:#aad1d6;color:#FFF!important;"><a id="label_realtor_custom" adr_trans="label_realtor_custom" href="RealtorProducts.php" style="color:#000!important;">Custom Price for Realtor</a></div>
-<div class="col-md-4" style="border-radius:0px 5px 5px 0px;border:solid 1px;font-weight:600;padding:10px;"><a href="PhotographerProducts.php">Photographers Commission</a></div>
+<div class="col-md-4 ProductBreadCrumb Left"><a href="products.php" id="label_product_price" adr_trans="label_product_price">Products & It's Price</a></div>
+<div class="col-md-4 ProductBreadCrumb Active"><a id="label_realtor_custom" adr_trans="label_realtor_custom" href="RealtorProducts.php" style="color:#000!important;">Custom Price for Realtor</a></div>
+<div class="col-md-4 ProductBreadCrumb Right"><a href="PhotographerProducts.php">Photographers Commission</a></div>
 </div>
 </center>
 <br><br><br />
 						<div class="row">
 						<div class="col-md-12">
 						<div class="col-md-6" style="text-align:left;padding-left:15px;">
-						<h5 class="text-left" id="label_list_products"><span adr_trans="label_list_products" style="color:#000;">List of Products</span>
+						<h5 class="Text-md" id="label_list_products"><span adr_trans="label_list_products">List of Products</span>
 						<?php
 
 						if(@$_REQUEST['realtor']) {
@@ -302,10 +309,10 @@ th
 
 						</h5>
 						</div>
-<div class="col-md-6" style="text-align:right">
+                        <div class="col-md-6">
 						
 						<form name="filterfrm" method="post" action="">
-						<input type="text" name="realtor" class="form-control" style="width:300px;height:30px;font-size:12px;float:right;margin-right:-35px;" list="realtors" onChange="this.form.submit();" placeholder="<?php if(empty($_REQUEST['realtor'])) { echo "Select Realtor"; } else { echo $RealtornameIs; } ?>" >
+						<input type="text"  name="realtor" class="form-control" list="realtors" onChange="this.form.submit();" placeholder="<?php if(empty($_REQUEST['realtor'])) { echo "Select Realtor"; } else { echo $RealtornameIs; } ?>" >
 
 						<datalist id="realtors">
 
@@ -321,8 +328,8 @@ th
 						</form>
 						</div></div></div>
 						<hr class="space xs" />
-						  <div style="width:100%;width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-					<table class="table-striped" align="center" style="width:100%;">
+						  <div class="TableScroll">
+					<table class="table-striped ListTable" >
                 <?php
 				$total_no=0;
 				if(@$_REQUEST['realtor'])
@@ -331,7 +338,7 @@ th
 				$realtor_id=$_REQUEST['realtor'];
 
 
-				 ?><thead>
+				 ?><thead class="TableHeading">
                     <tr>
                         <th>#</th>
                         <th id="label_product_name" adr_trans="label_product_name">Product Name</th>
@@ -342,7 +349,7 @@ th
 
                 </thead>
 <form name="submitFrm" method="post" action="">
-                <tbody>
+                <tbody class="TableContent">
 
 
 									<?php
@@ -414,7 +421,7 @@ $realtorDiscountPrice=0;
 						<td><?php echo $get_product['timeline']; ?></td>
                         <td><?php echo $get_product['total_cost']; ?></td>
                         <td>
-						<input type="number" name="discount_price[]" value="<?php echo $realtorDiscountPrice; ?>" style="width:70px;" max="<?php echo $get_product['total_cost']; ?>" step="0.01">
+						<input type="number" class="form-control W-30" name="discount_price[]" value="<?php echo $realtorDiscountPrice; ?>"  max="<?php echo $get_product['total_cost']; ?>" step="0.01">
 						<input type="hidden" name="product_cost[]" value="<?php echo $get_product['total_cost']; ?>">
 						<input type="hidden" name="product_id[]" value="<?php echo $get_product['id']; ?>">
 						<input type="hidden" name="pc_admin_id" value="<?php echo $loggedin_id; ?>">
@@ -434,11 +441,11 @@ $realtorDiscountPrice=0;
 				   <?php } ?>
 				   <?php
 					if(@$_REQUEST['realtor']) { ?>
-				 <tr><td colspan="4">&nbsp;</td><td><input type="submit" name="Save" value="Set Price" class="btn adr-save btn-sm"></td></tr>
+				 <tr><td colspan="4">&nbsp;</td><td><input type="submit" name="Save" value="Set Price" class="ActionBtn-sm"></td></tr>
 				 <?php } ?>
                 </tbody>
 				</form>
-            </table></div>
+            </table><br></div>
 			<?php
 			if($total_no!=0)
 			{

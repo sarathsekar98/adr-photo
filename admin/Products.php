@@ -237,9 +237,9 @@ th
 						<?php }  ?>
 						<?php if(@$_REQUEST['first']) { ?><div class="col-md-12"><h5 align="center" id="label_add_company_profile" style="color:#006600!important;font-size:13px;">Step #2 of 2 : Set up products for Photo company</h5></div> <?php } ?>
 						</center>
-						<a class="lightbox btn adr-save btn-sm circle-button" id="addedit" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;"><span id="label_add_new_product" adr_trans="label_add_new_product">+Add Product</span></a>
+						<a class="lightbox ActionBtn-sm" id="addedit" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;"><span id="label_add_new_product" adr_trans="label_add_new_product">+Add Product</span></a>
 						
-						<div class="col-md-12 TableScroll OuterSpace" >
+						<div class="col-md-12 TableScroll OuterSpace">
 
 
 <div class="TextCenter">
@@ -251,7 +251,7 @@ th
 
 						  <div>
 						  <hr class="space xs" />
-					<table align="center" class="table-striped NotificationTable W-100">
+					<table align="center" class="table-striped ListTable W-100">
                  <thead class="TableHeading">
                     <tr>
                         <th>#</th>

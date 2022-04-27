@@ -455,8 +455,9 @@ font-size: 100%;
   color: #000;
   text-align: left;
   background: #aad1d6;
+  font-weight: 600;
   vertical-align: ;
-  padding: 10px;
+  padding: 12px;
   
 }
 .TableContent
@@ -1094,6 +1095,18 @@ i.fa-star-o,i.fa-star
 .W-100
 {
     width: 100%;
+}
+.W-75
+{
+    width: 75%;
+}
+.W-50
+{
+    width: 50%;
+}
+.W-30
+{
+    width: 30%;
 }
 .Text-md
 {
