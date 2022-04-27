@@ -461,8 +461,8 @@ min-width:100px!important;
           <td style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
                           <td style=""><a onclick="mouseover(<?php echo $get_order['id']?>)"><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed' >completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";}elseif($status==8){echo "<span adr_trans='' class='Status-Reopen'>Reopen</span>";}elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Working with Customer</span>";}elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}?><?php if($status==5||$status==6||$status==7){ echo "  <i class='fa fa-question-circle' style='position:relative;top:-28px;left:80px;color:black;'></i>";}?></a></td>
-                                      <td style="" class="text-center"><a target="" href="order_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
-          <i class="fa fa-pencil fa-lg" style="color:#000"></i></a></td>
+                                      <td style="" class="text-center"><a target="" href="order_detail.php?id=<?php echo $get_order['id']; ?>" class="IconWithTitle">
+          <i class="fa fa-pencil fa-lg"></i></a></td>
 
           </tr>
           <tr><td class="listPageTRGap">&nbsp;</td></tr>
@@ -731,8 +731,8 @@ min-width:100px!important;
           <td style=""><?php echo date('d/m/Y ',strtotime($get_order['order_due_date'])); ?></td>
 
         <td class="text-center"  style=""><a onclick="mouseover(<?php echo $get_order['id']; ?>)"><?php $status=$get_order['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' >Rework</span>";}elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Working With Customer</span>";}?></a></td>
-        <td class="text-center" style=""><a target="" href="order_detail.php?id=<?php echo $get_order['id']; ?>" class="link">
-          <i class="fa fa-chevron-circle-right fa-lg" style="color:#000"></i></a></td>
+        <td class="text-center" style=""><a target="" href="order_detail.php?id=<?php echo $get_order['id']; ?>" class="IconWithTitle">
+          <i class="fa fa-chevron-circle-right fa-lg"></i></a></td>
           <?php
           if($get_order['status_id']==3)
           {
@@ -740,19 +740,18 @@ min-width:100px!important;
            @$approved_check=mysqli_fetch_assoc(@$approved_check_query);
               if(@$approved_check['approved']==1)
                {
-                 echo '<td class="text-center" style="font-size: 18px;"><a target="" href="order_detail.php?c=1&id='.$get_order['id'].'" class="link">
+                 echo '<td class="text-center"><a target="" href="order_detail.php?c=1&id='.$get_order['id'].'" class="IconWithTitle Text-lg">
                  <i class="fa fa-file-text-o " title="View Order Cost"></i></a></td>';
                }
                else {
-                 echo '<td class="text-center" style="font-size: 18px;"><a target="" href="#" class="link">
+                 echo '<td class="text-center" ><a target="" href="#" class="IconWithTitle Text-lg">
                  <i class="fa fa-file-o " title="Order Cost is not Approved"></i></a></td>';
                }
           }
           else {
-            echo '<td class="text-center" style="font-size: 18px;"><a target="" href="#" class="link">
+            echo '<td class="text-center" ><a target="" href="#" class="IconWithTitle Text-lg">
             <i class="fa fa-file-o " title="Order Cost is not Ready"></i></a></td>';
           }
-
            ?>
           </tr>
           <tr><td class="listPageTRGap">&nbsp;</td></tr> 
