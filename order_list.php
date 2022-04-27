@@ -471,7 +471,7 @@ min-width:100px!important;
           {
             ?>
             <tr>
-              <td class="Text-sm hide" id="click<?php echo $get_order['id']?>" colspan="9"><span class="Text-md">Comment:</span><?php echo @$get_order['comment'];?> </td>
+              <td class="Text-sm hide TextCenter" id="click<?php echo $get_order['id']?>" colspan="9"><span class="Text-md">Comment:</span><?php echo @$get_order['comment'];?> </td>
             </tr>
         <?php  }
       ?>
@@ -760,8 +760,8 @@ min-width:100px!important;
               {
                 ?>
                 <tr>
-                  <td class="text-left hide" id="click<?php echo $get_order['id']?>" colspan="9" style="background-color: white;
-    color: black;" ><span style="color:red;font-size:13px;">Comments:</span><?php echo $get_order['comment'];?> </td>
+                  <td class="text-left hide Text-sm" id="click<?php echo $get_order['id']?>" colspan="9" style="background-color: white;
+    color: black;" ><span class="Text-md">Comments:</span><?php echo $get_order['comment'];?> </td>
                 </tr>
             <?php  }?>
           <?php } } ?>
