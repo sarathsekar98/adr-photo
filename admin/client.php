@@ -117,10 +117,10 @@ if(isset($_REQUEST['email']))
 ?>
 <?php include "header.php";  ?>
  <div class="">
-        <div class="" style="margin-left:00px;height:fit-content;width:100%">
+        <div>
             <div class="row">
 			<hr class="space s">
-                <div class="col-md-2" style="padding-left:10px;">
+                <div class="col-md-2">
 	<?php include "sidebar.php"; ?>
   <style>
  /* table {
@@ -244,10 +244,10 @@ var xhttp= new XMLHttpRequest();
 			</div>
                 <div class="col-md-10">
                   <?php   //echo $_SESSION['project_url'];?>
-                   <a href="Realtor_registration.php" class="anima-button circle-button btn-sm btn adr-save realtor-btn"  style="position: relative;top: 30px;z-index: 2;"><i class="fa fa-plus"></i>Add Realtor</a>
+                   <a href="Realtor_registration.php" class="ActionBtn-md AnimationBtn"  style="float: right;position: relative;top: 30px;z-index: 2;"><i class="fa fa-plus"></i>Add Realtor</a>
 
 
-						 <a href="#tnc" class="anima-button circle-button btn-sm btn adr-save realtor-btn lightbox link"  style="height:30px;color:#000!important;font-weight:600;float:right;margin-right:10px;position: relative;top: 30px;z-index: 2;"><i class="fa fa-paper-plane"></i><span adr_trans="label_send_invite" style="color:#000!important;font-weight:600">Send Invite</span></a>
+						 <a href="#tnc" class="ActionBtn-md AnimationBtn lightbox link"  style="float:right;margin-right:10px;position: relative;top: 30px;z-index: 2;"><i class="fa fa-paper-plane"></i><span adr_trans="label_send_invite">Send Invite</span></a>
 
 <?php if(@isset($_REQUEST["a"])) { ?>
                         <div class="success-box" style="display:block;margin-left:300px;">
@@ -257,27 +257,27 @@ var xhttp= new XMLHttpRequest();
 
                   <div class="col-md-12" style="margin-left:20px;">
 
-                              <div class="tab-box " data-tab-anima="fade-right" style="">
+                              <div class="tab-box " data-tab-anima="fade-right" >
 
 
-                                  <ul class="nav nav-tabs" style="">
+                                  <ul class="nav nav-tabs" >
                                       <li id="click1" class="active current-active"><a href="#" id="label_all_realtor" adr_trans="label_all_realtor">All Realtor</a></li>
                                       <li id="click2"><a href="#" id="label_favourite_realtor" adr_trans="label_favourite_realtor">My Favourite Realtor</a></li>
 
                                   </ul>
-                                  <div class="panel active" style="background-color: white;" id="tab1">
+                                  <div class="panel active" id="tab1">
                                     <div class="col-md-12">
 
 																		<form name="realtorSearch" method="post" action="client.php" >
-																	  <input type="text" class="form-control form-value" name="filter_realtor" value="<?php echo @$_REQUEST['filter_realtor'];?>" placeholder="Search by Name,City,Organization and hit enter key" onBlur="this.form.submit()" align="center" style="margin-left:25px;height:30px;width:96%"/>
+																	  <input type="text" class="form-control form-value W-96" name="filter_realtor" value="<?php echo @$_REQUEST['filter_realtor'];?>" placeholder="Search by Name,City,Organization and hit enter key" onBlur="this.form.submit()" align="center" style="margin-left:25px;"/>
 																		</form>
 																		</div>
 						
                                     <hr class="space s">
 
-									 <div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-               <table align="center" class="table-stripped" style="background:#FFF;color:#000;width:98%">
-                                       <tr style="border:solid 2px #aad1d6;">
+									 <div class="TableScroll">
+               <table align="center" class="table-stripped W-98">
+                                       <tr class="TableHeading">
                                          <th><span adr_trans="label_first_name">Firstname</span></th>
                                          <th><span adr_trans="label_last_name">Lastname</span></th>
 										<th><span adr_trans="label_organization">Organization</span></th>
@@ -315,7 +315,7 @@ else
                                        while($realtor=mysqli_fetch_assoc($realtor_query))
                                        {
                                           ?>
-                                          <tr class="listPageTR">
+                                          <tr class="listPageTR TableContent">
                                             <td><?php echo @$realtor['first_name'];?></td>
                                                 <td><?php echo @$realtor['last_name'];?></td>
 						<td><?php echo @$realtor['organization_name'];?></td>
@@ -323,7 +323,7 @@ else
                                                         <td><?php echo @$realtor['city'];?></td>
                                                         <td><?php echo @$realtor['state'];?></td>
                                                        <td><?php echo @$realtor['country'];?></td>
-                               <td><a href="client_detail.php?realtor_id=<?php echo $realtor['id'];?>" style="padding-left:10px;"><i class="fa fa-chevron-circle-right fa-lg" style="color:#000" title="View Client detail"></i></a></td>
+                               <td><a href="client_detail.php?realtor_id=<?php echo $realtor['id'];?>" style="padding-left:10px;"><i class="fa fa-chevron-circle-right fa-lg IconWithTitle" title="View Client detail"></i></a></td>
                           <?php
 
                           $realtor_id=$realtor['id'];
@@ -344,7 +344,7 @@ else
                        else{
                        	?>
 
-                       	<td><a title="Already added to favourites"><i class="fa fa-heart" style="color:green;padding-left:30px"></i></a></td>
+                       	<td><a title="Already added to favourites"><i class="fa fa-heart IconColor" style="padding-left:30px"></i></a></td>
 
 					<?php } ?>
 
@@ -355,17 +355,17 @@ else
 
                                      </table></div>
                                   </div>
-                                  <div class="panel" id="tab2" style="background-color: white;">
+                                  <div class="panel" id="tab2">
 											<div class="col-md-12">
 			<form name="realtorSearch" method="post" action="client.php?favourite=1">
-	  <input type="text" class="form-control form-value" name="filter_realtor_favourite" placeholder="Search by Name,City,Organization and hit enter key" align="center" style="margin-left:25px;height:30px;width:96%" value="<?php echo @$_REQUEST['filter_realtor_favourite'];?>" onBlur="this.form.submit()"/>
+	  <input type="text" class="form-control form-value W-96" name="filter_realtor_favourite" placeholder="Search by Name,City,Organization and hit enter key" align="center" style="margin-left:25px;" value="<?php echo @$_REQUEST['filter_realtor_favourite'];?>" onBlur="this.form.submit()"/>
 			</form>
 		</div>
 		
                                     <hr class="space s">
-									 <div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-                                    <table style="width:98%" align="center" class="table-striped" >
-                                      <tr style="border:solid 2px #aad1d6;">
+									 <div class="TableScroll">
+                                    <table align="center" class="table-striped W-98" >
+                                      <tr class="TableHeading">
                                          <th><span adr_trans="label_first_name">Firstname</span></th>
                                          <th><span adr_trans="label_last_name">Lastname</span></th>
 										<th><span adr_trans="label_organization">Organization</span></th>
@@ -400,7 +400,7 @@ else
                                        while($realtor1=mysqli_fetch_assoc($realtor_query1))
                                        {
                                           ?>
-                                          <tr class="listPageTR">
+                                          <tr class="listPageTR TableContent">
                                             <td><?php echo @$realtor1['first_name'];?></td>
                                                 <td><?php echo @$realtor1['last_name'];?></td>
 																									  <td><?php echo @$realtor1['organization_name'];?></td>
@@ -408,8 +408,8 @@ else
                                                         <td><?php echo @$realtor1['city'];?></td>
                                                             <td><?php echo @$realtor1['state'];?></td>
                                                                 <td><?php echo @$realtor1['country'];?></td>
-                                                                    <td><a href="client_detail.php?realtor_id=<?php echo $realtor1['id'];?>" style="padding-left:10px"><i class="fa fa-chevron-circle-right fa-lg" style="color:#000" title="View Client detail"></i></a></td>
-                                                                        <td><a title="Remove from favourites" onclick="unfavourite('<?php echo $realtor1['id'];?>','<?php echo $loggedin_id;?>');" style="text-align:center"><i class="fa fa-heart" style="color:green;padding-left:20px"></i></a></td>
+                                                                    <td><a href="client_detail.php?realtor_id=<?php echo $realtor1['id'];?>" style="padding-left:10px"><i class="fa fa-chevron-circle-right fa-lg IconWithTitle" title="View Client detail"></i></a></td>
+                                                                        <td><a title="Remove from favourites" onclick="unfavourite('<?php echo $realtor1['id'];?>','<?php echo $loggedin_id;?>');" style="text-align:center"><i class="fa fa-heart IconColor" style="padding-left:20px"></i></a></td>
                                           </tr>
                                            <tr><td class="listPageTRGap">&nbsp;</td></tr>
                                           <?php
@@ -442,16 +442,16 @@ else
 </div>
 
 <div id="tnc" class="box-lightbox white" style="padding:25px;border-radius:25px 25px 25px 25px;width:450px;height:230px;">
-	 <div class="subtitle g" style="color:#333333">
-	 	 <h5 style="color:#333333;font-style: italic;" align="center">“Fotopia is awesome! We recommend Realtors and Photo Company to join here”</h5>
+	 <div class="subtitle g" style="color:#000">
+	 	 <h5 style="color:#000;font-style: italic;" align="center">“Fotopia is awesome! We recommend Realtors and Photo Company to join here”</h5>
     <br>
-		 <h5 style="color:#333333" align="center" id="label_enter_the_email" adr_trans="label_enter_the_email">Enter the Email</h5>
+		 <h5 style="color:#000" class="PageHeading-md" align="center" id="label_enter_the_email" adr_trans="label_enter_the_email">Enter the Email</h5>
 			
 				<center><span class="sub" id="error" style="color:green;"></span></center>
 				<form   method="post" name="stdform" action="" onsubmit="">
 				<input id="email1" name="email" placeholder="Email" type="email" autocomplete="off" onblur="this.value=this.value.trim()" class="form-control form-value" required>
 				<input type="hidden" name="pc_admin_id" id="pc_admin_id" value="<?php echo $_SESSION['admin_loggedin_id']; ?>"/><br>
-				<center><button class="btn adr-save" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
+				<center><button class="ActionBtn-md" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
 				</form>
 				<hr class="space l">
 

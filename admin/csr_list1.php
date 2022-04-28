@@ -102,7 +102,7 @@ thead > tr:last-child > th, th > span {
 	</style>
 <?php include "header.php";  ?>
  <div class="section-empty bgimage5">
-        <div class="" style="margin-left:0px;height:inherit;width:100%">
+        <div>
             <div class="row">
 			<hr class="space s">
                 <div class="col-md-2" style="padding-left:10px;">
@@ -113,7 +113,7 @@ thead > tr:last-child > th, th > span {
 <style>
 	
 	 </style>
-                <div class="col-md-10" style="padding-left:30px;">
+                <div class="col-md-10">
 				<hr class="space s" />
                 	<div class="tab-box" data-tab-anima="show-scale">
                     <!--<h5 class="text-center" adr_trans="label_users_list">List of Users</h5>-->
@@ -167,70 +167,71 @@ thead > tr:last-child > th, th > span {
 <li id="click4"><a href="#" id="label_editor" adr_trans="label_editor">Editor</a></li>
 </ul>
 
-<div class="panel active " id="tab1" style="width:100%;">
+<div class="panel active W-100" id="tab1">
 
-<p align="right"><a href="create_pc_admin_user.php" id="label_create_admin" adr_trans="label_create_admin" class="btn adr-save " style="margin-bottom: 10px;font-size: 12px;" >Create Admin</a></p>
-<div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-<table class="table-striped" align="center" aria-busy="false" style="width:100%;">
-                <thead>
-                    <tr><th data-column-id="id" class="text-left" style=""><span class="text" id="label_s.no" adr_trans="label_s.no">
+<p align="right"><a href="create_pc_admin_user.php" id="label_create_admin" adr_trans="label_create_admin" class="ActionBtn-md " >Create Admin</a></p>
+<hr class="space xs">
+<div class="TableScroll">
+<table class="table-striped W-100" align="center" aria-busy="false">
+                <thead class="TableHeading">
+                    <tr><th data-column-id="id" class="text-left" ><span class="text" id="label_s.no" adr_trans="label_s.no">
 
                                 S.No
 
-                        </span></th><th data-column-id="name" class="text-left" style=""><span class="text" id="label_name" adr_trans="label_name">
+                        </span></th><th data-column-id="name" class="text-left" ><span class="text" id="label_name" adr_trans="label_name">
 
                                 Name
 
                         </span>
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_organization" adr_trans="label_organization">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_organization" adr_trans="label_organization">
 
                                 Organization
 
                         </span>
 
 
-						<!-- </a></th><th data-column-id="more-info" class="text-left" style=""><a href="javascript:void(0);" class="column-header-anchor sortable"><span class="text">
+						<!-- </a></th><th data-column-id="more-info" class="text-left" ><a href="javascript:void(0);" class="column-header-anchor sortable"><span class="text">
 
                                 Type
 
                         </span> -->
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_city" adr_trans="label_city">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_city" adr_trans="label_city">
 
                                 City
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_state" adr_trans="label_state">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_state" adr_trans="label_state">
 
                                 State
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_profile_picture" adr_trans="label_profile_picture">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_profile_picture" adr_trans="label_profile_picture">
 
                                 Profile picture
 
                         </span>
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_contact" adr_trans="label_contact">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_contact" adr_trans="label_contact">
 
                                 Contact
 
                         </span>
 
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_status" adr_trans="label_status">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_status" adr_trans="label_status">
 
                                 Status
 
                         </span>
 
-						</th><th data-column-id="link-icon" class="text-center" style=""><span class="text"  id="label_details" adr_trans="label_details">
+						</th><th data-column-id="link-icon" class="text-center" ><span class="text"  id="label_details" adr_trans="label_details">
 
                                 Details
 
                         </span></th></tr>
                 </thead>
-                <tbody>
+                <tbody class="TableContent">
 				<?php
 				//	---------------------------------  pagination starts ---------------------------------------
 				if(@$_GET["page"]<0)
@@ -287,20 +288,19 @@ thead > tr:last-child > th, th > span {
 				$cnt++;   //	---------------------------------  pagination starts ---------------------------------------
 				?>
 				<tr data-row-id="0" class="listPageTR">
-				<td class="text-left" style=""><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+				<td class="text-left" ><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['first_name']; ?> <?php echo $res1['last_name']; ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['organization_name']; ?></td>
-				<!-- <td class="text-left" style=""><?php echo $res1['type_of_user']; ?></td> -->
-				<td class="text-left" style=""><?php echo $res1['city']; ?></td>
-				<td class="text-left" style=""><?php echo $res1['state']; ?></td>
-				<td class="text-center" style=""><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
+				<td class="text-left" ><?php echo $res1['city']; ?></td>
+				<td class="text-left" ><?php echo $res1['state']; ?></td>
+				<td class="text-center" ><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
 				<img src="data:<?php echo $res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode($res1['profile_pic']); ?>" width="50" height="50" /></td>
 
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['contact_number']; ?></td>
-				<td class="text-left" style=""><?php $approved2=$res1['is_approved']; if($approved2==0) { echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;' id='label_pending' adr_trans='label_pending'>Pending</span>"; } elseif($approved2==2) { echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;' id='label_blocked' adr_trans='label_blocked'>Blocked</span>"; } else { echo "<span style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;' id='label_approved' adr_trans='label_approved'>Approved</span>"; } ?></td>
-				<td class="text-center" style=""><a target="" href="pc_admin_details.php?val=0&id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-chevron-circle-right fa-lg"></i></a>&nbsp;&nbsp;<a target="" href="edit_pc_admin_user.php?id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-pencil fa-lg" style="padding-left:3px" title="Edit Admin details"></i></a></td>
+				<td class="text-left" ><?php $approved2=$res1['is_approved']; if($approved2==0) { echo "<span class='Status-Rework'>Pending</span>"; } elseif($approved2==2) { echo "<span class='Status-Rework' id='label_blocked' adr_trans='label_blocked'>Blocked</span>"; } else { echo "<span class='Status-Completed' id='label_approved' adr_trans='label_approved'>Approved</span>"; } ?></td>
+				<td class="text-center" ><a target="" href="pc_admin_details.php?val=0&id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-chevron-circle-right fa-lg IconWithTitle"></i></a>&nbsp;&nbsp;<a target="" href="edit_pc_admin_user.php?id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-pencil fa-lg IconWithTitle" title="Edit Admin details"></i></a></td>
 				</tr>
 				<tr><td class="listPageTRGap">&nbsp;</td></tr>
 				<?php }} ?></tbody>
@@ -319,76 +319,77 @@ thead > tr:last-child > th, th > span {
 								</div>
 
 </div>
-<div class="panel" id="tab2" style="width:100%;">
+<div class="panel W-100" id="tab2">
 <!--Panel 2 starts-->
-<p align="right"><a href="create_csr.php" style="margin-bottom: 10px;" class="btn adr-save"><span adr_trans="label_create_csr">Create CSR</span></a></p>
-<div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-<table align="center" class="table-striped" aria-busy="false" style="width:100%;">
-                <thead>
-                    <tr><th data-column-id="id" class="text-left" style=""><span class="text">
+<p align="right"><a href="create_csr.php" class="ActionBtn-md"><span adr_trans="label_create_csr">Create CSR</span></a></p>
+<hr class="space xs">
+<div class="TableScroll">
+<table align="center" class="table-striped W-100" aria-busy="false">
+                <thead class="TableHeading">
+                    <tr><th data-column-id="id" class="text-left" ><span class="text">
 
                                 S.No
 
-                        </span></th><th data-column-id="name" class="text-left" style=""><span class="text" id="label_name" adr_trans="label_name">
+                        </span></th><th data-column-id="name" class="text-left" ><span class="text" id="label_name" adr_trans="label_name">
 
                                 Name
 
                         </span>
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_organization" adr_trans="label_organization">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_organization" adr_trans="label_organization">
 
                                 Organization
 
                         </span>
 
-                      <!--   </th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_admin" adr_trans="label_admin">
+                      <!--   </th><th data-column-id="logo" class="text-left" ><span class="text" id="label_admin" adr_trans="label_admin">
 
                                 Admin
 
                         </span> -->
 
 
-						</th><th data-column-id="more-info" class="text-left" style=""><span class="text" id="label_type" adr_trans="label_type">
+						</th><th data-column-id="more-info" class="text-left" ><span class="text" id="label_type" adr_trans="label_type">
 
                                 Type
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_city" adr_trans="label_city">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_city" adr_trans="label_city">
 
                                 City
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_state" adr_trans="label_state">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_state" adr_trans="label_state">
 
                                 State
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_profile_picture" adr_trans="label_profile_picture">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_profile_picture" adr_trans="label_profile_picture">
 
                                 Profile picture
 
                         </span>
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_contact" adr_trans="label_contact">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_contact" adr_trans="label_contact">
 
                                 Contact
 
                         </span>
 
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_status" adr_trans="label_status">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_status" adr_trans="label_status">
 
                                 Status
 
                         </span>
 
-						</th><th data-column-id="link-icon" class="text-center" style=""><span class="text" id="label_details" adr_trans="label_details">
+						</th><th data-column-id="link-icon" class="text-center" ><span class="text" id="label_details" adr_trans="label_details">
 
                                 Details
 
                         </span></th></tr>
                 </thead>
-                <tbody>
+                <tbody class="TableContent">
 				<?php
 				//	---------------------------------  pagination starts ---------------------------------------
 				if(@$_GET["page"]<0)
@@ -452,21 +453,21 @@ thead > tr:last-child > th, th > span {
 
 				?>
 				<tr data-row-id="0" class="listPageTR">
-				<td class="text-left" style=""><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+				<td class="text-left" ><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['first_name']; ?> <?php echo $res1['last_name']; ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['organization_name']; ?></td>
 				<!-- <td class="text-left" style="word-break:break-all;"><?php //echo @$admin1['first_name']; ?></td>  -->
-				<td class="text-left" style=""><?php echo $res1['type_of_user']; ?></td>
-				<td class="text-left" style=""><?php echo $res1['city']; ?></td>
-				<td class="text-left" style=""><?php echo $res1['state']; ?></td>
-				<td class="text-center" style=""><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
+				<td class="text-left" ><?php echo $res1['type_of_user']; ?></td>
+				<td class="text-left" ><?php echo $res1['city']; ?></td>
+				<td class="text-left" ><?php echo $res1['state']; ?></td>
+				<td class="text-center" ><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
 				<img src="data:<?php echo $res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode($res1['profile_pic']); ?>" width="50" height="50" /></td>
 
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['contact_number']; ?></td>
-				<td class="text-left" style=""><?php $approved2=$res1['is_approved']; if($approved2==0) { echo "<span id='label_pending' adr_trans='label_pending' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;' >Pending</span>"; } elseif($approved2==2) { echo "<span id='label_blocked' adr_trans='label_blocked' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Blocked</span>"; } else { echo "<span id='label_approved' adr_trans='label_approved' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Approved</span>"; } ?></td>
-				<td class="text-center" style=""><a target="" href="csr_details.php?val=0&id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-chevron-circle-right fa-lg"></i></a>&nbsp;&nbsp;<a target="" href="edit_csr.php?id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-pencil fa-lg" style="padding-left:3px" title="Edit CSR details"></i></a></td>
+				<td class="text-left" ><?php $approved2=$res1['is_approved']; if($approved2==0) { echo "<span id='label_pending' adr_trans='label_pending' class='Status-Rework' >Pending</span>"; } elseif($approved2==2) { echo "<span id='label_blocked' adr_trans='label_blocked' class='Status-Rework' >Blocked</span>"; } else { echo "<span id='label_approved' adr_trans='label_approved' class='Status-Completed' >Approved</span>"; } ?></td>
+				<td class="text-center" ><a target="" href="csr_details.php?val=0&id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-chevron-circle-right fa-lg IconWithTitle"></i></a>&nbsp;&nbsp;<a target="" href="edit_csr.php?id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-pencil fa-lg IconWithTitle" title="Edit CSR details"></i></a></td>
 				</tr>
 				<tr><td class="listPageTRGap">&nbsp;</td></tr>
 				<?php }} ?></tbody>
@@ -487,71 +488,72 @@ thead > tr:last-child > th, th > span {
 </div>
 
 
-<div class="panel" id="tab3" style="width:100%;">
+<div class="panel W-100" id="tab3">
 <!--Panel 3 starts-->
-  <center ><i style="font-size: 14px;color:darkgrey">Note:&nbsp;Each photographer need to be assigned to an editor based on the services.  </i></center>
-<p align="right"><a href="create_photographer.php" style="margin-bottom: 10px;" class="btn adr-save"><span adr_trans="label_create_photographer">Create Photographer</span></a></p>
-<div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-<table class="table-striped" aria-busy="false" style="width:100%;">
-                <thead>
-                    <tr><th data-column-id="id" class="text-left" style=""><span class="text" id="label_s.no" adr_trans="label_s.no">
+  <center ><i class="Text-lg">Note:&nbsp;Each photographer need to be assigned to an editor based on the services.  </i></center>
+<p align="right"><a href="create_photographer.php" class="ActionBtn-lg"><span adr_trans="label_create_photographer">Create Photographer</span></a></p>
+<hr class="space xs">
+<div class="TableScroll">
+<table class="table-striped W-100" aria-busy="false">
+                <thead class="TableHeading">
+                    <tr><th data-column-id="id" class="text-left" ><span class="text" id="label_s.no" adr_trans="label_s.no">
 
                                 S.No
 
-                        </span></th><th data-column-id="name" class="text-left" style=""><span class="text" id="label_name" adr_trans="label_name">
+                        </span></th><th data-column-id="name" class="text-left" ><span class="text" id="label_name" adr_trans="label_name">
 
                                 Name
 
                         </span>
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_organization" adr_trans="label_organization">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_organization" adr_trans="label_organization">
 
                                 Organization
 
                         </span>
 
 
-						</th><th data-column-id="more-info" class="text-left" style=""><span class="text" id="label_admin_csr" adr_trans="label_admin_csr">
+						</th><th data-column-id="more-info" class="text-left" ><span class="text" id="label_admin_csr" adr_trans="label_admin_csr">
 
                                  Admin / CSR
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_city" adr_trans="label_city">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_city" adr_trans="label_city">
 
                                 City
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_state" adr_trans="label_state">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_state" adr_trans="label_state">
 
                                 State
 
                         </span>
 
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_profile_picture" adr_trans="label_profile_picture">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_profile_picture" adr_trans="label_profile_picture">
 
                                 Profile picture
 
                         </span>
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_contact" adr_trans="label_contact">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_contact" adr_trans="label_contact">
 
                                 Contact
 
                         </span>
 
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_status" adr_trans="label_status">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_status" adr_trans="label_status">
 
                                 Status
 
                         </span>
 
-						</th><th data-column-id="link-icon" class="text-center" style=""><span class="text" id="label_details" adr_trans="label_details">
+						</th><th data-column-id="link-icon" class="text-center" ><span class="text" id="label_details" adr_trans="label_details">
 
                                 Details
 
                         </span></th></tr>
                 </thead>
-                <tbody>
+                <tbody class="TableContent">
 				<?php
 				//	---------------------------------  pagination starts ---------------------------------------
 				if(@$_GET["page"]<0)
@@ -608,7 +610,7 @@ thead > tr:last-child > th, th > span {
 				$cnt++;
 				?>
 				<tr data-row-id="0" class="listPageTR">
-				<td class="text-left" style=""><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+				<td class="text-left" ><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['first_name']; ?> <?php echo $res1['last_name']; ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['organization_name']; ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php
@@ -631,16 +633,16 @@ thead > tr:last-child > th, th > span {
 
 
 				  ?></td>
-				<td class="text-left" style=""><?php echo $res1['city']; ?></td>
-				<td class="text-left" style=""><?php echo $res1['state']; ?></td>
-				<td class="text-center" style=""><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
+				<td class="text-left" ><?php echo $res1['city']; ?></td>
+				<td class="text-left" ><?php echo $res1['state']; ?></td>
+				<td class="text-center" ><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
 				<img src="data:<?php echo $res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode($res1['profile_pic']); ?>" width="50" height="50" /></td>
 
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['contact_number']; ?></td>
-				<td class="text-left" style=""><?php $approved=$res1['email_verified']; if($approved==0) { echo "<span id='label_pending' adr_trans='label_pending' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Pending</span>"; } elseif($approved==2) { echo "<span id='label_blocked' adr_trans='label_blocked' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Blocked</span>"; } else { echo "<span id='label_approved' adr_trans='label_approved' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Approved</span>"; } ?></td>
-				<td class="text-center" style=""><a target="" href="userDetails.php?val=2&id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-chevron-circle-right fa-lg"></i></a>&nbsp;&nbsp;<a target="" href="edit_photographer.php?id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-pencil fa-lg" style="padding-left:3px" title="Edit photographer details"></i></td>
+				<td class="text-left" ><?php $approved=$res1['email_verified']; if($approved==0) { echo "<span id='label_pending' adr_trans='label_pending' class='Status-Rework'>Pending</span>"; } elseif($approved==2) { echo "<span id='label_blocked' adr_trans='label_blocked' class='Status-Rework'>Blocked</span>"; } else { echo "<span id='label_approved' adr_trans='label_approved' class='Status-Completed'>Approved</span>"; } ?></td>
+				<td class="text-center" ><a target="" href="userDetails.php?val=2&id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-chevron-circle-right fa-lg IconWithTitle"></i></a>&nbsp;&nbsp;<a target="" href="edit_photographer.php?id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-pencil fa-lg IconWithTitle" title="Edit photographer details"></i></td>
 				</tr>
 				<tr><td class="listPageTRGap">&nbsp;</td></tr>
 				<?php }} ?></tbody>
@@ -660,7 +662,7 @@ thead > tr:last-child > th, th > span {
 </div>
 
 
-<div class="panel" id="tab4" style="width:100%;">
+<div class="panel W-100" id="tab4">
 
 <script>
 
@@ -704,58 +706,59 @@ header("location:csr_list1.php?ed=1");
 
 ?>
 
-<p align="right"><a href="create_editor.php" style="margin-bottom: 10px;" class="btn adr-save"><span adr_trans="label_create_editor">Create Editor</span></a></p>
-<div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-<table class="table-striped" style="width:100%">
-                <thead>
-                    <tr><th data-column-id="id" class="text-left" style=""><span class="text" id="label_s.no" adr_trans="label_s.no">
+<p align="right"><a href="create_editor.php" class="ActionBtn-md"><span adr_trans="label_create_editor">Create Editor</span></a></p>
+<hr class="space xs">
+<div class="TableScroll">
+<table class="table-striped W-100">
+                <thead class="TableHeading">
+                    <tr><th data-column-id="id" class="text-left" ><span class="text" id="label_s.no" adr_trans="label_s.no">
 
                                 S.No
 
-                        </span></th><th data-column-id="name" class="text-left" style=""><span class="text" id="label_name" adr_trans="label_name">
+                        </span></th><th data-column-id="name" class="text-left" ><span class="text" id="label_name" adr_trans="label_name">
 
                                 Name
 
                         </span>
-						</th><th data-column-id="logo" class="text-left" style=""><span class="text" id="label_organization" adr_trans="label_organization">
+						</th><th data-column-id="logo" class="text-left" ><span class="text" id="label_organization" adr_trans="label_organization">
 
                                 Organization
 
                         </span>
 
-                        </th><th data-column-id="logo" class="text-left" style=""><span class="text" adr_trans="">
+                        </th><th data-column-id="logo" class="text-left" ><span class="text" adr_trans="">
 
                                 Organization Website
 
                         </span>
 
 
-						 </th><th data-column-id="more-info" class="text-left" style=""><span class="text" id="label_email_address" adr_trans="label_email_address">
+						 </th><th data-column-id="more-info" class="text-left" ><span class="text" id="label_email_address" adr_trans="label_email_address">
 
                                 Email address
 
                         </span>
 
 
-						</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_contact" adr_trans="label_contact">
+						</th><th data-column-id="link" class="text-left" ><span class="text" id="label_contact" adr_trans="label_contact">
 
                                 Contact
 
                         </span>
-												</th><th data-column-id="link" class="text-left" style=""><span class="text" id="label_photographer" adr_trans="label_photographer">
+												</th><th data-column-id="link" class="text-left" ><span class="text" id="label_photographer" adr_trans="label_photographer">
 
                                 Photographer
 
                         </span>
 
 
-						</th><th data-column-id="link-icon" class="text-center" style=""><span class="text" id="label_details" adr_trans="label_details">
+						</th><th data-column-id="link-icon" class="text-center" ><span class="text" id="label_details" adr_trans="label_details">
 
                                 Details
 
                         </span></th></tr>
                 </thead>
-                <tbody>
+                <tbody class="TableContent">
 				<?php
 				//	---------------------------------  pagination starts ---------------------------------------
 									if(empty($_GET["page"]))
@@ -818,7 +821,7 @@ header("location:csr_list1.php?ed=1");
 				$cnt++;   //	---------------------------------  pagination starts ---------------------------------------
 				?>
 				<tr data-row-id="0" class="listPageTR">
-				<td class="text-left" style=""><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+				<td class="text-left" ><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['first_name']; ?> <?php echo $res1['last_name']; ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php echo $res1['organization_name']; ?></td>
 				<td class="text-left" style="word-break:break-all;"><?php if($res1['organization_website']==""){echo'NA';} else{echo $res1['organization_website'];} ?></td>
@@ -847,9 +850,9 @@ header("location:csr_list1.php?ed=1");
 				 ?></td>
 
 
-				<td class="text-center" style=""><a target="" href="edit_editor.php?id=<?php echo $res1['id']; ?>&service=<?php echo @$get_photographer_id_query1['service_type']; ?>" class="link">
-				<i class="fa fa-pencil fa-lg" style="padding-left:3px" title="Edit Editor details"></i></a>&nbsp;
-				                 <a href="csr_list1.php?editor_id=<?php echo $res1['id']; ?>&del=1" onclick="return confirmDelete();"><i class="fa fa-trash fa-lg" style="padding-left:3px;" title="Delete"></i></a></td>
+				<td class="text-center" ><a target="" href="edit_editor.php?id=<?php echo $res1['id']; ?>&service=<?php echo @$get_photographer_id_query1['service_type']; ?>" class="link">
+				<i class="fa fa-pencil fa-lg IconWithTitle" title="Edit Editor details"></i></a>&nbsp;
+				                 <a href="csr_list1.php?editor_id=<?php echo $res1['id']; ?>&del=1" onclick="return confirmDelete();"><i class="fa fa-trash fa-lg IconWithTitle" title="Delete"></i></a></td>
 				</tr>
 				<tr><td class="listPageTRGap">&nbsp;</td></tr>
 				<?php }} ?></tbody>

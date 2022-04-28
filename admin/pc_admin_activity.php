@@ -56,12 +56,12 @@ thead > tr:last-child > th, th > span {
 </style>
 <?php include "header.php";  ?>
  <div class="section-empty bgimage2">
-        <div class="container">
+        <div class="container" style="margin-left:0px;height:inherit;width:100%">
             <div class="row">
 			<hr class="space s">
                 <div class="col-md-2">
 	 	<?php include "sidebar.php";?>
-
+ 
 
 			</div>
                 <div class="col-md-10">
