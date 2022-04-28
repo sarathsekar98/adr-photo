@@ -274,21 +274,21 @@ opacity:1!important;
   font-size: 10px;
   font-family: verdana;
   color: #000; 
-  padding: 5px;
+  padding: 0px;
 }
 .PageHeading-md
 {
   font-family: verdana;
   color: #000; 
   font-size: 12px;
-  padding: 5px;
+  padding: 0px;
 }
 .PageHeading-lg
 {
   font-family: verdana;
   color: #000; 
   font-size: 13px;
-  padding: 5px;
+  padding: 0px;
 }
 
 .FieldLabel
@@ -1190,6 +1190,14 @@ i.fa-star-o,i.fa-star
 {
     width: 30%;
 }
+.W-20
+{
+    width: 20%;
+}
+.W-10
+{
+    width: 10%;
+}
 .Float-left
 {
     float: left;
@@ -1264,6 +1272,7 @@ i.fa-star-o,i.fa-star
 }
 
 /*nav tab configrations ends here*/
+
 /*nav pills Start here*/
 .nav-pills li a
 {

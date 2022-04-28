@@ -244,10 +244,10 @@ var xhttp= new XMLHttpRequest();
 			</div>
                 <div class="col-md-10">
                   <?php   //echo $_SESSION['project_url'];?>
-                   <a href="Realtor_registration.php" class="ActionBtn-md AnimationBtn"  style="float: right;position: relative;top: 30px;z-index: 2;"><i class="fa fa-plus"></i>Add Realtor</a>
+                   <a href="Realtor_registration.php" class="ActionBtn-md AnimationBtn Float-right"  style="position: relative;top: 30px;z-index: 2;"><i class="fa fa-plus"></i>Add Realtor</a>
 
 
-						 <a href="#tnc" class="ActionBtn-md AnimationBtn lightbox link"  style="float:right;margin-right:10px;position: relative;top: 30px;z-index: 2;"><i class="fa fa-paper-plane"></i><span adr_trans="label_send_invite">Send Invite</span></a>
+						 <a href="#tnc" class="ActionBtn-md AnimationBtn lightbox link Float-right"  style="margin-right:10px;position: relative;top: 30px;z-index: 2;"><i class="fa fa-paper-plane"></i><span adr_trans="label_send_invite">Send Invite</span></a>
 
 <?php if(@isset($_REQUEST["a"])) { ?>
                         <div class="success-box" style="display:block;margin-left:300px;">

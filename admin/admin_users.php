@@ -22,17 +22,25 @@ if(isset($_REQUEST['loginbtn']))
     margin-right: -35px !important;
 }
 }
-th
+/*th
 {
     background: #aad1d6;
     padding-top: 10px !important;
     padding-bottom: 10px;
     padding-left: 3px !important;
-}
+}*/
 .infos p
 {
   margin-right: -40px;
  }
+.OuterSpace
+{
+
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px!important;
+
+}
 	</style>
 <?php include "header.php";  ?>
  <div class="section-empty bgimage1">
@@ -52,41 +60,43 @@ th
 					<?php } ?>
 
 
- <h5><span style="color:#000;margin-left: 3px;">List of Fotopia Admins</span></h5>
- 	<a href="create_admin.php" class="circle-button btn adr-save" style="float:right;font-size: 12px;height: 30px;margin-top:-36px;"><i class="fa fa-plus fa-xs" style=""></i>Create</a>      
-<div style="background: white;padding: 10px;border-radius: 5px!important;">
-<div style="width:100%;">
+ <h5 class="PageHeading-md"><span>List of Fotopia Admins</span></h5>
+ 	   
+<div class="OuterSpace">
+	<a href="create_admin.php" class="ActionBtn-md AnimationBtn Float-right" ><i class="fa fa-plus fa-xs" ></i>Create</a>   
+	<hr class="space xs">
+<div class="W-100">
 		
-					<table class="table-stripped" style="color:#000;opacity:0.8;width:100%;">
-                <thead>
-                    <tr><th data-column-id="id" class="text-left" style=""><span class="text">
+					<table class="table-stripped W-100">
+                <thead class="TableHeading">
+                    <tr><th data-column-id="id" class="text-left" ><span class="text">
 
                                 S.No
 
-                        </span><span class="icon fa "></span></th><th data-column-id="name" class="text-left" style=""><span class="text">
+                        </span><span class="icon fa "></span></th><th data-column-id="name" class="text-left" ><span class="text">
 
                                 Name
 
                         </span>
 
-						<span class="icon fa "></span></th><th data-column-id="logo" class="text-left" style=""><span class="text">
+						<span class="icon fa "></span></th><th data-column-id="logo" class="text-left" ><span class="text">
 
                                 City
 
                         </span>
 
-						<span class="icon fa "></span></th><th data-column-id="logo" class="text-left" style=""><span class="text">
+						<span class="icon fa "></span></th><th data-column-id="logo" class="text-left" ><span class="text">
 
                                 State
 
                         </span>
 
-						<span class="icon fa "></span></th><th data-column-id="logo" class="text-left" style=""><span class="text">
+						<span class="icon fa "></span></th><th data-column-id="logo" class="text-left" ><span class="text">
 
                                 Picture
 
                         </span>
-						<span class="icon fa "></span></th><th data-column-id="link" class="text-left" style=""><span class="text">
+						<span class="icon fa "></span></th><th data-column-id="link" class="text-left" ><span class="text">
 
                                 Contact
 
@@ -94,13 +104,13 @@ th
 
 
 
-						<span class="icon fa "></span></th><th data-column-id="link-icon" class="text-left" style=""><span class="text">
+						<span class="icon fa "></span></th><th data-column-id="link-icon" class="text-left" ><span class="text">
 
                                 Details
 
                         </span><span class="icon fa "></span></th></tr>
                 </thead>
-                <tbody>
+                <tbody class="TableContent">
 
 									<?php
                     //	---------------------------------  pagination starts ---------------------------------------
@@ -150,15 +160,15 @@ th
 				//-----------------------------------pagination end---------------------------------------------
 				?>
 				<tr data-row-id="0" class="listPageTR">
-				<td class="text-left" style=""><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
-				<td class="text-left" style=""><?php echo $res1['first_name']; ?> <?php echo $res1['last_name']; ?></td>
-				<td class="text-left" style=""><?php echo $res1['city']; ?></td>
-				<td class="text-left" style=""><?php echo $res1['state']; ?></td>
-				<td class="text-left" style=""><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
+				<td class="text-left" ><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+				<td class="text-left" ><?php echo $res1['first_name']; ?> <?php echo $res1['last_name']; ?></td>
+				<td class="text-left" ><?php echo $res1['city']; ?></td>
+				<td class="text-left" ><?php echo $res1['state']; ?></td>
+				<td class="text-left" ><a class="lightbox" href="imageView.php?image_id=<?php echo $res1["id"]; ?>">
 				<img src="data:<?php echo $res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode($res1['profile_pic']); ?>" width="50" height="50" /></td>
-				<td class="text-left" style=""><?php echo $res1['contact_number']; ?></td>
-				<td class="text-left" style=""><a target="" href="adminDetails.php?id=<?php echo $res1['id']; ?>" class="link">
-				<i class="fa fa-chevron-circle-right fa-lg"></i></a></td>
+				<td class="text-left" ><?php echo $res1['contact_number']; ?></td>
+				<td class="text-left" ><a target="" href="adminDetails.php?id=<?php echo $res1['id']; ?>" class="link">
+				<i class="fa fa-chevron-circle-right fa-lg IconWithTitle"></i></a></td>
 				</tr>
 				<tr><td class="listPageTRGap">&nbsp;</td></tr>
 				<?php } ?>

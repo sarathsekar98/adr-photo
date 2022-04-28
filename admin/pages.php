@@ -41,6 +41,12 @@ tr:last-child > th
   padding: 0px 25px;
   border-radius: 0px 0px 5px 5px!important;
 }
+
+.OuterSpace
+{
+  background:#FFF;
+  border-radius: 5px!important;
+}
 </style>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
@@ -60,17 +66,17 @@ tr:last-child > th
 
 
 			</div>
-                <div class="col-md-10" style="padding-left:15px;">
+                <div class="col-md-10">
 
 
 
 
 
-<h5><span adr_trans="cms_pages" style="color:#000;margin-left: 3px;">CMS Pages</span></h5>  
-			<div style="width:100%;background:#FFF;border-radius: 5px 5px 0px 0px!important;margin-top: 10px;">
+<h5 class="PageHeading-md"><span adr_trans="cms_pages">CMS Pages</span></h5>  
+			<div class="OuterSpace">
  <hr class="space xs" />
-                            <table id="dataTable" class="table-striped" align="center" style="background:#FFF;color:#000;opacity:0.8;width:98%;">
-                                  <thead>
+                            <table id="dataTable" class="table-striped W-98" align="center">
+                                  <thead class="TableHeading">
                                       <tr><th data-column-id="id" class="text-left" style=""><span class="text" id="label_s.no" adr_trans="label_s.no">
 
                                             S.No
@@ -99,7 +105,7 @@ tr:last-child > th
 
                                           </span>	</a></th></tr>
                                   </thead>
-                                  <tbody>
+                                  <tbody class="TableContent">
                           <?php
                                      //	---------------------------------  pagination starts ---------------------------------------
 																		 if(@$_GET["page"]<0)
@@ -161,7 +167,7 @@ $res="";
                           <tr data-row-id="0" class="listPageTR">
 						   <td><?php echo $cnt; ?></td>
                           <td><?php echo $getCMSPages['page_title']; ?></td>
-						   <td><a href="editPages.php?id=<?php echo $getCMSPages['id']; ?>" class="btn btn-primary btn-sm adr-save" style="height: 30px;font-size: 12px;">View / Edit</a></td>
+						   <td><a href="editPages.php?id=<?php echo $getCMSPages['id']; ?>" class="ActionBtn-sm">View / Edit</a></td>
 						    <td><?php  echo $getCMSPages['last_updated_on']; ?></td>
 							 <td><?php if($getCMSPages['status']==1) { echo "Active"; } else { echo "Inactive"; } ?></td>
 

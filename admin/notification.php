@@ -18,16 +18,25 @@ include "connection1.php";
     margin-right: 14px !important;
 }
 }
-th
+/*th
 {
     background: #aad1d6;
     padding-top: 10px !important;
     padding-bottom: 10px;
     padding-left: 3px !important;
-}
+}*/
 .infos p
 {
   margin-right: -10px;
+}
+
+.OuterSpace
+{
+
+background: #fff;
+padding: 0px;
+border-radius: 5px!important;
+
 }
    </style>
  <div class="section-empty bgimage1">
@@ -39,13 +48,13 @@ th
      <?php include "sidebar.php";  ?>
 
                 </div>
-    <h5><span style="color:#000;margin-left: 3px;">Users Activities</span></h5>            
-<div class="col-md-10" style="background: white;padding: 0px;border-radius: 5px!important;">
+    <h5 class="PageHeading-md"><span>Users Activities</span></h5>            
+<div class="col-md-10 OuterSpace">
 
 <hr class="space xs"/>
 <div class="col-md-12">
 <form name="search_filter" method="post" action="">
-   <center><select name="module" class="form-control" style="width:160px;height: 30px;font-size: 12px;float:right;" id="module" onchange="this.form.submit()">
+<select name="module" class="form-control W-20 Float-right" style="" id="module" onchange="this.form.submit()">
         <option value="">Select a module</option>
           <?php
               $modules=mysqli_query($con,"select distinct(module) from user_actions order by module");
@@ -55,27 +64,26 @@ th
               <option value="<?php echo $all_modules['module']; ?>" <?php if(@$_REQUEST['module']==$all_modules['module']) { echo "selected"; } ?>><?php echo $all_modules['module']; ?></option>
               <?php } ?>
       </select>
-      </center>
     </form>
 </div>
         <div class="col-md-12">
          <hr class="space xs" />
-         <div style="width:100%;background: white;">
-      <table class="table-stripped" style="color:#000;opacity:0.8;width:98%;margin-left:17px;">
-          <thead> 
-              <tr><th  class="text-left" style="padding-left:20px!important;">
+         <div>
+      <table class="table-stripped NotificationTable W-98" style="margin-left:17px;">
+          <thead class="TableHeading"> 
+              <tr><th  class="text-left">
                           S.No
 
-                 </th><th  class="text-left" style="padding-left:20px!important;">
+                 </th><th  class="text-left">
                           Module
 
-                  </th><th  class="text-left" style="padding-left:20px!important;">
+                  </th><th  class="text-left">
                           Action
 
-                  </th><th  class="text-left" style="padding-left:20px!important;">
+                  </th><th  class="text-left">
                           Action done by
 
-                 </th><th  class="text-left" style="padding-left:20px!important;">
+                 </th><th  class="text-left">
                           Action date
 
                  </th>
@@ -262,12 +270,12 @@ if($get_action['module']== $new)
 {
 
   ?>
-         <tr class="listPageTR">
-          <td class="text-left" style="padding-left:20px!important;"><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
-          <td class="text-left" style="padding-left:20px!important;"><?php echo $get_action['module'] ?> </td>
-          <td class="text-left" style="padding-left:20px!important;"><?php echo $get_action['action'] ?> </td>
-          <td class="text-left" style="padding-left:20px!important;"><?php echo $get_action['action_done_by_name'] ?></td>
-          <td class="text-left" style="padding-left:20px!important;"><?php echo $date1 ?></td>
+         <tr class="listPageTR TableContent">
+          <td class="text-left"><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+          <td class="text-left"><?php echo $get_action['module'] ?> </td>
+          <td class="text-left"><?php echo $get_action['action'] ?> </td>
+          <td class="text-left"><?php echo $get_action['action_done_by_name'] ?></td>
+          <td class="text-left"><?php echo $date1 ?></td>
         </tr>
         <tr><td class="listPageTRGap">&nbsp;</td></tr>
 
@@ -275,7 +283,7 @@ if($get_action['module']== $new)
 }
 }
 ?>
-</tbody>
+
                   </table></div>
                   <div class="undefined-footer">
                   <div class="col-sm-6">
