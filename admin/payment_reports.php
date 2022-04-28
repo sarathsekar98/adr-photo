@@ -21,10 +21,10 @@ if(isset($_REQUEST['loginbtn']))
       margin-right: -40px !important;
     }
   }
-  .nav-pills > li > a
+  /*.nav-pills > li > a
   {
     padding: 6px;
-  }
+  }*/
   .infobar
   {
     margin-top: 22px;
@@ -47,6 +47,13 @@ if(isset($_REQUEST['loginbtn']))
   }
   .nav > li {
   margin-right:10px;
+  }
+  .OuterSpace
+  {
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
   }
 </style>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
@@ -85,12 +92,12 @@ if(isset($_REQUEST['loginbtn']))
 
 
                   <hr class="space s">
-                  <div class="col-md-12" style="width:100%;margin-top: 5px;">
+                  <div class="col-md-12" style="margin-top: 5px;">
 
                          <ul class="nav nav-pills" style="margin-left:0px;">
-                              <li class="active"><a id="label_order_report" adr_trans="label_order_report" href="order_reports.php" class="btn btn-default btn-sm " style="background:#FFF!important;color:#000!important;">Order Report</a></li>
-                              <li class="active"><a id="label_appointment_report" adr_trans="label_appointment_report" href="appointment_reports.php" class="btn btn-default btn-sm " style="background:#FFF!important;color:#000!important;">Appointment Report</a></li>
-                              <li class="active"><a id="label_payment_report" adr_trans="label_payment_report" href="payment_reports.php" class="btn btn-default btn-sm adr-save ">Payment Report</a></li>
+                               <li class="Text-sm"><a href="order_reports.php" id="label_order_report" adr_trans="label_order_report" class="">Order Report</a></li>
+                              <li class="Text-sm"><a href="appointment_reports.php" id="label_appointment_report" adr_trans="label_appointment_report" >Appointment Report</a></li>
+                              <li class="active Text-sm"><a href="payment_reports.php" id="label_payment_report" adr_trans="label_payment_report" >Payment Report</a></li>
                                 </ul>
 <br />
 <script>
@@ -143,23 +150,23 @@ function radioFilter(val)
 </script>
 
 
-<div class="row" style="width:100%;margin-left:3px;"> 
+<div class="row" style="margin-left:3px;"> 
 <form>
 <div class="col-md-2" style="padding-left:0px;margin-top:5px;">
-<h5 id="label_from_date" adr_trans="label_from_date">From Date</h5>
-<input type="date" onchange="setSecondDate();" id="start" value="<?php echo @$_REQUEST['starting']?>" name="starting" class="form-control" style="padding-left:5px;width:160px;height:30px">
+<h5 class="FieldLabel" id="label_from_date" adr_trans="label_from_date">From Date</h5>
+<input type="date" onchange="setSecondDate();" id="start" value="<?php echo @$_REQUEST['starting']?>" name="starting" class="form-control" style="padding-left:5px;">
 </div>
 <div class="col-md-2" style="padding-left:5px;margin-top:5px;">
-<p><h5 id="label_to_date" adr_trans="label_to_date">To Date</h5></p>
-<input type="date" id="end" name="ending" value="<?php echo @$_REQUEST['ending']?>" class="form-control" style="padding-left:2px;width:160px;height:30px">
+<p><h5 class="FieldLabel" id="label_to_date" adr_trans="label_to_date">To Date</h5></p>
+<input type="date" id="end" name="ending" value="<?php echo @$_REQUEST['ending']?>" class="form-control" style="padding-left:2px;">
 </div>
 <div class="col-md-6" >
-  <h5 id="label_from_date" adr_trans="label_Choose_Realtor" style="padding-left:15px;margin-top:5px;">Filter By</h5>
- &nbsp;&nbsp; <input type="radio" id="radioRealtor" name="filter" value="RealtorCompany" <?php if(@$_REQUEST['filter']!='Photographer'){ echo 'checked';} ?>  onclick="radioFilter(this.value)" onChange="radioFilter(this.value)"><span  style="font-size:13px;color:#666666;">&nbsp;&nbsp;Realtor Company</span>&nbsp;&nbsp;&nbsp;&nbsp;
- <?php if($_SESSION['admin_loggedin_type']!="FotopiaAdmin"){?> <input type="radio" id="radioPhotographer" name="filter" value="Photographer" <?php if(@$_REQUEST['filter']=='Photographer'){ echo 'checked';} ?> onclick="radioFilter(this.value)" onChange="radioFilter(this.value)"><span style="font-size:13px;color:#666666;display:inline-block">&nbsp;&nbsp;Photographer</span>
+  <h5 class="FieldLabel" id="label_from_date" adr_trans="label_Choose_Realtor" style="padding-left:15px;margin-top:5px;">Filter By</h5>
+ &nbsp;&nbsp; <input type="radio" id="radioRealtor" name="filter" value="RealtorCompany" <?php if(@$_REQUEST['filter']!='Photographer'){ echo 'checked';} ?>  onclick="radioFilter(this.value)" onChange="radioFilter(this.value)"><span  class="Text-md">&nbsp;&nbsp;Realtor Company</span>&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php if($_SESSION['admin_loggedin_type']!="FotopiaAdmin"){?> <input type="radio" id="radioPhotographer" name="filter" value="Photographer" <?php if(@$_REQUEST['filter']=='Photographer'){ echo 'checked';} ?> onclick="radioFilter(this.value)" onChange="radioFilter(this.value)"><span class="Text-md" style="display:inline-block">&nbsp;&nbsp;Photographer</span>
 <?php } ?>
 
-<select name="realtor_id" id="realtorDropdown" class="form-control" list="realtors_list" style="width:200px;height:30px;font-size:13px;padding:0px 0px 0px 5px;display:inline-block;margin-left:20px;">
+<select name="realtor_id" id="realtorDropdown" class="form-control" list="realtors_list" style="width:200px;display:inline-block;margin-left:20px;">
 <option value=0> Select Realtor</option>
 						<?php
 
@@ -171,7 +178,7 @@ function radioFilter(val)
 						<?php } ?>
 
 </select>
-<select name="photographer_id" id="photographerDropdown" class="form-control" list="realtors_list" style="width:200px;height:30px;font-size:13px;padding:0px 0px 0px 5px;display:none;margin-left:20px;">
+<select name="photographer_id" id="photographerDropdown" class="form-control" list="realtors_list" style="width:200px;display:none;margin-left:20px;">
 <option value=0>Select Photographer</option>
             <?php
             $loggedin_type=$_SESSION['admin_loggedin_type'];
@@ -200,10 +207,10 @@ function radioFilter(val)
 
 </div>
 <div class="col-md-2" style="margin-top:23px;padding-left:0px;">
-    <button type="submit" id="label_search" adr_trans="label_search" class="btn adr-save s" style="padding: 6px 10px !important;height:30px;font-size:12px;margin-left:<?php if($loggedin_type=="PCAdmin" || $loggedin_type=="CSR") { echo "-15px"; } else { echo "-125px"; }?>;margin-top:5px;">Search</button>
+    <button type="submit" id="label_search" adr_trans="label_search" class="ActionBtn-sm" style="margin-left:<?php if($loggedin_type=="PCAdmin" || $loggedin_type=="CSR") { echo "-15px"; } else { echo "-125px"; }?>;margin-top:5px;">Search</button>
 
-                          <a href="#" onclick="payment()"><i class="fa fa-file-pdf-o" style="color:#F20F00;font-size:28px;padding-left:10px;vertical-align: middle;float:right;padding-top:5px;" title="Download PDF"></i></a>&nbsp;&nbsp;
-<a href="#" class="dataExport" data-type="excel"><i class="fa fa-file-excel-o" style="color:#117C43;font-size:28px;padding-left:10px;vertical-align: middle;float:right;padding-top:5px;" title="Download Excel"></i></a>
+                          <a href="#" onclick="payment()"><i class="fa fa-file-pdf-o fa-2x Float-right" style="color:#F20F00;vertical-align: middle;padding-top:5px;" title="Download PDF"></i></a>&nbsp;&nbsp;
+<a href="#" class="dataExport" data-type="excel"><i class="fa fa-file-excel-o fa-2x Float-right" style="color:#117C43;vertical-align: middle;padding-top:5px;" title="Download Excel"></i></a>
 
   </div>
 </div>
@@ -212,11 +219,11 @@ function radioFilter(val)
 
 
 
-<div style="margin-top: 5px;width:100%;border-radius: 5px;background-color:white">
-  <div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-        <table id="dataTable" align="center" class="table-striped" style="opacity:0.9;width:98%;">
+<div class="OuterSpace">
+  <div class="TableScroll">
+        <table id="dataTable" align="center" class="table-striped ListTable W-98" >
 
-                                    <thead>
+                                    <thead class="TableHeading">
 									<hr class="space xs" />
 			<!--<tr class="text-left"><th align="center" colspan="11" style="font-size:15px;"><center><b><br /><span  adr_trans="label_payment_report">Payment Reports</span><br /></b></center></th></tr>-->
                                         <tr><th data-column-id="id" class="text-left" style=""><span class="text">
@@ -337,7 +344,7 @@ $available=mysqli_num_rows($taxpercent);
 
 								</tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="TableContent">
                             <?php
                                        //	---------------------------------  pagination starts ---------------------------------------
 

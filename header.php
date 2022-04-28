@@ -1264,7 +1264,22 @@ i.fa-star-o,i.fa-star
 }
 
 /*nav tab configrations ends here*/
-
+/*nav pills Start here*/
+.nav-pills li a
+{
+  font-family: verdana;
+  background: #fff!important; 
+  border: none !important;
+  color: #000 !important;
+  padding: 5px;
+  line-height: 24px;
+}
+.nav-pills li.active,.nav-pills li.active a
+{
+  font-family: verdana;
+  background: #aad1d6!important;
+}
+/*nav pills end here*/
 </style>
 <script>
 var calid;

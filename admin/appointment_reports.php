@@ -25,10 +25,7 @@ if(isset($_REQUEST['label_search']))
       margin-right: -40px !important;
     }
   }
-  .nav-pills > li > a
-  {
-    padding: 6px;
-  }
+
   .infobar
   {
     margin-top: 22px;
@@ -52,11 +49,17 @@ if(isset($_REQUEST['label_search']))
    .nav > li {
   margin-right:10px;
   }
+  .OuterSpace
+  {
+    margin-top: 5px;
+    width: 100%;
+    background-color: white;
+  }
 </style>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
  <div class="section-empty bgimage5">
-        <div class="" style="margin-left:0px;height:inherit;width:100%">
+        <div class="" style="margin-left:0px;height:inherit;">
             <div class="row">
 			
                 <div class="col-md-2" style="padding-left:15px;">
@@ -75,9 +78,9 @@ if(isset($_REQUEST['label_search']))
                   <hr class="space s">
                   <div class="col-md-12" style="margin-top:5px;">
                            <ul class="nav nav-pills" style="margin-left:0px;">
-                              <li class="active"><a href="order_reports.php" id="label_order_report" adr_trans="label_order_report" class="btn btn-default btn-sm " style="background:#FFF!important;color:#000!important;">Order Report</a></li>
-                              <li class="active"><a href="appointment_reports.php" id="label_appointment_report" adr_trans="label_appointment_report" class="btn btn-default btn-sm adr-save " >Appointment Report</a></li>
-                              <li class="active"><a href="payment_reports.php" id="label_payment_report" adr_trans="label_payment_report" class="btn btn-default btn-sm " style="background:#FFF!important;color:#000!important;">Payment Report</a></li>
+                               <li class="Text-sm"><a href="order_reports.php" id="label_order_report" adr_trans="label_order_report" class="">Order Report</a></li>
+                              <li class="active Text-sm"><a href="appointment_reports.php" id="label_appointment_report" adr_trans="label_appointment_report" >Appointment Report</a></li>
+                              <li class="Text-sm"><a href="payment_reports.php" id="label_payment_report" adr_trans="label_payment_report">Payment Report</a></li>
                                 </ul>
 
 <br />
@@ -107,17 +110,17 @@ var days = 1;
 <form>
 <div class="row">
 <div class="col-md-2" style="padding-left:18px;">
-<p><h5 id="label_from_date" adr_trans="label_from_date">From Date</h5></p>
-<input type="date" onchange="setSecondDate();" id="start" name="starting" value="<?php echo @$_REQUEST['starting']?>" class="form-control" style="padding-left:5px;width:160px;height:30px">
+<p><h5 class="FieldLabel" id="label_from_date" adr_trans="label_from_date">From Date</h5></p>
+<input type="date" onchange="setSecondDate();" id="start" name="starting" value="<?php echo @$_REQUEST['starting']?>" class="form-control" style="padding-left:5px;">
 </div>
 <div class="col-md-2" style="padding-left:20px;">
-<p><h5 id="label_to_date" adr_trans="label_to_date">To Date</h5></p>
-<input type="date" id="end" name="ending"  class="form-control" value="<?php echo @$_REQUEST['ending']?>" style="padding-left:5px;width:160px;height:30px">
+<p><h5 class="FieldLabel" id="label_to_date" adr_trans="label_to_date">To Date</h5></p>
+<input type="date" id="end" name="ending"  class="form-control" value="<?php echo @$_REQUEST['ending']?>" style="padding-left:5px;">
 </div>
 <div class="col-md-3" style="padding-left:25px;">
-<p><h5 id="label_filter_by" adr_trans="label_filter_by">Filter By</h5></p>
- <input type="text"  list="Suggestions1" placeholder="Search Photographer" class="form-control form-value" id="user_name1" name="user_name1" value="<?php echo @$_REQUEST["user_name1"] ?>" autocomplete="off"  style="width:200px;height:30px;font-size:13px;padding:0px 0px 0px 5px" />
- <!-- <button type="submit" style="padding:2px!important;background:white;border:none;"><i class="fa fa-search" style="color:#006600"></i></button> -->
+<p><h5 class="FieldLabel" id="label_filter_by" adr_trans="label_filter_by">Filter By</h5></p>
+ <input type="text"  list="Suggestions1" placeholder="Search Photographer" class="form-control form-value" id="user_name1" name="user_name1" value="<?php echo @$_REQUEST["user_name1"] ?>" autocomplete="off"  style="font-size:13px;padding:0px 0px 0px 5px" />
+
 
  <datalist id="Suggestions1"  >
  <?php
@@ -149,12 +152,12 @@ var days = 1;
 </div>
 
 
-<div class="col-md-3" style="margin-top:23px;padding-left:0px;margin-left:0px;">
-  <button type="submit" name="label_search" id="label_search" adr_trans="label_search" class="btn adr-save" style="padding: 6px 10px !important;height:30px;font-size:12px;margin-left:-15px;">Search</button>
+<div class="col-md-3" style="margin-top:23px;padding-left:10px;margin-left:0px;">
+  <button type="submit" name="label_search" id="label_search" adr_trans="label_search" class="ActionBtn-sm" style="margin-left:-15px;">Search</button>
 </div>
-<div class="col-md-2" style="margin-top:23px;float:right;">
-   <a href="#" onclick="appointment()"><i class="fa fa-file-pdf-o" style="color:#F20F00;font-size:28px;padding-left:10px;vertical-align: middle;float:right;margin-right:-15px;" title="Download PDF"></i></a>&nbsp;&nbsp;
-<a href="#" class="dataExport" data-type="excel"><i class="fa fa-file-excel-o" style="color:#117C43;font-size:28px;padding-left:10px;vertical-align: middle;float:right;" title="Download Excel"></i></a>
+<div class="col-md-2 " style="margin-top:23px;">
+   <a href="#" onclick="appointment()"><i class="fa fa-file-pdf-o fa-2x Float-right" style="color:#F20F00;padding-left:10px;vertical-align: middle;;margin-right:-15px;" title="Download PDF"></i></a>&nbsp;&nbsp;
+<a href="#" class="dataExport" data-type="excel"><i class="fa fa-file-excel-o fa-2x Float-right" style="color:#117C43;padding-left:10px;vertical-align: middle;" title="Download Excel"></i></a>
 
 </div>
 </div>
@@ -165,12 +168,12 @@ var days = 1;
 
 
 
-<div style="margin-top: 5px;width:100%;background-color:white">
-                          <div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-               <table id="dataTable" align="center" class="table-striped" style="background:#FFF;color:#000;opacity:0.8;width:98%;">
+<div class="OuterSpace">
+                          <div class="TableScroll"> 
+               <table id="dataTable" align="center" class="table-striped ListTable W-98">
 
 
-                                    <thead>
+                                    <thead class="TableHeading">
 									<hr class="space xs" />
 				<!--	<tr class="text-left"><th align="center" colspan="8"><center><b><br /><span adr_trans="label_appointment_report">Appointment Reports</span><br /></b></center></th></tr>-->
 
@@ -224,7 +227,7 @@ var days = 1;
 
                                             </span>	</th></tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="TableContent">
                             <?php
                                        //	---------------------------------  pagination starts ---------------------------------------
 																		if(@$_GET["page"]<0)
@@ -461,13 +464,13 @@ $_SESSION['filterby']=$filterBy;
                                //	---------------------------------  pagination starts ---------------------------------------
                             ?>
                             <tr data-row-id="0" class="listPageTR">
-                            <td class="text-left" style=""><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
+                            <td class="text-left" ><?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?></td>
                             <?php
                               $hs_id=$get_order["home_seller_id"];
                               $get_home_query=mysqli_query($con,"select * from home_seller_info where id=$hs_id");
                               $get_home=mysqli_fetch_assoc($get_home_query);
                              ?>
-                            <td class="text-left" style=""><?php echo $get_home["address"];?></td>
+                            <td class="text-left" width="200"><?php echo $get_home["address"];?></td>
                               <td class="text-left" style=""><?php echo $get_home["city"];?></td>
                                 <td class="text-left" style=""><?php echo $get_home["state"];?></td>
                             <?php
