@@ -1233,13 +1233,29 @@ i.fa-star-o,i.fa-star
 {
     background: #aad1d6;
 }
+/*nav tab configrations starts here*/
 .nav-tabs
 {
 
   font-family: verdana;
 }
+.nav-tabs li a
+{
 
+  font-family: verdana;
+  background: #fff!important;
 
+}
+
+.nav-tabs li.active,.nav-tabs li.active a
+{
+
+  font-family: verdana;
+  background: #aad1d6!important;
+
+}
+
+/*nav tab configrations ends here*/
 
 </style>
 <script>

@@ -227,7 +227,7 @@ font-size:12px;
 }
 .nav-tabs > li.active > a:focus,.nav-tabs > li.active > a
 {
-background:#aad1d6!important;
+/*background:#aad1d6!important;*/
 color:#000;
 padding-top:0px;
 padding-bottom:2px;
