@@ -130,7 +130,7 @@ color:#000!important;
 }
 th
 {
-    background: #aad1d6;
+    /*background: #aad1d6;*/
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 3px !important;
