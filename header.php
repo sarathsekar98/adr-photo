@@ -585,6 +585,15 @@ font-size: 100%;
   width: 90px;
   border-radius: 5px;   
 }
+/*common table start here*/
+thead > tr:last-child
+{
+     border-top: solid 1px #aad1d6!important;
+    border-bottom: solid 0.5px #aad1d6!important;
+    border-left: solid 1px #aad1d6!important;
+    border-right: solid 1.5px #aad1d6!important;
+}
+/*common table end here*/
 //to be applied in body tag
 .PageFont
 {
