@@ -32,9 +32,15 @@ th:last-child > span
 {
   background: white !important;
   padding: 0px 25px;
-  margin-right: 40px;
 }
-  </style>
+.OuterSpace
+{
+  margin-top: 5px;
+  width: 100%;
+  border: solid 1px #fff;
+  background-color: white;
+}
+</style>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
  <div class="section-empty bgimage3">
@@ -58,9 +64,10 @@ th:last-child > span
                   <div class="col-md-12">
 
                          <ul class="nav nav-pills" style="margin-left:0px;">
-                              <li class="active" style="margin-right: 10px;"><a href="order_reports.php" class="btn btn-default btn-sm " style="background:#FFF!important;color:#000!important;"  adr_trans="label_order_reports">Order Report</a></li>
-                              <li class="active"><a href="payment_reports.php" class="btn btn-default btn-sm adr-save"   adr_trans="label_payment_report">Payment Report</a></li>
-                                </ul>
+                              <li style="margin-right: 10px;"><a href="order_reports.php" adr_trans="label_order_reports">Order Report</a></li>
+
+                              <li class="active"><a href="payment_reports.php" adr_trans="label_payment_report">Payment Report</a></li>
+                            </ul>
 <br />
 <script>
 
@@ -113,15 +120,15 @@ return true;
 <form name="searchForm" method="post" action="" onsubmit="return validateDates()">
 <div class="row">
 <div class="col-md-3" style="padding-left:15px;">
-<p><h5 adr_trans="label_from_date">From Date</h5></p>
-<input type="date" id="start" name="starting" value="<?php echo @$_REQUEST['starting'];?>"; onchange="setSecondDate();" class="form-control" style="display:inline-table;height:30px;">
+<p><h5 class="FieldLabel" adr_trans="label_from_date">From Date</h5></p>
+<input type="date" id="start" name="starting" value="<?php echo @$_REQUEST['starting'];?>"; onchange="setSecondDate();" class="form-control" style="display:inline-table;">
 </div>
 <div class="col-md-3" style="padding-left:10px;">
-<p><h5 adr_trans="label_to_date">To Date</h5></p>
-<input type="date" id="end" name="ending" value="<?php echo @$_REQUEST['ending'];?>" class="form-control" style="height: 30px;">
+<p><h5 class="FieldLabel" adr_trans="label_to_date">To Date</h5></p>
+<input type="date" id="end" name="ending" value="<?php echo @$_REQUEST['ending'];?>" class="form-control">
 </div>
 <div class="col-md-3" style="padding-left:10px;">
-<p><h5 adr_trans="label_photo_company">Photo Company</h5></p>
+<p><h5 class="FieldLabel" adr_trans="label_photo_company">Photo Company</h5></p>
 <?php
 if(!empty($_REQUEST['pcfilter'])){
 	//echo $_REQUEST['pcfilter']."<br>";
@@ -132,7 +139,7 @@ if(!empty($_REQUEST['pcfilter'])){
 
 }
 ?>
-<input type="text" name="pcfilter" id="pcfilter" class="form-control" placeholder="<?php echo @$select_organization['org'];?>" list="pclist" style="height: 30px;" onchange="PCAdminSearch()"  autocomplete="off" />
+<input type="text" name="pcfilter" id="pcfilter" class="form-control" placeholder="<?php echo @$select_organization['org'];?>" list="pclist" onchange="PCAdminSearch()"  autocomplete="off" />
 <datalist id="pclist">
  <?php
 							$city1=mysqli_query($con,"select distinct(organization_name) as org,pc_admin_id from photo_company_profile where pc_admin_id in (select id from admin_users where is_approved=1)");
@@ -143,22 +150,23 @@ if(!empty($_REQUEST['pcfilter'])){
 							<?php } ?>
 </datalist>
 </div>
-<div class="col-md-3" style="margin-top: 24px;padding-left: 10px;width: 220px;">
-    <button type="submit" id="submit" class="btn btn-default btn-sm" style="" adr_trans="label_search">Search</button>
+<div class="col-md-3" style="margin-top: 24px;padding-left: 10px;">
+    <button type="submit" id="submit" class="ActionBtn-sm" style="" adr_trans="label_search">Search</button>
 
-                          <a href="#" onclick="payment()"><i class="fa fa-file-pdf-o" style="color:#F20F00;font-size:25px;padding-left:10px;vertical-align: middle;margin-top: 3px;float: right;" title="Download PDF"></i></a>&nbsp;&nbsp;
-<a href="#" class="dataExport" data-type="excel"><i class="fa fa-file-excel-o" style="color:#117C43;font-size:25px;padding-left:10px;vertical-align: middle;margin-top: 3px;float: right;" title="Download Excel"></i></a>
+                          <a href="#" onclick="payment()"><i class="fa fa-file-pdf-o fa-2x Float-right" style="color:#F20F00;padding-left:10px;vertical-align: middle;margin-top: 3px;" title="Download PDF"></i></a>&nbsp;&nbsp;
+<a href="#" class="dataExport" data-type="excel"><i class="fa fa-file-excel-o fa-2x Float-right" style="color:#117C43;padding-left:10px;vertical-align: middle;margin-top: 3px;" title="Download Excel"></i></a>
 
   </div>
 </div>
 
 </form>
-<div style="margin-top: 5px;width:96%;border:solid 1px #fff;background-color:white">
-<div style="width:100%;scrollbar-width: none;overflow-x: scroll;overflow-y:hidden">
-                              <table id="dataTable" align="center" class="table-striped" style="background:#FFF;color:#000;opacity:0.9;width:96%;margin-top: 10px;">
+<div class="OuterSpace">
+<div class="TableScroll">
+  <hr class="space xs">
+                              <table id="dataTable" align="center" class="table-striped ListTable W-98" >
 
 
-                                    <thead>
+                                    <thead class="TableHeading">
 			<!--  -->
                                         <tr><th data-column-id="id" class="text-left" style=""><span class="text" adr_trans="label_s.no">
 
@@ -231,7 +239,7 @@ if(!empty($_REQUEST['pcfilter'])){
                                 </span>
   															</a></th></tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="TableContent">
                             <?php
 
 							$pc_admin_filter="";
@@ -539,7 +547,7 @@ if(!empty($_REQUEST['pcfilter'])){
                              ?>
                             <td class="text-left" style=""><?php  if($get_order2['session_from_datetime']!='0000-00-00 00:00:00') {
 		  echo date('d/m/Y H:i',strtotime($get_order2['session_from_datetime'])); } else { echo "Not booked yet."; } ?></td>
-                            <td class="text-left" style="padding-right: 10px;"><?php $status=$get_order2['status_id']; if($status==1) { echo "<span style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Created</span>"; } elseif($status==2){echo "<span style='color:brown;font-weight:bold;'>WIP</span>";}elseif($status==3){echo "<span style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>completed</span>";}elseif($status==4){echo "<span style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;'>Rework</span>";} ?></td>
+                            <td class="text-left" style="padding-right: 10px;"><?php $status=$get_order2['status_id']; if($status==1) { echo "<span class='Status-Created'>Created</span>"; } elseif($status==2){echo "<span >WIP</span>";}elseif($status==3){echo "<span class='Status-Completed'>completed</span>";} ?></td>
 
                             </tr>
                             <tr><td class="listPageTRGap">&nbsp;</td></tr>
