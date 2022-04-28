@@ -41,7 +41,7 @@ padding-left:5px;
 }
 
 thead > tr:last-child > th, th > span {
-    background: #aad1d6;
+    /*background: #aad1d6;*/
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 3px !important;
