@@ -1273,6 +1273,8 @@ i.fa-star-o,i.fa-star
   color: #000 !important;
   padding: 5px;
   line-height: 24px;
+  font-weight: 600;
+  font-size: 12px;
 }
 .nav-pills li.active,.nav-pills li.active a
 {
