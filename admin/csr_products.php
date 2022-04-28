@@ -145,7 +145,7 @@ border-radius: 5px;
 
 
 				   <?php } } else { ?>
-				   <tr><td colspan="7" id="label_no_product" adr_trans="label_no_product">No products found.</td></tr>
+				   <tr><td colspan="7" class="PageHeading-md" id="label_no_product" adr_trans="label_no_product">No products found.</td></tr>
 				   <?php } ?>
                 </tbody>
             </table>
