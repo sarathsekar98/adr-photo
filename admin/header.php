@@ -1061,6 +1061,14 @@ i.fa-star-o,i.fa-star
 {
     width: 100%;
 }
+.W-98
+{
+    width: 98%;
+}
+.W-96
+{
+    width: 96%;
+}
 .W-75
 {
     width: 75%;
