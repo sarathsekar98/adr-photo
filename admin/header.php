@@ -677,15 +677,14 @@ border: 2px solid blue;
 {
 
 font-family: verdana;
-color: red;
-font-size: 10px; 
+color: #000;
+font-size: 13px; 
+font-weight: bold;
 text-align: center;
-background: blue;  
-border-radius: 1px; 
+background: #aad1d6;  
+border-radius: 5px; 
 padding: 2px ;
-width: 100px;
-height: 10px; 
-
+justify-content: center;
 }
 
 .PaginationEntries
@@ -719,6 +718,8 @@ height: 10px;
     font-family: verdana;
     font-size: 12px;
     color: #000;
+    height: 27px;
+    margin-bottom: 5px;
 }
 ::placeholder
 {

@@ -75,64 +75,7 @@ $("#photo_company").show();
 {
   padding-left: 39px;
 }
-.fc-day-mon,.fc-day-tue,.fc-day-wed,.fc-day-thu,.fc-day-fri,
-{
-background:#FFF!important;
-border:solid 1px #000!important;
-}
-.fc-day-sat,.fc-day-sun
-{
-background:#EEEEEE!important;
-border:solid 1px #000!important;
-}
-.active
-{
-/*background:none!important;*/
-}
-.btn-default
-{
-margin-left:0px!important;
-}
 
-
-
-.fc-day-today
-{
-background: #FFF!important;
-color:#000!important;
-border:solid 1px #01A8F2!important;
-}
-
-h2.fc-toolbar-title
-{
-display:contents;
-color:#000!important;
-border:solid 1px #000!important;
-padding:10px;
-}
-
-
-.fc .fc-toolbar.fc-header-toolbar
-{
-background:#FFF;
-border-radius:25px 25px 0px 0px;
-}
-
-.fc-scroller-harness,.fc-scroller-harness-liquid
-{
-border-radius:0px!important;
-}
-.fc-prev-button, .fc-next-button
-{
-background:#FFF!important;
-color:#000!important;
-margin:2px!important;
-font-size: 10px!important;
-}
-.fc .fc-toolbar-title
-{
-font-size:11px!important;
-}
 @media only screen and (max-width: 600px) {
   .fc-prev-button, .fc-next-button, .fc-button
 {

@@ -265,7 +265,68 @@ opacity:1!important;
 }
 	</style>
 
-    <style type="text/css">
+    <style>
+
+    .adr-save,.adr-save:hover
+    {
+    background:#AAD1D6!important;
+    border-color:#AAD1D6!important;
+    color: #000 !important;
+    border-radius: 5px !important;
+    }
+    .adr-cancel
+    {
+    /*background:#5cb85c!important;
+    border-color:#5cb85c!important;*/
+    background:#F2ADA8!important;
+    border-color:#F2ADA8!important;
+    color: #000 !important;
+    border-radius: 5px !important;
+     
+    }
+    .adr-success
+    {
+    /*background:#5cb85c!important;
+    border-color:#5cb85c!important;*/
+    background:#AAD1D6!important;
+    border-color:#AAD1D6!important;
+     color: #000 !important;
+     border-radius: 5px !important;
+    }
+    .btn-default
+    {
+
+    border: none !important;
+    padding-top:20px;
+    background:#AAD1D6!important;
+    color: #000 !important;
+    border-radius: 5px !important;
+    }
+
+    a.adr-save > i,button.adr-save > i,a.adr-cancel > i,button.adr-cancel > i,a.adr-save > span,a.btn-default > i,button.btn-default > i
+{
+  color: #000 !important;
+
+} 
+
+    .row
+    {
+    width:100%;
+    }
+    .fc-today-button,.fc-button
+{
+border-radius:25px!important;
+}
+#MenuList .active
+{
+z-index:999;
+opacity:1!important;
+}
+
+</style>
+
+
+<style type="text/css">
 
         
 
@@ -785,15 +846,14 @@ border: 2px solid blue;
 {
 
 font-family: verdana;
-color: red;
-font-size: 10px; 
+color: #000;
+font-size: 13px; 
+font-weight: bold;
 text-align: center;
-background: blue;  
-border-radius: 1px; 
+background: #aad1d6;  
+border-radius: 5px; 
 padding: 2px ;
-width: 100px;
-height: 10px; 
-
+justify-content: center;
 }
 
 .PaginationEntries
@@ -835,6 +895,8 @@ margin: 2px;
     font-family: verdana;
     font-size: 12px;
     color: #000;
+    height: 27px;
+    margin-bottom: 5px;
 }
 ::placeholder
 {
@@ -1334,7 +1396,6 @@ i.fa-star-o,i.fa-star
   background: #aad1d6!important;
 }
 /*nav pills end here*/
-
 
 /*Calendar configs starts here*/
 

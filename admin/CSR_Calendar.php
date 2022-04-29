@@ -55,19 +55,27 @@ header("location:CSR_Calendar.php?ph_id=$ph_id&ph_name=$ph_name");
 
 			var urlNew="";
 			</script>
-                <div class="col-md-8" style="padding-left:10px;">
+                <div class="col-md-8">
  
-<div class="row">
-<div class="col-md-12">
-  <hr class="space s">
-				<div class="col-md-4" style="float:left;padding-left:0px;margin-top: -16px!important;">
+ <div class="row" style="padding-left:20px;">
 
-            <span style="font-style: bold;text-align:left;padding-left:20px;color:#000"><span class="text-center" id="label_calendar" adr_trans="label_calendar"> CSR Calendar</span> - <?php echo strtoupper($_SESSION['admin_loggedin_name']); ?></span>
+  <div class="col-md-12">
+<span class="PageHeading-md"><span class="text-center" id="label_calendar" adr_trans="label_calendar"> CSR Calendar</span> - <?php echo strtoupper($_SESSION['admin_loggedin_name']); ?></span>
+
+</div>
+</div>
+
+<div class="row" style="margin-left:10px;">
+<div class="col-md-12">
+ 
+				<div class="col-md-6" style="">
+
+   <div style=""> <?php if(@$_REQUEST['ph_name']) { echo strtoupper($_REQUEST['ph_name'])." (Photographer's) Calendar."; } ?>         
 
         </div>
-
-        <div class="col-md-4" style="float:left;"><form name="" method="post" action="" id="filterForm">
-<input type="text" name="ph_name"  id="ph_name" list="phList" onchange="fillPhId();" value="<?php echo @$_REQUEST['ph_name'];?>" placeholder="Select a photographer" autocomplete="off"  class="form-control" style="width:190px;margin-bottom:10px;font-size: 12px;height:30px;margin-left: 200px;"/>
+</div>
+        <div class="col-md-3"><form name="" method="post" action="" id="filterForm">
+<input type="text" name="ph_name"  id="ph_name" list="phList" onchange="fillPhId();" value="<?php echo @$_REQUEST['ph_name'];?>" placeholder="Select a photographer" autocomplete="off"  class="form-control Float-right"/>
 
  <datalist id="phList">
      <option value="" id="label_select_photographer" adr_trans="label_select_photographer">Select a Photographer</option>
@@ -82,199 +90,28 @@ header("location:CSR_Calendar.php?ph_id=$ph_id&ph_name=$ph_name");
 
                   </datalist>
                   <input type="hidden" name="ph_id" id="ph_id" value="<?php echo @$_REQUEST['ph_id']; ?>" />
-                  </form></div>
-                  <div class="col-md-4" style="float:right;text-align:right;margin-right:-40px;">
+                  </form>
+
+                </div>
+
+
+                  <div class="col-md-3">
           <?php
            $csr_id=$_SESSION['admin_loggedin_id'];
             $get_pcadmin_query=mysqli_query($con,"select * from admin_users where id=$csr_id");
             $get_pcadmin=mysqli_fetch_array($get_pcadmin_query);
             $pc_admin_id=$get_pcadmin['pc_admin_id'];
           ?>
-               <a href="photographerCalendar1.php?pc_admin_id=<?php echo $pc_admin_id;?>&csr_id=<?php echo $csr_id; ?>" id="" adr_trans="label_create_new_order" class="anima-button circle-button btn-sm btn adr-save" style="font-size: 12px;height: 30px;"><i class="fa fa-calendar"></i> Create New Order</a>
+               <a href="photographerCalendar1.php?pc_admin_id=<?php echo $pc_admin_id;?>&csr_id=<?php echo $csr_id; ?>" id="" adr_trans="label_create_new_order" class="ActionBtn-md AnimationBtn Float-right"><i class="fa fa-calendar"></i> Create New Order</a>
               </div>
+
+
           </div>
 				</div>
-<div class="row" style="padding-left:10px;">
-<div class="col-md-12">
-				</div></div>
-				  
-				  
-				  
-				<div class="row" style="padding-left:15px;">
-<div class="col-md-12" style="text-align:left;margin-top:-28px;margin-left: 5px;"> <?php if(@$_REQUEST['ph_name']) { echo strtoupper($_REQUEST['ph_name'])." (Photographer's) Calendar."; } ?></div></div>
-
 
 <link href='../lib/main.css' rel='stylesheet' />
 				<style>
 
-
-			
-
-				#calendar
-
-				{
-
-				background-color:#FFFFFF;
-
-				border-radius:10px!important;
-
-				}
-
-				table td[class*="col-"], table th[class*="col-"]
-				{
-				background:#EEE;
-
-				}
-        .fc-day-mon,.fc-day-tue,.fc-day-wed,.fc-day-thu,.fc-day-fri
-        {
-        background:#FFF!important;
-        border:solid 1px #EEE!important;
-        }
-        .fc-day-sat,.fc-day-sun
-        {
-        background:#EEEEEE!important;
-
-        }
-        .fc-daygrid-event
-        {
-        background:none!important;
-        }
-        .status1{
-
-
-
-		background-color:#86C4F0!important;
-
-
-
-        color:#000!important;
-
-
-
-        }
-.status4,.status5,.status6{
-		background-color:#F58883!important;
-		color:#000!important;
-		 }
-
-
-        .status3
- {
-
-        color:#000!important;
-
-		background-color:#76EA97!important;
-
-        }
-        .status2,.status7 {
-
-		background-color:#FF8400!important;
-
-        color:#000!important;
-
-        }
-
-.fc-day-mon,.fc-day-tue,.fc-day-wed,.fc-day-thu,.fc-day-fri
-{
-background:#FFF!important;
-border:solid 1px #000!important;
-}
-.fc-day-sat,.fc-day-sun
-{
-border:solid 1px #000!important;
-background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    #ccc 2px,
-    #DDD 12px
-  ),
-  /* on "bottom" */
-  linear-gradient(
-    to bottom,
-    #eee,
-    #999
-  )!important;
-}
-
-
-
-.fc-day-today
-{
-background: #FFF!important;
-color:#000!important;
-border:solid 1px #01A8F2!important;
-}
-
-h2.fc-toolbar-title
-{
-display:contents;
-color:#000!important;
-border:solid 1px #000!important;
-padding:10px;
-}
-
-
-.fc .fc-toolbar.fc-header-toolbar
-{
-background:#FFF;
-border-radius:25px;
-}
-
-.fc-scroller-harness,.fc-scroller-harness-liquid
-{
-border-radius:0px!important;
-}
-
-
-.fc-prev-button, .fc-next-button
-{
-background:#FFF!important;
-color:#000!important;
-margin:10px!important;
-
-}
-/*.fc-event-main .status2
-{
-background-color:#FED8B1!important;
-color:#242526!important;
-font-weight:bold;
-}
-.fc-event-main-frame .status1{
-background-color:#67B7D1!important;
-color:#242526!important;
-font-weight:bold;
-}
-*/
-.fc-timegrid-event .fc-event-time
-{
-margin-bottom:0px!important;
-}
-
-.statusBUSY
-{
- pointer-events: none;
-	color:#000;
-	padding-left:5px;
-background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    #ccc 2px,
-    #DDD 12px
-  ),
-  /* on "bottom" */
-  linear-gradient(
-    to bottom,
-    #eee,
-    #999
-  )!important;
-
-}
-.fc-button
-{
-margin:2px!important;
-}
 .today_appointment
 {
     padding-left: 5px;
@@ -444,8 +281,8 @@ businessHours: // specify an array instead
 	<div id='calendar' style="border-radius:5px"></div>
 
     </div>
-	<div class="col-md-2" style="margin-top:20px;padding-right:0px;height:auto">
-	<div class="adr-save" style="background:#aad1d6;color:#000!important;padding:5px;width:100%;height: 30px;font-size: 12px;"><h5 id="label_today_appointment" adr_trans="label_today_appointment" align="center" style="color:#000;margin: 4px;"><u>Today's Appointment</u><br /><br /> <?php echo date("d-M-Y"); ?></h5></div>
+	<div class="col-md-2" style="margin-top:22px;padding-right:0px;height:auto">
+  <div class="BoxHeading"><p align="center" id="label_today_appointment" adr_trans="label_today_appointment">Today's Appointment<br /><br /> <?php echo date("d-M-Y"); ?></p></div>
 	<?php
 	$appointments="";
 	if(@$_REQUEST['ph_id']) {
