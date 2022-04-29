@@ -325,7 +325,6 @@ opacity:1!important;
 
 </style>
 
-
 <style type="text/css">
 
         
@@ -613,6 +612,7 @@ font-size: 100%;
   opacity:0.9;
   width:98%;
   padding-left:3px;
+  border-radius: 5px;
 }
 .NotificationTable > tbody > .listPageTR > td:first-child,.NotificationTable > .TableHeading > tr > th:first-child
 {
@@ -1525,6 +1525,7 @@ background: repeating-linear-gradient(
 }
 /*Calendar configs starts here*/
 </style>
+
 <script>
 var calid;
 function calDetails(calid)

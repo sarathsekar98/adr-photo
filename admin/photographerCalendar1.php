@@ -67,7 +67,7 @@ $(".mfp-close").click();
 <a class="lightbox btn btn-primary btn-sm circle-button" id="warningMsg" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;display:none;">+Add Product</a>
 
 
-			<?php if(@$_REQUEST['Photographer_id']!='') { ?>	<h5 class="text-center"><?php echo $photographer_name_is; ?> - Photographer's Calendar</h5>
+			<?php if(@$_REQUEST['Photographer_id']!='') { ?>	<h5 class="text-center PageHeading-md"><?php echo $photographer_name_is; ?> - Photographer's Calendar</h5>
 			<?php }  else { ?><h5 style="color:#006666;padding-top:0px;" class="text-center">Select a Photographer from the below list to create an Order OR bypass to order detail screen</h5> <?php } ?>
 
 
@@ -75,7 +75,7 @@ $(".mfp-close").click();
 color:#000!important;border-radius:5px;margin-top: 0px;margin-bottom: 10px;margin-left: 2px;">
 <div class="col-md-4" style="padding:10px;padding-left:30px;">
 <form name="" method="post" action="" id="filterForm">
-<input type="text" name="ph_name"  id="ph_name" list="phList" onchange="fillPhId();" placeholder="Select a photographer" value="<?php echo @$_REQUEST['ph_name']; ?>"  autocomplete="off"  class="form-control btn btn-default" style="color: #000;width:250px;margin-bottom:10px;padding: 0px;margin-top:10px;border-radius:25px;height: 30px;font-size: 12px;"/>
+<input type="text" name="ph_name"  id="ph_name" list="phList" onchange="fillPhId();" placeholder="Select a photographer" value="<?php echo @$_REQUEST['ph_name']; ?>"  autocomplete="off"  class="form-control BoxHeading" style="width:250px;margin-bottom:10px;padding: 0px;margin-top:10px;"/>
 
  <datalist id="phList" style="">
  	 <option value="" id="label_select_photographer" adr_trans="label_select_photographer">Select a Photographer</option>
@@ -108,7 +108,7 @@ color:#000!important;border-radius:5px;margin-top: 0px;margin-bottom: 10px;margi
 				  </form></div>
 				 <div class="col-md-4" style="padding:10px;font-size:24px;text-align:center;top:10px;font-weight:bolder"><span style="text-shadow: 2px 2px #AAA;">OR</span></div>
 				 <div class="col-md-4" style="padding:20px;">
-<a href="quick_create_order.php?u=0&pc_admin_id=<?php echo @$_REQUEST['pc_admin_id']; ?>" class="btn btn-default" style="border-radius:25px;padding: 6px;color:#AAA;height: 30px;font-size: 12px;width:250px;">Skip to Order Detail screen
+<a href="quick_create_order.php?u=0&pc_admin_id=<?php echo @$_REQUEST['pc_admin_id']; ?>" class="ActionBtn-md" style="width:250px;">Skip to Order Detail screen
 </a>
 </div>
 </div>

@@ -22,7 +22,7 @@ include "connection1.php";
 <div class="row">
 <div class="col-md-12" style="padding-left:20px;height:30px;">
 				<div class="col-md-6" style="float:left;display:inline-block">
-				<h5> <span class="" adr_trans="label_calendar"> Calendar</span> - <?php echo strtoupper($_SESSION['loggedin_name']); ?>
+				<h5 class="PageHeading-md"> <span adr_trans="label_calendar"> Calendar</span> - <?php echo strtoupper($_SESSION['loggedin_name']); ?>
 				<hr class="space s" /></h5></div>
 				<div class="col-md-6" style="float:right">
 				<!-- <a href="create_order.php" class="anima-button circle-button btn-sm btn" id="label_create_new_order" adr_trans="label_create_new_order" style="float:right;margin-top:-6px;"><i class="fa fa-calendar"></i> Create New Order</a> -->

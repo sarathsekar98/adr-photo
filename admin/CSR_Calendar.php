@@ -60,7 +60,7 @@ header("location:CSR_Calendar.php?ph_id=$ph_id&ph_name=$ph_name");
  <div class="row" style="padding-left:20px;">
 
   <div class="col-md-12">
-<span class="PageHeading-md"><span class="text-center" id="label_calendar" adr_trans="label_calendar"> CSR Calendar</span> - <?php echo strtoupper($_SESSION['admin_loggedin_name']); ?></span>
+<h5 class="PageHeading-md"><span class="text-center" id="label_calendar" adr_trans="label_calendar"> CSR Calendar</span> - <?php echo strtoupper($_SESSION['admin_loggedin_name']); ?></h5>
 
 </div>
 </div>

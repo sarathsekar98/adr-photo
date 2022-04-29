@@ -1,6 +1,6 @@
 <?php
 ob_start();
-
+ 
 include "connection1.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -281,7 +281,7 @@ $loggedin_id=$_SESSION["loggedin_id"];
 
 	   ?>
 	   
-<tr><td   style="width:200px"><img src="data:<?php echo @$res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode(@$res1['profile_pic']); ?>" width="70" height="70" style="border-radius:35px" /><br /></td><td >&nbsp;</td><td ><p class="Text-md fa-1x"><?php echo @$res1['first_name']." ".$res1['last_name']; ?></p>
+<tr><td><img src="data:<?php echo @$res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode(@$res1['profile_pic']); ?>" width="70" height="70" style="border-radius:35px" /><br /></td><td >&nbsp;</td><td ><p class="Text-md fa-1x"><?php echo @$res1['first_name']." ".$res1['last_name']; ?></p>
 		 </td></tr>
 <tr><td colspan="3"><hr class="space xs" /></td></tr>
 			   <tr><td ><span adr_trans="label_contact_no">Contact number</span></td><td >:</td><td ><b><?php echo @$res1['contact_number']; ?></b></td></tr>

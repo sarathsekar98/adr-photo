@@ -19,6 +19,14 @@ if(isset($_REQUEST['loginbtn']))
 
 <?php include "header.php";  ?>
 	<style>
+.OuterSpace
+{
+	color: #000;
+	background: #FFF;
+	border-radius:5px;
+	opacity:0.9;
+	width:90%;
+}
 
 	</style>
 <div class="section-empty bgimage7">
@@ -54,7 +62,7 @@ $loggedin_id=$_SESSION["admin_loggedin_id"];
                         </div>
 						<?php }  ?>
 
-					<table class="" aria-busy="false" align="center" style="color: #000;background: #FFF;opacity:0.8;width:100%;border-radius:10px!important;margin-left:10px;height: 600px;">
+					<table class="ProfileTable" aria-busy="false" align="center">
 
 
 	  <?php
@@ -71,59 +79,55 @@ $loggedin_id=$_SESSION["admin_loggedin_id"];
 	   ?>
 
 	   <!--<tr><td colspan="3" style="padding-top:10px;"> <h5 class="text-center" style="margin-left:-10px;" id="label_company_details" adr_trans="label_company_details">Company details</h5></td></tr>-->
-  <tr><td style="width:250px;font-size: 10px;vertical-align: baseline;padding-top: 0px;padding-bottom: 30px" align="right"><img src="<?php echo @"../".$res1['logo_image_url'] ?>" width="50" height="50" /></td><td style="padding-left:15px;padding-right:15px;padding-top: 10px;padding-bottom: 10px"></td><td style="font-size: 20px;padding-top: 0px;padding-bottom: 30px"><?php echo @$res1['organization_name']; ?></td></tr>
+  <tr><td align="right"><img src="<?php echo @"../".$res1['logo_image_url'] ?>" width="50" height="50" /></td><td></td><td><p class="Text-md fa-1x"><?php echo @$res1['organization_name']; ?></p></td></tr>
 	    
-		 <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_org_branch">Organization branch</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['organization_branch']; ?></td></tr>
+		 <tr><td align="left"><span adr_trans="label_org_branch">Organization branch</span></td><td>:</td><td><?php echo @$res1['organization_branch']; ?></td></tr>
 
-		 <tr><td align="left" style="font-size: 10px;padding-left:40px;padding-bottom: 20px"><span adr_trans="label_org_number">Organization Number</span></td><td style="padding-left:15px;padding-right:15px;padding-bottom: 20px">:</td><td style="padding-bottom: 20px"><?php echo @$res1['organization_number']; ?></td></tr>
+		 <tr><td align="left"><span adr_trans="label_org_number">Organization Number</span></td><td>:</td><td><?php echo @$res1['organization_number']; ?></td></tr>
 
-		  <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_contact_no">Contact number</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><b><?php echo @$res1['contact_number']; ?></b></td></tr>
+		  <tr><td align="left"><span adr_trans="label_contact_no">Contact number</span></td><td>:</td><td><b><?php echo @$res1['contact_number']; ?></b></td></tr>
 
-		   <tr><td align="left" style="font-size: 10px;padding-left:40px;padding-bottom: 20px"><span adr_trans="label_email">Email</span></td><td style="padding-left:15px;padding-right:15px;padding-bottom: 20px">:</td><td style="padding-bottom: 20px"><?php echo @$res1['email']; ?></td></tr>
+		   <tr><td align="left"><span adr_trans="label_email">Email</span></td><td>:</td><td><?php echo @$res1['email']; ?></td></tr>
 
-			  <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_address">Address</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['address_line1'].", ".@$res1['address_line2']; ?></td></tr>
+			  <tr><td align="left"><span adr_trans="label_address">Address</span></td><td>:</td><td><?php echo @$res1['address_line1'].", ".@$res1['address_line2']; ?></td></tr>
 
 			   <!-- <tr><th style="padding-left:20px;"><span adr_trans="label_logo">Logo</span></th><th>:</th><td><img src="data:<?php //echo @$res1['logo_image_type']; ?>;base64,<?php //echo base64_encode(@$res1['logo']); ?>" width="50" height="50" /></td></tr> -->
      
-			   <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_city">City</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['city']; ?></td></tr>
+			   <tr><td align="left"><span adr_trans="label_city">City</span></td><td>:</td><td><?php echo @$res1['city']; ?></td></tr>
 
-			    <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_state">State</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['state']; ?></td></tr>
+			    <tr><td align="left"><span adr_trans="label_state">State</span></td><td>:</td><td><?php echo @$res1['state']; ?></td></tr>
 
-				 <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_zip_code">Zip Code</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['postal_code']; ?></td></tr>
+				 <tr><td align="left"><span adr_trans="label_zip_code">Zip Code</span></td><td>:</td><td><?php echo @$res1['postal_code']; ?></td></tr>
 
-				  <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_country">Country</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['country']; ?></td></tr>
+				  <tr><td align="left"><span adr_trans="label_country">Country</span></td><td>:</td><td><?php echo @$res1['country']; ?></td></tr>
 
-				  <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_location">Location</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><?php echo @$res1['location']; ?></td></tr>
+				  <tr><td align="left"><span adr_trans="label_location">Location</span></td><td>:</td><td><?php echo @$res1['location']; ?></td></tr>
 
-					<tr><td align="left" style="font-size: 10px;padding-left:40px;padding-bottom: 20px"><span adr_trans="label_tax">Tax</span></td><td style="padding-left:15px;padding-right:15px;padding-bottom: 20px">:</td><td style="padding-bottom: 20px"><?php echo @$res1['tax']." %"; ?></td></tr>
+					<tr><td align="left"><span adr_trans="label_tax">Tax</span></td><td>:</td><td><?php echo @$res1['tax']." %"; ?></td></tr>
 
-					<tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_skills">Skills</span></td><td style="padding-left:15px;padding-right:15px;vertical-align: baseline;">:</td><td><?php echo @$res1['skills']; ?></td></tr>
+					<tr><td align="left"><span adr_trans="label_skills">Skills</span></td><td>:</td><td><?php echo @$res1['skills']; ?></td></tr>
 
-					<tr><td align="left" style="font-size: 10px;padding-left:40px;padding-bottom: 20px"><span adr_trans="label_portfolio_website">Portfolio/Website</span></td><td style="padding-left:15px;padding-right:15px;padding-bottom: 20px">:</td><td style="padding-bottom: 20px"><?php echo @$res1['portfolio']; ?></td></tr>
+					<tr><td align="left"><span adr_trans="label_portfolio_website">Portfolio/Website</span></td><td>:</td><td><?php echo @$res1['portfolio']; ?></td></tr>
 
-                     <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_fb_id">Facebook ID</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><span class="fa fa-facebook" style="margin-right: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span><?php echo @$res1['facebook_id']; ?></td></tr>
+                     <tr><td align="left"><span adr_trans="label_fb_id">Facebook ID </span><span class="fa fa-facebook SocialIconWithTitle"></span></td><td>:</td><td><?php echo @$res1['facebook_id']; ?></td></tr>
 
-                     <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_insta_id">Instagram ID</span></td><td style="padding-left:15px;padding-right:15px;">:</td><td><span class="fa fa-instagram" style="margin-right: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span><?php echo @$res1['instagram_id']; ?></td></tr>
+                     <tr><td align="left"><span adr_trans="label_insta_id">Instagram ID </span><span class="fa fa-instagram SocialIconWithTitle"></span></td><td>:</td><td><?php echo @$res1['instagram_id']; ?></td></tr>
 
-					<tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_twitter_id">Twitter ID</span></td><td style="padding-left:15px;padding-right:15px;width:30px!important">:</td><td align="left"><span class="fa fa-twitter" style="margin-right: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span><?php echo @$res1['twitter_id']; ?></td></tr>
+					<tr><td align="left"><span adr_trans="label_twitter_id">Twitter ID </span><span class="fa fa-twitter SocialIconWithTitle"></span></td><td>:</td><td align="left"><?php echo @$res1['twitter_id']; ?></td></tr>
 
-					<tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_youtube_id">Youtube ID</span></td><td style="padding-left:15px;padding-right:15px;width:30px!important">:</td><td align="left"><span class="fa fa-youtube" style="margin-right: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span><?php echo @$res1['youtube_id']; ?></td></tr>
+					<tr><td align="left"><span adr_trans="label_youtube_id">Youtube ID </span><span class="fa fa-youtube SocialIconWithTitle"></span></td><td>:</td><td align="left"><?php echo @$res1['youtube_id']; ?></td></tr>
 
-				    <tr><td align="left" style="font-size: 10px;padding-left:40px;"><span adr_trans="label_linkedin_id">LinkedIN ID</span> </td><td style="padding-left:15px;padding-right:15px;">:</td><td><span class="fa fa-linkedin" style="margin-right: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span><?php echo @$res1['linkedin_id']; ?></td></tr>
-
-
-
-					 <tr><td align="left"  style="font-size: 10px; padding-left:40px;"><br /><span adr_trans="label_about_us">About Us</span> :</td><td style="padding-left:5px;padding-right:15px;">&nbsp;</td><td align="left">&nbsp;</td></tr>
-
-<tr><td colspan="3" style="font-size: 11px; padding:10px;padding-bottom:60px;padding-left:40px;"><?php echo @$res1['about_us']; ?></td></tr>
+				    <tr><td align="left"><span adr_trans="label_linkedin_id">LinkedIN ID </span><span class="fa fa-linkedin SocialIconWithTitle"></span></td><td>:</td><td><?php echo @$res1['linkedin_id']; ?></td></tr>
+<tr><td colspan="3"><hr class="space xs"></td></tr>
+				    <tr><td align="left"><span adr_trans="label_about_us">About Us</span></td><td>:</td><td><?php echo @$res1['about_us']; ?></td></tr>
 					
-
+<tr><td colspan="3"><hr class="space xs"></td></tr>
 
 <?php } ?>
 
 				  </table>
 				  <br />
-				  <a id="label_add_profile" adr_trans="label_add_profile"  class="anima-button circle-button btn-success btn-sm btn adr-save" style="float: right;margin-right: -8px;" href="edit_company_profile.php"><i class="fa fa-pencil"></i>Add / Edit profile</a>
+				  <a id="label_add_profile" adr_trans="label_add_profile"  class="ActionBtn-md AnimationBtn Float-right" style="margin-right: 5px;" href="edit_company_profile.php"><i class="fa fa-pencil"></i>Add / Edit profile</a>
 
 
 
@@ -207,8 +211,8 @@ function get_email_content()
 
 
 
-<table style="color: #000;background: #FFF;border-radius:10px;opacity:0.7;width:90%;" align="center"><tr><td style="padding:20px;">
-	 <h5 class="text-center" style="margin-left:-10px;color:#000!important;"  ><span adr_trans="label_email_settings">Email Settings</span><a onclick="mouseover()"><i class='fa fa-question-circle' aria-hidden='true'></i></a></h5>
+<table class="OuterSpace" align="center"><tr><td style="padding:20px;">
+	 <h5 class="text-center PageHeading-md"><span adr_trans="label_email_settings">Email Settings</span><a onclick="mouseover()"><i class='fa fa-question-circle IconWithTitle' aria-hidden='true'></i></a></h5>
 
 
               <span class="text-center hide" id="click" colspan="9" style="background-color: white;
@@ -229,7 +233,7 @@ color: black;" ><i><?php echo 'The Dynamic fields below can be used to customize
  								<br>
 
  								<div class="col-md-12">
-                                <p adr_trans="label_select_title"><b>Select Title</b></p>
+                                <p class="FieldLabel"><span adr_trans="label_select_title">Select Title</span></p>
                                 <select name="email_template_title" id="email_template_title" class="form-control form-value" onclick="get_email_content()" onchange=" get_email_content()" required="">
 
                                 <option value="" selected="" disabled="">Select an email title</option>
@@ -247,22 +251,16 @@ color: black;" ><i><?php echo 'The Dynamic fields below can be used to customize
 								<option value="Order Completed">Order Completed</option>
 								<option value="Share finished images">Share finished images</option>
 								<option value="Send finished images">Send finished images</option>
-
-
 							</select>
 								</div>
-
 								<div class="col-md-12">
-                                <p adr_trans="label_email_content"><b>Email content</b></p>
+                                <p class="FieldLabel"><span adr_trans="label_email_content">Email content</span></p>
                                 <textarea id="email_template_content" name="email_template_content"  class="form-control form-value" required="" rows="3" cols="100"></textarea>
-								</div>
+								</div>				
+							<div class="col-md-12">
 
-								<br><br><br><br><br>
-
-							<div class="col-md-8">
-
-	 						<p align="right" ><br />
-							<button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="updatebtn" id="label_update_template" adr_trans="label_update_template"><i class="fa fa-sign-in"></i>Update template</button>
+	 						<p align="center" ><br />
+							<button class="ActionBtn-md AnimationBtn" type="submit" name="updatebtn" id="label_update_template" adr_trans="label_update_template"><i class="fa fa-sign-in"></i>Update template</button>
 							</p>
 
 							</div>

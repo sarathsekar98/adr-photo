@@ -76,7 +76,7 @@ header("location:PCAdmin_Calender.php?ph_id=$ph_id&ph_name=$ph_name&busydate=$bu
 <div class="row">
 <div class="col-md-12" style="padding-left:20px;">
 				<div class="col-md-12">
-				<span class="PageHeading-md"><span class="text-center" id="label_pca_calendar" adr_trans="label_pca_calendar"> Photo Company Admin Calendar</span> - <?php echo strtoupper($_SESSION['admin_loggedin_org']); ?></span>
+				<h5 class="PageHeading-md"><span class="text-center" id="label_pca_calendar" adr_trans="label_pca_calendar"> Photo Company Admin Calendar</span> - <?php echo strtoupper($_SESSION['admin_loggedin_org']); ?></h5>
 
 				 </div></div>
 				</div>
