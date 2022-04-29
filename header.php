@@ -545,7 +545,7 @@ font-size: 100%;
   padding: 5px;
   float: left;
 }
-.NotificationTable,.ListTable
+.NotificationTable,.ListTable,.ProfileTable
 {
   color: #000;
   background: white;
@@ -553,7 +553,6 @@ font-size: 100%;
   width:98%;
   padding-left:3px;
 }
-
 .NotificationTable > tbody > .listPageTR > td:first-child,.NotificationTable > .TableHeading > tr > th:first-child
 {
   padding-left: 20px !important;
@@ -586,6 +585,30 @@ font-size: 100%;
   border-radius: 5px;   
 }
 /*common table start here*/
+
+/*profiletable code start here*/
+.ProfileTable tr td:nth-child(1)
+{
+    width: 150px !important;
+    float: right;
+    text-align: right;
+
+}
+.ProfileTable tr td:nth-child(1) span
+{
+    font-size: 12px;
+}
+.ProfileTable tr td:nth-child(2)
+{
+    padding-left: 5px;
+    padding-right: 15px;
+    width: 30px!important;
+}
+.ProfileTable tr td:nth-child(3)
+{
+    text-align: left;
+}
+/*profiletable code end here*/
 thead > tr:last-child
 {
      border-top: solid 1px #aad1d6!important;
@@ -785,16 +808,24 @@ margin-bottom: 10px;
 
 .SocialIcon
 {
-
 font-size: 10px; 
 padding: 10px;
-color: red;
-background: blue; 
-border-radius: 1px; 
-text-decoration: none;
-width: 10px;
-height: 10px;
-
+color: #000;
+background: #aad1d6; 
+border-radius: 10px; 
+margin: 2px;
+}
+.SocialIconWithTitle
+{
+    margin-left: 5px;
+    padding: 4px;
+    background: #aad1d6;
+    color: #000;
+    border-radius: 20px !important;
+    font-size: 8px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
 }
 .form-control
 {

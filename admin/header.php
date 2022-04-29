@@ -436,7 +436,7 @@ font-size: 100%;
   padding: 5px;
   float: left;
 }
-.NotificationTable,.ListTable
+.NotificationTable,.ListTable,.ProfileTable
 {
   color: #000;
   background: white;
@@ -450,6 +450,7 @@ font-size: 100%;
   padding-left: 20px !important;
   width: 100px !important;
 }
+
 .TableHeading
 {
   font-family: verdana;
@@ -477,6 +478,29 @@ font-size: 100%;
   border-radius: 5px;   
 }
 /*common table start here*/
+/*profiletable code start here*/
+.ProfileTable tr td:nth-child(1)
+{
+    width: 150px !important;
+    float: right;
+    text-align: right;
+
+}
+.ProfileTable tr td:nth-child(1) span
+{
+    font-size: 12px;
+}
+.ProfileTable tr td:nth-child(2)
+{
+    padding-left: 5px;
+    padding-right: 15px;
+    width: 30px!important;
+}
+.ProfileTable tr td:nth-child(3)
+{
+    text-align: left;
+}
+/*profiletable code end here*/
 thead > tr:last-child
 {
      border-top: solid 1px #aad1d6!important;
