@@ -484,6 +484,7 @@ font-size: 100%;
     width: 150px !important;
     float: right;
     text-align: right;
+    font-family: verdana;
 
 }
 .ProfileTable tr td:nth-child(1) span
@@ -499,6 +500,8 @@ font-size: 100%;
 .ProfileTable tr td:nth-child(3)
 {
     text-align: left;
+    font-size: 10px;
+    font-family: verdana;
 }
 /*profiletable code end here*/
 thead > tr:last-child

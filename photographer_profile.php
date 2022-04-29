@@ -161,9 +161,9 @@ $loggedin_id=$_SESSION["loggedin_id"];
 
 				?>
 
-<h5 style="float:left;color: #000;margin-left: 13px;">Company profile</h5>
+<h5 class="PageHeading-md">Company profile</h5>
 
-					<table id="table1"  style="color: #000;background: #FFF;opacity:0.8;width:100%;border-radius:5px!important;margin-left:10px;padding:10px;height:500px;" cellpadding="10" cellspacing="10">
+					<table class="ProfileTable W-100" id="table1"   cellpadding="10" cellspacing="10">
 
 					<tbody>
 					<tr><td colspan="3"><hr class="space xs" /></td></tr>
@@ -174,38 +174,38 @@ $loggedin_id=$_SESSION["loggedin_id"];
 
 	  if ($userExist == 0) { ?>
 
-	  	<tr><td align="right"  style="font-size: 10px;">No profile information</th></tr>
+	  	<tr><td >No profile information</th></tr>
 
 	 <?php  }
 	 else{
  
 	   ?>
 
-	    <tr><td align="right"  style="font-size: 10px;"><img src="<?php echo @"./".$res1['logo_image_url'] ?>" width="50" height="50" /><br /></td><td style="padding-left:5px;padding-right:15px;">&nbsp;</td><td align="left" style="font-size:20px;"><?php echo @$res1['organization_name']; ?>
+	    <tr><td ><img src="<?php echo @"./".$res1['logo_image_url'] ?>" width="50" height="50" /><br /></td><td >&nbsp;</td><td><p class="Text-md fa-1x"><?php echo @$res1['organization_name']; ?></p>
 		 </td></tr>
 		 <tr><td colspan="3"><hr class="space xs" /></td></tr>
-		 <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_org_branch">Organization branch</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['organization_branch']; ?></td></tr>
-		  <tr><td align="right"><span>Organization Number</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['organization_number']; ?></td></tr>
+		 <tr><td ><span adr_trans="label_org_branch">Organization branch</span></td><td >:</td><td ><?php echo @$res1['organization_branch']; ?></td></tr>
+		  <tr><td align="right"><span>Organization Number</span></td><td >:</td><td ><?php echo @$res1['organization_number']; ?></td></tr>
 		  <tr><td colspan="3"><hr class="space xs" /></td></tr>
 
-		    <tr><td align="right"  style="font-size: 12px;" adr_trans="label_contact_no">Contact number</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><b><?php echo @$res1['contact_number']; ?></b></td></tr>
-		   <tr><td align="right"  style="font-size: 12px;" adr_trans="label_email">Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['email']; ?></td></tr>
-		   <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_portfolio_website">Portfolio/Website</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['portfolio']; ?></td></tr>
+		    <tr><td  adr_trans="label_contact_no">Contact number</td><td >:</td><td ><b><?php echo @$res1['contact_number']; ?></b></td></tr>
+		   <tr><td  adr_trans="label_email">Email</td><td >:</td><td ><?php echo @$res1['email']; ?></td></tr>
+		   <tr><td ><span adr_trans="label_portfolio_website">Portfolio/Website</span></td><td >:</td><td ><?php echo @$res1['portfolio']; ?></td></tr>
 
 		   <tr><td colspan="3"><hr class="space xs" /></td></tr>
-			  <tr><td align="right"  style="font-size: 12px;" adr_trans="label_address">Address</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['address_line1'].", ".@$res1['address_line2']; ?></td></tr>
-			   <tr><td align="right"  style="font-size: 12px;" adr_trans="label_city">City</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['city']; ?></td></tr>
-			    <tr><td align="right"  style="font-size: 12px;" adr_trans="label_state">State</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['state']; ?></td></tr>
-				 <tr><td align="right"  style="font-size: 12px;" adr_trans="label_zip_code">Zip Code</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['postal_code']; ?></td></tr>
-				  <tr><td align="right"  style="font-size: 12px;" adr_trans="label_country">Country</td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['country']; ?></td></tr>
+			  <tr><td  adr_trans="label_address">Address</td><td >:</td><td ><?php echo @$res1['address_line1'].", ".@$res1['address_line2']; ?></td></tr>
+			   <tr><td  adr_trans="label_city">City</td><td >:</td><td><?php echo @$res1['city']; ?></td></tr>
+			    <tr><td  adr_trans="label_state">State</td><td >:</td><td ><?php echo @$res1['state']; ?></td></tr>
+				 <tr><td  adr_trans="label_zip_code">Zip Code</td><td >:</td><td ><?php echo @$res1['postal_code']; ?></td></tr>
+				  <tr><td  adr_trans="label_country">Country</td><td >:</td><td ><?php echo @$res1['country']; ?></td></tr>
 
 			<tr><td colspan="3"><hr class="space xs" /></td></tr>   
-			  <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_fb_id">Facebook ID</span><span class="fa fa-facebook" style="margin-left: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['facebook_id']; ?></td></tr>
-					<tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_insta_id">Instagram ID</span><span class="fa fa-instagram" style="margin-left: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span></td><td style="padding-left:5px;padding-right:15px;width:30px!important">:</td><td align="left"><?php echo @$res1['instagram_id']; ?></td></tr>
-					<tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_twitter_id">Twitter ID</span><span class="fa fa-twitter" style="margin-left: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span></td><td style="padding-left:5px;padding-right:15px;width:30px!important">:</td><td align="left"><?php echo @$res1['twitter_id']; ?></td></tr>
+			  <tr><td ><span adr_trans="label_fb_id">Facebook ID</span><span class="fa fa-facebook SocialIconWithTitle" ></span></td><td >:</td><td ><?php echo @$res1['facebook_id']; ?></td></tr>
+					<tr><td ><span adr_trans="label_insta_id">Instagram ID</span><span class="fa fa-instagram SocialIconWithTitle" ></span></td><td >:</td><td ><?php echo @$res1['instagram_id']; ?></td></tr>
+					<tr><td ><span adr_trans="label_twitter_id">Twitter ID</span><span class="fa fa-twitter SocialIconWithTitle" ></span></td><td >:</td><td ><?php echo @$res1['twitter_id']; ?></td></tr>
 					
-					<tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_youtube_id">Youtube ID</span><span class="fa fa-youtube" style="margin-left: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span></td><td style="padding-left:5px;padding-right:15px;width:30px!important">:</td><td align="left"><?php echo @$res1['youtube_id']; ?></td></tr>
-					<tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_linkedin_id">LinkedIN ID </span><span class="fa fa-linkedin" style="margin-left: 5px;padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px !important;font-size: 8px;"></span></td><td style="padding-left:5px;padding-right:15px;width:30px!important">:</td><td align="left"><?php echo @$res1['linkedin_id']; ?></td></tr>
+					<tr><td ><span adr_trans="label_youtube_id">Youtube ID</span><span class="fa fa-youtube SocialIconWithTitle" ></span></td><td >:</td><td ><?php echo @$res1['youtube_id']; ?></td></tr>
+					<tr><td ><span adr_trans="label_linkedin_id">LinkedIN ID </span><span class="fa fa-linkedin SocialIconWithTitle" ></span></td><td >:</td><td ><?php echo @$res1['linkedin_id']; ?></td></tr>
 
 
 
@@ -256,7 +256,7 @@ $loggedin_id=$_SESSION["loggedin_id"];
 				?>
 
 
-<div id="table2" style="display:block;">
+<div id="table2" >
 
 	<?php if(@isset($_REQUEST["u"])) { ?>
                         <div class="success-box" style="display:block;margin-left:150px;">
@@ -264,8 +264,9 @@ $loggedin_id=$_SESSION["loggedin_id"];
                         </div>
 						<?php }  ?>
 
-						<h5 style="float:left;color: #000;margin-left: 12px;">My profile</h5>
-<table id="table"  style="color: #000;background: #FFF;opacity:0.8;width:95%;border-radius:5px!important;margin-left:10px;padding:10px;height:500px;" cellpadding="10" cellspacing="10">					<tbody>
+						<h5 class="PageHeading-md">My profile</h5>
+<table id="table" class="ProfileTable" cellpadding="10" cellspacing="10">					
+<tbody>
 <tr><td colspan="3"><hr class="space xs" /></td></tr>
 	  <?php
 
@@ -273,42 +274,41 @@ $loggedin_id=$_SESSION["loggedin_id"];
 
 	  if ($userExist == 0) { ?>
 
-	  	<tr><td align="right"  style="font-size: 10px;">No profile information</th></tr>
+	  	<tr><td >No profile information</th></tr>
 
 	 <?php  }
 	 else{
 
 	   ?>
 	   
-	   <!-- <tr><td colspan="3"><hr class="space s" /></td></tr> -->
-<tr><td align="right"  style="font-size: 10px;width:200px"><img src="data:<?php echo @$res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode(@$res1['profile_pic']); ?>" width="70" height="70" style="border-radius:35px" /><br /></td><td style="padding-left:5px;padding-right:15px;">&nbsp;</td><td align="left" style="font-size:20px;"><?php echo @$res1['first_name']." ".$res1['last_name']; ?>
+<tr><td   style="width:200px"><img src="data:<?php echo @$res1['profile_pic_image_type']; ?>;base64,<?php echo base64_encode(@$res1['profile_pic']); ?>" width="70" height="70" style="border-radius:35px" /><br /></td><td >&nbsp;</td><td ><p class="Text-md fa-1x"><?php echo @$res1['first_name']." ".$res1['last_name']; ?></p>
 		 </td></tr>
 <tr><td colspan="3"><hr class="space xs" /></td></tr>
-			   <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_contact_no">Contact number</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><b><?php echo @$res1['contact_number']; ?></b></td></tr>
+			   <tr><td ><span adr_trans="label_contact_no">Contact number</span></td><td >:</td><td ><b><?php echo @$res1['contact_number']; ?></b></td></tr>
 			    
 			    <tr><td colspan="3"><hr class="space xs" /></td></tr>
 			   
 			   
-				   <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_contact_skills">Skills</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['skills']; ?></td></tr>
-				     <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_contact_portfolio">Portfolio</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['portfolio']; ?></td></tr>
+				   <tr><td ><span adr_trans="label_contact_skills">Skills</span></td><td >:</td><td ><?php echo @$res1['skills']; ?></td></tr>
+				     <tr><td ><span adr_trans="label_contact_portfolio">Portfolio</span></td><td >:</td><td ><?php echo @$res1['portfolio']; ?></td></tr>
 					 <tr><td colspan="3"><hr class="space xs" /></td></tr>
-			  <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_address">Address</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['address_line1'].", ".@$res1['address_line2']; ?></td></tr>
-			   <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_city">City</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['city']; ?></td></tr>
-			    <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_state">State</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['state']; ?></td></tr>
-				 <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_zip_code">Zip Code</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['postal_code']; ?></td></tr>
-				  <tr><td align="right"  style="font-size: 10px;"><span adr_trans="label_country">Country</span></td><td style="padding-left:5px;padding-right:15px;">:</td><td align="left"><?php echo @$res1['country']; ?></td></tr>
+			  <tr><td ><span adr_trans="label_address">Address</span></td><td >:</td><td ><?php echo @$res1['address_line1'].", ".@$res1['address_line2']; ?></td></tr>
+			   <tr><td ><span adr_trans="label_city">City</span></td><td >:</td><td ><?php echo @$res1['city']; ?></td></tr>
+			    <tr><td ><span adr_trans="label_state">State</span></td><td >:</td><td ><?php echo @$res1['state']; ?></td></tr>
+				 <tr><td ><span adr_trans="label_zip_code">Zip Code</span></td><td >:</td><td ><?php echo @$res1['postal_code']; ?></td></tr>
+				  <tr><td ><span adr_trans="label_country">Country</span></td><td >:</td><td ><?php echo @$res1['country']; ?></td></tr>
 
 
 
-			     <tr><td align="left"  style="font-size: 10px; padding-left:10px;"><span adr_trans="label_contact_about">About Me</span> :</td><td style="padding-left:5px;padding-right:15px;">&nbsp;</td><td align="left">&nbsp;</td></tr>
+			     <tr><td><span adr_trans="label_contact_about">About Me</span> :</td><td >&nbsp;</td><td >&nbsp;</td></tr>
 
-<tr><td colspan="3" style="font-size: 11px; padding:10px;"><?php echo @$res1['about_me']; ?></td></tr>
+<tr><td colspan="3"><?php echo @$res1['about_me']; ?></td></tr>
 <?php } ?>
 
 				</tbody>
 				  </table>
 				  <br />
-				  <a class="anima-button circle-button btn-success btn-sm btn adr-save" style="margin-right:16px ;float: right;" href="edit_photographer_profile.php" adr_trans="label_add_profile"><i class="fa fa-pencil"></i>Add / Edit profile</a>
+				  <a class="AnimationBtn ActionBtn-md Float-right" style="margin-right: 10px;" href="edit_photographer_profile.php" adr_trans="label_add_profile"><i class="fa fa-pencil"></i>Add / Edit profile</a>
 
 </div>
 
