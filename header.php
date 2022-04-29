@@ -1300,6 +1300,135 @@ i.fa-star-o,i.fa-star
   background: #aad1d6!important;
 }
 /*nav pills end here*/
+
+
+/*Calendar configs starts here*/
+
+#calendar
+{
+background-color:#FFFFFF!important;
+border-radius:10px!important;
+}
+table td[class*="col-"], table th[class*="col-"]
+{
+background:#EEE!important;
+}
+.fc-day-mon,.fc-day-tue,.fc-day-wed,.fc-day-thu,.fc-day-fri
+{
+background:#FFF!important;
+border:solid 1px #EEE!important;
+}
+.fc-day-sat,.fc-day-sun
+{
+background:#EEEEEE!important;
+}
+.fc-daygrid-event
+{
+background:none!important;
+}
+.status1
+{
+background-color:#86C4F0!important;
+color:#000!important;
+}
+.status4,.status5,.status6
+{
+background-color:#F58883!important;
+color:#000!important;
+}
+.status3
+{
+color:#000!important;
+background-color:#76EA97!important;
+}
+.status2,.status7 {
+background-color:#FF8400!important;
+color:#000!important;
+}
+.fc-day-mon,.fc-day-tue,.fc-day-wed,.fc-day-thu,.fc-day-fri
+{
+background:#FFF!important;
+border:solid 1px #000!important;
+}
+.fc-day-sat,.fc-day-sun
+{
+border:solid 1px #000!important;
+background: repeating-linear-gradient(
+45deg,
+transparent,
+transparent 10px,
+#ccc 2px,
+#DDD 12px
+),
+ 
+linear-gradient(
+    to bottom,
+    #eee,
+    #999
+  )!important;
+}
+.fc-day-today
+{
+background: #FFF!important;
+color:#000!important;
+border:solid 1px #01A8F2!important;
+}
+
+h2.fc-toolbar-title
+{
+display:contents;
+color:#000!important;
+border:solid 1px #000!important;
+padding:10px;
+}
+.fc .fc-toolbar.fc-header-toolbar
+{
+background:#FFF;
+border-radius:25px;
+}
+.fc-scroller-harness,.fc-scroller-harness-liquid
+{
+border-radius:0px!important;
+}
+.fc-prev-button, .fc-next-button
+{
+background:#FFF!important;
+color:#000!important;
+margin:10px!important;
+
+}
+.fc-timegrid-event .fc-event-time
+{
+margin-bottom:0px!important;
+}
+.statusBUSY
+{
+ pointer-events: none;
+    color:#000;
+    padding-left:5px;
+background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    #ccc 2px,
+    #DDD 12px
+  ),
+  /* on "bottom" */
+  linear-gradient(
+    to bottom,
+    #eee,
+    #999
+  )!important;
+
+}
+.fc-button-primary
+{
+    background: #aad1d6!important;
+    color: #000!important;
+    font-family: verdana!important;
+    font-size: 12px!important;
+}
+/*Calendar configs starts here*/
 </style>
 <script>
 var calid;
