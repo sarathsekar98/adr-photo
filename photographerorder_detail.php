@@ -16,7 +16,7 @@ $id_url=$_REQUEST['id'];
   header("location:photographerDashboard.php?na=1");exit;
   }
 
-
+ 
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -421,7 +421,7 @@ border:none!important;
   position: relative;
   text-align: left;
   /* font-size: 18px; */
-      padding: 8px 3px 8px 15px;
+      padding: 5px 3px 4px 15px;
   z-index: 1;
 
 }
@@ -480,6 +480,10 @@ html{	background-color:#FFF; }
     -webkit-animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 	margin-top:80px;
+  padding-left:13px;
+  font-weight:600;
+  padding-top:5px;
+  color:#FFF
 }
 
 @keyframes drop{
@@ -642,6 +646,22 @@ textarea{
 
 }
 
+.OuterSpace
+{
+  width:96%;
+  background:#FFF;
+  padding:10px;
+  border-radius:5px;
+  max-height:fit-content;
+  min-height:800px
+}
+
+.ProfileTable tr td:nth-child(1)
+{
+   
+    float: none;
+   
+}
 
  </style>
  <script>
@@ -1125,48 +1145,42 @@ header("location:photographerDashboard.php?private=1"); exit;
 
                                   ?>
 
-   <div class="col-md-12"><div class="ribbon" style="padding-left:13px;font-weight:600;padding-top:5px;color:#FFF"><span adr_trans="label_order_value">Order Value</span><br /><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
+   <div class="col-md-12 Text-md"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br /><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
                       <div class="row" style="margin:0px;" id="printArea">
                       				<div class="col-md-6" style="">
-<div style="width:96%;background:#FFF;padding:10px;border-radius:5px;max-height:fit-content;min-height:800px">
-                      				<p align="right" adr_trans="label_order_details" style="color:#000;font-weight:600;font-size:15px;">Order Details</p>
+<div class="OuterSpace">
+                      				<p class="PageHeading-lg Float-right" adr_trans="label_order_details">Order Details</p>
 
-                      				<table class="" style="color:#000;font-weight:600;font-size:13px;">
+                      				<table class="ProfileTable">
                       				<tr>
-                      			 <td id="label_order_no" adr_trans="label_order_no" style="width:150px;font-size:10px;" align="right">Order #</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['id']; ?></td>
+                      			 <td id="label_order_no" adr_trans="label_order_no" align="right">Order #</td><td>:</td><td><?php echo $get_summary['id']; ?></td>
                       				</tr>
                               <tr>
-    			                    <td id="label_property_type" align="right" adr_trans="label_property_type" style="font-size:10px;">Property Type</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['property_type']?></td>
+    			                    <td id="label_property_type" align="right" adr_trans="label_property_type">Property Type</td><td>:</td><td><?php echo $get_summary['property_type']?></td>
                               </tr>
                              
                               <tr>
-                              <td id="label_floors" align="right" adr_trans="label_floors" style="font-size:10px;">No. of Floors</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['number_of_floor_plans']?></td>
+                              <td id="label_floors" align="right" adr_trans="label_floors">No. of Floors</td><td>:</td><td><?php echo $get_summary['number_of_floor_plans']?></td>
                               </tr>
                               <tr>
-                              <td id="label_area" align="right" adr_trans="label_area"style="font-size:10px;">Area</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['area']?><hr class="space xs" /></td>
+                              <td id="label_area" align="right" adr_trans="label_area">Area</td><td>:</td><td><?php echo $get_summary['area']?><hr class="space xs" /></td>
                               </tr>
                       				<tr>
 									
 									 <tr>
-                              <td id="label_property_address" align="right" adr_trans="label_property_address" style="font-size:10px;">Property Address</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['property_address'],",".$get_summary['property_city']."<br>".$get_summary['property_state'].",".$get_summary['property_zip']; ?><hr class="space xs" /></td>
+                              <td id="label_property_address" align="right" adr_trans="label_property_address">Property Address</td><td>:</td><td><?php echo $get_summary['property_address'],",".$get_summary['property_city']."<br>".$get_summary['property_state'].",".$get_summary['property_zip']; ?><hr class="space xs" /></td>
                               </tr>
-                      				<!-- <td>Total Cost</td><td>:</td><td>
-                      				<?php
-                      				 $total_cost=mysqli_query($con,"SELECT sum(total_price) as totalPrice from order_products WHERE order_id='$order_id'");
-                                  $total_cost1=mysqli_fetch_array($total_cost);
-                      				echo $total_cost1['totalPrice'];
-                      				?>
-                      				</td> -->
+                      			
                       				</tr>
                                <tr>
-        <td adr_trans="" align="right" style="font-size:10px;">Photo Comapany Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php if($get_summary['pc_admin_id']!=0){echo $Pc_organization;} else{echo 'Not yet selected';}?></td>
+        <td adr_trans="" align="right">Photo Comapany Name</td><td>:</td><td><?php if($get_summary['pc_admin_id']!=0){echo $Pc_organization;} else{echo 'Not yet selected';}?></td>
         </tr>
 
                               <tr>
-        <td adr_trans="" align="right" style="font-size:10px;">Photographer Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php if($get_summary['photographer_id']!=0){echo $photographer_Name;} else{echo 'Not yet selected';}?></td>
+        <td adr_trans="" align="right">Photographer Name</td><td>:</td><td><?php if($get_summary['photographer_id']!=0){echo $photographer_Name;} else{echo 'Not yet selected';}?></td>
         </tr>
                       				<tr>
-                      				<td align="right" adr_trans="label_session_date_time" style="font-size:10px;">Session Date & Time</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php if($get_summary['session_from_datetime']!='0000-00-00 00:00:00') { echo date("d-m-Y H:i a",strtotime($get_summary['session_from_datetime'])); ?>
+                      				<td align="right" adr_trans="label_session_date_time">Session Date & Time</td><td>:</td><td><?php if($get_summary['session_from_datetime']!='0000-00-00 00:00:00') { echo date("d-m-Y H:i a",strtotime($get_summary['session_from_datetime'])); ?>
 				 - <br /><?php echo date("d-m-Y H:i a",strtotime($get_summary['session_to_datetime'])); } else { echo "Session not booked yet.";  } ?><hr class="space xs" /></td>
                       				</tr>
                               <?php
@@ -1182,36 +1196,36 @@ header("location:photographerDashboard.php?private=1"); exit;
                               {
                               ?>
                               <tr>
-                              <td align="right" style="font-size:10px;">Realtor Organization</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                              <td align="right">Realtor Organization</td><td>:</td><td>
                                 <?php
                                   echo @$get_realtor_name["organization_name"];
                                   ?>
                               </td>
                               </tr>
                               <tr>
-                              <td align="right" id="label_realtor_name" adr_trans="label_realtor_name" style="font-size:10px;">Realtors Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                              <td align="right" id="label_realtor_name" adr_trans="label_realtor_name">Realtors Name</td><td>:</td><td>
                                 <?php
                                   echo $get_realtor_name1=$get_hs_details['request_name'];
                                   ?>
                               </td>
                               </tr>
                               <tr>
-                              <td align="right" id="label_realtor_phone" adr_trans="label_realtor_phone" style="font-size:10px;">Realtors Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo$get_hs_details['request_contact_no']; ?></td>
+                              <td align="right" id="label_realtor_phone" adr_trans="label_realtor_phone">Realtors Phone</td><td>:</td><td><?php echo$get_hs_details['request_contact_no']; ?></td>
                               </tr>
                               <tr>
-                              <td align="right" id="label_realtor_email" adr_trans="label_realtor_email" style="font-size:10px;">Realtors Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_hs_details['request_email']; ?></td>
+                              <td align="right" id="label_realtor_email" adr_trans="label_realtor_email">Realtors Email</td><td>:</td><td><?php echo $get_hs_details['request_email']; ?></td>
                               </tr>
                             <?php }
                             elseif($get_hs_details['lead_from']==""){ ?>
                               <tr>
-                              <td align="right" style="font-size:10px;">Realtor Organization</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                              <td align="right">Realtor Organization</td><td>:</td><td>
                                 <?php
                                   echo @$get_realtor_name["organization_name"];
                                   ?>
                               </td>
                               </tr>
                               <tr>
-                              <td align="right" id="label_realtor_name" adr_trans="label_realtor_name" style="font-size:10px;">Realtors Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                              <td align="right" id="label_realtor_name" adr_trans="label_realtor_name">Realtors Name</td><td>:</td><td>
                                 <?php
                                     echo $get_realtor_name1;
                                   
@@ -1219,26 +1233,26 @@ header("location:photographerDashboard.php?private=1"); exit;
                       				</td>
                       				</tr>
                               <tr>
-                              <td align="right" id="label_realtor_phone" adr_trans="label_realtor_phone" style="font-size:10px;">Realtors Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_realtor_name["contact_number"]; ?></td>
+                              <td align="right" id="label_realtor_phone" adr_trans="label_realtor_phone">Realtors Phone</td><td>:</td><td><?php echo $get_realtor_name["contact_number"]; ?></td>
                               </tr>
                               <tr>
-                              <td align="right" id="label_realtor_email" adr_trans="label_realtor_email" style="font-size:10px;">Realtors Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_realtor_name["email"]; ?></td>
+                              <td align="right" id="label_realtor_email" adr_trans="label_realtor_email">Realtors Email</td><td>:</td><td><?php echo $get_realtor_name["email"]; ?></td>
                               </tr>
                             <?php } ?>
                               <tr>
-                              <td align="right" id="label_due_date" adr_trans="label_due_date" style="font-size:10px;">Due Date</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo date("d-m-Y",strtotime($get_summary['order_due_date'])); ?><hr class="space xs" /></td>
+                              <td align="right" id="label_due_date" adr_trans="label_due_date">Due Date</td><td>:</td><td><?php echo date("d-m-Y",strtotime($get_summary['order_due_date'])); ?><hr class="space xs" /></td>
                               </tr>
                       				<tr>
-                      				<td align="right" id="label_status" adr_trans="label_status" style="font-size:10px;">Status</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php $status=$get_summary['status_id']; if($status==1) { echo "<span adr_trans='label_created' style='color: #000; font-weight: bold;display: block; background: #86C4F0;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Created</span>"; } elseif($status==2){echo "<span adr_trans='label_wip'style='color: #000; font-weight: bold;display: block; background: #FF8400; padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>completed</span>";}elseif($status==4){echo "<span adr_trans='label_rework' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Rework</span>";}elseif($status==6){echo "<span adr_trans='label_declined' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Declined</span>";}elseif($status==7){echo "<span adr_trans='label_working_customer' style='color:orange;font-weight:bold;width:60px;'>Working with Customer</span>";}elseif($status==8){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;' id='' adr_trans=''>Reopen</span>";}?></td>
+                      				<td align="right" id="label_status" adr_trans="label_status">Status</td><td>:</td><td><?php $status=$get_summary['status_id']; if($status==1) { echo "<span adr_trans='label_created' class='Status-Created'>Created</span>"; }elseif($status==2){echo "<span adr_trans='label_wip' class='Status-Wip'>WIP</span>";}elseif($status==3){echo "<span adr_trans='label_completed' class='Status-Completed'>completed</span>";} elseif($status==4){echo "<span adr_trans='label_rework' class='Status-Rework'>Rework</span>";} elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}  elseif($status==6){echo "<span adr_trans='label_declined' class='Status-Declined'>Declined</span>";} elseif($status==7){echo "<span adr_trans='label_working_customer' class='Status-Wwc'>Waiting for Customer</span>";} elseif($status==8){echo "<span class='Status-Reopen' adr_trans=''>Reopen</span>";}?></td>
                       				</tr>
                       				</table>
                                    <hr class="space s">
        
-                      				<p id="" adr_trans="" align="left" style="color:#000;font-weight:600;font-size:15px;">Products Ordered</p>
+                      				<p class="PageHeading-lg" adr_trans="" >Products Ordered</p>
 
                                <hr class="space xs">
 
-                      				<table style="color:#000;font-weight:600;font-size:10px;">
+                      				<table class="Text-md">
 									 
                       				<?php
 
@@ -1258,9 +1272,9 @@ header("location:photographerDashboard.php?private=1"); exit;
 
                                <br />
 
-                               <p id="" adr_trans="" align="left" style="color:#000;font-weight:600;font-size:15px;">Booking Notes</p>
+                               <p class="PageHeading-lg" adr_trans="">Booking Notes</p>
                                <hr class="space xs">
-        <table style="color:#000;font-weight:600;font-size:12px;white-space:pre-wrap">
+        <table class="Text-md" style="white-space:pre-wrap">
 
           <tr>
 
@@ -1276,22 +1290,22 @@ header("location:photographerDashboard.php?private=1"); exit;
 									
                       				<div class="col-md-6">
 								<div class="homeseller_box" style="">	
-                      				<p align="right" adr_trans="label_homeseller_info" style="color:#000;font-weight:600;font-size:15px;">Home Seller Info</p>
+                      				<p adr_trans="label_homeseller_info" class="PageHeading-lg Float-right">Home Seller Info</p>
 
-                      <table class="" style="color:#000;font-weight:600;font-size:13px;">
+                      <table class="ProfileTable">
                         <tr>
-                        <td align="right" id="label_homeseller_name" adr_trans="label_homeseller_name" style="font-size:10px;">Home Seller Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['name']; ?></td>
+                        <td align="right" id="label_homeseller_name" adr_trans="label_homeseller_name">Home Seller Name</td><td>:</td><td><?php echo $homeSeller1['name']; ?></td>
                         </tr>
                         <tr>
-                        <td align="right" id="label_homeseller_address" adr_trans="label_homeseller_address" style="font-size:10px;">Home Seller Address</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['address'].",<br>".$homeSeller1['city'].", ".$homeSeller1['state'];?></td>
-                        </tr>
-
-                        <tr>
-                        <td align="right" id="label_homeseller_phone" adr_trans="label_homeseller_phone" style="font-size:10px;">Home Seller Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['mobile_number'];?></td>
+                        <td align="right" id="label_homeseller_address" adr_trans="label_homeseller_address">Home Seller Address</td><td>:</td><td><?php echo $homeSeller1['address'].",<br>".$homeSeller1['city'].", ".$homeSeller1['state'];?></td>
                         </tr>
 
                         <tr>
-                        <td align="right" id="label_homeseller_email" adr_trans="label_homeseller_email" style="font-size:10px;">Home Seller Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['email'];
+                        <td align="right" id="label_homeseller_phone" adr_trans="label_homeseller_phone">Home Seller Phone</td><td>:</td><td><?php echo $homeSeller1['mobile_number'];?></td>
+                        </tr>
+
+                        <tr>
+                        <td align="right" id="label_homeseller_email" adr_trans="label_homeseller_email">Home Seller Email</td><td>:</td><td><?php echo $homeSeller1['email'];
 
 $propAddress=$get_summary['property_address']." ".$get_summary['property_zip']." ".$get_summary['property_city']." Norway ";  
   $propAddress=str_replace(",","",$propAddress);
@@ -1307,21 +1321,21 @@ $propAddress=$get_summary['property_address']." ".$get_summary['property_zip']."
 
 <?php  if (!empty($homeSeller1['contact_person_name'])) { ?>
         <tr>
-        <td align="right" style="font-size:10px;" adr_trans="">Additional Contact Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['contact_person_name'];?></td>
+        <td align="right" adr_trans="">Additional Contact Name</td><td>:</td><td><?php echo $homeSeller1['contact_person_name'];?></td>
         </tr>
 
 <?php } ?>
 
 <?php  if (!empty($homeSeller1['contact_person_email'])) { ?>
         <tr>
-        <td align="right" style="font-size:10px;" adr_trans="">Additional Contact Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['contact_person_email'];?></td>
+        <td align="right" adr_trans="">Additional Contact Email</td><td>:</td><td><?php echo $homeSeller1['contact_person_email'];?></td>
         </tr>
   <?php } ?>
 
       
 <?php  if (!empty($homeSeller1['contact_person_mobile'])) { ?>
         <tr>
-        <td align="right" style="font-size:10px;" adr_trans="">Additional Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['contact_person_mobile'];?></td>
+        <td align="right" adr_trans="">Additional Phone</td><td>:</td><td><?php echo $homeSeller1['contact_person_mobile'];?></td>
         </tr>
 <?php } ?>
 
@@ -1462,14 +1476,14 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                           <div class="row" style="padding-top:5px;">
                             <div class="col-md-8" style="padding-left:15px;">
                               <?php if(!empty($standard['order_id'])){ ?>
-                            <a href="raw_image_history.php?id=<?php echo $id_url; ?>&p=1&f=1" target="_blank" style="font-size:16px;color:blue;text-decoration:underline;">click here to view already uploaded raw images</a>
+                            <a href="raw_image_history.php?id=<?php echo $id_url; ?>&p=1&f=1" target="_blank" class="HyperLink-md" >click here to view already uploaded raw images</a>
                          <?php } ?>
                             </div>
                             <div class="col-md-4">
                                                        <p align="right" style="margin-right: 16px;">
                           <label for="service">Select a service:</label>
                           </p>
-                          <select class="btn btn-default" id='purpose' style="float:right" onchange="tab_show(this.value)">
+                          <select class="ActionBtn-md Float-right" id='purpose' style="padding: 5px;" onchange="tab_show(this.value)">
                             <option  value="1">Photos <span class="badge"><?php
 
                             $raw_images_standard = "./raw_images/order_".$id_url."/standard_photos/";
@@ -1529,13 +1543,13 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                               <div class="row" style="margin-left:15px;">
                <div class="col-md-12" style="padding:0px;">
                <div class="col-md-9">&nbsp;</div>
-              
+      
                <div class="col-md-2" style="padding-right:30px;">
-                 <a href="<?php echo "preview1.php?id=$id_url";?>" class="btn btn-default" id="preview" data-lightbox-anima="show-scale" style="" adr_trans="label_preview">Preview </a>
+                 <a href="<?php echo "preview1.php?id=$id_url";?>" style="margin-right: 45px;" class="ActionBtn-sm Float-right" id="preview" data-lightbox-anima="show-scale" adr_trans="label_preview">Preview </a>
                 
                 </div>
                  <div class="col-md-1">
-                      <a   id="edit_button" class="btn btn-default" style="float:right;" adr_trans=""> Submit</a>
+                      <a   id="edit_button" class="ActionBtn-sm Float-right" adr_trans=""> Submit</a>
                              
                </div>
                </div></div>
@@ -1579,11 +1593,11 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                <div class="col-md-9">&nbsp;</div>
               
                <div class="col-md-2" style="padding-right: 30px;">
-                <a href="<?php echo "preview1.php?id=$id_url";?>" class="btn btn-default" id="preview" data-lightbox-anima="show-scale"  adr_trans="label_preview">Preview </a>
+                <a href="<?php echo "preview1.php?id=$id_url";?>" style="margin-right: 76px;" class="ActionBtn-sm Float-right" id="preview" data-lightbox-anima="show-scale"  adr_trans="label_preview">Preview </a>
                 
                 </div>
                  <div class="col-md-1" >
-                     <a href="preview1.php?id=<?php echo $id_url; ?>" class="btn btn-default" id="edit_button1"  style="float: right;" adr_trans=""> Submit</a>
+                     <a href="preview1.php?id=<?php echo $id_url; ?>" class="ActionBtn-sm Float-right" style="margin-right: 30px;" id="edit_button1" adr_trans=""> Submit</a>
                              
                </div>
              </div></div>
@@ -1690,13 +1704,16 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                   <div class="panel" id="tab6" style="padding:10px;">
 
                                         <hr class="space s">
-                                      <h5 id="zip_standard" style="text-align: center;font-size: 13px;color: black;" adr_trans="label_standard_photos">Standard Photos</h5>
+                                      <h5 id="zip_standard" class="PageHeading-md TextCenter" adr_trans="label_standard_photos">Standard Photos</h5>
                                       <?php
                                       $imagesDirectory_standard = "./rework_images/order_".$id_url."/standard_photos";
 
                                       ?>
                                       <form name="zipDownload" method="post" action="">
-                                        <input type="submit" name="ZIP" class="btn btn-default btn-sm download" value="Download" />
+                                        <input type="submit" name="ZIP" class="ActionBtn-sm download" value="Download" />
+
+                                        <!-- <hr class="space xs"> -->
+
                                <input type="hidden" name="imageType" value="rework" />
 
 				 <input type="hidden" name="folderToZip" value="<?php echo "./rework_images/order_".$id_url."/standard_photos"; ?>">
@@ -1747,7 +1764,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
 
 
 
-                                            <div data-sort="1" class=" col-md-3 cat1" style="visibility: visible; height:fit-content; padding:20px;border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                                            <div data-sort="1" class=" col-md-3 cat1 ImageBox">
 											<?php
 
 			$raw_images_standard = "./rework_images/order_".$id_url."/standard_photos/";
@@ -1774,7 +1791,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                 <a class="img-box i-center" href="<?php echo $imgurl; ?>" data-anima="show-scale" data-trigger="hover" data-anima-out="hide" style="opacity: 1;">
                                                     <i class="fa fa-photo anima" aid="0.22880302434786803" style="transition-duration: 500ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms; opacity: 0;"></i>
 
-                                                    <img alt="" id="img" src="<?php echo $imgurl; ?>" width="240" height="180"/>
+                                                    <img alt="" id="img" src="<?php echo $imgurl; ?>"/>
                                                     <center><span style="text-align:center;margin-top: 5px;"><?php echo $get_img_name1['description']."<br>".date("d-m-Y h:i a",strtotime($get_img_name1['created_on'])); ?></span></center>
 
                                                 </a><hr class="space xs" />
@@ -1789,7 +1806,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                   <div class="modal-content" style="height:260px;">
                                                      <span class="close" onclick="document.getElementById('myModal<?php echo $get_comment['id'];?>').style='display:none'" style="margin: 10px;font-size: 25px;color: black;">&times;</span>
 
-                                                     <center> <img alt="" id="img" src="<?php echo $imgurl ?>" width="180" height="200" style="float:left;margin-left:40px;margin-right:40px"/></center>
+                                                     <center> <img alt="" id="img" width="160" src="<?php echo $imgurl ?>" style="float:left;margin-left:40px;margin-right:40px"/></center>
                                                      <div style="float: left;margin-right: 0px;border-left:1px solid #DDD;position:absolute;left:45%">
                                                        <?php
                                                        $get_comment_querry=mysqli_query($con,"select * from img_upload where order_id=$id_url and img='$image'");
@@ -1798,12 +1815,12 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                        ?>
                                                <textarea id="s<?php echo $get_comment['id'];?>"  rows="4" cols="35" style="margin-left:20px;margin-top:30px" ><?php echo $get_comment['comments'];?></textarea>
                                                <hr class="space s">
-                                                  <center><input type="hidden" class="btn btn-primary btn-sm" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="btn adr-save btn-sm" style="" onclick="Getstandard('<?php echo "./rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="btn adr-cancel btn-sm" style="" onclick="disapprovestandard('<?php echo "./rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="Disapprove"/></center>
+                                                  <center><input type="hidden" class="ActionBtn-sm" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="ActionBtn-sm" style="" onclick="Getstandard('<?php echo "./rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="Approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="CancelBtn-sm" style="" onclick="disapprovestandard('<?php echo "./rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="Disapprove"/></center>
                                                      </div>
                                                   </div>
 
                                                 </div>
-                                                 <center class=""><input type="button" class="btn adr-save btn-sm" id="myBtn" style="width: -webkit-fill-available !important" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
+                                                 <center class=""><input type="button" class="ActionBtn-md" id="myBtn" style="width: -webkit-fill-available !important" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
 
                                             </div>
 
@@ -1894,13 +1911,13 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                           <input type="text" class="form-control" name="commentall" value="<?php echo @$standard['comments'] ?>"/>
                                         <?php } }?>
                                         <hr class="space l">
-                                        <h5 id="zip_floor" style="text-align: center;font-size: 13px;color: black;" adr_trans="label_floor_plans1">Floor Plans</h5>
+                                        <h5 id="zip_floor" class="PageHeading-md TextCenter" adr_trans="label_floor_plans1">Floor Plans</h5>
 
                                         <?php
                                         $imagesDirectory_floor = "./rework_images/order_".$id_url."/floor_plans";
                                         ?>
                                         <form name="zipDownload" method="post" action="">
-                                          <input type="submit" name="ZIP" class="btn btn-default btn-sm download" value="Download" />
+                                          <input type="submit" name="ZIP" class="ActionBtn-sm download" value="Download" />
 										   <input type="hidden" name="imageType" value="rework" />
 
                                           <input type ="hidden" name="folderToZip" value="<?php echo $imagesDirectory_floor;?>"/>
@@ -1959,12 +1976,12 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                 $get_img_name1=mysqli_fetch_assoc($get_img_name);
 
                                                 ?>
-                                              <div data-sort="1" class=" col-md-3 cat1" style="visibility: visible; height:fit-content; padding:20px;border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                                              <div data-sort="1" class=" col-md-3 cat1 ImageBox">
 
                                                   <a class="img-box i-center" href="<?php echo $imagesDirectory_floor."/".$image; ?>" data-anima="show-scale" data-trigger="hover" data-anima-out="hide" style="opacity: 1;">
                                                       <i class="fa fa-photo anima" aid="0.22880302434786803" style="transition-duration: 500ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms; opacity: 0;"></i>
 
-                                                      <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>" width="240" height="180"/>
+                                                      <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>"/>
                                                        <center><span style="text-align:center;margin-top: 5px;"><?php echo $get_img_name1['description']."<br>".date("d-m-Y h:i a",strtotime($get_img_name1['created_on'])); ?></span></center>
 
                                                   </a>
@@ -1979,7 +1996,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                     <div class="modal-content" style="height:260px;">
                                                        <span class="close" onclick="document.getElementById('myModal<?php echo $get_comment['id'];?>').style='display:none'" style="margin: 10px;font-size: 25px;color: black;">&times;</span>
 
-                                                       <center> <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>" width="180" height="200" style="float:left;margin-left:40px;margin-right:40px"/></center>
+                                                       <center> <img alt="" width="160" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>" style="float:left;margin-left:40px;margin-right:40px"/></center>
                                                        <div style="float: left;margin-right: 0px;border-left:1px solid #DDD;position:absolute;left:45%">
                                                          <?php
                                                          $get_comment_querry=mysqli_query($con,"select * from img_upload where order_id=$id_url and img='$image'");
@@ -1988,12 +2005,12 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                          ?>
                                                  <textarea id="s<?php echo $get_comment['id'];?>"  rows="4" cols="35" style="margin-left:20px;margin-top:30px" ><?php echo $get_comment['comments'];?></textarea>
                                                  <hr class="space s">
-                                                 <center><input type="hidden" class="btn btn-primary" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="btn adr-save" style="" onclick="Getfloor('<?php echo "./rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="btn adr-cancel" style="" onclick="disapprovefloor('<?php echo "./rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>')" value="Disapprove"/></center>
+                                                 <center><input type="hidden" class="ActionBtn-sm" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="ActionBtn-sm" style="" onclick="Getfloor('<?php echo "./rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="Approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="CancelBtn-sm" style="" onclick="disapprovefloor('<?php echo "./rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>')" value="Disapprove"/></center>
                                                        </div>
                                                     </div>
 
                                                   </div>
-                                                   <center class=""><input type="button" class="btn adr-save btn-sm" id="myBtn" style="width: -webkit-fill-available !important" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
+                                                   <center class=""><input type="button" class="ActionBtn-md" id="myBtn" style="width: -webkit-fill-available !important" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
                                               </div>
                                               <?php
                                              }
@@ -2357,32 +2374,14 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                       <div class="panel" id="tab5" style="padding:0px 15px 15px 15px">
 
 
-        <p align="right"><a class="anima-button circle-button btn-sm btn adr-save " style="position: relative;margin-right:15px;margin-top: 5px;color:white !important;" id="mobileprint" onclick="printPage()"><i class="fa fa-print"></i><span adr_trans="label_print">Print</span></a></p>
+        <p align="right"><a class="ActionBtn-sm AnimationBtn" style="position: relative;margin-right:15px;margin-top: 5px;" id="mobileprint" onclick="printPage()"><i class="fa fa-print"></i><span adr_trans="label_print">Print</span></a></p>
 
       <link rel="stylesheet" href="./css/style_invoice.css">
       <!-- <script src="script.js"></script> -->
 
     <div id="print">
       <header id="inv_header" >
-        <!-- <h1 id="inv_h1" style="font-size:50px; text-align: center;">Order Cost</h1><br/> -->
-             <!-- <h1 id="inv_h1" style="font-size:50px; text-align: left; margin-left : 1.5%;
-       padding-left : 1.5%;">Order Cost</h1> <br/> -->
-
-       <!-- <?php
-       $invoice_check_query=mysqli_query($con,"select * from invoice where order_id=$id_url");
-       @$invoice_check=mysqli_fetch_assoc(@$invoice_check_query);
-       if(@$get_name_create['type_of_user']!="Photographer")
-       {
-       if(@$invoice_check['approved']==0)
-        {
-         echo '<a  href="#" class="btn btn-warning" title="Order Cost is pending for your approval" name="button" onclick="pending('.$id_url.')" id="button_approved" style="float:right;border-radius:20px 20px 20px 20px;background-color: orange;color:#000000;font-size:12px;padding: 5px;margin-top: -110px;" >Approve</a>';
-        }
-        else {
-            echo '<a  href="#" class="" title="Already Approved " name="button" id="button_approved" style="float:right;color:#0275D8 !important;border-radius: 29px;padding: 3px;   margin-top: -106px;"><b>Approved</b></a>';
-        }
-       }
-
-        ?> -->
+       
         <script>
         function pending(data)
         {
@@ -2399,7 +2398,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
            window.location.href = "photographerorder_list.php";
         }
         </script>
-          <table style="margin-left : 0px;width:100%;margin-top:10px;">
+          <table style="margin-left : 0px;width:100%;margin-top:10px;" class="Text-md">
 
             <tr>
               <th style="width:30%;text-align:left">
@@ -2423,9 +2422,9 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
               </td>
             </tr>
           </table>
-<table style="width:100%!important;margin-left : 0px;">
+<table style="width:100%!important;margin-left : 0px;" class="Text-md">
 <tr><td style="width:70%!important;">
-        <table style="width:100%!important;float:right;text-align:left">
+        <table style="width:100%!important;float:right;text-align:left" class="Text-md">
        <?php
 
    $get_order_query=mysqli_query($con,"SELECT * FROM orders where id='$id_url'");
@@ -2451,7 +2450,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
 
      </td>
 	 <td style="width:50%">
-          <table style="text-align:right;float:right">
+          <table style="text-align:right;float:right" class="Text-md">
 
 <br />
 
@@ -2485,7 +2484,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
         <br>
         <br>
 
-        <table id="inv_table1" class="inventory"  style="width:100%">
+        <table id="inv_table1" class="inventory Text-md"  style="width:100%">
           <thead>
             <tr>
               <th id="inv_th" style="width:60% ;margin-left : 10px;
@@ -2544,7 +2543,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
       </article>
       <br/><br/>
   <table style="margin-left : 10px;
-       padding-left : 10px;">
+       padding-left : 10px;" class="Text-md">
     <tr>
       <th><p adr_trans="label_terms_condition">Terms and condtions </p></th>
     </tr>
@@ -2612,7 +2611,7 @@ if (@$_REQUEST['shar']) {
 <?php } ?>
                                                         <div class="row">
                                                              <div class="col-md-12">
-                                                         <p class="text-center" style="font-weight:600;color:#000"><span adr_trans="label_standard_photos">Standard Photos</span> (Selected <span id="selected_count">0</span> / <span id="total_count"><?php echo @getFileCount("./finished_images/order_".$id_url."/standard_photos") ?></span> Files )</p>
+                                                         <p class="text-center Text-md"><span adr_trans="label_standard_photos">Standard Photos</span> (Selected <span id="selected_count">0</span> / <span id="total_count"><?php echo @getFileCount("./finished_images/order_".$id_url."/standard_photos") ?></span> Files)</p>
                                                              </div>
                                                            </div>
                                                            <br>
@@ -2620,19 +2619,19 @@ if (@$_REQUEST['shar']) {
                                                            <div class="row" style="margin-left:20px;margin-bottom: 16px;">
                                                             <div class="col-md-3">
                                                             
-                                                                  <input type="checkbox" id="remove" onclick="selectAllImages()" style="margin-left: 50px;margin-top: 10px;">&nbsp;<b adr_trans="label_select_all">Select All</b></input>
+                                                                  <input type="checkbox" id="remove" onclick="selectAllImages()" style="margin-left: 50px;margin-top: 10px;">&nbsp;<b adr_trans="label_select_all" class="Text-sm">Select All</b></input>
                                                       
                                                              </div>
                                                              <div class="col-md-9" style="text-align: right;">
                                                              <!-- <div class="col-md-3" style="display:inline-block"> -->
-                                                               <input type="submit" class="circle-button btn-sm btn done adr-save" onclick="downloadbtn()" name="ZIP"value="Download " style="margin:0px 5px;">
+                                                               <input type="submit" class="ActionBtn-sm" onclick="downloadbtn()" name="ZIP"value="Download ">
                                                              <!-- </div> -->
                                                             <!--  <div class="col-md-3" style="display:inline-block"> -->
-                                                              <a href="<?php if(@getFileCount("./finished_images/order_".$id_url."/standard_photos")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc";}?>" class="circle-button btn-sm btn adr-save <?php if(@getFileCount("./finished_images/order_".$id_url."/standard_photos")!=0) { echo"lightbox link";}?>" onclick="shareme('<?php echo @$get_link['images_url']?>')" name="send2" id="send2" adr_trans="label_share" style="margin:0px 5px;">share</a>
+                                                              <a href="<?php if(@getFileCount("./finished_images/order_".$id_url."/standard_photos")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc";}?>" class="ActionBtn-sm <?php if(@getFileCount("./finished_images/order_".$id_url."/standard_photos")!=0) { echo"lightbox link";}?>" onclick="shareme('<?php echo @$get_link['images_url']?>')" name="send2" id="send2" adr_trans="label_share">share</a>
                                                             <!--  </div> -->
                                                              <?php if($get_summary['status_id']!=3 && $get_summary['status_id']!=5 && $get_summary['status_id']!=6){?>
                                                             <!--  <div class="col-md-3" style="display:inline-block"> -->
-                                                               <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=1" class="circle-button btn-sm btn adr-save" id="clicktoupload" style="margin:0px 5px;" adr_trans="label_upload">Upload</a>
+                                                               <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=1" class="ActionBtn-sm" id="clicktoupload" adr_trans="label_upload">Upload</a>
                                                             <!--  </div> -->
                                                            <?php } ?>
                                                            </div>
@@ -2695,18 +2694,18 @@ if (@$_REQUEST['shar']) {
                                                          <input type="checkbox" class="selectimg"  name="selected_image[]" id="selected_image<?php echo $get_comment['id'];?>" value="<?php echo $get_comment['id'];?>" style="display:none;" />
                                                          <input type="checkbox" class="selectall" name="allimage[]"  value="<?php echo $get_comment['id'];?> " checked  style="display:none;" >
 
-                                                        <div data-sort="1" class=" col-md-3 cat1" style="border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                                                        <div data-sort="1" class=" col-md-3 cat1 ImageBox">
 
-                                                          <a class="img-box icons<?php echo $get_comment['id'];?>" id="imga" href="<?php echo $imagesDirectory_standard."/".$image; ?>" title="<?php echo $picture_name1['description']; ?>" style="visibility: hidden;" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
+                                                          <a class="img-box icons<?php echo $get_comment['id'];?>" id="imga" href="<?php echo $imagesDirectory_standard."/".$image; ?>" title="<?php echo $picture_name1['description']; ?>" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
                                                               <i class="fa fa-eye " style="position:revert !important;top:50px;"></i>
                                                           </a>
 
-                                                          <a class="icons<?php echo $get_comment['id'];?> clikedImg1" id="imga1" onclick="clickimg(<?php echo $get_comment['id'];?>)" style="visibility: hidden;" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
+                                                          <a class="icons<?php echo $get_comment['id'];?> clikedImg1" id="imga1" onclick="clickimg(<?php echo $get_comment['id'];?>)" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
                                                               <i class="fa fa-square icons"  id="check<?php echo $get_comment['id'];?>" style="position:revert !important;top:50px;font-size: 16px;"></i>
 
                                                           </a>
-                                                  <img alt="" class="img1" id="clicked_img<?php echo $get_comment['id'];?>" src="<?php echo $imagesDirectory_standard."/".$image; ?>" onclick="clickimg(<?php echo $get_comment['id'];?>)" height="180" width="240" style="z-index: -1;margin-bottom:5px;margin-top:-50px;" onmouseover="showicons(<?php echo $get_comment['id'];?>)"   onmouseout="hideicons(<?php echo $get_comment['id'];?>)">
-                                                  <center><span style="text-align:center;margin-top: 5px;"><?php echo $checknaming1['description']."<br>".date("d-m-Y h:i a",strtotime($checknaming1['created_on'])); ?></span></center>
+                                                  <img alt="" class="img1" id="clicked_img<?php echo $get_comment['id'];?>" src="<?php echo $imagesDirectory_standard."/".$image; ?>" onclick="clickimg(<?php echo $get_comment['id'];?>)" style="z-index: -1;margin-bottom:5px;margin-top:-50px;" onmouseover="showicons(<?php echo $get_comment['id'];?>)"   onmouseout="hideicons(<?php echo $get_comment['id'];?>)">
+                                                  <center><span style="margin-top: 5px;"><?php echo $checknaming1['description']."<br>".date("d-m-Y h:i a",strtotime($checknaming1['created_on'])); ?></span></center>
 
                                                             <div id="myModal<?php echo $get_comment['id'];?>" class="modal" style="width:600px!important;">
                                                               <!-- Modal content -->
@@ -2714,7 +2713,7 @@ if (@$_REQUEST['shar']) {
                                                               <div class="modal-content" style="height:260px;">
                                                                  <span class="close" onclick="document.getElementById('myModal<?php echo $get_comment['id'];?>').style='display:none'" style="margin: 10px;font-size: 25px;color: black;">&times;</span>
 
-                                                                 <center> <img alt="" id="img" src="<?php echo $imagesDirectory_standard."/".$image; ?>" width="180" height="200" style="float:left;margin-left:40px;margin-right:40px"/></center>
+                                                                 <center> <img alt="" id="img" src="<?php echo $imagesDirectory_standard."/".$image; ?>" style="float:left;margin-left:40px;margin-right:40px"/></center>
                                                                  <div style="float: left;margin-right: 0px;border-left:1px solid #DDD;">
                                                                    <?php
                                                                    $get_comment_querry=mysqli_query($con,"select * from img_upload where order_id=$id_url and img='$image'");
@@ -2769,7 +2768,7 @@ if (@$_REQUEST['shar']) {
 
                                                         <div class="row">
                                                            <div class="col-md-12">
-                                                           <p class="text-center" style="font-weight:600;color:#000"><span adr_trans="label_floor_plans1">  Floor Plans</span> (Selected <span id="selected_floor_count">0</span> / <span id="total_floor_count"><?php echo @getFileCount("./finished_images/order_".$id_url."/floor_plans") ?></span> Files )</p>
+                                                           <p class="text-center Text-md"><span adr_trans="label_floor_plans1">  Floor Plans</span> (Selected <span id="selected_floor_count">0</span> / <span id="total_floor_count"><?php echo @getFileCount("./finished_images/order_".$id_url."/floor_plans") ?></span> Files )</p>
                                                            </div>
                                                            <br>
                                                        <form onsubmit="return check2();" name="zipDownload" id="zipDownload2" method="post" action="">
@@ -2777,19 +2776,19 @@ if (@$_REQUEST['shar']) {
                                                            <div class="col-md-3">
                                                            
                                                           <!--  <div class="col-md-3" style="display:inline-block"> -->
-                                                                     <input type="checkbox" id="remove2" onclick="selectAllImages2()" style="margin-left: 65px;margin-top: 15px;">&nbsp;<b adr_trans="label_select_all">Select All</b></input>
+                                                                     <input type="checkbox" id="remove2" onclick="selectAllImages2()" style="margin-left: 65px;margin-top: 15px;">&nbsp;<b adr_trans="label_select_all" class="Text-sm">Select All</b></input>
                                                            <!-- </div> -->
                                                            </div>
                                                            <div class="col-md-9" style="text-align:right;">
                                                           <!--  <div class="col-md-3" style="display:inline-block"> -->
-                                                             <input type="submit" class="circle-button btn-sm btn done adr-save" onclick="downloadbtn2()" name="ZIP"  value="Download " style="margin: 0px 5px;">
+                                                             <input type="submit" class="ActionBtn-sm" onclick="downloadbtn2()" name="ZIP"  value="Download ">
                                                           <!--  </div> -->
                                                            <!-- <div class="col-md-3" style="display:inline-block"> -->
-                                                             <a href="<?php if(@getFileCount("./finished_images/order_".$id_url."/floor_plans")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc";}?>" class="circle-button btn-sm btn adr-save <?php if(@getFileCount("./finished_images/order_".$id_url."/floor_plans")!=0) { echo"lightbox link";}?>" onclick="shareme2('<?php echo @$get_link['images_url']?>')" name="send2"  style="margin: 0px 5px;" id="send2" adr_trans="label_share">share</a>
+                                                             <a href="<?php if(@getFileCount("./finished_images/order_".$id_url."/floor_plans")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc";}?>" class="ActionBtn-sm <?php if(@getFileCount("./finished_images/order_".$id_url."/floor_plans")!=0) { echo"lightbox link";}?>" onclick="shareme2('<?php echo @$get_link['images_url']?>')" name="send2" id="send2" adr_trans="label_share">share</a>
                                                           <!--  </div> -->
                                                            <?php if($get_summary['status_id']!=3 && $get_summary['status_id']!=5 && $get_summary['status_id']!=6){?>
                                                            <!-- <div class="col-md-3" style="display:inline-block"> -->
-                                                                <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=2" class="circle-button btn-sm btn adr-save" id="clicktoupload2"  style="margin: 0px 5px;" adr_trans="label_upload"> Upload</a>
+                                                                <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=2" class="ActionBtn-sm" id="clicktoupload2" adr_trans="label_upload"> Upload</a>
                                                            <!-- </div> -->
                                                          <?php } ?>
                                                          </div>
@@ -2850,17 +2849,17 @@ if (@$_REQUEST['shar']) {
                                                          <input type="checkbox" class="selectimg2"  name="selected_image[]" id="selected_image2<?php echo $get_comment['id'];?>" value="<?php echo $get_comment['id'];?>" style="display:none;" />
                                                          <input type="checkbox" class="selectall" name="allimage[]" id="selectall2"value="<?php echo $get_comment['id'];?> " checked  style="display:none;" >
 
-                                                        <div data-sort="1" class=" col-md-3 cat1" style="border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                                                        <div data-sort="1" class=" col-md-3 cat1 ImageBox">
 
-                                                          <a class="img-box icons<?php echo $get_comment['id'];?>" id="imga" href="<?php echo $imagesDirectory_floor."/".$image; ?>" title="<?php echo $picture_name1['description']; ?>" style="visibility: hidden;" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
+                                                          <a class="img-box icons<?php echo $get_comment['id'];?>" id="imga" href="<?php echo $imagesDirectory_floor."/".$image; ?>" title="<?php echo $picture_name1['description']; ?>" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
                                                               <i class="fa fa-eye " style="position:revert !important;top:50px;"></i>
                                                           </a>
-                                                          <a class="icons<?php echo $get_comment['id'];?> clikedImg2" id="imga1" onclick="clickimg2(<?php echo $get_comment['id'];?>)" style="visibility: hidden;" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
+                                                          <a class="icons<?php echo $get_comment['id'];?> clikedImg2" id="imga1" onclick="clickimg2(<?php echo $get_comment['id'];?>)" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
                                                               <i class="fa fa-square icons2"  id="check2<?php echo $get_comment['id'];?>" style="position:revert !important;top:50px;font-size: 16px;"></i>
 
                                                           </a>
-                                                  <img alt="" class="img12" id="clicked_img2<?php echo $get_comment['id'];?>" src="<?php echo $imagesDirectory_floor."/".$image; ?>" onclick="clickimg2(<?php echo $get_comment['id'];?>)" height="180" width="240" style="z-index: -1;margin-bottom:5px;margin-top:-50px;" onmouseover="showicons(<?php echo $get_comment['id'];?>)"   onmouseout="hideicons(<?php echo $get_comment['id'];?>)">
-                                                  <center><span style="text-align:center;margin-top: 5px;"><?php echo $checknaming1['description']."<br>".date("d-m-Y h:i a",strtotime($checknaming1['created_on'])); ?></span></center>
+                                                  <img alt="" class="img12" id="clicked_img2<?php echo $get_comment['id'];?>" src="<?php echo $imagesDirectory_floor."/".$image; ?>" onclick="clickimg2(<?php echo $get_comment['id'];?>)" style="z-index: -1;margin-bottom:5px;margin-top:-50px;" onmouseover="showicons(<?php echo $get_comment['id'];?>)"   onmouseout="hideicons(<?php echo $get_comment['id'];?>)">
+                                                  <center><span style="margin-top: 5px;"><?php echo $checknaming1['description']."<br>".date("d-m-Y h:i a",strtotime($checknaming1['created_on'])); ?></span></center>
 
 
 
@@ -2870,7 +2869,7 @@ if (@$_REQUEST['shar']) {
                                                               <div class="modal-content" style="height:260px;">
                                                                  <span class="close" onclick="document.getElementById('myModal<?php echo $get_comment['id'];?>').style='display:none'" style="margin: 10px;font-size: 25px;color: black;">&times;</span>
 
-                                                                 <center> <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>" width="180" height="200" style="float:left;margin-left:40px;margin-right:40px"/></center>
+                                                                 <center> <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>" style="float:left;margin-left:40px;margin-right:40px"/></center>
                                                                  <div style="float: left;margin-right: 0px;border-left:1px solid #DDD;">
                                                                    <?php
                                                                    $get_comment_querry=mysqli_query($con,"select * from img_upload where order_id=$id_url and img='$image'");
@@ -3204,15 +3203,15 @@ if (@$_REQUEST['shar']) {
           </div>
            </div>
 
-  <div class="col-md-2" id="chat" style="border:none;background:#AAD1D6;opacity:0.7;padding:10px;font-family:Manrope-regular;border-radius:5px;margin-top:63px;">
-  <p style="color:#000;font-weight:600;padding-bottom:10px;" align="center">Order  Chat box <b> <?php
+  <div class="col-md-2 Text-md" id="chat" style="border:none;background:#AAD1D6;opacity:0.7;padding:10px;border-radius:5px;margin-top:63px;">
+  <p class="Text-md" style="padding-bottom:10px;" align="center"><b>Order Chat box  <?php
   $created_id=@$get_summary['created_id'];
   @$realtor1=mysqli_query($con,"select * from user_login where id='@$created_id'");
   @$realtor=mysqli_fetch_array(@$realtor1);
    // echo @$created_Name;  ?></b></p>
   <div id="wrapper" style="width:100%">
   <div class="scrollbar" id="style-default" style="border:none;background:#FFF;overflow:scroll;width:105%;height:495px;">
-  <table class="table" style="padding:0px;border:none;width:100%;font-size:10px!important;" id="ChatBox" >
+  <table class="table Text-md" style="padding:0px;border:none;width:100%;font-size:10px!important;" id="ChatBox" >
 
   </table>
 </div>
@@ -3220,7 +3219,7 @@ if (@$_REQUEST['shar']) {
   <input type="hidden" name="created_by_id" id="created_by_id" value="<?php echo $get_order["created_by_id"]; ?>" />
    <input type="hidden" name="order_id" id="order_id" value="<?php echo $get_order["id"]; ?>" />
    <input type="hidden" name="logged_id" id="logged_id" value="<?php echo $_SESSION["loggedin_id"]; ?>" />
-  <input type="text" name="chattext" id="chattext1" style="border:solid 0px #000080;font-family:Manrope-Regular;font-size:11px;font-weight:600;border-radius:5px;width:95%" placeholder=" Type your msg, hit enter" required />
+  <input type="text" class="Text-md" name="chattext" id="chattext1" style="border:solid 0px #000080;font-size:11px;font-weight:600;border-radius:5px;width:95%" placeholder=" Type your msg, hit enter" required />
 
 
   </div>
