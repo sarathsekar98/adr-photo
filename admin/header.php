@@ -496,6 +496,7 @@ font-size: 100%;
     padding-left: 5px;
     padding-right: 15px;
     width: 30px!important;
+    vertical-align: top;
 }
 .ProfileTable tr td:nth-child(3)
 {
@@ -850,17 +851,33 @@ font-style: italic;
 
 .ImageBox
 {
-
-padding: 5px;
-height: 250px; 
-width: 300px;
-background: grey; 
-border: 2px solid grey;
-border-radius: 1px;
-color: #000;
-
+border:solid 2px #aaa;
+padding: 5px !important;
+background: #ddd;
+margin: 15px;
 }
-
+.ImageBox a
+{
+    visibility: hidden;
+    background: #aad1d6 !important;
+    
+}
+.ImageBox a i
+{
+    color: #000 !important;
+}
+.ImageBox img
+{
+    width: 240px !important;
+    height: 180px !important;
+}
+.ImageBox span
+{
+    font-family: verdana;
+    font-size: 12px;
+    color:  #000;
+    font-weight: 600;
+}
 .DropdownInput
 {
 font-size: 10px; 

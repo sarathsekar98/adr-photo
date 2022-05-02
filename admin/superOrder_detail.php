@@ -872,7 +872,7 @@ font-size: 12px!important;
   position: relative;
   text-align: left;
   /* font-size: 18px; */
-      padding: 8px 3px 8px 15px;
+      padding: 5px 3px 3px 15px;
   z-index: 1;
 
 }
@@ -915,6 +915,10 @@ html{	background-color:#FFF; }
     -webkit-animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   margin-top:80px;
+  padding-left: 13px;
+  font-weight: 600;
+  padding-top: 5px;
+  color: #FFF;
 }
 
 
@@ -1045,6 +1049,13 @@ padding: 0px !important;
 {
   margin-left: 7% !important;
 }
+
+.ProfileTable tr td:nth-child(1)
+{
+    float: none;
+    vertical-align: top;
+}
+
 
 @media print
 {
@@ -1602,7 +1613,7 @@ alert(alertmsg);
                                 ?>
 
 
- <div class="col-md-12"><div class="ribbon" style="padding-left:13px;font-weight:600;padding-top:5px;color:#FFF"><span adr_trans="label_order_value">Order Value</span><br ><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
+ <div class="col-md-12"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br ><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
 
 
 
@@ -1612,43 +1623,43 @@ alert(alertmsg);
 
                               <div style="width:96%;background:#FFF;padding:10px;border-radius:5px;max-height:fit-content;min-height:800px">
                          
-                            <p align="right" id="label_order_details" adr_trans="label_order_details" style="color:#000;font-weight:600;font-size:15px;">Order Details</p>
+                            <p class="PageHeading-lg Float-right" id="label_order_details" adr_trans="label_order_details">Order Details</p>
 
 
-                            <table class="" style="color:#000;font-weight:600;font-size:13px;">
+                            <table class="ProfileTable">
                             <tr>
-                            <td align="right" id="label_order_no" adr_trans="label_order_no" style="width:150px;font-size: 10px;vertical-align: baseline;">Order #</td><td style="padding-left:5px;padding-right:15px;vertical-align: baseline;">:</td><td><?php echo $get_summary['id']; ?></td>
+                            <td align="right" id="label_order_no" adr_trans="label_order_no">Order #</td><td >:</td><td><?php echo $get_summary['id']; ?></td>
                             
                             </tr>
                              <tr>
-                              <td align="right" style="font-size:10px;vertical-align:baseline;" >Assignment Number</td><td style="padding-left:5px;padding-right:15px;vertical-align:baseline;">:</td><td><?php echo $homeSeller1['reference_number']; ?><hr class="space xs"></td>
+                              <td align="right">Assignment Number</td><td>:</td><td><?php echo $homeSeller1['reference_number']; ?><hr class="space xs"></td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_property_type" adr_trans="label_property_type">Property Type</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['property_type']?></td>
+                            <td align="right" id="label_property_type" adr_trans="label_property_type">Property Type</td><td>:</td><td><?php echo $get_summary['property_type']?></td>
                             </tr>
                                <tr>
-                            <td align="right" style="font-size: 10px;" id="label_floors" adr_trans="label_floors">No. of Floors</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['number_of_floor_plans']?></td>
+                            <td align="right" id="label_floors" adr_trans="label_floors">No. of Floors</td><td>:</td><td><?php echo $get_summary['number_of_floor_plans']?></td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;vertical-align: baseline;" id="label_area" adr_trans="label_area">Area</td><td style="padding-left:5px;padding-right:15px;vertical-align: baseline;">:</td><td><?php echo $get_summary['area']?><hr class="space xs" ></td>
+                            <td align="right" id="label_area" adr_trans="label_area">Area</td><td >:</td><td><?php echo $get_summary['area']?><hr class="space xs" ></td>
 
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;vertical-align: baseline;" id="label_property_address" adr_trans="label_property_address">Property Address</td><td style="padding-left:5px;padding-right:15px;vertical-align: baseline;">:</td><td><?php echo $get_summary['property_address'],",".$get_summary['property_city']."<br>".$get_summary['property_state'].",".$get_summary['property_zip']; ?><hr class="space xs" ></td>
+                            <td align="right" id="label_property_address" adr_trans="label_property_address">Property Address</td><td >:</td><td><?php echo $get_summary['property_address'],",".$get_summary['property_city']."<br>".$get_summary['property_state'].",".$get_summary['property_zip']; ?><hr class="space xs" ></td>
                           
                             </tr>
                          
                             <tr>
                               <tr>
-                              <td align="right" style="font-size: 10px;" >Photo Company Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php if($get_summary['pc_admin_id']!=0){echo $Pc_organization;} else{echo 'Not yet selected';}?></td>
+                              <td align="right" >Photo Company Name</td><td>:</td><td><?php if($get_summary['pc_admin_id']!=0){echo $Pc_organization;} else{echo 'Not yet selected';}?></td>
                               </tr>
                               <tr>
-                              <td align="right" style="font-size: 10px;" adr_trans="">Photographer Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php if($get_summary['photographer_id']!=0){echo $photographer_Name;} else{echo 'Not yet selected';}?></td>
+                              <td align="right" adr_trans="">Photographer Name</td><td>:</td><td><?php if($get_summary['photographer_id']!=0){echo $photographer_Name;} else{echo 'Not yet selected';}?></td>
                               </tr>
 
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;vertical-align: baseline;" id="label_session_date_time" adr_trans="label_session_date_time">Session Date & Time</td><td style="padding-left:5px;padding-right:15px;vertical-align: baseline;">:</td><td><?php if($get_summary['session_from_datetime']!='0000-00-00 00:00:00') { echo date("d-m-Y H:i a",strtotime($get_summary['session_from_datetime']))." - ". date("d-m-Y H:i a",strtotime($get_summary['session_to_datetime'])); } else { echo "Session not booked yet.";  } ?> <hr class="space xs"></td>
+                            <td align="right" id="label_session_date_time" adr_trans="label_session_date_time">Session Date & Time</td><td >:</td><td><?php if($get_summary['session_from_datetime']!='0000-00-00 00:00:00') { echo date("d-m-Y H:i a",strtotime($get_summary['session_from_datetime']))." - ". date("d-m-Y H:i a",strtotime($get_summary['session_to_datetime'])); } else { echo "Session not booked yet.";  } ?> <hr class="space xs"></td>
                            
                             </tr>
                             <?php
@@ -1664,36 +1675,36 @@ alert(alertmsg);
                             {
                             ?>
                             <tr>
-                            <td align="right" style="font-size: 10px;" >Realtor Organization</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                            <td align="right" >Realtor Organization</td><td>:</td><td>
                               <?php
                                 echo @$get_realtor_name["organization_name"];
                                 ?>
                             </td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_realtor_name" adr_trans="label_realtor_name">Realtors Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                            <td align="right" id="label_realtor_name" adr_trans="label_realtor_name">Realtors Name</td><td>:</td><td>
                               <?php
                                 echo @$get_hs_details['request_name'];
                                 ?>
                             </td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_realtor_phone" adr_trans="label_realtor_phone">Realtors Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo$get_hs_details['request_contact_no']; ?></td>
+                            <td align="right" id="label_realtor_phone" adr_trans="label_realtor_phone">Realtors Phone</td><td>:</td><td><?php echo$get_hs_details['request_contact_no']; ?></td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_realtor_email" adr_trans="label_realtor_email">Realtors Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_hs_details['request_email']; ?></td>
+                            <td align="right"  id="label_realtor_email" adr_trans="label_realtor_email">Realtors Email</td><td>:</td><td><?php echo $get_hs_details['request_email']; ?></td>
                             </tr>
                           <?php }
                           elseif($get_hs_details['lead_from']==""){ ?>
                             <tr>
-                            <td align="right" style="font-size: 10px;" >Realtor Organization</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                            <td align="right" >Realtor Organization</td><td>:</td><td>
                               <?php
                                 echo @$get_realtor_name["organization_name"];
                                 ?>
                             </td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_realtor_name" adr_trans="label_realtor_name">Realtors Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td>
+                            <td align="right" id="label_realtor_name" adr_trans="label_realtor_name">Realtors Name</td><td>:</td><td>
                               <?php
                                 echo $get_realtor_name1;
                                
@@ -1701,27 +1712,27 @@ alert(alertmsg);
                             </td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_realtor_phone" adr_trans="label_realtor_phone">Realtors Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_realtor_name["contact_number"]; ?></td>
+                            <td align="right" id="label_realtor_phone" adr_trans="label_realtor_phone">Realtors Phone</td><td>:</td><td><?php echo $get_realtor_name["contact_number"]; ?></td>
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_realtor_email" adr_trans="label_realtor_email">Realtors Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_realtor_name["email"]; ?></td>
+                            <td align="right" id="label_realtor_email" adr_trans="label_realtor_email">Realtors Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_realtor_name["email"]; ?></td>
                             </tr>
                           <?php } ?>
                             <tr>
-                            <td align="right" style="font-size: 10px;vertical-align: baseline;" id="label_due_date" adr_trans="label_due_date">Due Date</td><td style="padding-left:5px;padding-right:15px;vertical-align: baseline;">:</td><td><?php echo date("d-m-Y",strtotime($get_summary['order_due_date'])); ?><hr class="space xs"></td>
+                            <td align="right" id="label_due_date" adr_trans="label_due_date">Due Date</td><td >:</td><td><?php echo date("d-m-Y",strtotime($get_summary['order_due_date'])); ?><hr class="space xs"></td>
                             
                             </tr>
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_status" adr_trans="label_status">Status</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php $status=$get_summary['status_id']; if($status==1) { echo "<span id='label_created' adr_trans='label_created' style='color: #000; font-weight: bold;display: block; background: #86C4F0;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Created</span>"; } elseif($status==2){echo "<span id='label_wip' adr_trans='label_wip' style='color: #000; font-weight: bold;display: block; background: #FF8400; padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>WIP</span>";}elseif($status==3){echo "<span id='label_completed' adr_trans='label_completed' style='color: #000; font-weight: bold;display: block; background:#76EA97;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>completed</span>";}elseif($status==4){echo "<span id='label_rework' adr_trans='label_rework' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Rework</span>";}elseif($status==6){echo "<span id='label_declined' adr_trans='label_declined' style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Declined</span>";}elseif($status==7){echo "<span id='label_working_customer' adr_trans='label_working_customer' style='color:orange;font-weight:bold;width:60px;'>Working with Customer</span>";}elseif($status==5){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;'>Cancelled</span>";}elseif($status==8){echo "<span style='color: #000; font-weight: bold;display: block; background:#F58883;padding-top: 5px; max-width: 200px;padding-bottom: 5px;text-align: center;width:60px;' id='' adr_trans=''>Reopen</span>";}?></td>  </tr>
+                            <td align="right" id="label_status" adr_trans="label_status">Status</td><td style="padding-left:5px;padding-right:15px;">:</td><td width="100"><?php $status=$get_summary['status_id']; if($status==1) { echo "<span id='label_created' adr_trans='label_created' class='Status-Created' >Created</span>"; } elseif($status==2){echo "<span id='label_wip' adr_trans='label_wip' class='Status-Wip' >WIP</span>";}elseif($status==3){echo "<span id='label_completed' adr_trans='label_completed' class='Status-Completed'>completed</span>";}elseif($status==4){echo "<span id='label_rework' adr_trans='label_rework' class='Status-Rework'>Rework</span>";}elseif($status==6){echo "<span id='label_declined' adr_trans='label_declined' class='Status-Declined'>Declined</span>";}elseif($status==7){echo "<span id='label_working_customer' adr_trans='label_working_customer' class='Status-Wwc'>Working with Customer</span>";}elseif($status==5){echo "<span class='Status-Cancelled'>Cancelled</span>";}elseif($status==8){echo "<span  id='' adr_trans='' class='Status-Reopen'>Reopen</span>";} ?></td>  </tr>
                               <?php if($status==5||$status==6||$status==7){?>
-                                <tr><td align="right" style="font-size: 10px;">Reason</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $get_summary['comment']; ?></td></tr><?php } ?>
+                                <tr><td align="right">Reason</td><td>:</td><td><?php echo $get_summary['comment']; ?></td></tr><?php } ?>
 
                             </table>
                             <hr class="space xs">
                             <?php
                            if($get_summary['status_id']==1)
                            {?>
-                            <select class="form-control" name="status" id="status" onchange="status_change(this.value)" style="width:195px">
+                            <select class="form-control Float-right" name="status" id="status" onchange="status_change(this.value)" style="width:183px">
                               <option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Order Status-- </option>
                                 <option value="6">Decline Order</option>
                                 <option value="7">Working with Customer</option>
@@ -1732,11 +1743,11 @@ alert(alertmsg);
                         ?>
                                  <hr class="space m">
        
-                            <p id="" adr_trans="" align="left" style="color:#000;font-weight:600;font-size:15px;">Products Ordered</p>
+                            <p class="PageHeading-lg" adr_trans="" align="left">Products Ordered</p>
 
                             <hr class="space xs">
 
-                            <table style="color:#000;font-weight:600;font-size:12px;min-height:50px">
+                            <table class="Text-md">
                             <?php
 
                              $prodsList=mysqli_query($con,"SELECT * from products where id in(select product_id from order_products WHERE order_id='$order_id')");
@@ -1764,9 +1775,9 @@ alert(alertmsg);
 
                             <br>
 
-                             <p id="" adr_trans="" align="left" style="color:#000;font-weight:600;font-size:15px;">Booking Notes</p>
+                             <p class="PageHeading-lg" adr_trans="" align="left">Booking Notes</p>
                              <hr class="space xs">
-        <table style="color:#000;font-weight:600;font-size:12px;white-space:pre-wrap">
+        <table class="Text-md" style="white-space:pre-wrap">
 
           <tr>
 
@@ -1781,22 +1792,22 @@ alert(alertmsg);
 
                               <div style="width:100%;background:#FFF;padding:10px;border-radius:5px;height:800px"> 
                     
-                            <p align="right" id="label_homeseller_info" adr_trans="label_homeseller_info" style="color:#000;font-weight:600;font-size:15px;">Home Seller Info</p>
+                            <p class="PageHeading-lg Float-right" id="label_homeseller_info" adr_trans="label_homeseller_info">Home Seller Info</p>
 
-                    <table class="" style="color:#000;font-weight:600;font-size:13px;">
+                    <table class="ProfileTable">
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_homeseller_name" adr_trans="label_homeseller_name">Home Seller Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['name']; ?></td>
+                            <td align="right" id="label_homeseller_name" adr_trans="label_homeseller_name">Home Seller Name</td><td>:</td><td><?php echo $homeSeller1['name']; ?></td>
                             </tr>
                            <tr>
-                            <td align="right" style="font-size: 10px;vertical-align: baseline;" id="label_homeseller_address" adr_trans="label_homeseller_address">Home Seller Address</td><td style="padding-left:5px;padding-right:15px;vertical-align: baseline;">:</td><td><?php echo $homeSeller1['address'].",<br>".$homeSeller1['city'].", ".$homeSeller1['state'];?></td>
+                            <td align="right" id="label_homeseller_address" adr_trans="label_homeseller_address">Home Seller Address</td><td >:</td><td><?php echo $homeSeller1['address'].",<br>".$homeSeller1['city'].", ".$homeSeller1['state'];?></td>
                             </tr>
 
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_homeseller_phone" adr_trans="label_homeseller_phone">Home Seller Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['mobile_number'];?></td>
+                            <td align="right" id="label_homeseller_phone" adr_trans="label_homeseller_phone">Home Seller Phone</td><td>:</td><td><?php echo $homeSeller1['mobile_number'];?></td>
                             </tr>
 
                             <tr>
-                            <td align="right" style="font-size: 10px;" id="label_homeseller_email" adr_trans="label_homeseller_email">Home Seller Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['email'];
+                            <td align="right" id="label_homeseller_email" adr_trans="label_homeseller_email">Home Seller Email</td><td>:</td><td><?php echo $homeSeller1['email'];
 
   $propAddress=$get_summary['property_address']." ".$get_summary['property_zip']." ".$get_summary['property_city']." Norway ";  
   $propAddress=str_replace(",","",$propAddress);
@@ -1809,21 +1820,21 @@ alert(alertmsg);
 
 <?php  if (!empty($homeSeller1['contact_person_name'])) { ?>
         <tr>
-        <td align="right" style="font-size:10px;" adr_trans="">Additional Contact Name</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['contact_person_name'];?></td>
+        <td align="right"  adr_trans="">Additional Contact Name</td><td>:</td><td><?php echo $homeSeller1['contact_person_name'];?></td>
         </tr>
 
 <?php } ?>
 
 <?php  if (!empty($homeSeller1['contact_person_email'])) { ?>
         <tr>
-        <td align="right" style="font-size:10px;" adr_trans="">Additional Contact Email</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['contact_person_email'];?></td>
+        <td align="right" adr_trans="">Additional Contact Email</td><td>:</td><td><?php echo $homeSeller1['contact_person_email'];?></td>
         </tr>
   <?php } ?>
 
       
 <?php  if (!empty($homeSeller1['contact_person_mobile'])) { ?>
         <tr>
-        <td align="right" style="font-size:10px;" adr_trans="">Additional Phone</td><td style="padding-left:5px;padding-right:15px;">:</td><td><?php echo $homeSeller1['contact_person_mobile'];?></td>
+        <td align="right" adr_trans="">Additional Phone</td><td>:</td><td><?php echo $homeSeller1['contact_person_mobile'];?></td>
         </tr>
 <?php } ?>
 
@@ -2011,13 +2022,13 @@ alert(alertmsg);
                         <div class="tab-box pills" data-tab-anima="fade-left">
 
                           <div class="row" style="margin-left:15px;"> <div class="col-md-8">       <?php if(!empty($standard['order_id'])){ ?>
-                             <a href="../raw_image_history.php?id=<?php echo $id_url;?>&p=1&f=1" target="_blank" style="font-size:16px;color:blue;text-decoration:underline;z-index: 3;">click here to view already uploaded raw images</a>
+                             <a href="../raw_image_history.php?id=<?php echo $id_url;?>&p=1&f=1" target="_blank" class="HyperLink-md " style="z-index: 3;">click here to view already uploaded raw images</a>
                           <?php } ?>  </div>
                           <div class="col-md-4">
                             <p align="right" style="margin-right: 30px;">
                           <label for="service">Select a service:</label>
                           </p>
-                          <select class="btn adr-save" id='purpose' style="float:right;font-size: 12px;margin-right: 0px;" onchange="tab_show(this.value)">
+                          <select class="ActionBtn-md Float-right" id='purpose' style="padding: 5px;" onchange="tab_show(this.value)">
                             <option value="1">Photos <span class="badge"><?php
 
                             $raw_images_standard = "../raw_images/order_".$id_url."/standard_photos/";
@@ -2074,10 +2085,10 @@ alert(alertmsg);
                <div class="col-md-9">&nbsp;</div>
               
                <div class="col-md-2" style="padding-right:30px;">
-                <a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview" data-lightbox-anima="show-scale" style="float:right;margin-right:-10px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
+                <a href="<?php echo "preview1.php?id=$id_url";?>" class="ActionBtn-sm Float-right" id="preview" data-lightbox-anima="show-scale" style="margin-right:25px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
                 </div>
                  <div class="col-md-1">
-                             <a   id="edit_button" class="btn adr-save" style="float:right;margin-right:-15px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a>
+                             <a   id="edit_button" class="ActionBtn-sm Float-right" style="margin-right:-15px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a>
                </div>
                </div></div>
                              <hr class="space s">
@@ -2119,11 +2130,11 @@ alert(alertmsg);
                <div class="col-md-9">&nbsp;</div>
               
                <div class="col-md-2" style="padding-right:30px;">
-                 <a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview1" data-lightbox-anima="show-scale" style="float:right;margin-right:-10px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
+                 <a href="<?php echo "preview1.php?id=$id_url";?>" class="ActionBtn-sm Float-right" id="preview1" data-lightbox-anima="show-scale" style="margin-right:25px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
                 
                 </div>
                  <div class="col-md-1">
-                      <a href="preview1.php?id=<?php echo $id_url; ?>" class="btn adr-save" id="edit_button1"  style="float:right;margin-right: -15px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a>       
+                      <a href="preview1.php?id=<?php echo $id_url; ?>" class="ActionBtn-sm Float-right" id="edit_button1"  style="margin-right: -15px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a>       
                              
                </div>
                </div></div>
@@ -2678,14 +2689,14 @@ if (@$_REQUEST['shar']) {
                                        <div class="col-md-12" style="color:black;">
                                            <div class="row" style="margin-left:25px;">
                                           <div class="col-md-3">&nbsp;</div>
-                                          <div class="col-md-6"><p class="text-center" style="font-weight:600;"><span adr_trans="label_standard_photos">Standard Photos</span> ( Selected <span id="selected_count">0</span> / <span id="total_count"><?php echo @getFileCount("../finished_images/order_".$id_url."/standard_photos") ?></span> Files )</p></div>
+                                          <div class="col-md-6"><p class="text-center Text-md" ><span adr_trans="label_standard_photos">Standard Photos</span> ( Selected <span id="selected_count">0</span> / <span id="total_count"><?php echo @getFileCount("../finished_images/order_".$id_url."/standard_photos") ?></span> Files )</p></div>
                                           <div class="col-md-3" style="">
                                              <?php if($get_summary['status_id']!=3&&$get_summary['status_id']!=1)
                       {?>
-                      <p align="right">  <input type="button" id="done_hide"  class="circle-button btn-sm btn adr-save" style="" onclick="done(<?php echo $id_url; ?>)"  value="Mark as Complete"></p><br>
+                      <p align="right">  <input type="button" id="done_hide"  class="ActionBtn-sm" style="" onclick="done(<?php echo $id_url; ?>)"  value="Mark as Complete"></p><br>
                     <?php }
                     elseif($get_summary['status_id']==3) {?>
-                        <a href="superOrder_detail.php?id=<?php echo $order_id; ?>&update=1" class="circle-button btn-sm btn adr-save" style="float:right;" >Reopen</a><br><br>
+                        <a href="superOrder_detail.php?id=<?php echo $order_id; ?>&update=1" class="ActionBtn-sm" style="float:right;" >Reopen</a><br><br>
                   <?php  } ?>
                          <?php if($get_summary['status_id']==3||$get_summary['status_id']==1)
                          {
@@ -2694,18 +2705,19 @@ if (@$_REQUEST['shar']) {
                           ?>
                                           </div>
                                           </div>
+                                          <br>
 
                                        </div>
                                         <div class="row" style="margin-left: 16px;" >
                                               <div class="col-md-3" style="padding-top: 12px;">
                                                <!-- <div class="col-md-2" style="display:inline-block"> -->
 
-                                                 <input type="checkbox" id="remove" onclick="selectAllImages()" style="margin-top:-3px;font-family: Manrope-Regular;margin-left: 37%;" class="circle-button btn-sm btn done adr-save">&nbsp;<b><span adr_trans="label_select_all">Select All</span> </b></input>
+                                                 <input type="checkbox" id="remove" onclick="selectAllImages()" style="margin-top:-3px;margin-left: 37%;" >&nbsp;<b><span class="Text-md" adr_trans="label_select_all">Select All</span> </b></input>
                                                <!-- </div> -->
                                              </div>
                                              <div class="col-md-9" style="text-align:right!important">
                                                <!-- <div class="col-md-2" style="display:inline-block !im"> -->
-                                                 <input type="submit" class="circle-button btn-sm btn done adr-save" style="margin: 0px 5px;"  onclick="downloadbtn()" name="ZIP" value="Download" >
+                                                 <input type="submit" class="ActionBtn-sm"  onclick="downloadbtn()" name="ZIP" value="Download" >
                                                <!-- </div> -->
                                                <?php if($_SESSION['admin_loggedin_id']==$get_summary['created_by_id']&&$get_hs_details['lead_from']=="homeseller"&&$get_summary['created_by_type']!="Realtor")  { ?>
                                                <?php 
@@ -2727,7 +2739,7 @@ if (@$_REQUEST['shar']) {
                                                <?php if($showReworkbutton==1)
                                                {?>
                                                  <!-- <div class="col-md-2" style="display:inline-block"> -->
-                                                   <input type="submit"  class="adr-save circle-button btn-sm btn rework"  name="rework" style="margin: 0px 5px;font-family: Manrope-Regular;"  value="Rework" >
+                                                   <input type="submit"  class="ActionBtn-sm"  name="rework"   value="Rework" >
                                                    <!-- </div> -->
                                                    <?php } ?>
                                                
@@ -2738,24 +2750,24 @@ if (@$_REQUEST['shar']) {
                                                  ?>
                                                  <?php if($_SESSION['admin_loggedin_id']==$get_summary['created_by_id']&&$get_hs_details['lead_from']=="homeseller"&&$get_summary['created_by_type']!="Realtor"&&$get_link['images_url']!='')  { ?>
                                                <!-- <div class="col-md-2" style="display:inline-block"> -->
-                                                 <a href="#tnc1" style="margin: 0px 5px;font-family: Manrope-Regular;" class="circle-button btn-sm btn lightbox link adr-save" onclick="shareme('<?php echo @$get_link['images_url']?>','1')" name="send2" id="send3"><span adr_trans="label_send" style="font-size: 12px;">send</span></a>
+                                                 <a href="#tnc1" class="ActionBtn-sm"> onclick="shareme('<?php echo @$get_link['images_url']?>','1')" name="send2" id="send3"><span adr_trans="label_send" style="font-size: 12px;">send</span></a>
                                                <!-- </div> -->
                                                <?php } ?>
 
                                                <!-- <div class="col-md-2" style="display:inline-block"> -->
-                                                 <a href="<?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc1";}?>"  style="margin:0px 5px;font-size: 12px;font-family: Manrope-Regular;" class="circle-button btn-sm btn adr-save <?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")!=0) { echo"lightbox link";}?>" onclick="shareme('<?php echo @$get_link['images_url']?>','0')" name="send2" id="send2"><span adr_trans="label_share" style="font-size:12px;">share</span></a>
+                                                 <a href="<?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc1";}?>"  class="ActionBtn-sm" <?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")!=0) { echo"lightbox link";}?>" onclick="shareme('<?php echo @$get_link['images_url']?>','0')" name="send2" id="send2"><span adr_trans="label_share" class="Text-sm" >share</span></a>
                                                <!-- </div> -->
 
                                                <!-- <div class="col-md-2" style="display:inline-block"> -->
                                                 
-                                                  <input type="submit"  class="circle-button btn-sm btn adr-save"  name="delete_all" style="margin: 0px 5px;"  value="Delete" >
+                                                  <input type="submit"  class="ActionBtn-sm"  name="delete_all" value="Delete" >
 
                                                <!-- </div> -->
 
 <?php }?>
 <?php if($get_summary['status_id']!=3 && $get_summary['status_id']!=5 && $get_summary['status_id']!=6){?>
                                                <!-- <div class="col-md-2" style="display:inline-block;font-size:11px;"> -->
-                      <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=1"  id="clicktoupload" class="circle-button btn-sm btn adr-save" style="margin: 0px 5px;padding:5px;font-size:11px;"><span   adr_trans='label_upload' style="font-size:11px;">Upload</span></a>
+                      <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=1"  id="clicktoupload" class="ActionBtn-sm"><span   adr_trans='label_upload' class="Text-sm">Upload</span></a>
                                                <!-- </div> -->
                                             
                                                <?php }?>
@@ -2811,14 +2823,14 @@ if (@$_REQUEST['shar']) {
                                              <input type="checkbox" class="selectimg"  name="selected_image[]" id="selected_image<?php echo $get_comment['id'];?>" value="<?php echo $get_comment['id'];?>" style="display:none;" >
                                              <input type="checkbox" class="selectall" name="allimage[]"  value="<?php echo $get_comment['id'];?> " checked  style="display:none;" >
 
-                                            <div data-sort="1" class=" col-md-3 cat1" style="border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                                            <div data-sort="1" class=" col-md-3 cat1 ImageBox" >
 
-                                              <a class="img-box icons<?php echo $get_comment['id'];?>" id="imga" title="<?php echo $picture_name1['description']; ?>" href="<?php echo $imagesDirectory_standard."/".$image; ?>"  style="visibility: hidden;" onmouseover="showicons(<?php echo $get_comment['id'];?>)" >
-                                                  <i class="fa fa-eye " style="position:revert !important;top:50px;color: black;"></i>
+                                              <a class="img-box icons<?php echo $get_comment['id'];?>" id="imga" title="<?php echo $picture_name1['description']; ?>" href="<?php echo $imagesDirectory_standard."/".$image; ?>"   onmouseover="showicons(<?php echo $get_comment['id'];?>)" >
+                                                  <i class="fa fa-eye " style="position:revert !important;top:50px;"></i>
                                               </a>
 
-                                              <a class="icons<?php echo $get_comment['id'];?> clikedImg1" id="imga1" onclick="clickimg(<?php echo $get_comment['id'];?>)" style="visibility: hidden;"  onmouseover="showicons(<?php echo $get_comment['id'];?>)">
-                                                <i class="fa fa-square icons"  id="check<?php echo $get_comment['id'];?>" style="position:revert !important;top:50px;font-size: 16px;color:black !important;"></i>
+                                              <a class="icons<?php echo $get_comment['id'];?> clikedImg1" id="imga1" onclick="clickimg(<?php echo $get_comment['id'];?>)" onmouseover="showicons(<?php echo $get_comment['id'];?>)">
+                                                <i class="fa fa-square icons"  id="check<?php echo $get_comment['id'];?>" style="position:revert !important;top:50px;font-size: 16px;"></i>
 
                                               </a>
 
@@ -2830,8 +2842,9 @@ if (@$_REQUEST['shar']) {
                                                   <i class="fa fa-trash-o anima" style="position:absolute !important;top:50%;left:40%;z-index:2;color:black;font-size:20px;padding:20px;background:white;border-radius:30px;"></i>
                                               </a> -->
 
-                                                  <img alt="" class="img1" id="clicked_img<?php echo $get_comment['id'];?>" onclick="clickimg(<?php echo $get_comment['id'];?>)" src="<?php echo $imagesDirectory_standard."/".$image; ?>" height="180" width="240" style="z-index: 0;margin-bottom:5px;margin-top:-50px;border: none;" onmouseover="showicons(<?php echo $get_comment['id'];?>)"   onmouseout="hideicons(<?php echo $get_comment['id'];?>)">
-                                                  <center><span style="text-align:center;margin-top: 5px;"><?php echo $checknaming1['description']."<br>".date("d-m-Y h:i a",strtotime($checknaming1['created_on'])); ?></span></center>
+                                                  <img alt="" class="img1" id="clicked_img<?php echo $get_comment['id'];?>" onclick="clickimg(<?php echo $get_comment['id'];?>)" src="<?php echo $imagesDirectory_standard."/".$image; ?>" style="z-index: 0;margin-bottom:5px;margin-top:-50px;border: none;" onmouseover="showicons(<?php echo $get_comment['id'];?>)"   onmouseout="hideicons(<?php echo $get_comment['id'];?>)">
+                                                  <center><span
+                                                    style="margin-top: 5px;"><?php echo $checknaming1['description']."<br>".date("d-m-Y h:i a",strtotime($checknaming1['created_on'])); ?></span></center>
 
 
                                                   <!-- <img alt="" class="img1" id="clicked_img<?php //echo $get_comment['id'];?>" src="<?php //echo $imagesDirectory_standard."/".$image; ?>" height="180" width="300" style="z-index: -1;margin-bottom:5px;"> -->
