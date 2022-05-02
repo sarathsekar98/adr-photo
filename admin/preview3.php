@@ -17,6 +17,15 @@ background:#000 !important;
 opacity:1!important;
 
 }
+.OuterSpace
+{
+  background: #FFF;
+  color: #000;
+  opacity: 0.9;
+  padding: 10px;
+  margin-top: 23px;
+  border-radius: 5px;
+}
 </style>
 
 <link rel="stylesheet" href="../dropzone/dropzone.css">
@@ -27,10 +36,10 @@ opacity:1!important;
                 <div class="col-md-2">
 	<?php include "sidebar.php"; ?>
 </div>
-                <div class="col-md-8" style="background: white;border-radius: 5px;margin-top: 23px;padding: 10px;">
+                <div class="col-md-8 OuterSpace">
                   <br>
 
-                  <a href="#" id="send" class="btn adr-save btn-sm"  style="margin-top: -10px;float: right;"><span adr_trans="label_send">send</span></a>
+                  <a href="#" id="send" class="ActionBtn-sm"  style="margin-top: -10px;float: right;"><span adr_trans="label_send">send</span></a>
                   <center><h5 adr_trans="label_preview_and_naming">Preview And Naming</h5></center>
 
   <?php
@@ -73,12 +82,12 @@ opacity:1!important;
          if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType == 'DNG') || ($imgFileType == 'CR2') || ($imgFileType == 'NEF') || ($imgFileType == 'ARW'))
          {
           ?>
-                  <div data-sort="1" class=" col-md-3 cat1" style="visibility: visible; margin-top:5px;border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                  <div data-sort="1" class=" col-md-3 cat1 ImageBox" >
 
                       <a class="img-box i-center" href="<?php echo "finished_images/order_".$id_url."/".$service."/".$image; ?>" data-anima="show-scale" data-trigger="hover" data-anima-out="hide" style="opacity: 1;">
                           <i class="fa fa-photo anima" aid="0.22880302434786803" style="transition-duration: 500ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms; opacity: 0;"></i>
 
-                          <img alt="" src="<?php echo "../finished_images/order_".$id_url."/".$service."/".$image; ?>" width="240" height="180"/>
+                          <img alt="" src="<?php echo "../finished_images/order_".$id_url."/".$service."/".$image; ?>" />
                       </a>
                       <?php
                       $get_comment_querry=mysqli_query($con,"SELECT * FROM `image_naming` WHERE order_id=$id_url and image_name='$image'");
@@ -94,7 +103,7 @@ opacity:1!important;
                            $previewvalue=$get_comment['description'];
                        }
                       ?>
-                      <input type="text" list="pic_type3" class="form-control stdImg"  id="myBtn<?php echo $get_comment['id']; ?>" value="<?php echo $previewvalue; ?>" style="width:webkit-fill-available;margin-top:10px;font-size: 12px;height: 30px;" onchange="myFunction(event,<?php echo  $get_comment['id'];?>,'<?php echo $service ?>')" required placeholder="Name the pic"/>
+                      <input type="text" list="pic_type3" class="form-control stdImg"  id="myBtn<?php echo $get_comment['id']; ?>" value="<?php echo $previewvalue; ?>" style="width:webkit-fill-available;margin-top:10px;" onchange="myFunction(event,<?php echo  $get_comment['id'];?>,'<?php echo $service ?>')" required placeholder="Name the pic"/>
                       <datalist id="pic_type3" />
 
 
