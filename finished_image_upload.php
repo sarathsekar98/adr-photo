@@ -177,6 +177,19 @@ if(isset($_REQUEST['send']))
 <script src="dropzone/dropzone.js"></script>
 <script src="dropzone/validate.js"></script>
 
+<style>
+
+.OuterSpace
+{
+background:#fff;
+margin-top:25px;
+border-radius:5px;
+padding:20px;
+}  
+
+</style>
+
+
 <link rel="stylesheet" href="dropzone/dropzone.css">
  <div class="section-empty bgimage9">
         <div class="container" style="margin-left:0px;height:inherit">
@@ -187,10 +200,10 @@ if(isset($_REQUEST['send']))
 
 
 </div>
-<div class="col-md-9" style="background:white;margin-top:25px;border-radius:5px;padding:20px;">
+<div class="col-md-9 OuterSpace" style="">
   <div id="standard_photos_div" >
         <div id="error1" ></div>
-    <form action="./dropzone/upload1.php?id=<?php echo $order_id; ?>&type=<?php echo $type1;?>&user_id=<?php echo $_SESSION['loggedin_id'];?>&user_type=<?php echo $_SESSION['user_type'];?>" id='uploads' class="dropzone" style="100px">
+    <form action="./dropzone/upload1.php?id=<?php echo $order_id; ?>&type=<?php echo $type1;?>&user_id=<?php echo $_SESSION['loggedin_id'];?>&user_type=<?php echo $_SESSION['user_type'];?>" id='uploads' class="dropzone">
 
      <span id="drop_files"></span>
      </form>
@@ -203,8 +216,8 @@ if(isset($_REQUEST['send']))
 
      </script>
      <div class="col-md-12" style="margin-top:10px;padding-right: 0px !important;">
-      <a href="#" id="edit_button" class="btn btn-primary adr-save" style="float: right;margin-left: 10px;" adr_trans="">Submit</a>
-        <a href="preview3.php?id=<?php echo $order_id?>&type=<?php echo $type1?>&send=1" class="btn btn-primary adr-save" style="float: right;" adr_trans="label_preview">preview</a>
+      <a href="#" id="edit_button" class="ActionBtn-sm Float-right" style="margin-left: 10px;" adr_trans="">Submit</a>
+        <a href="preview3.php?id=<?php echo $order_id?>&type=<?php echo $type1?>&send=1" class="ActionBtn-sm Float-right" adr_trans="label_preview">preview</a>
       </div>
 
       <input type="hidden"  id="order_id"  value="<?php echo $order_id?>"/>

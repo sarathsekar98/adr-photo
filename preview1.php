@@ -225,6 +225,15 @@ background:#000 !important;
 opacity:1!important;
 
 }
+.OuterSpace
+{
+background:#FFF;
+color:#000;
+opacity:0.9;
+padding: 10px;
+margin-top: 23px;
+border-radius: 5px;
+}  
 
 </style>
 <script>
@@ -293,14 +302,14 @@ var a;
                 <div class="col-md-2">
 <?php include "sidebar.php"; ?>
 			          </div>
-                <div class="col-md-8" style="background:#FFF;color:#000;opacity:0.9;padding: 10px;margin-top: 23px;border-radius: 5px;">
+                <div class="col-md-8 OuterSpace">
                 <hr class="space s">
 
 
-                  <h5 style="text-align: center;font-size: 13px;color: black;" adr_trans="label_standard_photos">Standard Photos</h5>
+                  <h5 class="PageHeading-md TextCenter" adr_trans="label_standard_photos">Standard Photos</h5>
 
-                   <button  class="btn btn-primary adr-save btn-sm"  id="edit_button" data-lightbox-anima="show-scale" style="display:block;float:right;margin-top: -35px;" adr_trans="label_send"> Send</button>
-                   <a href="photographerorder_detail.php?id=<?php echo $id_url?>&upload=1&fixed=2"  class="btn btn-primary adr-save btn-sm"  id="done_button" data-lightbox-anima="show-scale" style="display:none;float:right;margin-top: -35px;" adr_trans="label_send">Send</a>
+                   <button  class="ActionBtn-sm"  id="edit_button" data-lightbox-anima="show-scale" style="display:block;float:right;margin-top: -35px;" adr_trans="label_send"> Send</button>
+                   <a href="photographerorder_detail.php?id=<?php echo $id_url?>&upload=1&fixed=2"  class="ActionBtn-sm"  id="done_button" data-lightbox-anima="show-scale" style="display:none;float:right;margin-top: -35px;" adr_trans="label_send">Send</a>
                    <select name="editor_email" id="editor_email1" onchange="show_editbtn(this.val)" style="display:none;float:right;margin-top: -47px;color: black;margin-right: 74px;height: 32px;min-width: 110px;">
 
                     <?php
@@ -342,10 +351,10 @@ var a;
 
                         ?>
 
-                        <div data-sort="1" class=" col-md-3 cat1" style="visibility: visible; margin-top:5px;border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;">
+                        <div data-sort="1" class=" col-md-3 cat1 ImageBox">
                             <a class="img-box i-center" href="<?php echo $imagesDirectory_standard."/".$image; ?>" data-anima="show-scale" data-trigger="hover" data-anima-out="hide" style="opacity: 1;">
                                 <i class="fa fa-photo anima" aid="0.22880302434786803" style="transition-duration: 500ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms; opacity: 0;"></i>
-                                <img alt="" id="img" src="<?php echo $imagesDirectory_standard."/".$image; ?>"   height="180" width="240"/>
+                                <img alt="" id="img" src="<?php echo $imagesDirectory_standard."/".$image; ?>"/>
                             </a>
                             <?php
                           //  echo "SELECT * FROM `image_naming` WHERE order_id=$id_url and image_name='$image'";
@@ -411,9 +420,9 @@ var a;
                     </div>
                     <hr class="space l">
 
-                    <h5 style="text-align: center;font-size: 13px;color: black;">Floor Plans</h5>
-                       <button  class="btn btn-primary adr-save btn-sm"  id="edit_button1" data-lightbox-anima="show-scale" style="display:block;float:right;margin-top:-35px" adr_trans="label_send"> Send</button>
-                       <a href="photographerorder_detail.php?id=<?php echo $id_url?>&upload=1&fixed=2"  class="btn btn-primary adr-save btn-sm"  id="done_button1" data-lightbox-anima="show-scale" style="display:none;float:right;margin-top: -35px;" adr_trans="label_send" >Send</a>
+                    <h5 class="PageHeading-md TextCenter">Floor Plans</h5>
+                       <button  class="ActionBtn-sm"  id="edit_button1" data-lightbox-anima="show-scale" style="display:block;float:right;margin-top:-35px" adr_trans="label_send"> Send</button>
+                       <a href="photographerorder_detail.php?id=<?php echo $id_url?>&upload=1&fixed=2"  class="ActionBtn-sm"  id="done_button1" data-lightbox-anima="show-scale" style="display:none;float:right;margin-top: -35px;" adr_trans="label_send" >Send</a>
                         <select name="editor_email" id="editor_email2"  onchange="show_editbtn2()" style="display:none;float:right;margin-top: -47px;color: black;margin-right: 74px;height: 32px;min-width: 110px;">
                           <?php
                             $photographer_id=$_SESSION['loggedin_id'];
@@ -456,11 +465,11 @@ var a;
                          if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType == 'DNG') || ($imgFileType == 'CR2') || ($imgFileType == 'NEF') || ($imgFileType == 'ARW'))
                          {
                           ?>
-                          <div data-sort="1" class=" col-md-3 cat1" style="visibility: visible;margin-top:5px;border:solid 2px #aaa;padding:5px;background:#ddd;margin:15px;" >
+                          <div data-sort="1" class=" col-md-3 cat1 ImageBox">
                               <a class="img-box i-center" href="<?php echo $imagesDirectory_floor."/".$image; ?>" data-anima="show-scale" data-trigger="hover" data-anima-out="hide" style="opacity: 1;">
                                   <i class="fa fa-photo anima" aid="0.22880302434786803" style="transition-duration: 500ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms; opacity: 0;"></i>
 
-                                  <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>" height="180" width="240"/>
+                                  <img alt="" id="img" src="<?php echo $imagesDirectory_floor."/".$image; ?>"/>
                               </a>
                               <?php
                               $get_comment_querry=mysqli_query($con,"SELECT * FROM `image_naming` WHERE order_id=$id_url and image_name='$image'");
