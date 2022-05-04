@@ -3219,7 +3219,7 @@ if (@$_REQUEST['shar']) {
   <input type="hidden" name="created_by_id" id="created_by_id" value="<?php echo $get_order["created_by_id"]; ?>" />
    <input type="hidden" name="order_id" id="order_id" value="<?php echo $get_order["id"]; ?>" />
    <input type="hidden" name="logged_id" id="logged_id" value="<?php echo $_SESSION["loggedin_id"]; ?>" />
-  <input type="text" class="Text-md" name="chattext" id="chattext1" style="border:solid 0px #000080;font-size:11px;font-weight:600;border-radius:5px;width:95%" placeholder=" Type your msg, hit enter" required />
+  <input type="text" class="Text-md" name="chattext" id="chattext1" style="border:solid 0px #000080;border-radius:5px;width:95%" placeholder=" Type your msg, hit enter" required />
 
 
   </div>
