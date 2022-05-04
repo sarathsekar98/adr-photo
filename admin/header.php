@@ -967,6 +967,8 @@ border-bottom-color: #fff;
 {
     display: block;
     margin: 10px 0px;
+    line-height: 15px;
+    height: 25px;
 }
  .advs-box.boxed-inverse > p.counter,.advs-box.boxed-inverse > p
 {
