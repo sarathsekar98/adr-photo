@@ -3466,7 +3466,7 @@ if (@$_REQUEST['shar']) {
 
       <div id="print" style="padding-left:15px;padding-right:15px;padding-bottom:10px;">
         <header id="inv_header" >
-          <h4 id="inv_h1" style="font-size:20px; text-align: center;"><span id="label_order_cost" adr_trans="label_order_cost">Order cost</span></h4><br>
+          <h4 id="inv_h1" class="TextCenter Text-md fa-2x"><span id="label_order_cost" adr_trans="label_order_cost">Order cost</span></h4><br>
                <!-- <h1 id="inv_h1" style="font-size:50px; text-align: left; margin-left : 1.5%;
          padding-left : 1.5%;">Order Cost</h1> <br> -->
 
@@ -3480,7 +3480,7 @@ if (@$_REQUEST['shar']) {
           {
             ?>
 
-           <a href="#" class="ActionBtn-sm" title="Approved Order Cost" name="button" onclick="pending(<?php echo $id_url; ?>)" id="button_approved" style="color:white !important;border-radius: 29px;margin-top: -78px;margin-right: 4px;"><i class="fa fa-check"></i><span adr_trans="label_approve">Approve</span></a>
+           <a href="#" class="ActionBtn-sm AnimationBtn Float-right" title="Approved Order Cost" name="button" onclick="pending(<?php echo $id_url; ?>)" id="button_approved" style="margin-top: -90.5px;"><i class="fa fa-check"></i><span adr_trans="label_approve">Approve</span></a>
           
            <?php
           }
@@ -3490,7 +3490,7 @@ if (@$_REQUEST['shar']) {
 
              <!-- <a  href="#" class="anima-button circle-button btn-sm btn adr-save" title="Already Approved" name="button" id="button_approved" style="float:right;border-radius: 29px;padding: 3px;   margin-top: -80px;"><b><span adr_trans="label_approved">Approved</span></b></a>';
  -->
-              <a href="#" class="ActionBtn-sm" title="Already Approved" name="button" id="button_approved" style="color:white !important;border-radius: 29px;margin-top: -84px;margin-right: 4px;padding: 4px;"><span adr_trans="label_approved">Approved</span></a>
+              <a href="#" class="ActionBtn-sm Float-right" title="Already Approved" name="button" id="button_approved" style="margin-top: -90.5px;width: fit-content;"><span adr_trans="label_approved">Approved</span></a>
          
 <?php
           }

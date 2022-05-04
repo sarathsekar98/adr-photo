@@ -1281,7 +1281,7 @@ thead > tr:last-child > th, th > span {
            @$approved_check=mysqli_fetch_assoc(@$approved_check_query);
               if(@$approved_check['approved']==1)
                {
-                 echo '<td class="text-left" ><a target="" href="superOrder_detail.php?c=1&id='.$get_order['id'].'" class="IconWithTitle Text-lg">
+                 echo '<td class="text-center" ><a target="" href="superOrder_detail.php?c=1&id='.$get_order['id'].'" class="IconWithTitle Text-lg">
                  <i class="fa fa-file-text-o " title="View Order Cost"></i></a></td>';
                }
                else {
@@ -1290,7 +1290,7 @@ thead > tr:last-child > th, th > span {
                }
           }
           else {
-            echo '<td class="text-left" ><a target="" href="#" class="IconWithTitle Text-lg">
+            echo '<td class="text-center" ><a target="" href="#" class="IconWithTitle Text-lg">
             <i class="fa fa-file-o " title="Order Cost is not Ready"></i></a></td>';
           }
 
