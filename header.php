@@ -333,6 +333,7 @@ $("#dayVal").val(calid);
 
 }
 </script>
+<link rel="stylesheet" href="style1.css">
      <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <!-- Extra optional content header -->
 </head>
