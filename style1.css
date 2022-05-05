@@ -1206,6 +1206,8 @@ background: #aad1d6;
 ul.pagination li
 {
  font-size: 12px;
+ font-family: verdana !important;
+ color: #000;
 }
 ul.pagination > li > a
 {
@@ -1213,23 +1215,27 @@ ul.pagination > li > a
  color: #000 !important;
  border-color: #AAD1D6 !important;
  padding: 4px 5px;
+ font-family: verdana !important;
 }
 ul.pagination > li.active > a
 {
   background: #378087 !important;
   color: #000 !important;
   border-color: #378087 !important;
+  font-family: verdana !important;
 }
 div.infos > p > span
 {
   padding-right: 3px;
   padding-left: 3px;
   color: #000;
+  font-family: verdana !important;
 }
 .infos p,.infos
 {
     color: #000 !important;
     font-weight: 600 !important;
+    font-family: verdana !important;
 }
 
 /*Pagination configs ends here*/
