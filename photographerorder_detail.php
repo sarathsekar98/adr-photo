@@ -470,8 +470,6 @@ html{	background-color:#FFF; }
 .ribbon {
     width: 100px;
     height: 50px;
-    background-color: #AAD1D6;
-	color:#000!important;
     position: absolute;
     right: 15px;
 	z-index:999;
@@ -483,7 +481,6 @@ html{	background-color:#FFF; }
   padding-left:13px;
   font-weight:600;
   padding-top:5px;
-  color:#FFF
 }
 
 @keyframes drop{
@@ -1145,7 +1142,7 @@ header("location:photographerDashboard.php?private=1"); exit;
 
                                   ?>
 
-   <div class="col-md-12 Text-md"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br /><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
+   <div class="col-md-12 Text-md"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br /><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
                       <div class="row" style="margin:0px;" id="printArea">
                       				<div class="col-md-6" style="">
 <div class="OuterSpace">
@@ -3203,7 +3200,7 @@ if (@$_REQUEST['shar']) {
           </div>
            </div>
 
-  <div class="col-md-2 Text-md" id="chat" style="border:none;background:#AAD1D6;opacity:0.7;padding:10px;border-radius:5px;margin-top:63px;">
+  <div class="col-md-2 ChatBox Text-md" id="chat" style="margin-top:63px;">
   <p class="Text-md" style="padding-bottom:10px;" align="center"><b>Order Chat box  <?php
   $created_id=@$get_summary['created_id'];
   @$realtor1=mysqli_query($con,"select * from user_login where id='@$created_id'");

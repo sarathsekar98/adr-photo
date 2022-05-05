@@ -696,8 +696,6 @@ html{	background-color:#FFF; }
 .ribbon {
     width: 100px;
     height: 50px;
-    background-color: #AAD1D6;
-  color:#000!important;
     position: absolute;
     right: 15px;
   z-index:999;
@@ -800,11 +798,7 @@ margin-left:0px!important;
 }
 .tab-box > .panel, .tab-box > .panel-box > .panel 
 {
-border:none!important;
 padding:0px;
-}
-.nav-tabs > li.active > a {
-    background-color: #aad1d6 !important;
 }
 .nav-tabs {
 border-bottom:none!important;
@@ -813,13 +807,6 @@ border-bottom:none!important;
 {
 padding:0px!important;
 }
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus
-{
-  background-color: #AAD1D6;
-  color: #000;
-  border-color: #AAD1D6;
-}
-
 .nav-tabs > li
 {
   margin-left: 0px !important;
@@ -1393,7 +1380,7 @@ if($get_order1['status_id']==3||$get_order1['status_id']==1||$get_order1['status
 
 
               ?>
- <div class="col-md-12 Text-md"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br ><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
+ <div class="col-md-12 Text-md"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br ><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
 
 
 
@@ -2861,7 +2848,7 @@ if($get_order1['status_id']==3)
 
           </div>
                  </div>
-<div class="col-md-2 Text-md" style="border:none;background:#AAD1D6;opacity:0.7;padding:10px;border-radius:5px;margin-top:40px;">
+<div class="col-md-2 ChatBox Text-md" style="margin-top:40px;">
   <p class="Text-md" style="padding-bottom:10px;" align="center">Order Chat Box <?php
 
   $realtor1=mysqli_query($con,"select * from user_login where id='$photographer_id'");

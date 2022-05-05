@@ -11,7 +11,7 @@
     font-size: 12px;
     padding: 0px;
 }
-
+ 
 .PageHeading-lg {
     font-family: verdana;
     color: #000;
@@ -701,7 +701,12 @@ thead>tr:last-child {
     width: 10px;
     border-radius: 10px;
 }
-
+.ChatBox 
+{
+    background: #aad1d6;
+    opacity: 0.7;
+    border-radius: 5px;
+}
 .ChatUser {
     color: green;
     font-size: 11px;
@@ -767,6 +772,7 @@ thead>tr:last-child {
     margin: 10px 0px;
     line-height: 15px;
     height: 25px;
+    color: #000;
 }
 
 .advs-box.boxed-inverse>p.counter,
@@ -1013,6 +1019,7 @@ i.fa-star {
 
     font-family: verdana;
     background: #fff !important;
+    color: #000 !important;
 
 }
 
@@ -1021,6 +1028,7 @@ i.fa-star {
 
     font-family: verdana;
     background: #aad1d6 !important;
+    color: #000 !important;
 
 }
 
@@ -1043,7 +1051,11 @@ i.fa-star {
     font-family: verdana;
     background: #aad1d6 !important;
 }
+.nav-pills.nav-justified
+{
+    border-color: #aad1d6 !important;
 
+}
 /*nav pills end here*/
 
 /*Calendar configs starts here*/
@@ -1180,3 +1192,10 @@ h2.fc-toolbar-title {
 }
 
 /*Calendar configs starts here*/
+
+.ribbon 
+{
+
+background: #aad1d6;
+
+}

@@ -25,7 +25,7 @@ Table of contents
 13. IE < 10 [Row 5577] 
 14. Theme global style [Row 5593] 
 -------------------------------------------------------------------
-*/
+*/ 
 /*
 ==============================
 GLOBAL STYLE
@@ -180,7 +180,6 @@ padding-top:15px!important;
 padding-bottom:15px!important;
 font-weight:bold;
 font-size:10px;
-color:#000;
 }
 th,th > span
 {
@@ -227,8 +226,6 @@ font-size:12px;
 }
 .nav-tabs > li.active > a:focus,.nav-tabs > li.active > a
 {
-/*background:#aad1d6!important;*/
-color:#000;
 padding-top:0px;
 padding-bottom:2px;
 padding-left:5px;

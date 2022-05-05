@@ -903,22 +903,17 @@ html{	background-color:#FFF; }
 .ribbon {
     width: 100px;
     height: 50px;
-    background-color: #AAD1D6;
-  color:#000!important;
     position: absolute;
-
     right: 30px;
     z-index: 999;
     top: -350px;
 	border-radius:5px 0px 0px 5px;
-
     -webkit-animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   margin-top:80px;
   padding-left: 13px;
   font-weight: 600;
   padding-top: 5px;
-  color: #FFF;
 }
 
 
@@ -1626,7 +1621,7 @@ alert(alertmsg);
                                 ?>
 
 
- <div class="col-md-12"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br ><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="color:#000;padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
+ <div class="col-md-12 Text-md"><div class="ribbon"><span adr_trans="label_order_value">Order Value</span><br ><span style="padding-left:20px;">$<?php echo $total_cost1['totalPrice']?><i class="fa fa-info-circle" style="padding-left:5px;" title="Order Value w/o tax and other cost. Please refer order cost for more details."></i></span></div></div>
 
 
 
@@ -3839,7 +3834,7 @@ $percentage = @$get_information['tax'];
 
   
 
-<div class="col-md-2" class="Text-md" style="border:none;background:#AAD1D6;opacity:0.7;padding:10px;font-family:border-radius:5px;margin-top:60px;">
+<div class="col-md-2 ChatBox Text-md" style="margin-top:60px;">
 
   <b><p class="Text-md" style="padding-bottom:10px;" align="center">Order Chat Box <?php
 
