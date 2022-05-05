@@ -959,7 +959,14 @@ i.fa-star {
 .W-10 {
     width: 10%;
 }
-
+.fa-1x
+{
+font-size: 1.5em;
+}
+.VerticalAlign-t
+{
+vertical-align: top;
+}
 .Float-left {
     float: left;
 }
@@ -1239,3 +1246,4 @@ div.infos > p > span
 }
 
 /*Pagination configs ends here*/
+
