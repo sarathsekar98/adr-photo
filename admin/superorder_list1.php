@@ -162,69 +162,8 @@ header("location:subcsrOrder_list1.php?app=1");
      }
      </script>
 	 <style>
-	/*.nav-tabs > li.active > a, .current-active {
-    background:#000!important;color:#FFF!important;
-    border-radius: 20px 20px 0px 0px;
-    opacity: 0.8;
 
-
-}
-.current-active
-{
- background:#000!important;
- color:#FFF!important;border-bottom-color:#000!important;
-}*/
-ul.pagination li
-{
- font-size: 10px;
-}
-ul.pagination > li > a
-{
- background: #AAD1D6 !important;
- color: #378087 !important;
- border-color: #AAD1D6 !important;
- padding: 4px 5px;
-}
-ul.pagination > li.active > a
-{
-  background: #378087 !important;
-  color: #FFF!important;
-  border-color: #378087 !important;
-}
-
-
-/*ul.pagination > li.prev > a
-{
- background: white !important;
- color: green !important;
- border-color: white !important;
-}*/
-
-/*ul.pagination > li.next > a
-{
-  background: white !important;
- color: green !important;
- border-color: white !important;
-}
-ul.pagination > li.last > a
-{
-  background: white !important;
- color: green !important;
- border-color: white !important;
-}*/
-.infobar .infos p
-{
-  margin-right: -40px;
-}	 
-/*th,th > span
-{
-  background: #aad1d6;
-  padding-top: 6px !important;
-  padding-bottom: 10px !important;
-  padding-left: 3px !important;
-}*/
-thead > tr:last-child > th, th > span {
-    /*background: #aad1d6;*/
+thead > tr:last-child > th, th > span {=
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 3px !important;
