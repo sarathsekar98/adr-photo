@@ -314,7 +314,7 @@ thead > tr:last-child > th, th > span {
 							<a href="#1" class="button"><?php echo $_SESSION["page"]; ?></a></li><li class="next disabled" aria-disabled="true">
 								<a href="<?php echo "./csr_list1.php?a=1&page=".($_SESSION["page"]+1);?>" class="button">&gt;</a></li><li class="last disabled" aria-disabled="true">
 									<a href="<?php echo "./csr_list1.php?a=1&page=".($Page_check);?>" class="button">>></a></li></ul></div><div class="col-sm-6 infoBar">
-										<div style="float:right;" class="infos"><p align="right" style="margin-right:0px;"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?> <span adr_trans="label_to">to</span> <?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?> of &nbsp;<?php echo $total_no; ?> <span adr_trans="label_entries">entries</span></p></div></div>
+										<div style="float:right;" class="infos"><p align="right"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?><span adr_trans="label_to">to</span><?php if($cnt<0){ echo "0";}else{ echo $cnt;}?><span adr_trans="">of</span><?php echo $total_no; ?><span adr_trans="label_entries">entries</span></p></div></div>
 									</div>
 								</div>
 
@@ -481,7 +481,7 @@ thead > tr:last-child > th, th > span {
 							<a href="#1" class="button"><?php echo $_SESSION["page"]; ?></a></li><li class="next disabled" aria-disabled="true">
 								<a href="<?php echo "./csr_list1.php?c=1&page=".($_SESSION["page"]+1);?>" class="button">&gt;</a></li><li class="last disabled" aria-disabled="true">
 									<a href="<?php echo "./csr_list1.php?c=1&page=".($Page_check);?>" class="button">>></a></li></ul></div><div class="col-sm-6 infoBar">
-										<div style="float:right;" class="infos"><p align="right" style="margin-right:0px;"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?> <span adr_trans="label_to">to</span> <?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?> of &nbsp;<?php echo $total_no; ?> <span adr_trans="label_entries">entries</span></p></div></div>
+										<div style="float:right;" class="infos"><p align="right"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?><span adr_trans="label_to">to</span><?php if($cnt<0){ echo "0";}else{ echo $cnt;}?><span adr_trans="">of</span><?php echo $total_no; ?><span adr_trans="label_entries">entries</span></p></div></div>
 									</div>
 								</div>
 
@@ -655,7 +655,7 @@ thead > tr:last-child > th, th > span {
 							<a href="#1" class="button"><?php echo $_SESSION["page"]; ?></a></li><li class="next disabled" aria-disabled="true">
 								<a href="<?php echo "./csr_list1.php?p=1&page=".($_SESSION["page"]+1);?>" class="button">&gt;</a></li><li class="last disabled" aria-disabled="true">
 									<a href="<?php echo "./csr_list1.php?p=1&page=".($Page_check);?>" class="button">>></a></li></ul></div><div class="col-sm-6 infoBar">
-										<div style="float:right;" class="infos"><p align="right" style="margin-right:0px;"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?> <span adr_trans="label_to">to</span> <?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?> of &nbsp;<?php echo $total_no; ?> <span adr_trans="label_entries">entries</span></p></div></div>
+										<div style="float:right;" class="infos"><p align="right"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?><span adr_trans="label_to">to</span><?php if($cnt<0){ echo "0";}else{ echo $cnt;}?><span adr_trans="">of</span><?php echo $total_no; ?><span adr_trans="label_entries">entries</span></p></div></div>
 									</div>
 								</div><!--Panel 3 ends-->
 
@@ -866,7 +866,7 @@ header("location:csr_list1.php?ed=1");
 							<a href="#1" class="button"><?php echo $_SESSION["page"]; ?></a></li><li class="next disabled" aria-disabled="true">
 								<a href="<?php echo "./csr_list1.php?e=1&page=".($_SESSION["page"]+1);?>" class="button">&gt;</a></li><li class="last disabled" aria-disabled="true">
 									<a href="<?php echo "./csr_list1.php?e=1&page=".($Page_check);?>" class="button">>></a></li></ul></div><div class="col-sm-6 infoBar">
-										<div style="float:right;" class="infos"><p align="right" style="margin-right:0px;"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?> <span adr_trans="label_to">to</span> <?php if($cnt<0){ echo "0";}else{ echo $cnt;} ?> of &nbsp;<?php echo $total_no; ?> <span adr_trans="label_entries">entries</span></p></div></div>
+										<div style="float:right;" class="infos"><p align="right"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?><span adr_trans="label_to">to</span><?php if($cnt<0){ echo "0";}else{ echo $cnt;}?><span adr_trans="">of</span><?php echo $total_no; ?><span adr_trans="label_entries">entries</span></p></div></div>
 									</div>
 								</div>
 
