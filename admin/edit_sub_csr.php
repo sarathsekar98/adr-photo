@@ -221,8 +221,8 @@ function validate_email(val)
                               <div class="alert alert-warning" id="error-msg">&nbsp;</div>
                           </div>
 
-  						 <button class="anima-button circle-button btn-sm btn" type="submit" name="signupbtn"><i class="fa fa-sign-in"></i>Update</button>
-                         &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn" href="csr_list1.php"><i class="fa fa-times"></i>Cancel</a>
+  						 <button class="AnimationBtn btn" type="submit" name="signupbtn"><i class="fa fa-sign-in"></i>Update</button>
+                         &nbsp;&nbsp;<a class="AnimationBtn btn" href="csr_list1.php"><i class="fa fa-times"></i>Cancel</a>
   </center>
   					   </div>
 

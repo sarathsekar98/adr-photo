@@ -21,7 +21,7 @@ include "header.php";
                             <p>Fotopia is awesome!. Signup today, We will be happy to assist you. </p>
                         </div>
                         <div class="col-md-3">
-                            <a class="circle-button btn-sm" href="#">support@fotopia.no </a>
+                            <a class="circle-button" href="#">support@fotopia.no </a>
                         </div>
                     </div>
                 </div>

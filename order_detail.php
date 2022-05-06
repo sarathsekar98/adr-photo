@@ -2839,7 +2839,7 @@ if($get_order1['status_id']==3)
           <input type="hidden" name="link1" id="link">
           <input type="hidden" name="sharename" value="<?php echo $loggedin_name;?>"  >
           <hr class="space s">
-          <center><button class="btn adr-save" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
+          <center><button class="btn ActionBtn-sm" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
           </form>
           <hr class="space l">
 
@@ -2902,7 +2902,7 @@ if($get_order1['status_id']==3)
         <input type="hidden" name="status_id" id="status_id">
 
         <hr class="space s">
-        <center><button class="btn adr-save" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
+        <center><button class="btn ActionBtn-sm" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
         </form>
         <hr class="space l">
 

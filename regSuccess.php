@@ -92,7 +92,7 @@ try {
                         <span id="label_admin_not_approved" adr_trans="label_admin_not_approved">You can login only after admin approved your account.</span>
                         </h5>
                         <hr class="space m">
-                        <a class="anima-button btn-ms btn adr-cancel circle-button" id="label_go_back_home" adr_trans="label_go_back_home" href="index.php"><i class="fa fa-long-arrow-left"></i>Go back to home</a>
+                        <a class="AnimationBtn btn-ms CancelBtn-sm " id="label_go_back_home" adr_trans="label_go_back_home" href="index.php"><i class="fa fa-long-arrow-left"></i>Go back to home</a>
                     </div>
                 </div>
             </div>

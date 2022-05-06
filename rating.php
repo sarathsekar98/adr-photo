@@ -127,7 +127,7 @@ return false;
 				<input type="hidden" name="photographer_id"  value="<?php echo $photographer_id; ?>">
 				<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span adr_trans="label_comments">Comment</span></p>
 				<textarea name="comment" class="form-control" style="margin:10px;width:350px"  placeholder="Type your comments"></textarea>
-				<input type="submit" name="RateNow" value="Submit" class="btn btn-primary adr-save" style="margin:20px;">
+				<input type="submit" name="RateNow" value="Submit" class="btn btn-primary ActionBtn-sm" style="margin:20px;">
 				</form>
 				</td></tr>
 				</table>

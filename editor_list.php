@@ -199,8 +199,8 @@ padding:5px!important;
 
 							<div class="col-md-12">
                                 <p align="center" style="padding-top:10px;">
-                                	<button class="anima-button circle-button btn-sm btn" type="submit" name="signupbtn"  adr_trans="label_save"><i class="fa fa-sign-in"></i>Save</button>
-                         &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn" href="editor_list.php" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
+                                	<button class="AnimationBtn btn" type="submit" name="signupbtn"  adr_trans="label_save"><i class="fa fa-sign-in"></i>Save</button>
+                         &nbsp;&nbsp;<a class="AnimationBtn btn" href="editor_list.php" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
 								</p>
                             </div>
 							</form>
@@ -247,7 +247,7 @@ padding:5px!important;
 
 
 <p align="right" style="width:100%;">
-	<a class="lightbox btn btn-primary btn-sm circle-button"  id="addedit" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;" adr_trans="label_add_editor">+ Add Editor</a><br /><br />
+	<a class="lightbox btn-primary "  id="addedit" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;" adr_trans="label_add_editor">+ Add Editor</a><br /><br />
 						<div class="col-md-12" style="background:#000;color:#FFF;opacity:0.8;padding:10px;"></p>
 <div id="flip-scroll">
 <table class="table table-condensed table-hover table-striped bootgrid-table" aria-busy="false">

@@ -69,6 +69,7 @@
     text-align: center;
     font-weight: 600;
     line-height: 24px;
+    vertical-align: top;
 
 }
 
@@ -86,6 +87,7 @@
     text-align: center;
     font-weight: 600;
     line-height: 24px;
+    vertical-align: top;
 }
 
 .ActionBtn-lg {
@@ -102,6 +104,7 @@
     text-align: center;
     font-weight: 600;
     line-height: 24px;
+    vertical-align: top;
 }
 
 .CancelBtn-sm {
@@ -152,7 +155,7 @@
     line-height: 24px;
 }
 
-/*animation btn start here*/
+/*animation start here*/
 .AnimationBtn {
     position: relative;
     overflow: hidden;

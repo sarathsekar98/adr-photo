@@ -132,7 +132,7 @@ background:none!important;
 
       <?php echo $get_complete['total1'];?>
                             </p>
-                            <a class="anima-button circle-button btn-sm" href="order_list.php?c=1"><i class="fa fa-long-arrow-right"></i>View </a>
+                            <a class="AnimationBtn " href="order_list.php?c=1"><i class="fa fa-long-arrow-right"></i>View </a>
                         </div>
 
                         <div class="col-md-3 advs-box advs-box-top-icon boxed-inverse" data-anima="rotate-20" data-trigger="hover" style="background:grey;border-radius:35px 35px 35px 35px!important;width:23%;margin:7px;">
@@ -147,7 +147,7 @@ background:none!important;
 
                       <?php echo $get_ongoing['total'];?>
                                         </p>
-                                        <a class="anima-button circle-button btn-sm" href="order_list.php?o=1"><i class="fa fa-long-arrow-right"></i>View </a>
+                                        <a class="AnimationBtn " href="order_list.php?o=1"><i class="fa fa-long-arrow-right"></i>View </a>
                                     </div>
 
                         <div class="col-md-3 advs-box advs-box-top-icon boxed-inverse" data-anima="rotate-20" data-trigger="hover" style="background:grey; height:171px;border-radius:35px 35px 35px 35px!important;width:23%;margin:7px;">
@@ -159,7 +159,7 @@ background:none!important;
                                         <h5>Properties</h5>
                                         <p style="color:white;font-size:25px;font-weight:600">  &nbsp;<br /><label class="counter" data-speed="1000" data-to="<?php echo $get_order['home_total'];?>" style="color:white;font-size:25px;font-weight:600"><?php echo $get_order['home_total'];?></label></p>
                                   </p> -->
-                                          <a class="anima-button circle-button btn-sm" href="#"><i class="fa fa-long-arrow-right"></i>View </a>
+                                          <a class="AnimationBtn " href="#"><i class="fa fa-long-arrow-right"></i>View </a>
                                     </div>
 
             <div class="col-md-3 advs-box advs-box-top-icon boxed-inverse" data-anima="rotate-20" data-trigger="hover" style="background:grey; height:171px;border-radius:35px 35px 35px 35px!important;width:23%;margin:7px;">
@@ -171,7 +171,7 @@ background:none!important;
                             <!-- <h5>Photographers</h5>
                              <p style="color:white;font-size:25px;font-weight:600">&nbsp;<br /><label class="counter" data-speed="1000" data-to="<?php echo $get_user['total'];?>" style="color:white;font-size:25px;font-weight:600"><?php echo $get_user['total'];?></label></p> -->
 
-                          <a class="anima-button circle-button btn-sm" href="#"><i class="fa fa-long-arrow-right"></i>View </a>
+                          <a class="AnimationBtn " href="#"><i class="fa fa-long-arrow-right"></i>View </a>
                         </div>
 
             </div>
@@ -293,7 +293,7 @@ background:none!important;
               <center>    <h5>Upcoming Events</h5></center>
               	<div id='calendar' style="opacity:0.8"></div>
                 <hr class="space s">
-                <center>  <a href="./csrRealtorCalendar.php" class="anima-button circle-button btn-sm btn adr-save"><i class="fa fa-calendar"></i> View My Calender</a>    </center>
+                <center>  <a href="./csrRealtorCalendar.php" class="AnimationBtn ActionBtn-sm"><i class="fa fa-calendar"></i> View My Calender</a>    </center>
             </div>
             <div class="col-md-6">  <div class=" advs-box advs-box-top-icon boxed-inverse"  style="background:white;border:1px solid black;border-radius:35px 35px 35px 35px;opacity:0.8;height: 330px;">
                 <p style="color:black;margin-top: -20px;margin-bottom: 25px;font-size: 18px;">Latest Deliverd photos</p>
@@ -311,7 +311,7 @@ background:none!important;
                   </div>
             <?php		}
               ?>
-               <a class="anima-button circle-button btn-sm" href="order_list.php"><i class="fa fa-long-arrow-right"></i>View My Orders </a>
+               <a class="AnimationBtn " href="order_list.php"><i class="fa fa-long-arrow-right"></i>View My Orders </a>
             </div></div>
 
 

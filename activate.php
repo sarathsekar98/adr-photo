@@ -22,7 +22,7 @@ if($exist!=0)
                         <h1 ><span adr_trans="label_account_activated">Account activated!</span></h1>
                         <h5 ><span adr_trans="label_login_btn_proceed">Your account has been activated. Please click the login button to proceed.</span></a></h5>
                         <hr class="space m">
-                        <a class="anima-button btn-ms btn circle-button" href="login.php" adr_trans="label_login"><i class="fa fa-long-arrow-left"></i>Login</a>
+                        <a class="AnimationBtn btn-ms " href="login.php" adr_trans="label_login"><i class="fa fa-long-arrow-left"></i>Login</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ if($exist!=0)
                             Email link is invalid or expired. Please contact administrator to activate your account.</a>
                         </h5>
                         <hr class="space m">
-                        <a class="anima-button btn-ms btn circle-button" href="index.php"><i class="fa fa-long-arrow-left" adr_trans="label_go_back_home"></i>Go back to Home</a>
+                        <a class="AnimationBtn btn-ms " href="index.php"><i class="fa fa-long-arrow-left" adr_trans="label_go_back_home"></i>Go back to Home</a>
                     </div>
                 </div>
             </div>

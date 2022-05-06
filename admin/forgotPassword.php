@@ -152,7 +152,7 @@ if($exist!=0)
                             Your account has been activated. Please click the login button to proceed.</a>
                         </h5>
                         <hr class="space m">
-                        <a class="anima-button btn-ms btn circle-button" href="login.php"><i class="fa fa-long-arrow-left"></i>Login</a>
+                        <a class="AnimationBtn btn-ms " href="login.php"><i class="fa fa-long-arrow-left"></i>Login</a>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@ if($exist!=0)
                             adr_trans="label_please_follow">Please follow the email instrcution to continue reset your password.</span></a>
                         </h5>
                         <hr class="space m">
-                        <a class="anima-button btn-ms btn circle-button adr-cancel" id="label_go_back_home"
+                        <a class="AnimationBtn btn-ms  CancelBtn-sm" id="label_go_back_home"
                         adr_trans="label_go_back_home" href="index.php"><i class="fa fa-long-arrow-left"></i>Go back to Home</a>
                     </div>
                 </div>

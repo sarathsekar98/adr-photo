@@ -239,9 +239,9 @@ th
 
 
 							<div class="col-md-12">
-                                <p align="center" style="padding-top:10px;"> <button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="prodbtn"><i class="fa fa-sign-in" id="label_save" adr_trans="label_save"></i>Save</button>
+                                <p align="center" style="padding-top:10px;"> <button class="AnimationBtn ActionBtn-sm" type="submit" name="prodbtn"><i class="fa fa-sign-in" id="label_save" adr_trans="label_save"></i>Save</button>
 
-								  &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="Products.php"><i class="fa fa-times" id="label_cancel" adr_trans="label_cancel"></i>Cancel</a>
+								  &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="Products.php"><i class="fa fa-times" id="label_cancel" adr_trans="label_cancel"></i>Cancel</a>
 								</p>
                             </div>
 							</form>

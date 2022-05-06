@@ -176,7 +176,7 @@ $limit=$start_no_users. ',' . $number_of_pages;
 
 
 
-                  <!-- <p align="right" id="label_back_home" adr_trans="label_back_home">   <a href="subcsr_dashboard.php" class="anima-button circle-button btn-sm btn adr-cancel" style="margin-bottom: 10px;margin-right: 15px;" ><i class="fa fa-sign-out"></i>Back To Home</a></p>
+                  <!-- <p align="right" id="label_back_home" adr_trans="label_back_home">   <a href="subcsr_dashboard.php" class="AnimationBtn CancelBtn-sm" style="margin-bottom: 10px;margin-right: 15px;" ><i class="fa fa-sign-out"></i>Back To Home</a></p>
  -->
         </div>
 

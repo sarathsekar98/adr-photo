@@ -51,11 +51,11 @@ $photographersList.="<table border=\"0\" cellpadding=\"10\" style=\"width:100%;p
 
 
 
-<a class=\"btn-sm adr-save\" adr_trans=\"label_book_online\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\" style=\"\">Book Online</a>&nbsp;&nbsp;&nbsp;
+<a class=\"btn-sm ActionBtn-sm\" adr_trans=\"label_book_online\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\" style=\"\">Book Online</a>&nbsp;&nbsp;&nbsp;
 
 
 
-<a class=\"btn-sm adr-save\" adr_trans=\"label_book_now\" href=\"./create_order.php?bn=1&pc_admin_id=$super_csr_id&Photographer_id=$Photographer_id\" style=\"\">Book Now</a>
+<a class=\"btn-sm ActionBtn-sm\" adr_trans=\"label_book_now\" href=\"./create_order.php?bn=1&pc_admin_id=$super_csr_id&Photographer_id=$Photographer_id\" style=\"\">Book Now</a>
 
 </p></td></tr></table>";
 
@@ -141,12 +141,12 @@ echo $result="<div class=\"panel active\" id=\"aboutmeDiv\" style=\"height:280px
                             <div class=\"panel\" id=\"contactDiv\"  style=\"height:280px;overflow:scroll;\">
                                ".$portFolio."
                             </div>
-							<hr class=\"space s\"><center style=\"position:fixed;padding-top:40px;padding-left:200\"><a href=\"create_order.php?bn=1&pc_admin_id=".$super_csr_id."\" adr_trans=\"label_book_now\" class=\"btn  btn-sm circle-button adr-save\">Book Now</a><center>
+							<hr class=\"space s\"><center style=\"position:fixed;padding-top:40px;padding-left:200\"><a href=\"create_order.php?bn=1&pc_admin_id=".$super_csr_id."\" adr_trans=\"label_book_now\" class=\"btn   ActionBtn-sm\">Book Now</a><center>
 							";
 /*<p align=\"center\">
 
-<a class=\"anima-button circle-button btn-sm btn adr-cancel\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\"><i class=\"fa fa-calendar-o\"></i>Check Availability</a>&nbsp;&nbsp;&nbsp;
-<a class=\"anima-button circle-button btn-sm btn adr-save\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\"><i class=\"fa fa-check\"></i>Book Now</a></p>*/
+<a class=\"AnimationBtn CancelBtn-sm\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\"><i class=\"fa fa-calendar-o\"></i>Check Availability</a>&nbsp;&nbsp;&nbsp;
+<a class=\"AnimationBtn ActionBtn-sm\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\"><i class=\"fa fa-check\"></i>Book Now</a></p>*/
 
 
  ?>

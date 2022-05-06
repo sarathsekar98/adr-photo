@@ -118,11 +118,11 @@ padding-left:5px;
 
                   <div class="col-sm-6">
                         <ul class="pagination ">
-                          <li class="first disabled" aria-disabled="true"><a href="./photographeractivity.php?page=1" class="button adr-save">«</a></li>
-                          <li class="prev disabled" aria-disabled="true"><a href="<?php echo "./photographeractivity.php?page=".($_SESSION["page"]-1);?>" class="button adr-save">&lt;</a></li>
-                          <li class="page-1 active" aria-disabled="false" aria-selected="true"><a href="#1" class="button adr-save"><?php echo $_SESSION["page"]; ?></a></li>
-                          <li class="next disabled" aria-disabled="true"><a href="<?php echo "./photographeractivity.php?page=".($_SESSION["page"]+1);?>" class="button adr-save">&gt;</a></li>
-                          <li class="last disabled" aria-disabled="true"><a href="<?php echo "./photographeractivity.php?page=".($Page_check);?>" class="button adr-save">»</a></li></ul>  </div>
+                          <li class="first disabled" aria-disabled="true"><a href="./photographeractivity.php?page=1" class="button ActionBtn-sm">«</a></li>
+                          <li class="prev disabled" aria-disabled="true"><a href="<?php echo "./photographeractivity.php?page=".($_SESSION["page"]-1);?>" class="button ActionBtn-sm">&lt;</a></li>
+                          <li class="page-1 active" aria-disabled="false" aria-selected="true"><a href="#1" class="button ActionBtn-sm"><?php echo $_SESSION["page"]; ?></a></li>
+                          <li class="next disabled" aria-disabled="true"><a href="<?php echo "./photographeractivity.php?page=".($_SESSION["page"]+1);?>" class="button ActionBtn-sm">&gt;</a></li>
+                          <li class="last disabled" aria-disabled="true"><a href="<?php echo "./photographeractivity.php?page=".($Page_check);?>" class="button ActionBtn-sm">»</a></li></ul>  </div>
                           <div class="col-sm-6 infoBar"style="margin-top:24px">
                           <div class="infos"><p align="right"><span adr_trans="label_showing">Showing</span><?php  if(($start_no_users+1)<0){ echo "0";}else{ echo $start_no_users+1;}?><span adr_trans="label_to">to</span><?php if($cnt<0){ echo "0";}else{ echo $cnt;}?><span adr_trans="">of</span><?php echo $total_no; ?><span adr_trans="label_entries">entries</span></p></div>
                             <br>  <br>
@@ -130,7 +130,7 @@ padding-left:5px;
 
 
 
-                  <p align="right">   <a href="photographerDashboard.php" class="anima-button circle-button btn-sm btn adr-cancel" >Back To Home</a></p>
+                  <p align="right">   <a href="photographerDashboard.php" class="AnimationBtn CancelBtn-sm" >Back To Home</a></p>
 
         </div>
 

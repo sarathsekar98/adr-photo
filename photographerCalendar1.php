@@ -21,7 +21,7 @@ $photographer_name_is=$phDetail['first_name']." ".$phDetail['last_name'];
 			</div>
                 <div class="col-md-10">
 
-				<a class="lightbox btn btn-primary btn-sm circle-button" id="warningMsg" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;display:none;">+Add Product</a>
+				<a class="lightbox btn-primary " id="warningMsg" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;display:none;">+Add Product</a>
 
 <div class="row">
 <div class="col-md-12" style="padding-left:20px;height:30px;width:98%">
@@ -29,7 +29,7 @@ $photographer_name_is=$phDetail['first_name']." ".$phDetail['last_name'];
 				<h5 class="PageHeading-md"> <span class="" id="label_calendar" adr_trans="label_realtor_calendar"> Calendar</span> - Photographer - <?php echo strtoupper($photographer_name_is); ?>
 				</h5></div>
 				<div class="col-md-6" style="float:right">
-				<a href="create_order.php" class="anima-button circle-button btn-sm btn" id="label_create_new_order" adr_trans="label_create_new_order" style="float:right;margin-top:-6px;display:none;"><i class="fa fa-calendar"></i> Create New Order</a>
+				<a href="create_order.php" class="AnimationBtn btn" id="label_create_new_order" adr_trans="label_create_new_order" style="float:right;margin-top:-6px;display:none;"><i class="fa fa-calendar"></i> Create New Order</a>
 				</div></div>
 			</div>
 
@@ -320,7 +320,7 @@ var langIs='<?php echo $_SESSION['Selected_Language_Session']; ?>';
 
 <span adr_trans="label_booking_content">The appointment time needs to be approved by the photographer and is subject to change based on drive times etc. The photographer will reach out to confirm or adjust as needed</span>
 <br /><br />
-<p align="center"><a href="csrRealtorDashboard.php" class="btn btn-default anima-button circle-button btn-sm"><i class="fa fa-times-circle"></i><span adr_trans="label_cancel">Cancel</span></a>&nbsp;&nbsp;<button type="button" class="btn btn-default anima-button circle-button btn-sm" onclick="close_modal();"><i class="fa fa-check-circle"></i><span adr_trans="label_got_it">Got It</span></button></p>
+<p align="center"><a href="csrRealtorDashboard.php" class="btn btn-default AnimationBtn "><i class="fa fa-times-circle"></i><span adr_trans="label_cancel">Cancel</span></a>&nbsp;&nbsp;<button type="button" class="btn btn-default AnimationBtn " onclick="close_modal();"><i class="fa fa-check-circle"></i><span adr_trans="label_got_it">Got It</span></button></p>
 
 
 </td></tr></table></div>

@@ -601,7 +601,7 @@ function validateAddress()
 
 
 	<div class="breadcrumb1 hidden-xs hidden-sm">
-		<a href="#" class="btn adr-save" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;color:#000;"></i>
+		<a href="#" class="btn ActionBtn-sm" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;color:#000;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_order" adr_trans="label_order">Order</span>
 				<span class="breadcrumb__desc" id="label_fill_order" adr_trans="label_fill_order">Fill the order</span>
@@ -633,7 +633,7 @@ function validateAddress()
 
 
 <div class="breadcrumb1 hidden-md hidden-lg hidden-xl" style="height:50px;">
-		<a href="#" class="btn adr-save" id="firstStep">
+		<a href="#" class="btn ActionBtn-sm" id="firstStep">
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_order" adr_trans="label_order">Order</span>
 
@@ -795,7 +795,7 @@ if(@$_REQUEST['u']==1)
     </div>
 	 <div class="col-md-6">
                         <p>&nbsp;</p>
-                 <input type="button" name="save_realtor" id="save_realtor" class="btn adr-save btn-sm" value="Save New Realtor" style="border-radius:25px;" onclick="saveRealtor()" />
+                 <input type="button" name="save_realtor" id="save_realtor" class="btn ActionBtn-sm" value="Save New Realtor" style="border-radius:25px;" onclick="saveRealtor()" />
 				&nbsp;&nbsp; <span id="realtor_saved_msg" style="color:#006600;font-size:13px; display:none"></span>
     </div>
 </div>
@@ -811,7 +811,7 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
                         <div class="col-md-6">
                         <p adr_trans="label_find_address" style="display:inline-block">FIND ADDRESS</p>&nbsp;&nbsp;<i class="fa fa-map-marker " aria-hidden="true" style="font-size:20px; color:#006600;margin-top:3px;"></i>
                         <br>
-                        <input id="locationTextField" name="fnd_address" placeholder="Find The Address" type="text" autocomplete="0" class="form-control form-value" style="width: 60%;display: inline;margin-right: 8px;" <?php if(@$_REQUEST['u']) { echo "readonly"; } ?>> <input type="button" class="mt-3 btn adr-save btn-sm" onclick="validateAddress();getAddressApi()" value="Confirm" />
+                        <input id="locationTextField" name="fnd_address" placeholder="Find The Address" type="text" autocomplete="0" class="form-control form-value" style="width: 60%;display: inline;margin-right: 8px;" <?php if(@$_REQUEST['u']) { echo "readonly"; } ?>> <input type="button" class="mt-3 ActionBtn-sm" onclick="validateAddress();getAddressApi()" value="Confirm" />
                       </div>
                         <!-- <span style="float:right;margin-top:-30px;"><i class="fa fa-search" style="margin-left:-25px;"></i></span> -->
     </div>
@@ -927,7 +927,7 @@ if($user_type=="Photographer")
 
 
 
-     <button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="SaveOrder"><i class="fa fa-chevron-circle-right"></i><span adr_trans="label_next">Next</span></button>
+     <button class="AnimationBtn ActionBtn-sm" type="submit" name="SaveOrder"><i class="fa fa-chevron-circle-right"></i><span adr_trans="label_next">Next</span></button>
 
 	 <?php
 	 $user_type=$_SESSION['admin_loggedin_type'];
@@ -936,10 +936,10 @@ if($user_type=="Photographer")
 					{
 
 	 ?>
-               &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="subcsrOrder_list1.php"  id="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
+               &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="subcsrOrder_list1.php"  id="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
 
 			   <?php } else { ?>
-			     &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" id="label_cancel" adr_trans="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" href="superorder_list1.php"><i class="fa fa-times"></i>Cancel</a>
+			     &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" id="label_cancel" adr_trans="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" href="superorder_list1.php"><i class="fa fa-times"></i>Cancel</a>
 
 			   <?php } ?>
 </center>

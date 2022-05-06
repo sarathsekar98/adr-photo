@@ -169,8 +169,8 @@ $res=mysqli_query($con,"update editor set first_name='$fname',last_name='$lname'
 
 							<div class="col-md-12">
                                 <p align="center" style="padding-top:10px;">
-                                	<button id="label_save" adr_trans="label_save" class="anima-button circle-button btn-sm btn" type="submit" name="signupbtn"><i class="fa fa-sign-in"></i>Save</button>
-                         &nbsp;&nbsp;<a id="label_cancel" adr_trans="label_cancel" class="anima-button circle-button btn-sm btn" href="editor_list.php"><i class="fa fa-times"></i>Cancel</a>
+                                	<button id="label_save" adr_trans="label_save" class="AnimationBtn btn" type="submit" name="signupbtn"><i class="fa fa-sign-in"></i>Save</button>
+                         &nbsp;&nbsp;<a id="label_cancel" adr_trans="label_cancel" class="AnimationBtn btn" href="editor_list.php"><i class="fa fa-times"></i>Cancel</a>
 								</p>
                             </div>
 							</form>
@@ -217,7 +217,7 @@ $res=mysqli_query($con,"update editor set first_name='$fname',last_name='$lname'
 
 
 <p align="right">
-	<a class="lightbox btn btn-primary btn-sm circle-button"  id="addedit" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;"><span id="label_add_editor" adr_trans="label_add_editor">+ Add Editor</span></a>
+	<a class="lightbox btn-primary "  id="addedit" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;"><span id="label_add_editor" adr_trans="label_add_editor">+ Add Editor</span></a>
 						<div class="col-md-12" style="background:#000;color:#FFF;opacity:0.8;padding:10px;"></p>
 
 <table class="table table-condensed table-hover table-striped bootgrid-table" aria-busy="false">

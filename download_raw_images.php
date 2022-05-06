@@ -441,7 +441,7 @@ while (($image = readdir($opendirectory)) !== false)
       <input type="hidden" name="service_ID" value="<?php echo $service; ?>">
       <hr class="space s">
       <?php if($RowsFound>0 && @$_REQUEST['rework'])
-	  { ?> <input type="submit" class="btn adr-save" name="ZIP" value="ZIp and download rework Images">
+	  { ?> <input type="submit" class="btn ActionBtn-sm" name="ZIP" value="ZIp and download rework Images">
 	  <?php } ?>
   	</form>
 
@@ -489,7 +489,7 @@ while (($image = readdir($opendirectory)) !== false)
           });
 
         </script>
-           <p align="right"><a href="#" id="submit" class="btn adr-save" style="position: relative; ">submit</a></p>
+           <p align="right"><a href="#" id="submit" class="btn ActionBtn-sm" style="position: relative; ">submit</a></p>
 
          <input type="hidden"  id="order_id"  value="<?php echo $order_id?>">
           <input type="hidden"  id="service_name"  value="<?php echo $type?>">

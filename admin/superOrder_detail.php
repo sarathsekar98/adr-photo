@@ -1965,9 +1965,9 @@ alert(alertmsg);
                     </div>
                     <?php if($get_summary['status_id']==1||$get_summary['status_id']==2||$get_summary['status_id']==7){?>
                     <?php if($get_summary['created_by_id']!=$_SESSION['admin_loggedin_id']&&$get_summary['created_by_type']=="PCAdmin"){ ?>
-                    <p align="right"><a id="label_edit_reshedule_order" adr_trans="label_edit_reshedule_order" class="anima-button circle-button btn-sm adr-save" style="margin-right: 13px;margin-top:10px;background-color: #AAD1D6;color: #000;border-color: #AAD1D6;" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
+                    <p align="right"><a id="label_edit_reshedule_order" adr_trans="label_edit_reshedule_order" class="AnimationBtn ActionBtn-sm" style="margin-right: 13px;margin-top:10px;background-color: #AAD1D6;color: #000;border-color: #AAD1D6;" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
                   <?php }else{ ?>
-                    <p align="right"><a id="label_edit_reshedule_order" class="ActionBtn-sm AnimationBtn" style="margin-right: 13px;margin-top:10px;" adr_trans="label_edit_reshedule_order" class="anima-button circle-button btn-sm adr-save" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
+                    <p align="right"><a id="label_edit_reshedule_order" class="ActionBtn-sm AnimationBtn" style="margin-right: 13px;margin-top:10px;" adr_trans="label_edit_reshedule_order" class="AnimationBtn ActionBtn-sm" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
                   <?php } }?>
 
 
@@ -2180,7 +2180,7 @@ alert(alertmsg);
                              <span id="drop_files2"></span>
                              </form>
                              <hr class="space s">
-                             <a   id="edit_button2" class="btn adr-save" style="float:right;"><span id="label_upload" adr_trans="label_upload"> upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview2" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
+                             <a   id="edit_button2" class="btn ActionBtn-sm" style="float:right;"><span id="label_upload" adr_trans="label_upload"> upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn ActionBtn-sm" id="preview2" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
                              <hr class="space s">
                              <script>
                               $(document).ready(function() {
@@ -2219,7 +2219,7 @@ alert(alertmsg);
                            <span id="drop_files3"></span>
                          </form>
                          <hr class="space s">
-                         <a   id="edit_button3" class="btn adr-save" style="float:right;"> <span id="label_upload" adr_trans="label_upload"> Upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview3" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
+                         <a   id="edit_button3" class="btn ActionBtn-sm" style="float:right;"> <span id="label_upload" adr_trans="label_upload"> Upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn ActionBtn-sm" id="preview3" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
                          <hr class="space s">
                          <script>
                           $(document).ready(function() {
@@ -3483,7 +3483,7 @@ if (@$_REQUEST['shar']) {
           else {
              ?>
 
-             <!-- <a  href="#" class="anima-button circle-button btn-sm btn adr-save" title="Already Approved" name="button" id="button_approved" style="float:right;border-radius: 29px;padding: 3px;   margin-top: -80px;"><b><span adr_trans="label_approved">Approved</span></b></a>';
+             <!-- <a  href="#" class="AnimationBtn ActionBtn-sm" title="Already Approved" name="button" id="button_approved" style="float:right;border-radius: 29px;padding: 3px;   margin-top: -80px;"><b><span adr_trans="label_approved">Approved</span></b></a>';
  -->
               <a href="#" class="ActionBtn-sm Float-right" title="Already Approved" name="button" id="button_approved" style="margin-top: -90.5px;width: fit-content;"><span adr_trans="label_approved">Approved</span></a>
          
@@ -3752,7 +3752,7 @@ if (@$_REQUEST['shar']) {
                      <input type="hidden" name="id" value="<?php echo $id_url ?>">
          <span style="font-size:12px;padding-right:0px;">$</span><?php if($invoice_check['other_cost']!=0){echo $invoice_check['other_cost'];}?>
          <input type="text" name="description" style="<?php if($invoice_check['other_cost']!=0){echo "display:none";}?> ">
-<?php if($invoice_check['other_cost']==0){?><input type="submit" class="btn adr-save" style="position: absolute;right: 93%;" value="Done" ><?php } ?>
+<?php if($invoice_check['other_cost']==0){?><input type="submit" class="btn ActionBtn-sm" style="position: absolute;right: 93%;" value="Done" ><?php } ?>
 
  </form>
 </td>
@@ -3961,7 +3961,7 @@ function updateScroll(){
                                                      <input type="hidden" name="status_id" id="status_id">
 
                                                      <hr class="space s">
-                                                     <center><button class="btn adr-save" name="link" id="send" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
+                                                     <center><button class="btn ActionBtn-sm" name="link" id="send" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
                                                      </form>
                                                      <hr class="space l">
 
@@ -3979,7 +3979,7 @@ function updateScroll(){
                                                                     <input type="hidden" name="downloadoption" id="downloadoption" >
                                                                     <input type="hidden" name="sharename" value="<?php echo $_SESSION['admin_loggedin_name'];?>"  >
                                                                     <hr class="space s">
-                                                                    <center><button class="btn adr-save" name="link" id="send"><span adr_trans="label_send">Send</span></button></center>
+                                                                    <center><button class="btn ActionBtn-sm" name="link" id="send"><span adr_trans="label_send">Send</span></button></center>
                                                                     </form>
                                                                     <hr class="space l">
 
@@ -4000,7 +4000,7 @@ function updateScroll(){
                                                                                    <input name="email" placeholder="Enter the Email" type="email" onblur="this.value=this.value.trim()" autocomplete="off" class="form-control form-value" required>
                                                                                    <input type="hidden" name="invoice" value="<?php echo $invoice_check['order_id'];?>" required>
                                                                                    <hr class="space s">
-                                                                                   <center><button class="btn adr-save" name="link1" id="send" ><span adr_trans="label_send">Send</span></button></center>
+                                                                                   <center><button class="btn ActionBtn-sm" name="link1" id="send" ><span adr_trans="label_send">Send</span></button></center>
                                                                                    </form>
                                                                                    <hr class="space l">
 

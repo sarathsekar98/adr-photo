@@ -2088,7 +2088,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                         $imagesDirectory_Drone = "./rework_images/order_".$id_url."/Drone_photos";
                                         ?>
                                         <form name="zipDownload" method="post" action="">
-                                          <input type="submit" name="ZIP" class="btn btn-default btn-sm download" value="Download" />
+                                          <input type="submit" name="ZIP" class="btn btn-default download" value="Download" />
                                           <input type ="hidden" name="directory" value="<?php echo $imagesDirectory_Drone;?>"/>
                                         </form>
                                         <div class="maso-list gallery">
@@ -2145,7 +2145,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                     </div>
 
                                                   </div>
-                                                   <center class=""><input type="button" class="btn btn-primary btn-sm" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
+                                                   <center class=""><input type="button" class="btn btn-primary" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
 
                                               </div>
 
@@ -2229,7 +2229,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                         $imagesDirectory_Hdr = "./rework_images/order_".$id_url."/Hdr_photos";
                                         ?>
                                         <form name="zipDownload" method="post" action="">
-                                          <input type="submit" name="ZIP" class="btn btn-default btn-sm download" value="Download" style="" >
+                                          <input type="submit" name="ZIP" class="btn btn-default download" value="Download" style="" >
                                           <input type ="hidden" name="directory" value="<?php echo $imagesDirectory_Hdr;?>">
                                         </form>
                                         <div class="maso-list gallery">
@@ -2286,7 +2286,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
                                                     </div>
 
                                                   </div>
-                                                   <center class=""><input type="button" class="btn btn-primary btn-sm" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
+                                                   <center class=""><input type="button" class="btn btn-primary" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
 
                                               </div>
 
@@ -3190,7 +3190,7 @@ if (@$_REQUEST['shar']) {
                    <input type="hidden" name="link1" id="link"/>
                    <input type="hidden" name="sharename" value="<?php echo $loggedin_name;?>"  />
                    <hr class="space s">
-                   <center><button class="btn adr-save" name="link" id="send" >Send</button></center>
+                   <center><button class="btn ActionBtn-sm" name="link" id="send" >Send</button></center>
                    </form>
                    <hr class="space l">
 

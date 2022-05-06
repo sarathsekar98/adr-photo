@@ -76,7 +76,7 @@ if($exist!=0)
                             Your account has been activated. Please click the login button to proceed.</a>
                         </h5>
                         <hr class="space m">
-                        <a class="anima-button btn-ms btn circle-button" href="login.php"><i class="fa fa-long-arrow-left"></i>Login</a>
+                        <a class="AnimationBtn btn-ms " href="login.php"><i class="fa fa-long-arrow-left"></i>Login</a>
                     </div>
                 </div>
             </div>
@@ -130,8 +130,8 @@ if($exist!=0)
                             <div class="alert alert-warning" id="error-msg">&nbsp;</div>
                         </div>
 
-						 <button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="passresetbtn"><i class="fa fa-sign-in"></i>Reset Password</button>
-                       &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" id="label_cancel" adr_trans="label_cancel" href="login.php"><i class="fa fa-sign-in"></i>Cancel</a>
+						 <button class="AnimationBtn ActionBtn-sm" type="submit" name="passresetbtn"><i class="fa fa-sign-in"></i>Reset Password</button>
+                       &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" id="label_cancel" adr_trans="label_cancel" href="login.php"><i class="fa fa-sign-in"></i>Cancel</a>
 </center>
 					   </div>
                         </div>
@@ -176,8 +176,8 @@ if($exist!=0)
 			<input type="text" name="resetcode"  type="text" placeholder="" autocomplete="off" class="form-control form-value" required="" size="40"  />
 
 							<br /><br />
-							 <button class="anima-button circle-button btn-sm btn adr-save" id="label_confirm" adr_trans="label_confirm" type="submit" name="confirmbtn"><i class="fa fa-sign-in"></i>Confirm</button>
-                       &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" id="label_cancel" adr_trans="label_cancel" href="login.php"><i class="fa fa-sign-in"></i>Cancel</a>
+							 <button class="AnimationBtn ActionBtn-sm" id="label_confirm" adr_trans="label_confirm" type="submit" name="confirmbtn"><i class="fa fa-sign-in"></i>Confirm</button>
+                       &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" id="label_cancel" adr_trans="label_cancel" href="login.php"><i class="fa fa-sign-in"></i>Cancel</a>
 </center>
 							</form>
                         </h5>

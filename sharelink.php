@@ -418,7 +418,7 @@ if (@$_REQUEST['shar']) {
 
 
 <div class="panel active" style="border: 1px solid black;border-radius: 5px;">
-    <button href="#tnc" class="btn adr-save lightbox link btn-sm"  name="send2" id="send2" adr_trans="label_share" style="float: right;position:relative;top: -55px;right: -15px;border-radius: 5px;"> share
+    <button href="#tnc" class="btn ActionBtn-sm lightbox link"  name="send2" id="send2" adr_trans="label_share" style="float: right;position:relative;top: -55px;right: -15px;border-radius: 5px;"> share
 </button>
 
 	
@@ -498,7 +498,7 @@ if (@$_REQUEST['shar']) {
    <input type="hidden" name="Order_ID" value="<?php echo $id_url; ?>">
 
      <?php if(@$_REQUEST['d']==1){?>
-     <input type="submit" class="btn adr-save btn-sm done" name="ZIP" value="Download" style="margin-top:10px;" >
+     <input type="submit" class="btn ActionBtn-sm done" name="ZIP" value="Download" style="margin-top:10px;" >
    <?php } ?>
  </form>
 
@@ -521,7 +521,7 @@ if (@$_REQUEST['shar']) {
         <input type="hidden" name="link1" id="link" value="<?php echo "secret_code=".$secret?>">
         <!-- <input type="hidden" name="sharename" value="<?php //echo $loggedin_name;?>"  /> -->
         <hr class="space s">
-        <center><button class="btn adr-save" style="color:#000" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
+        <center><button class="btn ActionBtn-sm" style="color:#000" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
         </form>
         <hr class="space l">
 

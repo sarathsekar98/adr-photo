@@ -201,7 +201,7 @@ min-width:100px!important;
   <!-- <h5 align="center" adr_trans="label_list_order">List of Orders</h5> -->
   <hr class="space s" style="margin-top: 2px;">
    <p align="right" style="position: absolute;right: 15px;" >
-        <!-- <a href="create_order.php" id="label_create_new_order" adr_trans="label_create_new_order" class="anima-button circle-button btn-sm btn"><i class="fa fa-calendar"></i> Create New Order</a> -->
+        <!-- <a href="create_order.php" id="label_create_new_order" adr_trans="label_create_new_order" class="AnimationBtn btn"><i class="fa fa-calendar"></i> Create New Order</a> -->
         </p>
 <ul class="nav nav-tabs" style="">
 <li id="click11" class="active"><a href="#tab1" id="click1" adr_trans="label_ongoing_orders">On Going Orders</a></li>

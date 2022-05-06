@@ -241,7 +241,7 @@ standard_photos >
                        <form name="zipDownload" method="post" action="" style="padding-bottom:40px;">
                            <input type="hidden" name="folderToZip" value="<?php echo "./raw_images/order_".$id_url."/"."standard_photos"; ?>">
                            <?php if($RowsFound>0)
-                         { ?> <input type="submit" class="btn adr-save" style="float:right;background: black;color:white;border-radius:25px;font-size: 12px;" name="ZIP" value="ZIP and Download Photos">
+                         { ?> <input type="submit" class="btn ActionBtn-sm" style="float:right;background: black;color:white;border-radius:25px;font-size: 12px;" name="ZIP" value="ZIP and Download Photos">
                          <?php } ?>
                          </form>
                          
@@ -280,7 +280,7 @@ $getImgName1=mysqli_fetch_array($getImgName);
                   <form name="zipDownload" method="post" action="" style="padding-bottom:40px;">
                       <input type="hidden" name="folderToZip" value="<?php echo "./raw_images/order_".$id_url."/"."floor_plans"; ?>">
                       <?php if($RowsFound1>0)
-                	  { ?> <input type="submit" class="btn adr-save" style="float:right;background: black;color:white;border-radius:25px;font-size: 12px;" name="ZIP" value="ZIP and Download  Floor Plans">
+                	  { ?> <input type="submit" class="btn ActionBtn-sm" style="float:right;background: black;color:white;border-radius:25px;font-size: 12px;" name="ZIP" value="ZIP and Download  Floor Plans">
                 	  <?php } ?>
                   	</form>
                      

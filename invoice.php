@@ -120,7 +120,7 @@ $id = $_REQUEST['id'];
 
 
                 <div class="col-md-10">
-  <p align="right"><a class="anima-button circle-button btn-sm btn adr-save" style="position: relative;color:black !important;" onClick="printPage()"><i class="fa fa-print" style="color: black;"></i><span adr_trans="label_print">Print</span></a></p>
+  <p align="right"><a class="AnimationBtn ActionBtn-sm" style="position: relative;color:black !important;" onClick="printPage()"><i class="fa fa-print" style="color: black;"></i><span adr_trans="label_print">Print</span></a></p>
 <div id="printtable"></div>
     <div id="print">
 
@@ -373,7 +373,7 @@ $id = $_REQUEST['id'];
         <input type="hidden" name="link1" id="link" value="<?php echo "secret_code=".$secret?>">
         <!-- <input type="hidden" name="sharename" value="<?php echo $loggedin_name;?>"  /> -->
         <hr class="space s">
-        <center><button class="btn adr-save" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
+        <center><button class="btn ActionBtn-sm" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
         </form>
         <hr class="space l">
 

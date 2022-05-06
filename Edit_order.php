@@ -269,11 +269,11 @@ xhttp.send();
 
 
                          <?php if($_SESSION["user_type"]!='Photographer') {  ?>
-                           <button class="anima-button circle-button btn-sm btn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
-                                     &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="order_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
+                           <button class="AnimationBtn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
+                                     &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="order_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
                           <?php } else { ?>
-                            <button class="anima-button circle-button btn-sm btn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
-                                      &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="Photographerorder_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
+                            <button class="AnimationBtn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
+                                      &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="Photographerorder_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
                            <?php }  ?>
 
 

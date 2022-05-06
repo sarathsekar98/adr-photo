@@ -314,14 +314,14 @@ function validate_email1(val)
 <tr><td style="padding-left:20px;"><h5 id="label_first_name" adr_trans="label_first_name">First Name</h5></td><td><?php echo $user1['first_name']; ?><br /></td></tr>
 <tr><td style="padding-left:20px;"><h5 id="label_last_name" adr_trans="label_last_name">Last  Name</h5></td><td>  <?php echo $user1['last_name']; ?><br /></td></tr>
 <tr><td style="padding-left:20px;"><h5 id="label_organization" adr_trans="label_organization">Organization</h5></td><td> <?php if($_SESSION['admin_loggedin_type']=="PCAdmin"){ echo $user1['organization_name']; }else{ echo $organization_name; } ?><td align="left">
-<?php if($_SESSION['admin_loggedin_type']=="PCAdmin"){?><a href="#changePersonal" id="uname" class="lightbox link btn  adr-save" data-lightbox-anima="show-scale" style="font-size:13px;text-decoration:none;color:#000;"><span adr_trans="label_update">Update</span></a></td></td></tr><?php } ?>
+<?php if($_SESSION['admin_loggedin_type']=="PCAdmin"){?><a href="#changePersonal" id="uname" class="lightbox link  ActionBtn-sm" data-lightbox-anima="show-scale" style="font-size:13px;text-decoration:none;color:#000;"><span adr_trans="label_update">Update</span></a></td></td></tr><?php } ?>
 
 <tr><td style="padding-left:20px;"><h5 id="label_role" adr_trans="label_role">Role </h5></td><td> <?php echo $user1['type_of_user']; ?><br /></td><td align="left">
 <a href="#" id="moreInfo" onClick="showMore()" style="color:blue;"><span id="label_more" adr_trans="label_more">More</span></a></td></tr>
 
 <tr><td colspan="3"><span id="moreInfoText" style="display:none" adr_trans="label_change_role">To change your role, kindly click on sign up in the home screen and register as a new user.</span></td></tr>
 </td></tr>
-<tr><td style="padding-left:20px;" id="label_user_name"><h5 adr_trans="label_user_name">User Name </h5></td><td> <?php echo $user1['email']; ?><br /></td><td><a href="#changeemail" id="uname1" class="lightbox link btn adr-save" data-lightbox-anima="show-scale" style="font-size:12px;height: 30px;text-decoration:none;color:#000;"><span adr_trans="label_update">Update</span></a><br /></td></tr>
+<tr><td style="padding-left:20px;" id="label_user_name"><h5 adr_trans="label_user_name">User Name </h5></td><td> <?php echo $user1['email']; ?><br /></td><td><a href="#changeemail" id="uname1" class="lightbox link ActionBtn-sm" data-lightbox-anima="show-scale" style="font-size:12px;height: 30px;text-decoration:none;color:#000;"><span adr_trans="label_update">Update</span></a><br /></td></tr>
 <tr><td style="padding-left:20px;padding-bottom:20px;" ><h5 id="label_password" adr_trans="label_password">Password</h5></td><td>
 
  <?php
@@ -331,7 +331,7 @@ function validate_email1(val)
     echo substr( $user1['password'],0, $len) . str_repeat('*', $len)
   ?>
 
- <br /></td><td><a href="#changePassword" class="lightbox link btn adr-save" data-lightbox-anima="show-scale" id="upass" style="font-size:12px;text-decoration:none;color:#000;height: 30px;"><span adr_trans="label_update" >Update</span></a><br /></td></tr>
+ <br /></td><td><a href="#changePassword" class="lightbox link ActionBtn-sm" data-lightbox-anima="show-scale" id="upass" style="font-size:12px;text-decoration:none;color:#000;height: 30px;"><span adr_trans="label_update" >Update</span></a><br /></td></tr>
 
 </table>
 
@@ -356,7 +356,7 @@ function validate_email1(val)
 
 				<tr><td colspan="3" align="center">
 				<input type="hidden" name="id" value="<?php echo $user1['id']; ?>" />
-				<input type="submit" name="changeprofile" value="Update Profile" class="btn btn-primary adr-save" style="border-radius:20px 20px 20px 20px;background:#0275D8;font-size:12px;height: 30px;" /></td></tr>
+				<input type="submit" name="changeprofile" value="Update Profile" class="btn btn-primary ActionBtn-sm" style="border-radius:20px 20px 20px 20px;background:#0275D8;font-size:12px;height: 30px;" /></td></tr>
 				</form>
 
 				</table>
@@ -383,7 +383,7 @@ function validate_email1(val)
 				<tr><td id="label_new_password" adr_trans="label_new_password">New Password</td><td>:</td><td><input type="password" name="newpass" id="newpass" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/></td></tr>
 				<tr><td id="label_new_password_confirm" adr_trans="label_new_password_confirm">Confirm New Password</td><td>:</td><td><input type="password" name="confirmpass" id="confirmpass" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/></td></tr>
 				<tr><td colspan="3" align="center">
-				<input type="submit" name="changepass" value="Update Password" class="btn btn-primary adr-save" style="border-radius:20px 20px 20px 20px;background:#0275D8;font-size:12px;height: 30px;" /></td></tr>
+				<input type="submit" name="changepass" value="Update Password" class="btn btn-primary ActionBtn-sm" style="border-radius:20px 20px 20px 20px;background:#0275D8;font-size:12px;height: 30px;" /></td></tr>
 				</form>
 
 				</table>
@@ -418,13 +418,13 @@ function validate_email1(val)
 				</td></tr>
 				<form name="verifyemail" method="post" action="">
 				<tr><td id="label_new_email" adr_trans="label_new_email">New Email</td><td>:</td><td><input type="email" name="newemail" id="newemail" class="form-control" required onblur="this.value=this.value.trim();validate_email1(this.value)" /></td></tr>
-				<tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit" name="sendcode" value="Send Verification Code" class="btn btn-warning adr-cancel" style="border-radius:20px 20px 20px 20px; background:#F0AD4E;font-size:12px;height: 30px;"  /></td></tr>
+				<tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit" name="sendcode" value="Send Verification Code" class="btn btn-warning CancelBtn-sm" style="border-radius:20px 20px 20px 20px; background:#F0AD4E;font-size:12px;height: 30px;"  /></td></tr>
 				</form>
 				<form name="changeemail" method="post" action="">
 				<tr><td id="label_security_code" adr_trans="label_security_code">Security Code</td><td>:</td><td><input type="text" name="security_code" maxlength="6" class="form-control" required /></td></tr>
 
 
-				<tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit" name="updateemail" value="Update Email" class="btn btn-primary adr-save" style="border-radius:20px 20px 20px 20px; background:#0275D8;font-size:12px;height: 30px;" />
+				<tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit" name="updateemail" value="Update Email" class="btn btn-primary ActionBtn-sm" style="border-radius:20px 20px 20px 20px; background:#0275D8;font-size:12px;height: 30px;" />
 
 				<br />
 				</td></tr>

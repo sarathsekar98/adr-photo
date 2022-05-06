@@ -454,12 +454,12 @@ var property_contact_email="<?php echo @$get_order['property_contact_email']; ?>
 
 
                    <?php if($_SESSION["admin_loggedin_type"]!='Photographer') {  ?>
-                     &nbsp;&nbsp;<a id="label_decline_order" adr_trans="label_decline_order"  class="anima-button circle-button btn-sm btn adr-cancel float-left" style="float:left;"href="Edit_appointment.php?del=1&id=<?php echo $id_url;?>"><i class="fa fa-times"></i>Decline the Order</a>
-                     <button id="label_update_order" adr_trans="label_update_order" class="anima-button circle-button btn-sm btn adr-success float-right"  style="float:right;" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>Update the Order</button>
+                     &nbsp;&nbsp;<a id="label_decline_order" adr_trans="label_decline_order"  class="AnimationBtn CancelBtn-sm float-left" style="float:left;"href="Edit_appointment.php?del=1&id=<?php echo $id_url;?>"><i class="fa fa-times"></i>Decline the Order</a>
+                     <button id="label_update_order" adr_trans="label_update_order" class="AnimationBtn adr-success float-right"  style="float:right;" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>Update the Order</button>
 
                     <?php } else { ?>
-                      <button id="label_update_appointment<" adr_trans="label_update_appointment" class="anima-button circle-button btn-sm btn adr-success" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>update Appointment</button>
-                              &nbsp;&nbsp;<a  id="label_cancel" adr_trans="label_cancel" class="anima-button circle-button btn-sm btn adr-cancel" href="superOrder_detail.php?id=<?php echo $id_url;?>#order"><i class="fa fa-times"></i>Cancel</a>
+                      <button id="label_update_appointment<" adr_trans="label_update_appointment" class="AnimationBtn adr-success" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>update Appointment</button>
+                              &nbsp;&nbsp;<a  id="label_cancel" adr_trans="label_cancel" class="AnimationBtn CancelBtn-sm" href="superOrder_detail.php?id=<?php echo $id_url;?>#order"><i class="fa fa-times"></i>Cancel</a>
                      <?php } ?>
 
 

@@ -78,6 +78,6 @@ echo $result="<div class=\"panel active\" id=\"aboutmeDiv\" style=\"height:203px
 		
               <hr class=\"space s\">
 <center style=\"position:fixed;padding-top:20px;padding-left:200px;\">
-<a  class=\"anima-button circle-button btn-sm btn adr-save\" href=\"./photographerCalendar1.php?ph_name=&pc_admin_id=$pc_admin_id&Photographer_id=$Photographer_id\"><i class=\"fa fa-calendar-o\"></i><span adr_trans='label_book_online'>Book Online</span></a><center>";
+<a  class=\"AnimationBtn ActionBtn-sm\" href=\"./photographerCalendar1.php?ph_name=&pc_admin_id=$pc_admin_id&Photographer_id=$Photographer_id\"><i class=\"fa fa-calendar-o\"></i><span adr_trans='label_book_online'>Book Online</span></a><center>";
 
  ?>

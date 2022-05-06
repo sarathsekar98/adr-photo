@@ -98,7 +98,7 @@ th
 
                    <div class="col-md-12">
 
-            <!--  <a style="float:right" href="client.php" class="anima-button circle-button btn-sm btn adr-cancel"><i class="fa fa-chevron-circle-left"></i><span adr_trans="label_back_clients">Back to Clients</span></a> -->
+            <!--  <a style="float:right" href="client.php" class="AnimationBtn CancelBtn-sm"><i class="fa fa-chevron-circle-left"></i><span adr_trans="label_back_clients">Back to Clients</span></a> -->
 			  
          <div class="view" style="padding-left: 15px;">
                      <table class="table-stripped table-mobile" style="background: white;border-radius: 5px;">

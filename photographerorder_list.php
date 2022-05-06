@@ -135,7 +135,7 @@ th:last-child > span
     <?php
 $pht = $_SESSION['loggedin_id'];
 ?>
-       <!--  <a href="create_order.php?photographer_id=<?php //echo $pht;  ?>" class="anima-button circle-button btn-sm btn"><i class="fa fa-calendar"></i> Create New Order</a> -->
+       <!--  <a href="create_order.php?photographer_id=<?php //echo $pht;  ?>" class="AnimationBtn btn"><i class="fa fa-calendar"></i> Create New Order</a> -->
         <!-- </p> -->
 <ul class="nav nav-tabs">
 <li  class="active" id="click11"><a href="#tab1" id="click1" adr_trans="label_ongoing_orders">On Going Orders</a></li>

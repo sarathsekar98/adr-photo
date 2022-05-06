@@ -347,11 +347,11 @@ var photographer_id;
 
                 <p align="right">
                    <?php if($_SESSION["user_type"]!='Photographer') {  ?>
-                     <button class="anima-button circle-button btn-sm btn adr-success" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>update Appointment</button>
-                             &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="order_detail.php?id=<?php echo $id_url;?>#order"><i class="fa fa-times"></i>Cancel</a>
+                     <button class="AnimationBtn adr-success" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>update Appointment</button>
+                             &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="order_detail.php?id=<?php echo $id_url;?>#order"><i class="fa fa-times"></i>Cancel</a>
                     <?php } else { ?>
-                      <button class="anima-button circle-button btn-sm btn adr-success" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>update Appointment</button>
-                              &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="Photographerorder_detail.php?id=<?php echo $id_url;?>#order"><i class="fa fa-times"></i>Cancel</a>
+                      <button class="AnimationBtn adr-success" type="submit" name="edit_appointment"><i class="fa fa-sign-in"></i>update Appointment</button>
+                              &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="Photographerorder_detail.php?id=<?php echo $id_url;?>#order"><i class="fa fa-times"></i>Cancel</a>
                      <?php } ?>
 
 

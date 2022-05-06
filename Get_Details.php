@@ -64,8 +64,8 @@ echo $result="<div class=\"panel active\" id=\"aboutmeDiv\" style=\"height:203px
 							<hr class=\"space s\">
 <p align=\"center\">
 
-<a class=\"anima-button circle-button btn-sm btn adr-cancel\" adr_trans=\"label_check_availability\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\"><i class=\"fa fa-calendar-o\"></i>Check Availability</a>&nbsp;&nbsp;&nbsp;
-<a class=\"anima-button circle-button btn-sm btn adr-save\" adr_trans=\"label_book_now\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\" ><i class=\"fa fa-check\"></i>Book Now</a></p>
+<a class=\"AnimationBtn CancelBtn-sm\" adr_trans=\"label_check_availability\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\"><i class=\"fa fa-calendar-o\"></i>Check Availability</a>&nbsp;&nbsp;&nbsp;
+<a class=\"AnimationBtn ActionBtn-sm\" adr_trans=\"label_book_now\" href=\"./photographerCalendar1.php?Photographer_id=$Photographer_id\" ><i class=\"fa fa-check\"></i>Book Now</a></p>
 							";
 
 

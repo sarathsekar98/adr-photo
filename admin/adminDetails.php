@@ -178,11 +178,11 @@ $id=@$_REQUEST['id'];
 				    <tr><td align="right"><span adr_trans="label_last_login">Last Login</span></td><td>:</td><td><?php echo $res1['last_login']; ?></td></tr>
 					<tr><td align="right"><span adr_trans="label_last_login_ip">Last Login IP Address</span></td><td>:</td><td><?php echo $res1['last_login_ip']; ?></td></tr>
 					
-<!-- <tr><td colspan="3" align="center"><a class="anima-button circle-button btn-sm btn adr-save" href="admin_users.php"><i class="fa fa-sign-in"></i>Back to Admin list</a></td></tr> -->
+<!-- <tr><td colspan="3" align="center"><a class="AnimationBtn ActionBtn-sm" href="admin_users.php"><i class="fa fa-sign-in"></i>Back to Admin list</a></td></tr> -->
 				</tbody>
             </table>
             <p align="right" style="margin-top:10px;margin-right: 82px;">
-            	<a class="anima-button circle-button btn-sm btn adr-save" href="admin_users.php"><i class="fa fa-sign-in"></i>Back to Admin list</a>
+            	<a class="AnimationBtn ActionBtn-sm" href="admin_users.php"><i class="fa fa-sign-in"></i>Back to Admin list</a>
             </p>
                 </div>
             </div>

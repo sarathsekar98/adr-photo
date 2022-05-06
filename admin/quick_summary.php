@@ -287,7 +287,7 @@ border-radius:0px!important;
 
 			</span>
 		</a>
-		<a href="#"  class="btn adr-save" id="fourthStep"><i class="fa fa-file-text-o" style="font-size:30px;color:#000;padding-top:10px;"></i>
+		<a href="#"  class="btn ActionBtn-sm" id="fourthStep"><i class="fa fa-file-text-o" style="font-size:30px;color:#000;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_summary" adr_trans="label_summary">Summary</span>
 				<span class="breadcrumb__desc" id="label_order_status" adr_trans="label_order_status">Order Status</span>
@@ -586,7 +586,7 @@ src="https://www.google.com/maps/embed/v1/place?q=<?php echo $propAddress; ?>&ke
             </div>
 
                  <hr class="space m" />
-             <p id="label_back_to_order" adr_trans="label_back_to_order" align="center"><a style="background-color: #AAD1D6;color: #000;border-color: #AAD1D6;" class="anima-button circle-button btn-sm btn mt-3 adr-save" href="superOrder_detail.php?id=<?php echo $_REQUEST['od']?>"><i style="color:black" class="fa fa-times"></i>Back to Order</a></p>
+             <p id="label_back_to_order" adr_trans="label_back_to_order" align="center"><a style="background-color: #AAD1D6;color: #000;border-color: #AAD1D6;" class="AnimationBtn mt-3 ActionBtn-sm" href="superOrder_detail.php?id=<?php echo $_REQUEST['od']?>"><i style="color:black" class="fa fa-times"></i>Back to Order</a></p>
 
 
 

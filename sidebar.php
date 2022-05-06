@@ -316,7 +316,7 @@ line-height:23px;
         <form   method="post" name="stdform" action="" onsubmit="">
         <input id="email1" name="email" placeholder="Email" type="email" autocomplete="off" onblur="this.value=this.value.trim()" class="form-control form-value" required>
        <?php /*?> <input type="hidden" name="pc_admin_id" id="pc_admin_id" value="<?php echo $pc_admin_id; ?>"/><?php */?><br>
-        <center><button class="btn adr-save" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
+        <center><button class="btn ActionBtn-sm" name="link" id="send" ><span adr_trans="label_send">Send</span></button></center>
         </form>
         <hr class="space l">
 

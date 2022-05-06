@@ -155,7 +155,7 @@ if(isset($_REQUEST['passresetbtn']))
                           <span >You can login only after admin approves your account.</span>
                           </h5>
                           <hr class="space m">
-                          <a class="anima-button btn-ms btn adr-cancel"  href="../index.php"><i class="fa fa-long-arrow-left"></i>Go back to home</a>
+                          <a class="AnimationBtn btn-ms CancelBtn-sm"  href="../index.php"><i class="fa fa-long-arrow-left"></i>Go back to home</a>
                       </div>
                   </div>
               </div>
@@ -174,7 +174,7 @@ if(isset($_REQUEST['fail'])) {
                        Thanks & Hope you come back with us soon!<br />
                       </h3>
                        <hr class="space m">
-                       <a class="anima-button btn-ms btn adr-save circle-button" style="" id="label_go_back_home" adr_trans="label_go_back_home" href="../index.php"><i class="fa fa-long-arrow-left"></i>Go back to home</a>
+                       <a class="AnimationBtn btn-ms ActionBtn-sm " style="" id="label_go_back_home" adr_trans="label_go_back_home" href="../index.php"><i class="fa fa-long-arrow-left"></i>Go back to home</a>
                      </div>
                  </div>
              </div>
@@ -225,8 +225,8 @@ if(isset($_REQUEST['update_password']))
   <div class="alert alert-warning" id="error-msg">&nbsp;</div>
   </div>
 
-  <button class="anima-button btn-sm btn adr-save" type="submit" name="passresetbtn"><i class="fa fa-sign-in"></i>Create</button>
-  &nbsp;&nbsp;<a class="anima-button  btn-sm btn adr-cancel" id="label_cancel" adr_trans="label_cancel" href="login.php"><i class="fa fa-sign-in"></i>Cancel</a>
+  <button class="AnimationBtn ActionBtn-sm" type="submit" name="passresetbtn"><i class="fa fa-sign-in"></i>Create</button>
+  &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" id="label_cancel" adr_trans="label_cancel" href="login.php"><i class="fa fa-sign-in"></i>Cancel</a>
   </center>
   </div>
   </div>

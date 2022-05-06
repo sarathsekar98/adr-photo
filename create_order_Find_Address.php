@@ -637,7 +637,7 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
 
     <div class="col-md-12">
                         <p id="label_find_address" adr_trans="label_find_address">FIND ADDRESS</p>
-                        <input id="locationTextField" name="fnd_address" placeholder="Find The Address" type="text" autocomplete="0" class="form-control" style="width: 90%;display: inline;"> <button class="mt-3 btn adr-save" onclick="getAddressApi()">Confirm</button>
+                        <input id="locationTextField" name="fnd_address" placeholder="Find The Address" type="text" autocomplete="0" class="form-control" style="width: 90%;display: inline;"> <button class="mt-3 ActionBtn-sm" onclick="getAddressApi()">Confirm</button>
                         <!-- <span style="float:right;margin-top:-30px;"><i class="fa fa-search" style="margin-left:-25px;"></i></span> -->
     </div>
 
@@ -748,7 +748,7 @@ if($user_type=="Photographer")
 
 
 
-     <button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="SaveOrder" adr_trans="label_next"><i class="fa fa-chevron-circle-right"></i>Next</button>
+     <button class="AnimationBtn ActionBtn-sm" type="submit" name="SaveOrder" adr_trans="label_next"><i class="fa fa-chevron-circle-right"></i>Next</button>
 
 	 <?php
 	 $user_type=$_SESSION['user_type'];
@@ -757,10 +757,10 @@ if($user_type=="Photographer")
 					{
 
 	 ?>
-               &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="photographerCalendar.php"  id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
+               &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="photographerCalendar.php"  id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
 
 			   <?php } else { ?>
-			     &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" id="label_cancel" adr_trans="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" href="csrRealtorCalendar.php"><i class="fa fa-times"></i>Cancel</a>
+			     &nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" id="label_cancel" adr_trans="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" href="csrRealtorCalendar.php"><i class="fa fa-times"></i>Cancel</a>
 
 			   <?php } ?>
 </center>

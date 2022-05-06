@@ -256,7 +256,7 @@ $("#dayVal").val(calid);
 <ul class="nav nav-tabs nav-justified">
 <li class=" active "><a href="#" class="">Preview Naming</a></li>
 </ul>
-<a href="<?php echo "./download_raw_images.php?secret_code=$secret";?>" class="btn btn-default btn-sm anima-button adr-save" style="float: right;position: relative;top: -26px;border-radius: 5px;" adr_trans="label_send"><i class="fa fa-paper-plane adr-save"></i>send</a>
+<a href="<?php echo "./download_raw_images.php?secret_code=$secret";?>" class="btn btn-default AnimationBtn ActionBtn-sm" style="float: right;position: relative;top: -26px;border-radius: 5px;" adr_trans="label_send"><i class="fa fa-paper-plane ActionBtn-sm"></i>send</a>
 <div class="panel active" style="position: relative;top: 10px;">
   <?php
      $id_url=$raw_images["order_id"];

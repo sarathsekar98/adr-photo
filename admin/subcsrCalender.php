@@ -21,7 +21,7 @@ include "connection1.php";
 
 				<div>
 				<h5 class="text-center" id="label_realtor_calendar" adr_trans="label_realtor_calendar">Sub CSR Calendar<hr class="space s" />
-				<a href="create_order.php?val=2" class="anima-button circle-button btn-sm btn adr-save" id="label_create_new_order" adr_trans="label_create_new_order"><i class="fa fa-calendar"></i> Create New Order</a>
+				<a href="create_order.php?val=2" class="AnimationBtn ActionBtn-sm" id="label_create_new_order" adr_trans="label_create_new_order"><i class="fa fa-calendar"></i> Create New Order</a>
 				</h5>
 
 				</div>

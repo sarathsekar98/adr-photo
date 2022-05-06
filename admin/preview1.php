@@ -712,7 +712,7 @@ var a;
                   <input id="email1" name="email" placeholder="Email" onblur="this.value=this.value.trim()" type="email" autocomplete="off" class="form-control form-value" required>
                   <hr class="space s">
                    <input type="hidden" name="commentall" id="cmt1"/>
-                  <center><button class="btn adr-save" id="send" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
+                  <center><button class="btn ActionBtn-sm" id="send" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
                   </form>
                   <hr class="space l">
 
@@ -733,7 +733,7 @@ var a;
                                  <input id="email2" name="floor_email" onblur="this.value=this.value.trim()" placeholder="Email" type="email" autocomplete="off" class="form-control form-value" required>
                                  <hr class="space s">
                                   <input type="hidden" name="commentall" id="cmt2"/>
-                                 <center><button class="btn adr-save" id="send1" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
+                                 <center><button class="btn ActionBtn-sm" id="send1" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
                                  </form>
                                  <hr class="space l">
 
@@ -751,7 +751,7 @@ var a;
                                                 <input id="email3" name="Drone_email" onblur="this.value=this.value.trim()" placeholder="Email" type="email" autocomplete="off" class="form-control form-value" required>
                                                 <hr class="space s">
                                                  <input type="hidden" name="commentall" id="cmt3"/>
-                                                <center><button class="btn adr-save" id="send2" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
+                                                <center><button class="btn ActionBtn-sm" id="send2" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
                                                 </form>
                                                 <hr class="space l">
 
@@ -767,7 +767,7 @@ var a;
                                                          <input id="email4" name="hdr_email" onblur="this.value=this.value.trim()" placeholder="Email" type="email" autocomplete="off" class="form-control form-value" required>
                                                          <input type="hidden" name="commentall" id="cmt4"/>
                                                          <hr class="space s">
-                                                         <center><button class="btn adr-save" id="send3" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
+                                                         <center><button class="btn ActionBtn-sm" id="send3" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
                                                          </form>
                                                          <hr class="space l">
 

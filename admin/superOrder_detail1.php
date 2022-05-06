@@ -1930,9 +1930,9 @@ alert(alertmsg);
                     </div>
                     <?php if($get_summary['status_id']==1||$get_summary['status_id']==2||$get_summary['status_id']==7){?>
                     <?php if($get_summary['created_by_id']!=$_SESSION['admin_loggedin_id']&&$get_summary['created_by_type']=="PCAdmin"){ ?>
-                    <p align="right"><a id="label_edit_reshedule_order" adr_trans="label_edit_reshedule_order" class="anima-button circle-button btn-sm adr-save" style="margin-right: 13px;margin-top:10px;background-color: #AAD1D6;color: #000;border-color: #AAD1D6;" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
+                    <p align="right"><a id="label_edit_reshedule_order" adr_trans="label_edit_reshedule_order" class="AnimationBtn ActionBtn-sm" style="margin-right: 13px;margin-top:10px;background-color: #AAD1D6;color: #000;border-color: #AAD1D6;" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
                   <?php }else{ ?>
-                    <p align="right"><a id="label_edit_reshedule_order" style="margin-right: 13px;margin-top:10px;background-color: #AAD1D6;color: #000;border-color:  #AAD1D6;" adr_trans="label_edit_reshedule_order" class="anima-button circle-button btn-sm adr-save" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
+                    <p align="right"><a id="label_edit_reshedule_order" style="margin-right: 13px;margin-top:10px;background-color: #AAD1D6;color: #000;border-color:  #AAD1D6;" adr_trans="label_edit_reshedule_order" class="AnimationBtn ActionBtn-sm" href="create_appointment.php?hs_id=<?php echo @$get_summary['home_seller_id']?>&pc_admin_id=<?php echo @$get_summary['pc_admin_id']?>&Photographer_id=<?php echo @$get_summary['photographer_id'] ?>&od=<?php echo @$get_summary['id']?>&edit=1"><i style="color:black;" class="fa fa-long-arrow-right"></i>Edit/Reshedule Order </a></p>
                   <?php } }?>
 
 
@@ -2000,7 +2000,7 @@ alert(alertmsg);
                           <p align="right" style="margin-right: 30px;">
                           <label for="service">Select a service:</label>
                           </p>
-                          <select class="btn adr-save" id='purpose' style="float:right;font-size: 12px;margin-right: 0px;" onchange="tab_show(this.value)">
+                          <select class="btn ActionBtn-sm" id='purpose' style="float:right;font-size: 12px;margin-right: 0px;" onchange="tab_show(this.value)">
                             <option value="1">Photos <span class="badge"><?php
 
                             $raw_images_standard = "../raw_images/order_".$id_url."/standard_photos/";
@@ -2051,10 +2051,10 @@ alert(alertmsg);
 							 <div class="col-md-9">&nbsp;</div>
 							
 							 <div class="col-md-2" style="padding-right:30px;">
-							  <a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview" data-lightbox-anima="show-scale" style="float:right;margin-right:-10px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
+							  <a href="<?php echo "preview1.php?id=$id_url";?>" class="btn ActionBtn-sm" id="preview" data-lightbox-anima="show-scale" style="float:right;margin-right:-10px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
 							  </div>
 							   <div class="col-md-1">
-                             <a   id="edit_button" class="btn adr-save" style="float:right;margin-right:-15px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a>
+                             <a   id="edit_button" class="btn ActionBtn-sm" style="float:right;margin-right:-15px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a>
 							 </div>
 							 </div></div>
                              <hr class="space s">
@@ -2091,7 +2091,7 @@ alert(alertmsg);
                                <span id="drop_files1"></span>
                              </form>
                              <hr class="space s">
-                             <a href="preview1.php?id=<?php echo $id_url; ?>" class="btn adr-save" id="edit_button1"  style="float:right;margin-right: 10px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview1" data-lightbox-anima="show-scale" style="margin-left: 10px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
+                             <a href="preview1.php?id=<?php echo $id_url; ?>" class="btn ActionBtn-sm" id="edit_button1"  style="float:right;margin-right: 10px;"><span id="label_submit" adr_trans="label_submit">Submit</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn ActionBtn-sm" id="preview1" data-lightbox-anima="show-scale" style="margin-left: 10px;"><span id="label_preview" adr_trans="label_preview">Preview</span> </a>
                              <hr class="space s">
                              <script>
                               $(document).ready(function() {
@@ -2126,7 +2126,7 @@ alert(alertmsg);
                              <span id="drop_files2"></span>
                              </form>
                              <hr class="space s">
-                             <a   id="edit_button2" class="btn adr-save" style="float:right;"><span id="label_upload" adr_trans="label_upload"> upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview2" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
+                             <a   id="edit_button2" class="btn ActionBtn-sm" style="float:right;"><span id="label_upload" adr_trans="label_upload"> upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn ActionBtn-sm" id="preview2" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
                              <hr class="space s">
                              <script>
                               $(document).ready(function() {
@@ -2165,7 +2165,7 @@ alert(alertmsg);
                            <span id="drop_files3"></span>
                          </form>
                          <hr class="space s">
-                         <a   id="edit_button3" class="btn adr-save" style="float:right;"> <span id="label_upload" adr_trans="label_upload"> Upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn adr-save" id="preview3" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
+                         <a   id="edit_button3" class="btn ActionBtn-sm" style="float:right;"> <span id="label_upload" adr_trans="label_upload"> Upload</span></a><a href="<?php echo "preview1.php?id=$id_url";?>" class="btn ActionBtn-sm" id="preview3" data-lightbox-anima="show-scale" style=""><span id="label_preview" adr_trans="label_preview">Preview</span>  </a>
                          <hr class="space s">
                          <script>
                           $(document).ready(function() {
@@ -2201,7 +2201,7 @@ alert(alertmsg);
 
                                       ?>
                                       <form name="zipDownload" method="post" action="">
-                                        <input type="submit" name="ZIP" class="btn adr-save btn-sm download" value="Download"  style="float: right;top: -50px;position: relative;right: 10px;
+                                        <input type="submit" name="ZIP" class="btn ActionBtn-sm download" value="Download"  style="float: right;top: -50px;position: relative;right: 10px;
 float: right;top: -50px;position: relative;right: 10px;"/>
                                <input type="hidden" name="imageType" value="rework" />
 
@@ -2304,12 +2304,12 @@ float: right;top: -50px;position: relative;right: 10px;"/>
                                                        ?>
                                                <textarea id="s<?php echo $get_comment['id'];?>"  rows="4" cols="35" style="margin-left:20px;margin-top:30px" ><?php echo $get_comment['comments'];?></textarea>
                                                <hr class="space s">
-                                                  <center><input type="hidden" class="btn btn-primary btn-sm" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="btn adr-save btn-sm" style="" onclick="Getstandard('<?php echo "../rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="btn adr-cancel btn-sm" style="" onclick="disapprovestandard('<?php echo "../rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="Disapprove"/></center>
+                                                  <center><input type="hidden" class="btn btn-primary" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="btn ActionBtn-sm" style="" onclick="Getstandard('<?php echo "../rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="btn CancelBtn-sm" style="" onclick="disapprovestandard('<?php echo "../rework_images/order_".$id_url."/standard_photos"."/".$image;?>','<?php echo $get_comment['id'];?>',<?php echo $id_url; ?>)" value="Disapprove"/></center>
                                                      </div>
                                                   </div>
 
                                                 </div>
-                                                 <center class=""><input type="button" class="btn adr-save btn-sm" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
+                                                 <center class=""><input type="button" class="btn ActionBtn-sm" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
 
                                             </div>
 
@@ -2407,7 +2407,7 @@ float: right;top: -50px;position: relative;right: 10px;"/>
                                         $imagesDirectory_floor = "../rework_images/order_".$id_url."/floor_plans";
                                         ?>
                                         <form name="zipDownload" method="post" action="">
-                                          <input type="submit" name="ZIP" class="btn adr-save btn-sm download" value="Download"  style="float: right;top: -50px;position: relative;right: 10px;
+                                          <input type="submit" name="ZIP" class="btn ActionBtn-sm download" value="Download"  style="float: right;top: -50px;position: relative;right: 10px;
 "/>
                        <input type="hidden" name="imageType" value="rework" />
 
@@ -2499,12 +2499,12 @@ float: right;top: -50px;position: relative;right: 10px;"/>
                                                          ?>
                                                  <textarea id="s<?php echo $get_comment['id'];?>"  rows="4" cols="35" style="margin-left:20px;margin-top:30px" ><?php echo $get_comment['comments'];?></textarea>
                                                  <hr class="space s">
-                                                 <center><input type="hidden" class="btn btn-primary" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="btn adr-save" style="" onclick="Getfloor('<?php echo "../rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>','<?php echo $id_url; ?>')" value="approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="btn adr-cancel" style="" onclick="disapprovefloor('<?php echo "../rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>','<?php echo $id_url; ?>')" value="Disapprove"/></center>
+                                                 <center><input type="hidden" class="btn btn-primary" id="btn1" style=""  onclick="Getcomment('<?php echo $get_comment['id'];?>')" value="comment"/>&nbsp;&nbsp;&nbsp;<span class="<?php if($get_comment['uploaded_by_id']!=0){ echo "";}?>"><input type="button" class="btn ActionBtn-sm" style="" onclick="Getfloor('<?php echo "../rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>','<?php echo $id_url; ?>')" value="approve"/></span>&nbsp;&nbsp;&nbsp;<input type="button" class="btn CancelBtn-sm" style="" onclick="disapprovefloor('<?php echo "../rework_images/order_".$id_url."/floor_plans"."/".$image;?>','<?php echo $get_comment['id'];?>','<?php echo $id_url; ?>')" value="Disapprove"/></center>
                                                        </div>
                                                     </div>
 
                                                   </div>
-                                                   <center class=""><input type="button" class="btn adr-save btn-sm" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
+                                                   <center class=""><input type="button" class="btn ActionBtn-sm" id="myBtn" style="" onclick="document.getElementById('myModal<?php echo$get_comment['id'];?>').style='display:block'" value="Comment"/></center>
                                               </div>
                                               <?php
                                              }
@@ -2619,10 +2619,10 @@ if (@$_REQUEST['shar']) {
 
                       <?php if($get_summary['status_id']!=3&&$get_summary['status_id']!=1)
                       {?>
-                      <p align="right">  <input type="button" id="done_hide"  class="circle-button btn-sm btn adr-save" style="" onclick="done(<?php echo $id_url; ?>)"  value="Mark as Complete"></p><br>
+                      <p align="right">  <input type="button" id="done_hide"  class="circle-button ActionBtn-sm" style="" onclick="done(<?php echo $id_url; ?>)"  value="Mark as Complete"></p><br>
                     <?php }
                     elseif($get_summary['status_id']==3) {?>
-                        <a href="superOrder_detail.php?id=<?php echo $order_id; ?>&update=1" class="circle-button btn-sm btn adr-save" style="float:right;margin-top: 5px;margin-right: 5px;" >Reopen</a><br><br>
+                        <a href="superOrder_detail.php?id=<?php echo $order_id; ?>&update=1" class="circle-button ActionBtn-sm" style="float:right;margin-top: 5px;margin-right: 5px;" >Reopen</a><br><br>
                   <?php  } ?>
                          <?php if($get_summary['status_id']==3||$get_summary['status_id']==1)
                          {
@@ -2649,10 +2649,10 @@ if (@$_REQUEST['shar']) {
                                              <div class="row" style="padding:10px" >
                                               <div class="col-md-12">
                                                <div class="col-md-2" style="display:inline-block">
-                                                 <input type="checkbox" id="remove" onclick="selectAllImages()" style="margin-left:20px;font-family: Manrope-Regular; class="circle-button btn-sm btn done adr-save">&nbsp;<b><span adr_trans="label_select_all">Select All</span> </b></input>
+                                                 <input type="checkbox" id="remove" onclick="selectAllImages()" style="margin-left:20px;font-family: Manrope-Regular; class="circle-button done ActionBtn-sm">&nbsp;<b><span adr_trans="label_select_all">Select All</span> </b></input>
                                                </div>
                                                <div class="col-md-2" style="display:inline-block">
-                                                 <input type="submit" class="circle-button btn-sm btn done adr-save" style=""  onclick="downloadbtn()" name="ZIP" value="Download" >
+                                                 <input type="submit" class="circle-button done ActionBtn-sm" style=""  onclick="downloadbtn()" name="ZIP" value="Download" >
                                                </div>
                                                <?php if($_SESSION['admin_loggedin_id']==$get_summary['created_by_id']&&$get_hs_details['lead_from']=="homeseller"&&$get_summary['created_by_type']!="Realtor")  { ?>
                                                <?php 
@@ -2674,7 +2674,7 @@ if (@$_REQUEST['shar']) {
                                                <?php if($showReworkbutton==0)
                                                {?>
                                                  <div class="col-md-2" style="display:inline-block">
-                                                   <input type="submit"  class="adr-save circle-button btn-sm btn rework"  name="rework" style="font-family: Manrope-Regular;"  value="Rework" >
+                                                   <input type="submit"  class="adr-save  rework"  name="rework" style="font-family: Manrope-Regular;"  value="Rework" >
                                                    </div>
                                                    <?php } ?>
                                                
@@ -2685,24 +2685,24 @@ if (@$_REQUEST['shar']) {
                                                  ?>
                                                  <?php if($_SESSION['admin_loggedin_id']==$get_summary['created_by_id']&&$get_hs_details['lead_from']=="homeseller"&&$get_summary['created_by_type']!="Realtor"&&$get_link['images_url']!='')  { ?>
                                                <div class="col-md-2" style="display:inline-block">
-                                                 <a href="#tnc1" style="font-family: Manrope-Regular;" class="circle-button btn-sm btn lightbox link adr-save" onclick="shareme('<?php echo @$get_link['images_url']?>','1')" name="send2" id="send3"><span adr_trans="label_send" style="font-size: 12px;">send</span></a>
+                                                 <a href="#tnc1" style="font-family: Manrope-Regular;" class="circle-button lightbox link ActionBtn-sm" onclick="shareme('<?php echo @$get_link['images_url']?>','1')" name="send2" id="send3"><span adr_trans="label_send" style="font-size: 12px;">send</span></a>
                                                </div>
                                                <?php } ?>
 
                                                <div class="col-md-2" style="display:inline-block">
-                                                 <a href="<?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc1";}?>"  style="font-size: 12px;font-family: Manrope-Regular;" class="circle-button btn-sm btn adr-save <?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")!=0) { echo"lightbox link";}?>" onclick="shareme('<?php echo @$get_link['images_url']?>','0')" name="send2" id="send2"><span adr_trans="label_share" style="font-size:12px;">share</span></a>
+                                                 <a href="<?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc1";}?>"  style="font-size: 12px;font-family: Manrope-Regular;" class="circle-button ActionBtn-sm <?php if(@getFileCount("../finished_images/order_".$id_url."/standard_photos")!=0) { echo"lightbox link";}?>" onclick="shareme('<?php echo @$get_link['images_url']?>','0')" name="send2" id="send2"><span adr_trans="label_share" style="font-size:12px;">share</span></a>
                                                </div>
 
                                                <div class="col-md-2" style="display:inline-block">
                                                 
-                                                  <input type="submit"  class="circle-button btn-sm btn adr-save"  name="delete_all" style=""  value="Delete" >
+                                                  <input type="submit"  class="circle-button ActionBtn-sm"  name="delete_all" style=""  value="Delete" >
 
                                                </div>
 
 <?php }?>
 <?php if($get_summary['status_id']!=3 && $get_summary['status_id']!=5 && $get_summary['status_id']!=6){?>
                                                <div class="col-md-2" style="display:inline-block;font-size:11px;">
-                      <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=1"  id="clicktoupload" class="circle-button btn-sm btn adr-save" style="padding:5px;font-size:11px;"><span   adr_trans='label_upload' style="font-size:11px;">Upload</span></a>
+                      <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=1"  id="clicktoupload" class="circle-button ActionBtn-sm" style="padding:5px;font-size:11px;"><span   adr_trans='label_upload' style="font-size:11px;">Upload</span></a>
                                                </div>
                                             
                                                <?php }?>
@@ -2868,7 +2868,7 @@ if (@$_REQUEST['shar']) {
                                                     <input type="checkbox" id="remove2" onclick="selectAllImages2()" style="margin-left:20px">&nbsp;<b><span adr_trans="label_select_all">Select All</span></b></input>
                                                </div>
                                                 <div class="col-md-2" style="display:inline-flex">
-                                                  <input type="submit" class="circle-button btn-sm btn done adr-save" onclick="downloadbtn2()" name="ZIP"  value="Download" >
+                                                  <input type="submit" class="circle-button done ActionBtn-sm" onclick="downloadbtn2()" name="ZIP"  value="Download" >
                                                 </div>
                                                 <?php if($_SESSION['admin_loggedin_id']==$get_summary['created_by_id']&&$get_hs_details['lead_from']=="homeseller"&&$get_summary['created_by_type']!="Realtor")  {?>
 
@@ -2890,7 +2890,7 @@ if (@$_REQUEST['shar']) {
                                                ?>
                                                <?php if($showReworkbutton==1){?>
                                                 <div class="col-md-2"  style="display:inline-block">
-                                                <input type="submit" class=" circle-button btn-sm adr-save btn rework"  name="rework"  value="Rework" / >
+                                                <input type="submit" class="  ActionBtn-sm rework"  name="rework"  value="Rework" / >
                                                 </div>
                                                 <?php }}?>
                                                 <?php if(@$get_link['images_url']!='')
@@ -2898,23 +2898,23 @@ if (@$_REQUEST['shar']) {
                                                   ?>
                                                   <?php if($_SESSION['admin_loggedin_id']==$get_summary['created_by_id']&&$get_hs_details['lead_from']=="homeseller"&&$get_summary['created_by_type']!="Realtor")  { ?>
                                                 <div class="col-md-2" style="display:inline-block">
-                                                 <a href="#tnc1" style="" class="circle-button btn-sm btn lightbox link adr-save" onclick="shareme2('<?php echo @$get_link['images_url']?>','1')" name="send2" id="send2" ><span adr_trans="label_send" style="font-size:12px;">send</span></a>
+                                                 <a href="#tnc1" style="" class="circle-button lightbox link ActionBtn-sm" onclick="shareme2('<?php echo @$get_link['images_url']?>','1')" name="send2" id="send2" ><span adr_trans="label_send" style="font-size:12px;">send</span></a>
                                                 </div>
                                                 <?php } ?>
                                                 <div class="col-md-2" style="display:inline-block">
-                                                  <a href="<?php if(@getFileCount("../finished_images/order_".$id_url."/floor_plans")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc1";}?>" style="" class="circle-button btn-sm btn adr-save <?php if(@getFileCount("../finished_images/order_".$id_url."/floor_plans")!=0) { echo"lightbox link";}?>" onclick="shareme2('<?php echo @$get_link['images_url']?>','0')" name="send2" id="send2" ><span adr_trans="label_share" style="font-size:12px;">share</span></a>
+                                                  <a href="<?php if(@getFileCount("../finished_images/order_".$id_url."/floor_plans")==0) { echo"javascript:alert('No pictures to share.')";}else{echo "#tnc1";}?>" style="" class="circle-button ActionBtn-sm <?php if(@getFileCount("../finished_images/order_".$id_url."/floor_plans")!=0) { echo"lightbox link";}?>" onclick="shareme2('<?php echo @$get_link['images_url']?>','0')" name="send2" id="send2" ><span adr_trans="label_share" style="font-size:12px;">share</span></a>
                                                 </div>
 
                                                 <div class="col-md-2" style="display:inline-block">
                                                 
-                                                  <input type="submit"  class="circle-button btn-sm btn adr-save"  name="delete_all" style=""  value="Delete" >
+                                                  <input type="submit"  class="circle-button ActionBtn-sm"  name="delete_all" style=""  value="Delete" >
 
                                                </div>
 
                                               <?php } ?>
                                               <?php if($get_summary['status_id']!=3 && $get_summary['status_id']!=5 && $get_summary['status_id']!=6){?>
                                               <div class="col-md-2"  style="display:inline-block">
-                                                 <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=2"  id="clicktoupload2" class="circle-button btn-sm btn adr-save" style="padding:5px;font-size:11px;"><span adr_trans='label_upload' style="font-size: 11px;">Upload</span></a>
+                                                 <a href="finished_image_upload.php?id=<?php echo $id_url?>&type=2"  id="clicktoupload2" class="circle-button ActionBtn-sm" style="padding:5px;font-size:11px;"><span adr_trans='label_upload' style="font-size: 11px;">Upload</span></a>
                                               </div>
                                             <?php } ?>
                                              </div>
@@ -3383,7 +3383,7 @@ if (@$_REQUEST['shar']) {
                         <div class="panel" id="tab5" style="background:white;margin-right:-10px;margin-left: -15px;">
                         
 
-                          <p align="right" style="padding-top:10px;"><a class="anima-button circle-button btn-sm btn adr-save" style="position: relative;margin-right:110px;margin-top: 2px;font-size: 12px;" onclick="printPage()"><i class="fa fa-print"></i><span adr_trans="label_print">Print</span></a></p>
+                          <p align="right" style="padding-top:10px;"><a class="AnimationBtn ActionBtn-sm" style="position: relative;margin-right:110px;margin-top: 2px;font-size: 12px;" onclick="printPage()"><i class="fa fa-print"></i><span adr_trans="label_print">Print</span></a></p>
 
         <link rel="stylesheet" href="../css/style_invoice.css">
         <!-- <script src="script.js"></script> -->
@@ -3404,7 +3404,7 @@ if (@$_REQUEST['shar']) {
           {
             ?>
 
-           <a href="#" class="anima-button circle-button btn-sm btn adr-save" title="Approved Order Cost" name="button" onclick="pending(<?php echo $id_url; ?>)" id="button_approved" style="float:right;color:white !important;border-radius: 29px;margin-top: -78px;margin-right: 4px;"><i class="fa fa-check"></i><span adr_trans="label_approve">Approve</span></a>
+           <a href="#" class="AnimationBtn ActionBtn-sm" title="Approved Order Cost" name="button" onclick="pending(<?php echo $id_url; ?>)" id="button_approved" style="float:right;color:white !important;border-radius: 29px;margin-top: -78px;margin-right: 4px;"><i class="fa fa-check"></i><span adr_trans="label_approve">Approve</span></a>
           
            <?php
           }
@@ -3412,16 +3412,16 @@ if (@$_REQUEST['shar']) {
           else {
              ?>
 
-             <!-- <a  href="#" class="anima-button circle-button btn-sm btn adr-save" title="Already Approved" name="button" id="button_approved" style="float:right;border-radius: 29px;padding: 3px;   margin-top: -80px;"><b><span adr_trans="label_approved">Approved</span></b></a>';
+             <!-- <a  href="#" class="AnimationBtn ActionBtn-sm" title="Already Approved" name="button" id="button_approved" style="float:right;border-radius: 29px;padding: 3px;   margin-top: -80px;"><b><span adr_trans="label_approved">Approved</span></b></a>';
  -->
-              <a href="#" class="circle-button btn-sm btn adr-save" title="Already Approved" name="button" id="button_approved" style="float:right;color:white !important;border-radius: 29px;margin-top: -78px;margin-right: 4px;font-size: 12px;padding: 4px;"><span adr_trans="label_approved">Approved</span></a>
+              <a href="#" class="circle-button ActionBtn-sm" title="Already Approved" name="button" id="button_approved" style="float:right;color:white !important;border-radius: 29px;margin-top: -78px;margin-right: 4px;font-size: 12px;padding: 4px;"><span adr_trans="label_approved">Approved</span></a>
          
 <?php
           }
         }
         else {
 ?>
-            <a href="#invoice" class="anima-button circle-button  btn adr-save lightbox link" style="float:right;margin-top: -78px;margin-right:10px;font-size: 12px;" ><i class="fa fa-paper-plane"></i><span adr_trans="label_send">Send</span></a>
+            <a href="#invoice" class="AnimationBtn  ActionBtn-sm lightbox link" style="float:right;margin-top: -78px;margin-right:10px;font-size: 12px;" ><i class="fa fa-paper-plane"></i><span adr_trans="label_send">Send</span></a>
         
         <?php 
 
@@ -3681,7 +3681,7 @@ if (@$_REQUEST['shar']) {
                      <input type="hidden" name="id" value="<?php echo $id_url ?>">
          <span style="font-size:15px;padding-right:5px;">$</span><input id="cost" name="cost" placeholder="Other cost Description" visibility="hidden" type="number" value="<?php if($invoice_check['other_cost']!=0){echo $invoice_check['other_cost'];}?>" autocomplete="off" class="form-control" style="width:100px;display:inline;margin-top: 3px;" required <?php if($invoice_check['other_cost']!=0){echo "readonly";}?>>
          <input type="text" name="description" style="<?php if($invoice_check['other_cost']!=0){echo "display:none";}?> ">
-<?php if($invoice_check['other_cost']==0){?><input type="submit" class="btn adr-save" style="position: absolute;right: 93%;" value="Done" ><?php } ?>
+<?php if($invoice_check['other_cost']==0){?><input type="submit" class="btn ActionBtn-sm" style="position: absolute;right: 93%;" value="Done" ><?php } ?>
 
  </form>
 </td>
@@ -3703,7 +3703,7 @@ if (@$_REQUEST['shar']) {
    <input id="cost" name="cost" placeholder="Other cost Description" visibility="hidden" type="number" value="<?php echo @$invoice_check['other_cost'];?>"  autocomplete="off" class="form-control" style="width:100px;display:inline;margin-top:3px;" required <?php if(@$invoice_check['other_cost']!=0){echo "readonly";}?>>
 
 
-<?php if(@$invoice_check['other_cost']==0){?><input type="submit" class="btn adr-save" style="margin-bottom: 2.5px;" value="Done" /><?php } ?>
+<?php if(@$invoice_check['other_cost']==0){?><input type="submit" class="btn ActionBtn-sm" style="margin-bottom: 2.5px;" value="Done" /><?php } ?>
 
 
 </form>
@@ -3890,7 +3890,7 @@ function updateScroll(){
                                                      <input type="hidden" name="status_id" id="status_id">
 
                                                      <hr class="space s">
-                                                     <center><button class="btn adr-save" name="link" id="send" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
+                                                     <center><button class="btn ActionBtn-sm" name="link" id="send" ><span id="label_send" adr_trans="label_send">Send</span></button></center>
                                                      </form>
                                                      <hr class="space l">
 
@@ -3908,7 +3908,7 @@ function updateScroll(){
                                                                     <input type="hidden" name="downloadoption" id="downloadoption" >
                                                                     <input type="hidden" name="sharename" value="<?php echo $_SESSION['admin_loggedin_name'];?>"  >
                                                                     <hr class="space s">
-                                                                    <center><button class="btn adr-save" name="link" id="send"><span adr_trans="label_send">Send</span></button></center>
+                                                                    <center><button class="btn ActionBtn-sm" name="link" id="send"><span adr_trans="label_send">Send</span></button></center>
                                                                     </form>
                                                                     <hr class="space l">
 
@@ -3929,7 +3929,7 @@ function updateScroll(){
                                                                                    <input name="email" placeholder="Enter the Email" type="email" onblur="this.value=this.value.trim()" autocomplete="off" class="form-control form-value" required>
                                                                                    <input type="hidden" name="invoice" value="<?php echo $invoice_check['order_id'];?>" required>
                                                                                    <hr class="space s">
-                                                                                   <center><button class="btn adr-save" name="link1" id="send" ><span adr_trans="label_send">Send</span></button></center>
+                                                                                   <center><button class="btn ActionBtn-sm" name="link1" id="send" ><span adr_trans="label_send">Send</span></button></center>
                                                                                    </form>
                                                                                    <hr class="space l">
 

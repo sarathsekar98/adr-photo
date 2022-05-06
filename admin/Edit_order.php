@@ -269,11 +269,11 @@ xhttp.send();
 
 
                          <?php if($_SESSION["admin_loggedin_type"]!='Photographer') {  ?>
-                           <button id="label_update_order" adr_trans="label_update_order" class="anima-button circle-button btn-sm btn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
-                                     &nbsp;&nbsp;<a id="label_cancel" adr_trans="label_cancel" class="anima-button circle-button btn-sm btn adr-cancel" href="superOrder_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
+                           <button id="label_update_order" adr_trans="label_update_order" class="AnimationBtn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
+                                     &nbsp;&nbsp;<a id="label_cancel" adr_trans="label_cancel" class="AnimationBtn CancelBtn-sm" href="superOrder_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
                           <?php } else { ?>
-                            <button id="label_update_order" adr_trans="label_update_order"  class="anima-button circle-button btn-sm btn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
-                                      &nbsp;&nbsp;<a id="label_cancel" adr_trans="label_cancel" class="anima-button circle-button btn-sm btn adr-cancel" href="superOrder_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
+                            <button id="label_update_order" adr_trans="label_update_order"  class="AnimationBtn adr-success" type="submit" name="UpdateOrder"><i class="fa fa-sign-in"></i>Update order</button>
+                                      &nbsp;&nbsp;<a id="label_cancel" adr_trans="label_cancel" class="AnimationBtn CancelBtn-sm" href="superOrder_detail.php?id=<?php echo$id_url;?>#home"><i class="fa fa-times"></i>Cancel</a>
                            <?php }  ?>
 
 

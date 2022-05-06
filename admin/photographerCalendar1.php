@@ -64,7 +64,7 @@ $(".mfp-close").click();
 
 			</div>
                 <div class="col-md-10">
-<a class="lightbox btn btn-primary btn-sm circle-button" id="warningMsg" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;display:none;">+Add Product</a>
+<a class="lightbox btn-primary " id="warningMsg" href="#lb2" data-lightbox-anima="show-scale" style="float:right;margin-bottom:10px;display:none;">+Add Product</a>
 
 
 			<?php if(@$_REQUEST['Photographer_id']!='') { ?>	<h5 class="text-center PageHeading-md"><?php echo $photographer_name_is; ?> - Photographer's Calendar</h5>
@@ -376,7 +376,7 @@ var langIs='<?php echo $_SESSION['Selected_Language_Session']; ?>';
 
 <span style="font-size:12px;margin-bottom:20px;"><br /><br />Are you sure want to create an appointment in the past date?</span>
 
-<p align="center" style="margin-top:40px;"><a href="photographerCalendar1.php" class="btn btn-default anima-button circle-button btn-sm" style="width:90px!important"><i class="fa fa-times-circle"></i><span>&nbsp;No</span>&nbsp;&nbsp;</a>&nbsp;&nbsp;<button type="button" class="btn btn-default anima-button circle-button btn-sm" onclick="close_modal();" style="width:90px;"><i class="fa fa-check-circle"></i><span adr_trans="label_yes">Yes</span></button></p>
+<p align="center" style="margin-top:40px;"><a href="photographerCalendar1.php" class="btn btn-default AnimationBtn " style="width:90px!important"><i class="fa fa-times-circle"></i><span>&nbsp;No</span>&nbsp;&nbsp;</a>&nbsp;&nbsp;<button type="button" class="btn btn-default AnimationBtn " onclick="close_modal();" style="width:90px;"><i class="fa fa-check-circle"></i><span adr_trans="label_yes">Yes</span></button></p>
 
 
 

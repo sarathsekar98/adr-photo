@@ -399,8 +399,8 @@ while($city=mysqli_fetch_array($city1))
 										<br>
 															  <p align="center" >
 
-																<button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="profilebtn" id="label_update_profile" adr_trans="label_update_profile" style=""><i class="fa fa-sign-in" style="color:#000"></i>Update Profile</button>
-																					&nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="company_profile.php" id="label_cancel" adr_trans="label_cancel" style=""><i class="fa fa-times" style="color:#000"></i>Cancel</a></p>
+																<button class="AnimationBtn ActionBtn-sm" type="submit" name="profilebtn" id="label_update_profile" adr_trans="label_update_profile" style=""><i class="fa fa-sign-in" style="color:#000"></i>Update Profile</button>
+																					&nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="company_profile.php" id="label_cancel" adr_trans="label_cancel" style=""><i class="fa fa-times" style="color:#000"></i>Cancel</a></p>
 
 							</div>
 							</form>

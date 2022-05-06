@@ -225,8 +225,8 @@ p{
 
 										<br>
 															  <p align="center" >
-																<button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="profilebtn" id="label_update_profile" adr_trans="label_update_profile"><i class="fa fa-sign-in" style="color:#FFF"></i>Update Profile</button>
-																					&nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="csr_profile.php" id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times" style="color:#FFF"></i>Cancel</a></p>
+																<button class="AnimationBtn ActionBtn-sm" type="submit" name="profilebtn" id="label_update_profile" adr_trans="label_update_profile"><i class="fa fa-sign-in" style="color:#FFF"></i>Update Profile</button>
+																					&nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="csr_profile.php" id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times" style="color:#FFF"></i>Cancel</a></p>
 
 							</div>
 							</form>

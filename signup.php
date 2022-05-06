@@ -966,7 +966,7 @@ function get_states(cityIs) {
                             <div class="col-md-6" align="left">
                                 <br><br>
 
-                            <a class="anima-button circle-button btn-sm btn adr-save" onclick="return showStep2()" id="next" name="next" adr_trans="label_next" ><i class="fa fa-chevron-circle-right"></i>Next</a>&nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="index.php" id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
+                            <a class="AnimationBtn ActionBtn-sm" onclick="return showStep2()" id="next" name="next" adr_trans="label_next" ><i class="fa fa-chevron-circle-right"></i>Next</a>&nbsp;&nbsp;<a class="AnimationBtn CancelBtn-sm" href="index.php" id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
 
 
 
@@ -1078,7 +1078,7 @@ function get_states(cityIs) {
                             <div class="alert alert-warning" id="error-msg">&nbsp;</div>
                         </div>
 
-						  <a class="anima-button circle-button btn-sm btn adr-cancel" onclick="showStep1()" id="next" name="next" ><i class="fa fa-chevron-circle-left"></i>Back</a>&nbsp;&nbsp;<button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="signupbtn" id="label_signup" onclick="return step2Validation()"><i class="fa fa-sign-in"></i><span  adr_trans="label_signup">Signup</span></button>
+						  <a class="AnimationBtn CancelBtn-sm" onclick="showStep1()" id="next" name="next" ><i class="fa fa-chevron-circle-left"></i>Back</a>&nbsp;&nbsp;<button class="AnimationBtn ActionBtn-sm" type="submit" name="signupbtn" id="label_signup" onclick="return step2Validation()"><i class="fa fa-sign-in"></i><span  adr_trans="label_signup">Signup</span></button>
 
 </center>
 					   </div>
