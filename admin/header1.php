@@ -134,6 +134,7 @@ function validate_email(val)
   xhttp.send();
 }
 </script>
+ <link rel="stylesheet" href="../style1.css">
 </head>
 <body class="home">
     <div id="preloader"></div>

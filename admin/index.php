@@ -166,7 +166,7 @@ header("location:PCAdmin_dashboard.php");
 						<br>
 						 <div class="row">
                             <div class="col-md-12"><hr class="space s">
-						 <button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="loginbtn"><i class="fa fa-sign-in"></i><span adr_trans="label_login">Login</span></button>
+						 <button class="ActionBtn-sm AnimationBtn" type="submit" name="loginbtn"><i class="fa fa-sign-in"></i><span adr_trans="label_login">Login</span></button>
                        </div>
 					   <hr class="space l" />
                         </div>
