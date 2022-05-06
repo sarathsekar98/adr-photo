@@ -1250,23 +1250,36 @@ div.infos > p > span
 
 /*Pagination configs ends here*/
 
-/*Order Breadcrumb configs starts here*/
+
+/*Breadcrum Config Start here*/
 
 .ActiveBreadcrum
 {
-font-family: verdana;
-font-size: 12px;
-background: #aad1d6;
-color: #000;
+ color: #000 !important;
+ background: #aad1d6;
+ font-family: verdana !important;
 }
-
+.ActiveBreadcrum:hover
+{
+    background: #aad1d6 !important;
+}
 .NonActiveBreadcrum
 {
-font-family: verdana;
-font-size: 12px;
-background: #aad1d6;
-color: #000;
+ color: #000 !important;
+ background: #ddd;
+ font-family: verdana !important;
 }
-/*Order Breadcrumb configs ends here*/
+.ActiveBreadcrum:after
+{
+    background: #aad1d6 !important;
+}
+.NonActiveBreadcrum:after
+{
+    background: #ddd !important;
+}
+#firstStep i
+{
+    padding-top: 10px;
+}
 
-
+/*Breadcrum Config End here*/
