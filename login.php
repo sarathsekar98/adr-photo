@@ -191,16 +191,16 @@ $_SESSION['EXPIRES'] = time() + 3600;
 				<?php
 				} ?>
                     <form action="" class="form-box form-ajax" method="post">
-                        <br><h1 id="label_user_login" adr_trans="label_user_login" class="PageHeading-md fa-1x">User Login</h1>
+                        <br><h1 id="label_user_login" adr_trans="label_user_login" class="fa-1x">User Login</h1>
                         <div class="row">
                             <div class="col-md-6">
-                              <p id="label_email" adr_trans="label_email" class="FieldLabel">Email</p>
+                              <p id="label_email" adr_trans="label_email" class="">Email</p>
                                 <input id="email" name="email" placeholder="Email" type="email" autocomplete="off" class="form-control form-value" onblur="this.value=this.value.trim()" required="">
                             </div>
 							</div>
 							 <div class="row">
                             <div class="col-md-6">
-                              <p id="label_password" adr_trans="label_password" class="FieldLabel">Password</p>
+                              <p id="label_password" adr_trans="label_password" class="">Password</p>
                                 <input id="password" name="password" placeholder="password" type="password" autocomplete="off" class="form-control form-value" required="">
                             </div>
                         </div>
@@ -212,7 +212,7 @@ $_SESSION['EXPIRES'] = time() + 3600;
                             <div class="col-md-12"><hr class="space s">
 						 <button class="ActionBtn-sm AnimationBtn VerticalAlign-t" type="submit" name="loginbtn"  ><i class="fa fa-sign-in"></i><span adr_trans="label_login">Login</span></button>
                        &nbsp;&nbsp;<a class="CancelBtn-sm AnimationBtn" href="index.php" id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
-<br>&nbsp;&nbsp;<span id="label_no_acc" adr_trans="label_no_acc" class="Text-md">No account? Register</span> <a href="signup.php" class="HyperLink-md" id="label_here" adr_trans="label_here">here</span></a>
+<br>&nbsp;&nbsp;<span id="label_no_acc" adr_trans="label_no_acc" class="">No account? Register</span> <a href="signup.php" class="HyperLink-md" id="label_here" adr_trans="label_here">here</span></a>
 					   </div>
                         </div>
 
