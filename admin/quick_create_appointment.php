@@ -1087,28 +1087,28 @@ var od='<?php echo @$_REQUEST["od"]; ?>';
 
 
 			<div class="breadcrumb1 hidden-xs hidden-sm">
-		<a href="create_order.php?hs_id=<?php echo @$_REQUEST['hs_id']; ?>&pc_admin_id=<?php echo @$_REQUEST['pc_admin_id']; ?>&Photographer_id=<?php echo @$_REQUEST['Photographer_id']; ?>&u=1&od=<?php echo @$_REQUEST['od']; ?>" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;"></i>
+		<a href="create_order.php?hs_id=<?php echo @$_REQUEST['hs_id']; ?>&pc_admin_id=<?php echo @$_REQUEST['pc_admin_id']; ?>&Photographer_id=<?php echo @$_REQUEST['Photographer_id']; ?>&u=1&od=<?php echo @$_REQUEST['od']; ?>" class="NonActiveBreadcrum" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_order" adr_trans="label_order">Order</span>
 				<span class="breadcrumb__desc" id="label_fill_order" adr_trans="label_fill_order">Fill the order</span>
 			</span>
 		</a>
 
-		<a href="#" id="secondStep" class="btn ActionBtn-sm"><i class="fa fa-calendar" style="font-size:30px;color:#000;padding-top:10px;"></i>
+		<a href="#" id="secondStep" class="ActiveBreadcrum"><i class="fa fa-calendar" style="font-size:30px;color:#000;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_appointment" adr_trans="label_appointment">Appointment</span>
 				<span class="breadcrumb__desc" id="label_pick_appointment" adr_trans="label_pick_appointment">Pick appointment</span>
 
 			</span>
 		</a>
-		<a href="#" id="thirdStep"><i class="fa fa-database" style="font-size:30px;padding-top:10px;"></i>
+		<a href="#" class="NonActiveBreadcrum" id="thirdStep"><i class="fa fa-database" style="font-size:30px;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_products" adr_trans="label_products">Products</span>
 				<span class="breadcrumb__desc" id="label_select_products" adr_trans="label_select_products">Select Products</span>
 
 			</span>
 		</a>
-		<a href="#"><i class="fa fa-file-text-o" style="font-size:30px;padding-top:10px;"></i>
+		<a href="#" class="NonActiveBreadcrum"><i class="fa fa-file-text-o" style="font-size:30px;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_summary" adr_trans="label_summary">Summary</span>
 				<span class="breadcrumb__desc" id="label_order_status" adr_trans="label_order_status">Order Status</span>

@@ -571,28 +571,28 @@ function get_states(cityIs)
 
 
 	<div class="breadcrumb1 hidden-xs hidden-sm">
-		<a href="#" class="btn ActionBtn-sm" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;color:#000;"></i>
+		<a href="#" class="ActiveBreadcrum" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;color:#000;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_order" adr_trans="label_order">Order</span>
 				<span class="breadcrumb__desc" id="label_fill_order" adr_trans="label_fill_order">Fill the order</span>
 			</span>
 		</a>
 
-		<a href="#" id="secondStep"><i class="fa fa-calendar" style="font-size:30px;padding-top:10px;"></i>
+		<a href="#" class="NonActiveBreadcrum" id="secondStep"><i class="fa fa-calendar" style="font-size:30px;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_appointment" adr_trans="label_appointment">Appointment</span>
 				<span class="breadcrumb__desc" id="label_pick_appointment" adr_trans="label_pick_appointment">Pick appointment</span>
 
 			</span>
 		</a>
-		<a href="#" id="thirdStep"><i class="fa fa-database" style="font-size:30px;padding-top:10px;"></i>
+		<a href="#" class="NonActiveBreadcrum" id="thirdStep"><i class="fa fa-database" style="font-size:30px;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_products" adr_trans="label_products">Products</span>
 				<span class="breadcrumb__desc" id="label_select_products" adr_trans="label_select_products">Select Products</span>
 
 			</span>
 		</a>
-		<a href="#"><i class="fa fa-file-text-o" style="font-size:30px;padding-top:10px;"></i>
+		<a href="#" class="NonActiveBreadcrum"><i class="fa fa-file-text-o" style="font-size:30px;padding-top:10px;"></i>
 			<span class="breadcrumb__inner">
 				<span class="breadcrumb__title" id="label_summary" adr_trans="label_summary">Summary</span>
 				<span class="breadcrumb__desc" id="label_order_status" adr_trans="label_order_status">Order Status</span>
