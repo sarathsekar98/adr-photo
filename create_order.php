@@ -267,9 +267,10 @@ function myfunc()
   height: 100%;
   padding-left: 38px;
   padding-right: 0;
-  color: #666;
+  color: #000 !important;
+  font-size: 2.4em;
+  font-family: verdana !important;
 }
-
 .breadcrumb1 a:first-child {
   padding-left: 10px;
 
@@ -277,6 +278,10 @@ function myfunc()
 
 .breadcrumb1 a:last-child {
   padding-right: 15.2px;
+}
+
+.breadcrumb1 a i{
+  padding-top: 10px;
 }
 
 #firstStep:after {
@@ -488,7 +493,7 @@ function validateAddress()
 
 
   <div class="breadcrumb1 hidden-xs hidden-sm">
-    <a href="#" class="btn btn-default" id="firstStep"><i class="fa fa-camera-retro" style="font-size:40px;color:#000"></i>
+    <a href="#" class="ActionBtn-sm" id="firstStep"><i class="fa fa-camera-retro"></i>
       <span class="breadcrumb__inner">
         <span class="breadcrumb__title" id="label_order" adr_trans="label_order">Order</span>
         <span class="breadcrumb__desc" id="label_fill_order" adr_trans="label_fill_order">Fill the order</span>
@@ -617,22 +622,22 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
 
                <div id="realtor_information" style="display:none" >
                <div class="col-md-6">
-                        <p>REALTOR NAME</p>
+                        <p class="FieldLabel">REALTOR NAME</p>
                         <input id="realtor_name" name="realtor_name" placeholder="Enter The Realtor name" type="text" autocomplete="off"
                         value="<?php echo  @$appointment_update_details['request_name'];?>" class="form-control form-value" required >
     </div>
     <div class="col-md-6">
-                        <p>REALTOR PHONE NO</p>
+                        <p class="FieldLabel">REALTOR PHONE NO</p>
                         <input id="realtor_contactNo" name="realtor_contactNo" placeholder="Enter The Realtor Phone Number" type="tel" pattern="[0-9+.\(\)\-\s+]*" autocomplete="off"
                         value="<?php echo  @$appointment_update_details['request_contact_no'];?>" class="form-control form-value" required>
     </div>
     <div class="col-md-6">
-                        <p>REALTOR EMAIL</p>
+                        <p class="FieldLabel">REALTOR EMAIL</p>
                         <input id="realtor_email" name="realtor_email" placeholder="Enter The Realtor email id" type="email" autocomplete="off"
                         value="<?php echo  @$appointment_update_details['request_email'];?>" class="form-control form-value" onblur="this.value=this.value.trim()" required>
                               <br>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" class="FieldLabel">
                         <p>REALTOR ADDRESS</p>
                         <input id="realtor_address" name="realtor_address" placeholder="Enter The Realtor address" type="text" autocomplete="off"
                         value="<?php echo  @$appointment_update_details['request_address'];?>" class="form-control form-value" required>
@@ -647,20 +652,20 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
 ?>
 
     <div class="col-md-12">
-                          <div class="col-md-6">
-                        <p adr_trans="label_find_address" style="display:inline-block">FIND ADDRESS</p>&nbsp;&nbsp;<i class="fa fa-map-marker " aria-hidden="true" style="font-size:20px; color:#006600;margin-top:3px;"></i>
+                          <div class="col-md-8">
+                        <p class="FieldLabel" adr_trans="label_find_address" style="display:inline-block">FIND ADDRESS</p>&nbsp;&nbsp;<i class="fa fa-map-marker " aria-hidden="true"></i>
                         <br>
-                        <input id="locationTextField" name="fnd_address" placeholder="Find The Address" type="text" autocomplete="0" class="form-control" style="width: 80%;display: inline;margin-right: 8px"> <input type="button" class="mt-3 btn adr-save btn-sm" onclick="validateAddress();getAddressApi()" value="Confirm" />
+                        <input id="locationTextField" name="fnd_address" placeholder="Find The Address" type="text" autocomplete="0" class="form-control" style="width: 75%;display: inline;margin-right: 8px"> <input type="button" class="mt-3 ActionBtn-sm" onclick="validateAddress();getAddressApi()" value="Confirm" />
                         <!-- <span style="float:right;margin-top:-30px;"><i class="fa fa-search" style="margin-left:-25px;"></i></span> -->
                       </div>
     </div>
 
     <div class="col-md-6">
-                        <p id="label_homeseller_name" adr_trans="label_homeseller_name">HOME SELLER NAME</p>
+                        <p class="FieldLabel" id="label_homeseller_name" adr_trans="label_homeseller_name">HOME SELLER NAME</p>
                         <input id="sell_name" name="sell_name" placeholder="Enter The home seller name" value="<?php echo  @$appointment_update_details['name'];?>" type="text" autocomplete="off" class="form-control form-value" required="">
     </div>
     <div class="col-md-6">
-                        <p id="label_assignment_no" adr_trans="label_assignment_no">Assignment Number</p>
+                        <p class="FieldLabel" id="label_assignment_no" adr_trans="label_assignment_no">Assignment Number</p>
                         <input id=" ref_no" name="ref_no" placeholder="Enter The Assignment Number"  value="<?php echo  @$appointment_update_details['reference_number'];?>" type="text" autocomplete="off" class="form-control form-value" required="">
             <input type="hidden" name="pc_admin_id" value="<?php echo @$_REQUEST['pc_admin_id']; ?>" />
             <input type="hidden" name="Photographer_id" value="<?php echo @$_REQUEST['Photographer_id']; ?>" />
@@ -668,11 +673,11 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
 
     </div>
     <div class="col-md-12">
-                        <p id="label_address" adr_trans="label_address">ADDRESS</p>
+                        <p class="FieldLabel" id="label_address" adr_trans="label_address">ADDRESS</p>
                         <input id="address" name="address" placeholder="Enter The Address" type="text" autocomplete="off"  value="<?php echo  @$appointment_update_details['address'];?>" class="form-control form-value" required="">
                       </div>
     <div class="col-md-6">
-       <p id="label_city" adr_trans="label_city">CITY</p>
+       <p class="FieldLabel" id="label_city" adr_trans="label_city">CITY</p>
       <select name="city" id="city" class="form-control form-value" onchange="get_states(this.value)" required="">
         <option value="">Select City</option>
                     <?php
@@ -687,19 +692,19 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
       </div>
 
       <div class="col-md-6">
-       <p id="label_state" adr_trans="label_state">STATE</p> 
+       <p class="FieldLabel" id="label_state" adr_trans="label_state">STATE</p> 
       <select name="state" class="form-control form-value" id="state" required="" <?php if(@$_REQUEST['u']) { echo "readonly"; } ?>>
        <?php if($appointment_update_details['state']!='') { ?><option value="<?php echo  @$appointment_update_details['state'];?>"><?php echo  @$appointment_update_details['state'];?></option><?php } ?>
                     </select>
       </div>
      <div class="col-md-6">
-                        <p id="label_zip_code" adr_trans="label_zip_code">ZIP CODE</p>
+                        <p class="FieldLabel" id="label_zip_code" adr_trans="label_zip_code">ZIP CODE</p>
                         <input id="zip" name="zip" placeholder="Zip code" type="number" autocomplete="off" class="form-control form-value"  value="<?php echo  @$appointment_update_details['zip'];?>" required="">
                     </div>
 
 
     <div class="col-md-6">
-       <p id="label_country" adr_trans="label_country">COUNTRY</p>
+       <p class="FieldLabel" id="label_country" adr_trans="label_country">COUNTRY</p>
       <select name="country" class="form-control form-value"  value="<?php echo  @$appointment_update_details['country'];?>" required="">
                     <option value="Norway">Norway</option>
                     <option value="US">US</option>
@@ -707,12 +712,12 @@ $appointment_update_details=mysqli_fetch_array($appointment_update);
       </div>
 
           <div class="col-md-6">
-                              <p id="label_mobile_no" adr_trans="label_mobile_no">MOBILE NO</p>
+                              <p class="FieldLabel" id="label_mobile_no" adr_trans="label_mobile_no">MOBILE NO</p>
                               <input id="mobile_no" name="mobile_no" placeholder="Enter The mobile Number" type="tel" pattern="[0-9+.\(\)\-\s+]*" autocomplete="off"  value="<?php echo  @$appointment_update_details['mobile_number'];?>" class="form-control form-value" required="">
                           </div>
 
           <div class="col-md-6">
-                              <p id="label_email_id" adr_trans="label_email_id">EMAIL ID</p>
+                              <p class="FieldLabel" id="label_email_id" adr_trans="label_email_id">EMAIL ID</p>
                               <input id="email_id" name="email_id" placeholder="Enter The email id" type="email" autocomplete="off" value="<?php echo  @$appointment_update_details['email'];?>" class="form-control form-value" onblur="this.value=this.value.trim()" required="">
                               <br>
                           </div>
@@ -730,7 +735,7 @@ if($user_type=="Photographer")
    <?php } else { ?>
 
 <div class="col-md-12"  >
-          <span id="add_info"><i class="fa fa-plus-circle" id="add" onclick="show()" aria-hidden="true"></i></span>&nbsp;&nbsp;<span id="label_contact_person" adr_trans="label_contact_person"></span><br>
+          <span id="add_info"><i class="fa fa-plus-circle" id="add" onclick="show()" aria-hidden="true"></i></span>&nbsp;&nbsp;<span class="PageHeading-md" id="label_contact_person" adr_trans="label_contact_person"></span><br>
          </div>
 <?php } ?>
 
@@ -742,27 +747,27 @@ if($user_type=="Photographer")
          </script>
           <div id="show" style="display:none;">
           <div class="col-md-6">
-                              <p id="label_name" adr_trans="label_name">NAME</p>
+                              <p class="FieldLabel" id="label_name" adr_trans="label_name">NAME</p>
                               <input id="name" name="name" value="<?php echo  @$appointment_update_details['contact_person_name'];?>" placeholder="Enter The name" visibility="hidden" type="text" autocomplete="off" class="form-control form-value" >
 
           </div>
         <div class="col-md-6">
-                        <p id="label_mobile_no" adr_trans="label_mobile_no">MOBILE NO</p>
+                        <p class="FieldLabel" id="label_mobile_no" adr_trans="label_mobile_no">MOBILE NO</p>
                         <input id="mobile_no1" name="mobile_no1" placeholder="Enter The mobile number" type="tel" pattern="[0-9+.\(\)\-\s+]*" autocomplete="off" value="<?php echo  @$appointment_update_details['contact_person_mobile'];?>" class="form-control form-value">
         </div>
 
         <div class="col-md-6">
-                        <p id="label_email_id" adr_trans="label_email_id">EMAIL ID</p>
+                        <p class="FieldLabel" id="label_email_id" adr_trans="label_email_id">EMAIL ID</p>
                           <input id="email_id1" name="email_id1" placeholder="Enter The email id" type="email" autocomplete="off" value="<?php echo  @$appointment_update_details['contact_person_email'];?>" onblur="this.value=this.value.trim()" class="form-control form-value">
         </div></div>
 
 
      <div class="row">
-                    <div class="col-md-12"><center><hr class="space s">
+                    <div class="col-md-12"><hr class="space s">
 
 
 
-     <button class="anima-button circle-button btn-sm btn adr-save" type="submit" name="SaveOrder" adr_trans="label_next"><i class="fa fa-chevron-circle-right"></i>Next</button>
+     <button class="ActionBtn-sm AnimationBtn" style="margin-left: 20px;" type="submit" name="SaveOrder" adr_trans="label_next"><i class="fa fa-chevron-circle-right"></i>Next</button>
 
    <?php
    $user_type=$_SESSION['user_type'];
@@ -771,13 +776,13 @@ if($user_type=="Photographer")
           {
 
    ?>
-               &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" href="photographerCalendar.php"  id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
+               &nbsp;&nbsp;<a class="CancelBtn-sm AnimationBtn Float-right" href="photographerCalendar.php"  id="label_cancel" adr_trans="label_cancel"><i class="fa fa-times"></i>Cancel</a>
 
          <?php } else { ?>
-           &nbsp;&nbsp;<a class="anima-button circle-button btn-sm btn adr-cancel" id="label_cancel" adr_trans="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" href="csrRealtorCalendar.php"><i class="fa fa-times"></i>Cancel</a>
+           &nbsp;&nbsp;<a class="CancelBtn-sm AnimationBtn Float-right" id="label_cancel" adr_trans="label_cancel" onclick="return confirm('Are you sure want to cancel the order?');" href="csrRealtorCalendar.php"><i class="fa fa-times"></i>Cancel</a>
 
          <?php } ?>
-</center>
+
      </div>
 
 
