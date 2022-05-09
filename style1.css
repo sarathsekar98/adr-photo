@@ -1283,3 +1283,27 @@ div.infos > p > span
 }
 
 /*Breadcrum Config End here*/
+
+
+/*sidebar config start here*/
+
+
+.menuTable tr:nth-child(even) td
+{
+    padding: 5px;
+    background: #FFF;
+    font-weight: bold;
+    width: 150px;
+    font-family: verdana;
+    border-radius: 5px 5px 5px 5px;
+}
+.menuTable tr:nth-child(even) td a
+{
+    color: #000 !important;
+}
+.menuTable tr:nth-child(even) td a i
+{
+    color: #000 !important;
+}
+
+/*sidebar config end here*/
