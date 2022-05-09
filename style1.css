@@ -349,7 +349,6 @@ thead>tr:last-child {
 }
 
 /*common table end here*/
-//to be applied in body tag
 .PageFont {
     font-family: verdana !important;
 }
@@ -530,13 +529,12 @@ thead>tr:last-child {
 .SocialIconWithTitle {
     margin-left: 5px;
     padding: 4px;
-    background: #aad1d6;
-    color: #000;
+    background: #aad1d6 !important;
+    color: #000 !important;
     border-radius: 20px !important;
     font-size: 8px !important;
     padding-left: 4px !important;
     padding-right: 4px !important;
-}
 }
 
 .form-control {
@@ -1307,3 +1305,23 @@ div.infos > p > span
 }
 
 /*sidebar config end here*/
+
+
+/*Social icons color change starts here*/
+.fa-facebook
+{color: red;
+background: blue;}
+.fa-instagram
+{color: red;
+background: blue;}
+.fa-twitter
+{color: red;
+background: blue;}
+.fa-youtube-play
+{color: red;
+background: blue;}
+.fa-linkedin
+{color: red;
+background: blue;}
+/*Social icons color change ends here*/
+
