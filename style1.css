@@ -341,7 +341,8 @@
 }
 
 /*profiletable code end here*/
-thead>tr:last-child {
+.ProfileTable thead>tr:last-child,.NotificationTable
+thead>tr:last-child,.ListTable thead>tr:last-child {
     border-top: solid 1px #aad1d6 !important;
     border-bottom: solid 0.5px #aad1d6 !important;
     border-left: solid 1px #aad1d6 !important;
