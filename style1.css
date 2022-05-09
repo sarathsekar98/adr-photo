@@ -1289,7 +1289,7 @@ div.infos > p > span
 .menuTable tr:nth-child(even) td
 {
     padding: 5px;
-    background: #FFF;
+    background: #fff;
     font-weight: bold;
     width: 150px;
     font-family: verdana;
@@ -1303,25 +1303,37 @@ div.infos > p > span
 {
     color: #000 !important;
 }
-
+.menuTable tr:nth-child(even) td.active
+{
+background: #aad1d6;
+}
 /*sidebar config end here*/
-
 
 /*Social icons color change starts here*/
 .fa-facebook
-{color: red;
-background: blue;}
+{
+color: #fff;
+background: #000;
+}
 .fa-instagram
-{color: red;
-background: blue;}
+{
+color: #fff;
+background: #000;
+}
 .fa-twitter
-{color: red;
-background: blue;}
+{
+color: #fff;
+background: #000;
+}
 .fa-youtube-play
-{color: red;
-background: blue;}
+{
+color: #fff;
+background: #000;
+}
 .fa-linkedin
-{color: red;
-background: blue;}
+{
+color: #fff;
+background: #000;
+}
 /*Social icons color change ends here*/
 

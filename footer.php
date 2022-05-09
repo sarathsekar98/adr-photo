@@ -13,11 +13,11 @@
                         <span class="space"></span>
                         <div class="btn-group navbar-social">
                             <div style="margin-left:7px;background:#FFF!important;text-align:center;">
- <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" style="font-size:10px;padding:5px;border-radius:20px;padding-left:7px;padding-right:7px;padding-top:4px;padding-bottom:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="https://www.twitter.com/"><i class="fa fa-twitter" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
+ <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" style="font-size:10px;padding:5px;border-radius:20px;padding-left:7px;padding-right:7px;padding-top:4px;padding-bottom:4px;"></i></a>
+<a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="https://www.twitter.com/"><i class="fa fa-twitter" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
                             </div>
                         </div>
                     </div>
@@ -121,32 +121,32 @@ if ($usertype == 'Realtor'){
 
  if(strpos($currentPage, "csrRealtorDashboard") !== false || strpos($currentPage, "change_email_password") !== false)
  {
- echo "<script> $('#homeMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#homeMenu').addClass('active');  </script>";
  }
 
  if(strpos($currentPage, "order_list") !== false || strpos($currentPage, "create_order") !== false || strpos($currentPage, "order_detail") !== false || strpos($currentPage, "Edit_appointment") !== false || strpos($currentPage, "Edit_order") !== false || strpos($currentPage, "create_appointment") !== false || strpos($currentPage, "summary") !== false || strpos($currentPage, "rating") !== false || strpos($currentPage, "select_products") !== false)
  {
- echo "<script> $('#ordersMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#ordersMenu').addClass('active');  </script>";
  }
 
   if(strpos($currentPage, "csrRealtorCalendar") !== false || strpos($currentPage, "photographerCalendar1") !== false)
  {
- echo "<script> $('#calendarMenu').css('background','#aad1d6'); </script>";
+ echo "<script> $('#calendarMenu').addClass('active'); </script>";
  }
 
   if(strpos($currentPage, "realtor_activity") !== false)
  {
- echo "<script> $('#notificationMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#notificationMenu').addClass('active');  </script>";
  }
 
   if(strpos($currentPage, "order_reports") !== false || strpos($currentPage, "payment_reports") !== false)
  {
- echo "<script> $('#reportsMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#reportsMenu').addClass('active');  </script>";
  }
 
   if(strpos($currentPage, "realtor_profile") !== false || strpos($currentPage, "edit_realtor_profile") !== false)
  {
- echo "<script> $('#profileMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#profileMenu').addClass('active');  </script>";
  }
 
 
@@ -158,12 +158,12 @@ if ($usertype == 'Realtor'){
 
     if(strpos($currentPage, "photographerDashboard") !== false || strpos($currentPage, "change_email_password") !== false)
  {
- echo "<script> $('#homeMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#homeMenu').addClass('active');  </script>";
  }
 
  if(strpos($currentPage, "photographerCalendar") !== false)
  {
- echo "<script> $('#calendarMenu').css('background','#aad1d6'); </script>";
+ echo "<script> $('#calendarMenu').addClass('active'); </script>";
  }
 
   if(strpos($currentPage, "editor_list") !== false)
@@ -175,22 +175,22 @@ if ($usertype == 'Realtor'){
 
  if(strpos($currentPage, "photographerorder_list") !== false || strpos($currentPage, "create_order") !== false  || strpos($currentPage, "create_appointment") !== false || strpos($currentPage, "Edit_appointment1") !== false || strpos($currentPage, "photographerorder_detail") !== false || strpos($currentPage, "preview1") !== false || strpos($currentPage, "summary") !== false || strpos($currentPage, "finished_image_upload") !== false || strpos($currentPage, "preview3") !== false)
  {
- echo "<script> $('#ordersMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#ordersMenu').addClass('active');  </script>";
  }
 
  if(strpos($currentPage, "photographeractivity") !== false)
  {
- echo "<script> $('#notificationMenu').css('background','#aad1d6'); </script>";
+ echo "<script> $('#notificationMenu').addClass('active'); </script>";
  }
 
  if(strpos($currentPage, "photographerorder_list") !== false)
  {
- echo "<script> $('#ordersMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#ordersMenu').addClass('active');  </script>";
  }
 
  if(strpos($currentPage, "photographer_profile") !== false || strpos($currentPage, "photographer_profile") !== false)
  {
- echo "<script> $('#profileMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#profileMenu').addClass('active');  </script>";
  }
 
 
@@ -198,12 +198,12 @@ if ($usertype == 'Realtor'){
  if(strpos($currentPage, "Products") !== false)
  {
 
- echo "<script> $('#productsMenu').css('background','#aad1d6');  </script>";
+ echo "<script> $('#productsMenu').addClass('active');  </script>";
  }
   if(strpos($currentPage, "select_Products") !== false)
  {
     
- echo "<script> $('#productsMenu').css('background','white');  </script>";
+ echo "<script> $('#productsMenu').addClass('active');  </script>";
  }
 
  }

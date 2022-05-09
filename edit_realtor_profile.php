@@ -236,25 +236,25 @@ margin-left:0px!important;
 
 
                               <div class="col-md-6">
-                                <p style="color:#000;"><span adr_trans="label_linkedin_profile">LinkedIN profile</span>&nbsp;<span class="fa fa-linkedin" style="    padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px;font-size: 10px;"></span></p>
+                                <p style="color:#000;"><span adr_trans="label_linkedin_profile">LinkedIN profile</span>&nbsp;<span class="fa fa-linkedin SocialIconWithTitle"></span></p>
                                 <input id="linkedin_id" name="linkedin_id" type="text" autocomplete="off" class="form-control form-value" value="<?php echo @$res1['linkedin_id']; ?>">
 								</div>
 
 								<div class="col-md-6">
-                                <p  style="color:#000;" ><span adr_trans="label_fb_profile">Facebook profile</span>&nbsp;<span class="fa fa-facebook" style="    padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px;font-size: 10px;"></span></p>
+                                <p  style="color:#000;" ><span adr_trans="label_fb_profile">Facebook profile</span>&nbsp;<span class="fa fa-facebook SocialIconWithTitle"></span></p>
                                 <input id="facebook_id" name="facebook_id" type="text" autocomplete="off" class="form-control form-value" value="<?php echo @$res1['facebook_id']; ?>">
 								</div>
 
 								<div class="col-md-6">
-                                <p style="color:#000;"><span adr_trans="label_insta_profile">Instagram profile</span>&nbsp;<span class="fa fa-instagram" style="    padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px;font-size: 10px;"></span></p>
+                                <p style="color:#000;"><span adr_trans="label_insta_profile">Instagram profile</span>&nbsp;<span class="fa fa-instagram SocialIconWithTitle"></span></p>
                                 <input id="instagram_id" name="instagram_id" type="text" autocomplete="off" class="form-control form-value" value="<?php echo @$res1['instagram_id']; ?>">
 								</div>
                 <div class="col-md-6">
-                                <p style="color:#000;" ><span adr_trans="label_youtube_profile">Youtube profile</span>&nbsp;<span class="fa fa-youtube" style="    padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px;font-size: 10px;"></span></p>
+                                <p style="color:#000;" ><span adr_trans="label_youtube_profile">Youtube profile</span>&nbsp;<span class="fa fa-youtube-play SocialIconWithTitle"></span></p>
                                 <input id="youtube_id" name="youtube_id" type="text" autocomplete="off" class="form-control form-value" value="<?php echo @$res1['youtube_id']; ?>">
                 </div>
                 <div class="col-md-6">
-                                <p style="color:#000;"><span adr_trans="label_twitter_profile">Twitter profile</span>&nbsp;<span class="fa fa-twitter" style="    padding: 4px;background: #aad1d6;color: #000;font-weight: bold;border-radius: 20px;font-size: 10px;"></span></p>
+                                <p style="color:#000;"><span adr_trans="label_twitter_profile">Twitter profile</span>&nbsp;<span class="fa fa-twitter SocialIconWithTitle"></span></p>
                                 <input id="twitter_id" name="twitter_id" type="text" autocomplete="off" class="form-control form-value" value="<?php echo @$res1['twitter_id']; ?>">
                 </div>
 

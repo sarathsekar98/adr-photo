@@ -125,11 +125,11 @@ $pcadmin=mysqli_fetch_array($pcadmin1);
 </table>
 
 <div style="margin-left:7px;background:#F1F3F4!important;text-align:center;">
- <a target="_blank" href="'.$facebook_id.'"><i class="fa fa-facebook" style="font-size:10px;padding:5px;border-radius:20px;padding-left:7px;padding-right:7px;padding-top:4px;padding-bottom:4px;background:#000;color:#FFF"></i></a>
- <a target="_blank" href="'.$instagram_id.'"><i class="fa fa-instagram" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="'.$twitter_id.'"><i class="fa fa-twitter" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="'.$youtube_id.'"><i class="fa fa-youtube-play" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="'.$linkedin_id.'"><i class="fa fa-linkedin" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
+ <a target="_blank" href="'.$facebook_id.'"><i class="fa fa-facebook" style="font-size:10px;padding:5px;border-radius:20px;padding-left:7px;padding-right:7px;padding-top:4px;padding-bottom:4px;"></i></a>
+ <a target="_blank" href="'.$instagram_id.'"><i class="fa fa-instagram" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="'.$twitter_id.'"><i class="fa fa-twitter" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="'.$youtube_id.'"><i class="fa fa-youtube-play" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="'.$linkedin_id.'"><i class="fa fa-linkedin" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
                             </div>
 <br /><br />
 
@@ -180,11 +180,11 @@ $pcadmin=mysqli_fetch_array($pcadmin1);
 </table>
 
 <div style="margin-left:7px;background:#F1F3F4!important;text-align:center;">
- <a target="_blank" href="'.$facebook_id.'"><i class="fa fa-facebook" style="font-size:10px;padding:5px;border-radius:20px;padding-left:7px;padding-right:7px;padding-top:4px;padding-bottom:4px;background:#000;color:#FFF"></i></a>
- <a target="_blank" href="'.$instagram_id.'"><i class="fa fa-instagram" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="'.$twitter_id.'"><i class="fa fa-twitter" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="'.$youtube_id.'"><i class="fa fa-youtube-play" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
-<a target="_blank" href="'.$linkedin_id.'"><i class="fa fa-linkedin" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;background:#000;color:#FFF"></i></a>
+ <a target="_blank" href="'.$facebook_id.'"><i class="fa fa-facebook" style="font-size:10px;padding:5px;border-radius:20px;padding-left:7px;padding-right:7px;padding-top:4px;padding-bottom:4px;"></i></a>
+ <a target="_blank" href="'.$instagram_id.'"><i class="fa fa-instagram" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="'.$twitter_id.'"><i class="fa fa-twitter" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="'.$youtube_id.'"><i class="fa fa-youtube-play" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
+<a target="_blank" href="'.$linkedin_id.'"><i class="fa fa-linkedin" style="font-size:10px;padding:5px;border-radius:20px;padding:4px;"></i></a>
                             </div>
 <br /><br />
 
