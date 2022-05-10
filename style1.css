@@ -11,7 +11,7 @@
     font-size: 12px;
     padding: 0px;
 }
- 
+
 .PageHeading-lg {
     font-family: verdana;
     color: #000;
@@ -341,8 +341,9 @@
 }
 
 /*profiletable code end here*/
-.ProfileTable thead>tr:last-child,.NotificationTable
-thead>tr:last-child,.ListTable thead>tr:last-child {
+.ProfileTable thead>tr:last-child,
+.NotificationTable thead>tr:last-child,
+.ListTable thead>tr:last-child {
     border-top: solid 1px #aad1d6 !important;
     border-bottom: solid 0.5px #aad1d6 !important;
     border-left: solid 1px #aad1d6 !important;
@@ -703,13 +704,14 @@ thead>tr:last-child,.ListTable thead>tr:last-child {
     width: 10px;
     border-radius: 10px;
 }
-.ChatBox 
-{
+
+.ChatBox {
     background: #aad1d6;
     opacity: 0.7;
     border-radius: 5px;
     padding: 10px 5px 10px 15px !important;
 }
+
 .ChatUser {
     color: green;
     font-size: 11px;
@@ -961,14 +963,15 @@ i.fa-star {
 .W-10 {
     width: 10%;
 }
-.fa-1x
-{
-font-size: 1.5em;
+
+.fa-1x {
+    font-size: 1.5em;
 }
-.VerticalAlign-t
-{
-vertical-align: top;
+
+.VerticalAlign-t {
+    vertical-align: top;
 }
+
 .Float-left {
     float: left;
 }
@@ -1061,11 +1064,12 @@ vertical-align: top;
     font-family: verdana;
     background: #aad1d6 !important;
 }
-.nav-pills.nav-justified
-{
+
+.nav-pills.nav-justified {
     border-color: #aad1d6 !important;
 
 }
+
 /*nav pills end here*/
 
 /*Calendar configs starts here*/
@@ -1203,45 +1207,44 @@ h2.fc-toolbar-title {
 
 /*Calendar configs ends here*/
 
-.ribbon 
-{
+.ribbon {
 
-background: #aad1d6;
+    background: #aad1d6;
 
 }
 
 /*Pagination configs starts here*/
 
-ul.pagination li
-{
- font-size: 12px;
- font-family: verdana !important;
- color: #000;
+ul.pagination li {
+    font-size: 12px;
+    font-family: verdana !important;
+    color: #000;
 }
-ul.pagination > li > a
-{
- background: #AAD1D6 !important;
- color: #000 !important;
- border-color: #AAD1D6 !important;
- padding: 4px 5px;
- font-family: verdana !important;
+
+ul.pagination>li>a {
+    background: #AAD1D6 !important;
+    color: #000 !important;
+    border-color: #AAD1D6 !important;
+    padding: 4px 5px;
+    font-family: verdana !important;
 }
-ul.pagination > li.active > a
-{
-  background: #378087 !important;
-  color: #000 !important;
-  border-color: #378087 !important;
-  font-family: verdana !important;
+
+ul.pagination>li.active>a {
+    background: #378087 !important;
+    color: #000 !important;
+    border-color: #378087 !important;
+    font-family: verdana !important;
 }
-div.infos > p > span
-{
-  padding-right: 3px;
-  padding-left: 3px;
-  color: #000;
-  font-family: verdana !important;
+
+div.infos>p>span {
+    padding-right: 3px;
+    padding-left: 3px;
+    color: #000;
+    font-family: verdana !important;
 }
-.infos p,.infos
-{
+
+.infos p,
+.infos {
     color: #000 !important;
     font-weight: 600 !important;
     font-family: verdana !important;
@@ -1252,32 +1255,31 @@ div.infos > p > span
 
 /*Breadcrum Config Start here*/
 
-.ActiveBreadcrum
-{
- color: #000 !important;
- background: #aad1d6;
- font-family: verdana !important;
+.ActiveBreadcrum {
+    color: #000 !important;
+    background: #aad1d6;
+    font-family: verdana !important;
 }
-.ActiveBreadcrum:hover
-{
+
+.ActiveBreadcrum:hover {
     background: #aad1d6 !important;
 }
-.NonActiveBreadcrum
-{
- color: #000 !important;
- background: #ddd;
- font-family: verdana !important;
+
+.NonActiveBreadcrum {
+    color: #000 !important;
+    background: #ddd;
+    font-family: verdana !important;
 }
-.ActiveBreadcrum:after
-{
+
+.ActiveBreadcrum:after {
     background: #aad1d6 !important;
 }
-.NonActiveBreadcrum:after
-{
+
+.NonActiveBreadcrum:after {
     background: #ddd !important;
 }
-#firstStep i
-{
+
+#firstStep i {
     padding-top: 10px;
 }
 
@@ -1287,8 +1289,7 @@ div.infos > p > span
 /*sidebar config start here*/
 
 
-.menuTable tr:nth-child(even) td
-{
+.menuTable tr:nth-child(even) td {
     padding: 5px;
     background: #fff;
     font-weight: bold;
@@ -1296,45 +1297,45 @@ div.infos > p > span
     font-family: verdana;
     border-radius: 5px 5px 5px 5px;
 }
-.menuTable tr:nth-child(even) td a
-{
+
+.menuTable tr:nth-child(even) td a {
     color: #000 !important;
 }
-.menuTable tr:nth-child(even) td a i
-{
+
+.menuTable tr:nth-child(even) td a i {
     color: #000 !important;
 }
-.menuTable tr:nth-child(even) td.active
-{
-background: #aad1d6;
+
+.menuTable tr:nth-child(even) td.active {
+    background: #aad1d6;
 }
+
 /*sidebar config end here*/
 
 /*Social icons color change starts here*/
-.fa-facebook
-{
-color: #fff;
-background: #000;
+.fa-facebook {
+    color: #fff;
+    background: #000;
 }
-.fa-instagram
-{
-color: #fff;
-background: #000;
-}
-.fa-twitter
-{
-color: #fff;
-background: #000;
-}
-.fa-youtube-play
-{
-color: #fff;
-background: #000;
-}
-.fa-linkedin
-{
-color: #fff;
-background: #000;
-}
-/*Social icons color change ends here*/
 
+.fa-instagram {
+    color: #fff;
+    background: #000;
+}
+
+.fa-twitter {
+    color: #fff;
+    background: #000;
+}
+
+.fa-youtube-play {
+    color: #fff;
+    background: #000;
+}
+
+.fa-linkedin {
+    color: #fff;
+    background: #000;
+}
+
+/*Social icons color change ends here*/
