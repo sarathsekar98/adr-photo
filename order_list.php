@@ -722,7 +722,7 @@ min-width:100px!important;
 
           ?>
           <td style="word-break:break-all;"><?php echo @$photographer_Name ?>&nbsp;<?php if(@$online==1) { ?>
-      <i class="fa fa-comment" style="color:#006600" data-touserid="<?php echo $photographer_id ?>" data-tousername="<?php echo $photographer_Name ?>"></i>
+      <i data-touserid="<?php echo $photographer_id ?>" data-tousername="<?php echo $photographer_Name ?>"></i>
       <?php } ?></td>
      
         <td style=""><?php echo @$get_order['property_address']; ?></td>
