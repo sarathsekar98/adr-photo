@@ -1,5 +1,5 @@
 <?php
-// (A) INVALID AJAX REQUEST
+// (A) INVALID AJAX REQUEST hello
 if (!isset($_POST['req'])) { die("INVALID REQUEST"); }
 require "phpcal/2-cal-core.php";
 switch ($_POST['req']) {
